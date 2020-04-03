@@ -159,7 +159,7 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 	#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=4 dim=1
 	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=4 dim=1
 	#pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
-
+	#pragma HLS pipeline
 	// The first round key is the key itself.
 	for (i = 0; i < Nk; ++i)
 	{
