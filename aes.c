@@ -151,7 +151,7 @@ static const uint8_t Rcon[11] = {
 // This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
 void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 {
-	unsigned i, j, k;
+	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2 ;
 	uint8_t tempa[4]; // Used for the column/row operations
 
 	#pragma HLS ARRAY_RESHAPE variable=sbox  cyclic factor=4 dim=1
@@ -161,45 +161,40 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 	#pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
 	#pragma HLS pipeline
 	// The first round key is the key itself.
-	for (i = 0; i < Nk; ++i)
+	for (j = 0; j < cnt; j += 4)
 	{
-		j = i*4;
-		RoundKey[(i * 4) + 0] = Key[(i * 4) + 0];
-		RoundKey[(i * 4) + 1] = Key[(i * 4) + 1];
-		RoundKey[(i * 4) + 2] = Key[(i * 4) + 2];
-		RoundKey[(i * 4) + 3] = Key[(i * 4) + 3];
-		//    printf("RK[%d+0] = %x, RK[%d+0] = %x, RK[%d+0] = %x, RK[%d+0] = %x\n", j,RoundKey[j + 0], j+1,RoundKey[j + 1],
-		//    	j+2, RoundKey[j + 2], j+3, RoundKey[j + 3]);
-
+		RoundKey[j] = Key[j];
+		RoundKey[j + 1] = Key[j + 1];
+		RoundKey[j + 2] = Key[j + 2];
+		RoundKey[j + 3] = Key[j + 3];
 	}
 
 	// All other round keys are found from the previous round keys.
-	for (i = Nk; i < Nb * (Nr + 1); ++i)
+	for (s = cnt; s < cnt2; s+=4)
 	{
 		{
-			k = (i - 1) * 4;
-			tempa[0]=RoundKey[k + 0];
-			tempa[1]=RoundKey[k + 1];
-			tempa[2]=RoundKey[k + 2];
-			tempa[3]=RoundKey[k + 3];
-
+			k = s-4;
+			tempa[0] = RoundKey[k + 0];
+			tempa[1] = RoundKey[k + 1];
+			tempa[2] = RoundKey[k + 2];
+			tempa[3] = RoundKey[k + 3];
 		}
 
-		if (i % Nk == 0)
+		if (s % cnt == 0)
 		{
 			// This function shifts the 4 bytes in a word to the left once.
 			// [a0,a1,a2,a3] becomes [a1,a2,a3,a0]
 
 			// Function RotWord()
 			{
-				const uint8_t u8tmp = tempa[0];
-				tempa[0] = tempa[1];
-				tempa[1] = tempa[2];
-				tempa[2] = tempa[3];
-				tempa[3] = u8tmp;
+				const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
+				tempa[0] = u8tmp1;
+				tempa[1] = u8tmp2;
+				tempa[2] = u8tmp3;
+				tempa[3] = u8tmp0;
 			}
 
-			// SubWord() is a function that takes a four-byte input word and 
+			// SubWord() is a function that takes a four-byte input word and
 			// applies the S-box to each of the four bytes to produce an output word.
 
 			// Function Subword()
@@ -209,10 +204,10 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 				tempa[2] = getSBoxValue(tempa[2]);
 				tempa[3] = getSBoxValue(tempa[3]);
 			}
-			tempa[0] = tempa[0] ^ Rcon[i/Nk];
+			tempa[0] = tempa[0] ^ Rcon[s / cnt];
 		}
 #if defined(AES256) && (AES256 == 1)
-		if (i % Nk == 4)
+		if (s % cnt == 4)
 		{
 			// Function Subword()
 			{
@@ -223,14 +218,13 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 			}
 		}
 #endif
-		j = i * 4; k=(i - Nk) * 4;
-		RoundKey[j + 0] = RoundKey[k + 0] ^ tempa[0];
-		RoundKey[j + 1] = RoundKey[k + 1] ^ tempa[1];
-		RoundKey[j + 2] = RoundKey[k + 2] ^ tempa[2];
-		RoundKey[j + 3] = RoundKey[k + 3] ^ tempa[3];
-		//    printf("RK[%d+0] = %x, RK[%d+0] = %x, RK[%d+0] = %x, RK[%d+0] = %x\n", j,RoundKey[j + 0], j+1,RoundKey[j + 1],
-		//    	j+2, RoundKey[j + 2], j+3, RoundKey[j + 3]);
-
+		j = s;
+		k = s - cnt;
+		uint8_t tmp0 = RoundKey[k], tmp1 = RoundKey[k+1], tmp2 = RoundKey[k+2], tmp3 = RoundKey[k+3];
+		RoundKey[j] = tmp0 ^ tempa[0];
+		RoundKey[j + 1] = tmp1 ^ tempa[1];
+		RoundKey[j + 2] = tmp2 ^ tempa[2];
+		RoundKey[j + 3] = tmp3 ^ tempa[3];
 	}
 }
 
