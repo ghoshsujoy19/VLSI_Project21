@@ -586,34 +586,28 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2 ;
  uint8_t tempa[4];
 
-#pragma HLS ARRAY_RESHAPE variable=sbox cyclic factor=4 dim=1
-#pragma HLS ARRAY_RESHAPE variable=rsbox cyclic factor=4 dim=1
-#pragma HLS ARRAY_RESHAPE variable=Key cyclic factor=4 dim=1
-#pragma HLS ARRAY_RESHAPE variable=RoundKey cyclic factor=4 dim=1
-#pragma HLS ARRAY_RESHAPE variable=tempa complete dim=1
+#pragma HLS ARRAY_PARTITION variable=sbox cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=rsbox cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
+
+ for (j=0;j<16;j++){
 #pragma HLS pipeline
-
- for (j = 0; j < cnt; j += 4)
- {
-  RoundKey[j] = Key[j];
-  RoundKey[j + 1] = Key[j + 1];
-  RoundKey[j + 2] = Key[j + 2];
-  RoundKey[j + 3] = Key[j + 3];
+#pragma HLS unroll factor=16
+ RoundKey[j] = Key[j];
  }
-
-
-
 
 
  for (s = cnt; s < cnt2; s+=4)
  {
-  {
-   k = s-4;
-   tempa[0] = RoundKey[k + 0];
-   tempa[1] = RoundKey[k + 1];
-   tempa[2] = RoundKey[k + 2];
-   tempa[3] = RoundKey[k + 3];
-  }
+#pragma HLS pipeline
+#pragma HLS unroll factor=4
+#pragma HLS dependence variable=RoundKey inter true
+ tempa[0] = RoundKey[s-4];
+  tempa[1] = RoundKey[s-3];
+  tempa[2] = RoundKey[s-2];
+  tempa[3] = RoundKey[s-1];
 
   if (s % cnt == 0)
   {
@@ -621,34 +615,28 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 
 
 
-   {
-    const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
-    tempa[0] = u8tmp1;
-    tempa[1] = u8tmp2;
-    tempa[2] = u8tmp3;
-    tempa[3] = u8tmp0;
-   }
+   const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
+   tempa[0] = u8tmp1;
+   tempa[1] = u8tmp2;
+   tempa[2] = u8tmp3;
+   tempa[3] = u8tmp0;
 
 
 
 
 
-   {
-    tempa[0] = (sbox[(tempa[0])]);
-    tempa[1] = (sbox[(tempa[1])]);
-    tempa[2] = (sbox[(tempa[2])]);
-    tempa[3] = (sbox[(tempa[3])]);
-   }
-   tempa[0] = tempa[0] ^ Rcon[s / cnt];
+   tempa[0] = (sbox[(tempa[0])]) ^ Rcon[s / cnt];
+   tempa[1] = (sbox[(tempa[1])]);
+   tempa[2] = (sbox[(tempa[2])]);
+   tempa[3] = (sbox[(tempa[3])]);
+
+
   }
-# 224 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-  j = s;
-  k = s - cnt;
-  uint8_t tmp0 = RoundKey[k], tmp1 = RoundKey[k+1], tmp2 = RoundKey[k+2], tmp3 = RoundKey[k+3];
-  RoundKey[j] = tmp0 ^ tempa[0];
-  RoundKey[j + 1] = tmp1 ^ tempa[1];
-  RoundKey[j + 2] = tmp2 ^ tempa[2];
-  RoundKey[j + 3] = tmp3 ^ tempa[3];
+# 213 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+  RoundKey[s] = RoundKey[s-16] ^ tempa[0];
+  RoundKey[s + 1] = RoundKey[s-15] ^ tempa[1];
+  RoundKey[s + 2] = RoundKey[s-14] ^ tempa[2];
+  RoundKey[s + 3] = RoundKey[s-13] ^ tempa[3];
  }
 }
 
@@ -656,43 +644,43 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 #ifndef HLS_FASTSIM
 #include "apatb_KeyExpansion.h"
 #endif
-# 234 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 220 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_init_ctx(struct AES_ctx* ctx, const uint8_t* key)
 {
  
 #ifndef HLS_FASTSIM
 #define KeyExpansion AESL_WRAP_KeyExpansion
 #endif
-# 236 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 222 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 KeyExpansion(ctx->RoundKey, key);
 #undef KeyExpansion
-# 236 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 222 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 }
 #endif
-# 237 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 223 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
 #include "apatb_KeyExpansion.h"
 #endif
-# 239 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 225 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_init_ctx_iv(struct AES_ctx* ctx, const uint8_t* key, const uint8_t* iv)
 {
  
 #ifndef HLS_FASTSIM
 #define KeyExpansion AESL_WRAP_KeyExpansion
 #endif
-# 241 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 227 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 KeyExpansion(ctx->RoundKey, key);
 #undef KeyExpansion
-# 241 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 227 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
  memcpy (ctx->Iv, iv, 16);
 }
 #endif
-# 243 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 229 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 {
@@ -779,7 +767,7 @@ MixColumns_label36:for (i = 0; i < 4; ++i)
       Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
      }
 }
-# 357 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 343 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -893,7 +881,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 478 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 464 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -965,7 +953,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 557 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 543 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

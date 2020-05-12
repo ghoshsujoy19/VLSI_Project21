@@ -14,27 +14,191 @@
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
 
-`define AESL_MEM_RoundKey AESL_automem_RoundKey
-`define AESL_MEM_INST_RoundKey mem_inst_RoundKey
-`define AESL_MEM_Key AESL_automem_Key
-`define AESL_MEM_INST_Key mem_inst_Key
-`define AUTOTB_TVIN_RoundKey  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey.dat"
-`define AUTOTB_TVIN_Key  "../tv/cdatafile/c.KeyExpansion.autotvin_Key.dat"
-`define AUTOTB_TVIN_RoundKey_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey.dat"
-`define AUTOTB_TVIN_Key_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key.dat"
-`define AUTOTB_TVOUT_RoundKey  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey.dat"
-`define AUTOTB_TVOUT_RoundKey_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey.dat"
+`define AESL_MEM_RoundKey_0 AESL_automem_RoundKey_0
+`define AESL_MEM_INST_RoundKey_0 mem_inst_RoundKey_0
+`define AESL_MEM_RoundKey_1 AESL_automem_RoundKey_1
+`define AESL_MEM_INST_RoundKey_1 mem_inst_RoundKey_1
+`define AESL_MEM_RoundKey_2 AESL_automem_RoundKey_2
+`define AESL_MEM_INST_RoundKey_2 mem_inst_RoundKey_2
+`define AESL_MEM_RoundKey_3 AESL_automem_RoundKey_3
+`define AESL_MEM_INST_RoundKey_3 mem_inst_RoundKey_3
+`define AESL_MEM_RoundKey_4 AESL_automem_RoundKey_4
+`define AESL_MEM_INST_RoundKey_4 mem_inst_RoundKey_4
+`define AESL_MEM_RoundKey_5 AESL_automem_RoundKey_5
+`define AESL_MEM_INST_RoundKey_5 mem_inst_RoundKey_5
+`define AESL_MEM_RoundKey_6 AESL_automem_RoundKey_6
+`define AESL_MEM_INST_RoundKey_6 mem_inst_RoundKey_6
+`define AESL_MEM_RoundKey_7 AESL_automem_RoundKey_7
+`define AESL_MEM_INST_RoundKey_7 mem_inst_RoundKey_7
+`define AESL_MEM_RoundKey_8 AESL_automem_RoundKey_8
+`define AESL_MEM_INST_RoundKey_8 mem_inst_RoundKey_8
+`define AESL_MEM_RoundKey_9 AESL_automem_RoundKey_9
+`define AESL_MEM_INST_RoundKey_9 mem_inst_RoundKey_9
+`define AESL_MEM_RoundKey_10 AESL_automem_RoundKey_10
+`define AESL_MEM_INST_RoundKey_10 mem_inst_RoundKey_10
+`define AESL_MEM_RoundKey_11 AESL_automem_RoundKey_11
+`define AESL_MEM_INST_RoundKey_11 mem_inst_RoundKey_11
+`define AESL_MEM_RoundKey_12 AESL_automem_RoundKey_12
+`define AESL_MEM_INST_RoundKey_12 mem_inst_RoundKey_12
+`define AESL_MEM_RoundKey_13 AESL_automem_RoundKey_13
+`define AESL_MEM_INST_RoundKey_13 mem_inst_RoundKey_13
+`define AESL_MEM_RoundKey_14 AESL_automem_RoundKey_14
+`define AESL_MEM_INST_RoundKey_14 mem_inst_RoundKey_14
+`define AESL_MEM_RoundKey_15 AESL_automem_RoundKey_15
+`define AESL_MEM_INST_RoundKey_15 mem_inst_RoundKey_15
+`define AESL_DEPTH_Key_0 1
+`define AESL_DEPTH_Key_1 1
+`define AESL_DEPTH_Key_2 1
+`define AESL_DEPTH_Key_3 1
+`define AESL_DEPTH_Key_4 1
+`define AESL_DEPTH_Key_5 1
+`define AESL_DEPTH_Key_6 1
+`define AESL_DEPTH_Key_7 1
+`define AESL_DEPTH_Key_8 1
+`define AESL_DEPTH_Key_9 1
+`define AESL_DEPTH_Key_10 1
+`define AESL_DEPTH_Key_11 1
+`define AESL_DEPTH_Key_12 1
+`define AESL_DEPTH_Key_13 1
+`define AESL_DEPTH_Key_14 1
+`define AESL_DEPTH_Key_15 1
+`define AUTOTB_TVIN_RoundKey_0  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_0.dat"
+`define AUTOTB_TVIN_RoundKey_1  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_1.dat"
+`define AUTOTB_TVIN_RoundKey_2  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_2.dat"
+`define AUTOTB_TVIN_RoundKey_3  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_3.dat"
+`define AUTOTB_TVIN_RoundKey_4  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_4.dat"
+`define AUTOTB_TVIN_RoundKey_5  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_5.dat"
+`define AUTOTB_TVIN_RoundKey_6  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_6.dat"
+`define AUTOTB_TVIN_RoundKey_7  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_7.dat"
+`define AUTOTB_TVIN_RoundKey_8  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_8.dat"
+`define AUTOTB_TVIN_RoundKey_9  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_9.dat"
+`define AUTOTB_TVIN_RoundKey_10  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_10.dat"
+`define AUTOTB_TVIN_RoundKey_11  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_11.dat"
+`define AUTOTB_TVIN_RoundKey_12  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_12.dat"
+`define AUTOTB_TVIN_RoundKey_13  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_13.dat"
+`define AUTOTB_TVIN_RoundKey_14  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_14.dat"
+`define AUTOTB_TVIN_RoundKey_15  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_15.dat"
+`define AUTOTB_TVIN_Key_0  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_0.dat"
+`define AUTOTB_TVIN_Key_1  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_1.dat"
+`define AUTOTB_TVIN_Key_2  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_2.dat"
+`define AUTOTB_TVIN_Key_3  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_3.dat"
+`define AUTOTB_TVIN_Key_4  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_4.dat"
+`define AUTOTB_TVIN_Key_5  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_5.dat"
+`define AUTOTB_TVIN_Key_6  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_6.dat"
+`define AUTOTB_TVIN_Key_7  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_7.dat"
+`define AUTOTB_TVIN_Key_8  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_8.dat"
+`define AUTOTB_TVIN_Key_9  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_9.dat"
+`define AUTOTB_TVIN_Key_10  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_10.dat"
+`define AUTOTB_TVIN_Key_11  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_11.dat"
+`define AUTOTB_TVIN_Key_12  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_12.dat"
+`define AUTOTB_TVIN_Key_13  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_13.dat"
+`define AUTOTB_TVIN_Key_14  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_14.dat"
+`define AUTOTB_TVIN_Key_15  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_15.dat"
+`define AUTOTB_TVIN_RoundKey_0_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_0.dat"
+`define AUTOTB_TVIN_RoundKey_1_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_1.dat"
+`define AUTOTB_TVIN_RoundKey_2_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_2.dat"
+`define AUTOTB_TVIN_RoundKey_3_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_3.dat"
+`define AUTOTB_TVIN_RoundKey_4_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_4.dat"
+`define AUTOTB_TVIN_RoundKey_5_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_5.dat"
+`define AUTOTB_TVIN_RoundKey_6_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_6.dat"
+`define AUTOTB_TVIN_RoundKey_7_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_7.dat"
+`define AUTOTB_TVIN_RoundKey_8_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_8.dat"
+`define AUTOTB_TVIN_RoundKey_9_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_9.dat"
+`define AUTOTB_TVIN_RoundKey_10_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_10.dat"
+`define AUTOTB_TVIN_RoundKey_11_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_11.dat"
+`define AUTOTB_TVIN_RoundKey_12_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_12.dat"
+`define AUTOTB_TVIN_RoundKey_13_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_13.dat"
+`define AUTOTB_TVIN_RoundKey_14_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_14.dat"
+`define AUTOTB_TVIN_RoundKey_15_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_RoundKey_15.dat"
+`define AUTOTB_TVIN_Key_0_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_0.dat"
+`define AUTOTB_TVIN_Key_1_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_1.dat"
+`define AUTOTB_TVIN_Key_2_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_2.dat"
+`define AUTOTB_TVIN_Key_3_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_3.dat"
+`define AUTOTB_TVIN_Key_4_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_4.dat"
+`define AUTOTB_TVIN_Key_5_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_5.dat"
+`define AUTOTB_TVIN_Key_6_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_6.dat"
+`define AUTOTB_TVIN_Key_7_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_7.dat"
+`define AUTOTB_TVIN_Key_8_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_8.dat"
+`define AUTOTB_TVIN_Key_9_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_9.dat"
+`define AUTOTB_TVIN_Key_10_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_10.dat"
+`define AUTOTB_TVIN_Key_11_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_11.dat"
+`define AUTOTB_TVIN_Key_12_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_12.dat"
+`define AUTOTB_TVIN_Key_13_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_13.dat"
+`define AUTOTB_TVIN_Key_14_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_14.dat"
+`define AUTOTB_TVIN_Key_15_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvin_Key_15.dat"
+`define AUTOTB_TVOUT_RoundKey_0  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_0.dat"
+`define AUTOTB_TVOUT_RoundKey_1  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_1.dat"
+`define AUTOTB_TVOUT_RoundKey_2  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_2.dat"
+`define AUTOTB_TVOUT_RoundKey_3  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_3.dat"
+`define AUTOTB_TVOUT_RoundKey_4  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_4.dat"
+`define AUTOTB_TVOUT_RoundKey_5  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_5.dat"
+`define AUTOTB_TVOUT_RoundKey_6  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_6.dat"
+`define AUTOTB_TVOUT_RoundKey_7  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_7.dat"
+`define AUTOTB_TVOUT_RoundKey_8  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_8.dat"
+`define AUTOTB_TVOUT_RoundKey_9  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_9.dat"
+`define AUTOTB_TVOUT_RoundKey_10  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_10.dat"
+`define AUTOTB_TVOUT_RoundKey_11  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_11.dat"
+`define AUTOTB_TVOUT_RoundKey_12  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_12.dat"
+`define AUTOTB_TVOUT_RoundKey_13  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_13.dat"
+`define AUTOTB_TVOUT_RoundKey_14  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_14.dat"
+`define AUTOTB_TVOUT_RoundKey_15  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_15.dat"
+`define AUTOTB_TVOUT_RoundKey_0_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_0.dat"
+`define AUTOTB_TVOUT_RoundKey_1_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_1.dat"
+`define AUTOTB_TVOUT_RoundKey_2_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_2.dat"
+`define AUTOTB_TVOUT_RoundKey_3_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_3.dat"
+`define AUTOTB_TVOUT_RoundKey_4_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_4.dat"
+`define AUTOTB_TVOUT_RoundKey_5_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_5.dat"
+`define AUTOTB_TVOUT_RoundKey_6_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_6.dat"
+`define AUTOTB_TVOUT_RoundKey_7_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_7.dat"
+`define AUTOTB_TVOUT_RoundKey_8_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_8.dat"
+`define AUTOTB_TVOUT_RoundKey_9_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_9.dat"
+`define AUTOTB_TVOUT_RoundKey_10_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_10.dat"
+`define AUTOTB_TVOUT_RoundKey_11_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_11.dat"
+`define AUTOTB_TVOUT_RoundKey_12_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_12.dat"
+`define AUTOTB_TVOUT_RoundKey_13_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_13.dat"
+`define AUTOTB_TVOUT_RoundKey_14_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_14.dat"
+`define AUTOTB_TVOUT_RoundKey_15_out_wrapc  "../tv/rtldatafile/rtl.KeyExpansion.autotvout_RoundKey_15.dat"
 module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 7;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 23;
-parameter LENGTH_RoundKey = 60;
-parameter LENGTH_Key = 4;
+parameter LATENCY_ESTIMATION = 43;
+parameter LENGTH_RoundKey_0 = 15;
+parameter LENGTH_RoundKey_1 = 15;
+parameter LENGTH_RoundKey_2 = 15;
+parameter LENGTH_RoundKey_3 = 15;
+parameter LENGTH_RoundKey_4 = 15;
+parameter LENGTH_RoundKey_5 = 15;
+parameter LENGTH_RoundKey_6 = 15;
+parameter LENGTH_RoundKey_7 = 15;
+parameter LENGTH_RoundKey_8 = 15;
+parameter LENGTH_RoundKey_9 = 15;
+parameter LENGTH_RoundKey_10 = 15;
+parameter LENGTH_RoundKey_11 = 15;
+parameter LENGTH_RoundKey_12 = 15;
+parameter LENGTH_RoundKey_13 = 15;
+parameter LENGTH_RoundKey_14 = 15;
+parameter LENGTH_RoundKey_15 = 15;
+parameter LENGTH_Key_0 = 1;
+parameter LENGTH_Key_1 = 1;
+parameter LENGTH_Key_2 = 1;
+parameter LENGTH_Key_3 = 1;
+parameter LENGTH_Key_4 = 1;
+parameter LENGTH_Key_5 = 1;
+parameter LENGTH_Key_6 = 1;
+parameter LENGTH_Key_7 = 1;
+parameter LENGTH_Key_8 = 1;
+parameter LENGTH_Key_9 = 1;
+parameter LENGTH_Key_10 = 1;
+parameter LENGTH_Key_11 = 1;
+parameter LENGTH_Key_12 = 1;
+parameter LENGTH_Key_13 = 1;
+parameter LENGTH_Key_14 = 1;
+parameter LENGTH_Key_15 = 1;
 
 task read_token;
     input integer fp;
-    output reg [159 : 0] token;
+    output reg [183 : 0] token;
     integer ret;
     begin
         token = "";
@@ -64,20 +228,102 @@ wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
-wire [5 : 0] RoundKey_address0;
-wire  RoundKey_ce0;
-wire  RoundKey_we0;
-wire [31 : 0] RoundKey_d0;
-wire [5 : 0] RoundKey_address1;
-wire  RoundKey_ce1;
-wire  RoundKey_we1;
-wire [31 : 0] RoundKey_d1;
-wire [1 : 0] Key_address0;
-wire  Key_ce0;
-wire [31 : 0] Key_q0;
-wire [1 : 0] Key_address1;
-wire  Key_ce1;
-wire [31 : 0] Key_q1;
+wire [3 : 0] RoundKey_0_address0;
+wire  RoundKey_0_ce0;
+wire  RoundKey_0_we0;
+wire [7 : 0] RoundKey_0_d0;
+wire [7 : 0] RoundKey_0_q0;
+wire [3 : 0] RoundKey_1_address0;
+wire  RoundKey_1_ce0;
+wire  RoundKey_1_we0;
+wire [7 : 0] RoundKey_1_d0;
+wire [7 : 0] RoundKey_1_q0;
+wire [3 : 0] RoundKey_2_address0;
+wire  RoundKey_2_ce0;
+wire  RoundKey_2_we0;
+wire [7 : 0] RoundKey_2_d0;
+wire [7 : 0] RoundKey_2_q0;
+wire [3 : 0] RoundKey_3_address0;
+wire  RoundKey_3_ce0;
+wire  RoundKey_3_we0;
+wire [7 : 0] RoundKey_3_d0;
+wire [7 : 0] RoundKey_3_q0;
+wire [3 : 0] RoundKey_4_address0;
+wire  RoundKey_4_ce0;
+wire  RoundKey_4_we0;
+wire [7 : 0] RoundKey_4_d0;
+wire [7 : 0] RoundKey_4_q0;
+wire [3 : 0] RoundKey_5_address0;
+wire  RoundKey_5_ce0;
+wire  RoundKey_5_we0;
+wire [7 : 0] RoundKey_5_d0;
+wire [7 : 0] RoundKey_5_q0;
+wire [3 : 0] RoundKey_6_address0;
+wire  RoundKey_6_ce0;
+wire  RoundKey_6_we0;
+wire [7 : 0] RoundKey_6_d0;
+wire [7 : 0] RoundKey_6_q0;
+wire [3 : 0] RoundKey_7_address0;
+wire  RoundKey_7_ce0;
+wire  RoundKey_7_we0;
+wire [7 : 0] RoundKey_7_d0;
+wire [7 : 0] RoundKey_7_q0;
+wire [3 : 0] RoundKey_8_address0;
+wire  RoundKey_8_ce0;
+wire  RoundKey_8_we0;
+wire [7 : 0] RoundKey_8_d0;
+wire [7 : 0] RoundKey_8_q0;
+wire [3 : 0] RoundKey_9_address0;
+wire  RoundKey_9_ce0;
+wire  RoundKey_9_we0;
+wire [7 : 0] RoundKey_9_d0;
+wire [7 : 0] RoundKey_9_q0;
+wire [3 : 0] RoundKey_10_address0;
+wire  RoundKey_10_ce0;
+wire  RoundKey_10_we0;
+wire [7 : 0] RoundKey_10_d0;
+wire [7 : 0] RoundKey_10_q0;
+wire [3 : 0] RoundKey_11_address0;
+wire  RoundKey_11_ce0;
+wire  RoundKey_11_we0;
+wire [7 : 0] RoundKey_11_d0;
+wire [7 : 0] RoundKey_11_q0;
+wire [3 : 0] RoundKey_12_address0;
+wire  RoundKey_12_ce0;
+wire  RoundKey_12_we0;
+wire [7 : 0] RoundKey_12_d0;
+wire [7 : 0] RoundKey_12_q0;
+wire [3 : 0] RoundKey_13_address0;
+wire  RoundKey_13_ce0;
+wire  RoundKey_13_we0;
+wire [7 : 0] RoundKey_13_d0;
+wire [7 : 0] RoundKey_13_q0;
+wire [3 : 0] RoundKey_14_address0;
+wire  RoundKey_14_ce0;
+wire  RoundKey_14_we0;
+wire [7 : 0] RoundKey_14_d0;
+wire [7 : 0] RoundKey_14_q0;
+wire [3 : 0] RoundKey_15_address0;
+wire  RoundKey_15_ce0;
+wire  RoundKey_15_we0;
+wire [7 : 0] RoundKey_15_d0;
+wire [7 : 0] RoundKey_15_q0;
+wire [7 : 0] Key_0;
+wire [7 : 0] Key_1;
+wire [7 : 0] Key_2;
+wire [7 : 0] Key_3;
+wire [7 : 0] Key_4;
+wire [7 : 0] Key_5;
+wire [7 : 0] Key_6;
+wire [7 : 0] Key_7;
+wire [7 : 0] Key_8;
+wire [7 : 0] Key_9;
+wire [7 : 0] Key_10;
+wire [7 : 0] Key_11;
+wire [7 : 0] Key_12;
+wire [7 : 0] Key_13;
+wire [7 : 0] Key_14;
+wire [7 : 0] Key_15;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -99,20 +345,102 @@ wire ap_rst_n;
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
-    .RoundKey_address0(RoundKey_address0),
-    .RoundKey_ce0(RoundKey_ce0),
-    .RoundKey_we0(RoundKey_we0),
-    .RoundKey_d0(RoundKey_d0),
-    .RoundKey_address1(RoundKey_address1),
-    .RoundKey_ce1(RoundKey_ce1),
-    .RoundKey_we1(RoundKey_we1),
-    .RoundKey_d1(RoundKey_d1),
-    .Key_address0(Key_address0),
-    .Key_ce0(Key_ce0),
-    .Key_q0(Key_q0),
-    .Key_address1(Key_address1),
-    .Key_ce1(Key_ce1),
-    .Key_q1(Key_q1));
+    .RoundKey_0_address0(RoundKey_0_address0),
+    .RoundKey_0_ce0(RoundKey_0_ce0),
+    .RoundKey_0_we0(RoundKey_0_we0),
+    .RoundKey_0_d0(RoundKey_0_d0),
+    .RoundKey_0_q0(RoundKey_0_q0),
+    .RoundKey_1_address0(RoundKey_1_address0),
+    .RoundKey_1_ce0(RoundKey_1_ce0),
+    .RoundKey_1_we0(RoundKey_1_we0),
+    .RoundKey_1_d0(RoundKey_1_d0),
+    .RoundKey_1_q0(RoundKey_1_q0),
+    .RoundKey_2_address0(RoundKey_2_address0),
+    .RoundKey_2_ce0(RoundKey_2_ce0),
+    .RoundKey_2_we0(RoundKey_2_we0),
+    .RoundKey_2_d0(RoundKey_2_d0),
+    .RoundKey_2_q0(RoundKey_2_q0),
+    .RoundKey_3_address0(RoundKey_3_address0),
+    .RoundKey_3_ce0(RoundKey_3_ce0),
+    .RoundKey_3_we0(RoundKey_3_we0),
+    .RoundKey_3_d0(RoundKey_3_d0),
+    .RoundKey_3_q0(RoundKey_3_q0),
+    .RoundKey_4_address0(RoundKey_4_address0),
+    .RoundKey_4_ce0(RoundKey_4_ce0),
+    .RoundKey_4_we0(RoundKey_4_we0),
+    .RoundKey_4_d0(RoundKey_4_d0),
+    .RoundKey_4_q0(RoundKey_4_q0),
+    .RoundKey_5_address0(RoundKey_5_address0),
+    .RoundKey_5_ce0(RoundKey_5_ce0),
+    .RoundKey_5_we0(RoundKey_5_we0),
+    .RoundKey_5_d0(RoundKey_5_d0),
+    .RoundKey_5_q0(RoundKey_5_q0),
+    .RoundKey_6_address0(RoundKey_6_address0),
+    .RoundKey_6_ce0(RoundKey_6_ce0),
+    .RoundKey_6_we0(RoundKey_6_we0),
+    .RoundKey_6_d0(RoundKey_6_d0),
+    .RoundKey_6_q0(RoundKey_6_q0),
+    .RoundKey_7_address0(RoundKey_7_address0),
+    .RoundKey_7_ce0(RoundKey_7_ce0),
+    .RoundKey_7_we0(RoundKey_7_we0),
+    .RoundKey_7_d0(RoundKey_7_d0),
+    .RoundKey_7_q0(RoundKey_7_q0),
+    .RoundKey_8_address0(RoundKey_8_address0),
+    .RoundKey_8_ce0(RoundKey_8_ce0),
+    .RoundKey_8_we0(RoundKey_8_we0),
+    .RoundKey_8_d0(RoundKey_8_d0),
+    .RoundKey_8_q0(RoundKey_8_q0),
+    .RoundKey_9_address0(RoundKey_9_address0),
+    .RoundKey_9_ce0(RoundKey_9_ce0),
+    .RoundKey_9_we0(RoundKey_9_we0),
+    .RoundKey_9_d0(RoundKey_9_d0),
+    .RoundKey_9_q0(RoundKey_9_q0),
+    .RoundKey_10_address0(RoundKey_10_address0),
+    .RoundKey_10_ce0(RoundKey_10_ce0),
+    .RoundKey_10_we0(RoundKey_10_we0),
+    .RoundKey_10_d0(RoundKey_10_d0),
+    .RoundKey_10_q0(RoundKey_10_q0),
+    .RoundKey_11_address0(RoundKey_11_address0),
+    .RoundKey_11_ce0(RoundKey_11_ce0),
+    .RoundKey_11_we0(RoundKey_11_we0),
+    .RoundKey_11_d0(RoundKey_11_d0),
+    .RoundKey_11_q0(RoundKey_11_q0),
+    .RoundKey_12_address0(RoundKey_12_address0),
+    .RoundKey_12_ce0(RoundKey_12_ce0),
+    .RoundKey_12_we0(RoundKey_12_we0),
+    .RoundKey_12_d0(RoundKey_12_d0),
+    .RoundKey_12_q0(RoundKey_12_q0),
+    .RoundKey_13_address0(RoundKey_13_address0),
+    .RoundKey_13_ce0(RoundKey_13_ce0),
+    .RoundKey_13_we0(RoundKey_13_we0),
+    .RoundKey_13_d0(RoundKey_13_d0),
+    .RoundKey_13_q0(RoundKey_13_q0),
+    .RoundKey_14_address0(RoundKey_14_address0),
+    .RoundKey_14_ce0(RoundKey_14_ce0),
+    .RoundKey_14_we0(RoundKey_14_we0),
+    .RoundKey_14_d0(RoundKey_14_d0),
+    .RoundKey_14_q0(RoundKey_14_q0),
+    .RoundKey_15_address0(RoundKey_15_address0),
+    .RoundKey_15_ce0(RoundKey_15_ce0),
+    .RoundKey_15_we0(RoundKey_15_we0),
+    .RoundKey_15_d0(RoundKey_15_d0),
+    .RoundKey_15_q0(RoundKey_15_q0),
+    .Key_0(Key_0),
+    .Key_1(Key_1),
+    .Key_2(Key_2),
+    .Key_3(Key_3),
+    .Key_4(Key_4),
+    .Key_5(Key_5),
+    .Key_6(Key_6),
+    .Key_7(Key_7),
+    .Key_8(Key_8),
+    .Key_9(Key_9),
+    .Key_10(Key_10),
+    .Key_11(Key_11),
+    .Key_12(Key_12),
+    .Key_13(Key_13),
+    .Key_14(Key_14),
+    .Key_15(Key_15));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -144,88 +472,1508 @@ assign AESL_continue = tb_continue;
             end
         end
     end
-//------------------------arrayRoundKey Instantiation--------------
+//------------------------arrayRoundKey_0 Instantiation--------------
 
-// The input and output of arrayRoundKey
-wire    arrayRoundKey_ce0, arrayRoundKey_ce1;
-wire    arrayRoundKey_we0, arrayRoundKey_we1;
-wire    [5 : 0]    arrayRoundKey_address0, arrayRoundKey_address1;
-wire    [31 : 0]    arrayRoundKey_din0, arrayRoundKey_din1;
-wire    [31 : 0]    arrayRoundKey_dout0, arrayRoundKey_dout1;
-wire    arrayRoundKey_ready;
-wire    arrayRoundKey_done;
+// The input and output of arrayRoundKey_0
+wire    arrayRoundKey_0_ce0, arrayRoundKey_0_ce1;
+wire    arrayRoundKey_0_we0, arrayRoundKey_0_we1;
+wire    [3 : 0]    arrayRoundKey_0_address0, arrayRoundKey_0_address1;
+wire    [7 : 0]    arrayRoundKey_0_din0, arrayRoundKey_0_din1;
+wire    [7 : 0]    arrayRoundKey_0_dout0, arrayRoundKey_0_dout1;
+wire    arrayRoundKey_0_ready;
+wire    arrayRoundKey_0_done;
 
-`AESL_MEM_RoundKey `AESL_MEM_INST_RoundKey(
+`AESL_MEM_RoundKey_0 `AESL_MEM_INST_RoundKey_0(
     .clk        (AESL_clock),
     .rst        (AESL_reset),
-    .ce0        (arrayRoundKey_ce0),
-    .we0        (arrayRoundKey_we0),
-    .address0   (arrayRoundKey_address0),
-    .din0       (arrayRoundKey_din0),
-    .dout0      (arrayRoundKey_dout0),
-    .ce1        (arrayRoundKey_ce1),
-    .we1        (arrayRoundKey_we1),
-    .address1   (arrayRoundKey_address1),
-    .din1       (arrayRoundKey_din1),
-    .dout1      (arrayRoundKey_dout1),
-    .ready      (arrayRoundKey_ready),
-    .done    (arrayRoundKey_done)
+    .ce0        (arrayRoundKey_0_ce0),
+    .we0        (arrayRoundKey_0_we0),
+    .address0   (arrayRoundKey_0_address0),
+    .din0       (arrayRoundKey_0_din0),
+    .dout0      (arrayRoundKey_0_dout0),
+    .ce1        (arrayRoundKey_0_ce1),
+    .we1        (arrayRoundKey_0_we1),
+    .address1   (arrayRoundKey_0_address1),
+    .din1       (arrayRoundKey_0_din1),
+    .dout1      (arrayRoundKey_0_dout1),
+    .ready      (arrayRoundKey_0_ready),
+    .done    (arrayRoundKey_0_done)
 );
 
-// Assignment between dut and arrayRoundKey
-assign arrayRoundKey_address0 = RoundKey_address0;
-assign arrayRoundKey_ce0 = RoundKey_ce0;
-assign arrayRoundKey_we0 = RoundKey_we0;
-assign arrayRoundKey_din0 = RoundKey_d0;
-assign arrayRoundKey_address1 = RoundKey_address1;
-assign arrayRoundKey_ce1 = RoundKey_ce1;
-assign arrayRoundKey_we1 = RoundKey_we1;
-assign arrayRoundKey_din1 = RoundKey_d1;
-assign arrayRoundKey_ready= ready_initial | arrayRoundKey_done;
-assign arrayRoundKey_done =    AESL_done_delay;
+// Assignment between dut and arrayRoundKey_0
+assign arrayRoundKey_0_address0 = RoundKey_0_address0;
+assign arrayRoundKey_0_ce0 = RoundKey_0_ce0;
+assign RoundKey_0_q0 = arrayRoundKey_0_dout0;
+assign arrayRoundKey_0_we0 = RoundKey_0_we0;
+assign arrayRoundKey_0_din0 = RoundKey_0_d0;
+assign arrayRoundKey_0_we1 = 0;
+assign arrayRoundKey_0_din1 = 0;
+assign arrayRoundKey_0_ready= ready;
+assign arrayRoundKey_0_done = interface_done;
 
 
-//------------------------arrayKey Instantiation--------------
+//------------------------arrayRoundKey_1 Instantiation--------------
 
-// The input and output of arrayKey
-wire    arrayKey_ce0, arrayKey_ce1;
-wire    arrayKey_we0, arrayKey_we1;
-wire    [1 : 0]    arrayKey_address0, arrayKey_address1;
-wire    [31 : 0]    arrayKey_din0, arrayKey_din1;
-wire    [31 : 0]    arrayKey_dout0, arrayKey_dout1;
-wire    arrayKey_ready;
-wire    arrayKey_done;
+// The input and output of arrayRoundKey_1
+wire    arrayRoundKey_1_ce0, arrayRoundKey_1_ce1;
+wire    arrayRoundKey_1_we0, arrayRoundKey_1_we1;
+wire    [3 : 0]    arrayRoundKey_1_address0, arrayRoundKey_1_address1;
+wire    [7 : 0]    arrayRoundKey_1_din0, arrayRoundKey_1_din1;
+wire    [7 : 0]    arrayRoundKey_1_dout0, arrayRoundKey_1_dout1;
+wire    arrayRoundKey_1_ready;
+wire    arrayRoundKey_1_done;
 
-`AESL_MEM_Key `AESL_MEM_INST_Key(
+`AESL_MEM_RoundKey_1 `AESL_MEM_INST_RoundKey_1(
     .clk        (AESL_clock),
     .rst        (AESL_reset),
-    .ce0        (arrayKey_ce0),
-    .we0        (arrayKey_we0),
-    .address0   (arrayKey_address0),
-    .din0       (arrayKey_din0),
-    .dout0      (arrayKey_dout0),
-    .ce1        (arrayKey_ce1),
-    .we1        (arrayKey_we1),
-    .address1   (arrayKey_address1),
-    .din1       (arrayKey_din1),
-    .dout1      (arrayKey_dout1),
-    .ready      (arrayKey_ready),
-    .done    (arrayKey_done)
+    .ce0        (arrayRoundKey_1_ce0),
+    .we0        (arrayRoundKey_1_we0),
+    .address0   (arrayRoundKey_1_address0),
+    .din0       (arrayRoundKey_1_din0),
+    .dout0      (arrayRoundKey_1_dout0),
+    .ce1        (arrayRoundKey_1_ce1),
+    .we1        (arrayRoundKey_1_we1),
+    .address1   (arrayRoundKey_1_address1),
+    .din1       (arrayRoundKey_1_din1),
+    .dout1      (arrayRoundKey_1_dout1),
+    .ready      (arrayRoundKey_1_ready),
+    .done    (arrayRoundKey_1_done)
 );
 
-// Assignment between dut and arrayKey
-assign arrayKey_address0 = Key_address0;
-assign arrayKey_ce0 = Key_ce0;
-assign Key_q0 = arrayKey_dout0;
-assign arrayKey_we0 = 0;
-assign arrayKey_din0 = 0;
-assign arrayKey_address1 = Key_address1;
-assign arrayKey_ce1 = Key_ce1;
-assign Key_q1 = arrayKey_dout1;
-assign arrayKey_we1 = 0;
-assign arrayKey_din1 = 0;
-assign arrayKey_ready=    ready;
-assign arrayKey_done = 0;
+// Assignment between dut and arrayRoundKey_1
+assign arrayRoundKey_1_address0 = RoundKey_1_address0;
+assign arrayRoundKey_1_ce0 = RoundKey_1_ce0;
+assign RoundKey_1_q0 = arrayRoundKey_1_dout0;
+assign arrayRoundKey_1_we0 = RoundKey_1_we0;
+assign arrayRoundKey_1_din0 = RoundKey_1_d0;
+assign arrayRoundKey_1_we1 = 0;
+assign arrayRoundKey_1_din1 = 0;
+assign arrayRoundKey_1_ready= ready;
+assign arrayRoundKey_1_done = interface_done;
+
+
+//------------------------arrayRoundKey_2 Instantiation--------------
+
+// The input and output of arrayRoundKey_2
+wire    arrayRoundKey_2_ce0, arrayRoundKey_2_ce1;
+wire    arrayRoundKey_2_we0, arrayRoundKey_2_we1;
+wire    [3 : 0]    arrayRoundKey_2_address0, arrayRoundKey_2_address1;
+wire    [7 : 0]    arrayRoundKey_2_din0, arrayRoundKey_2_din1;
+wire    [7 : 0]    arrayRoundKey_2_dout0, arrayRoundKey_2_dout1;
+wire    arrayRoundKey_2_ready;
+wire    arrayRoundKey_2_done;
+
+`AESL_MEM_RoundKey_2 `AESL_MEM_INST_RoundKey_2(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_2_ce0),
+    .we0        (arrayRoundKey_2_we0),
+    .address0   (arrayRoundKey_2_address0),
+    .din0       (arrayRoundKey_2_din0),
+    .dout0      (arrayRoundKey_2_dout0),
+    .ce1        (arrayRoundKey_2_ce1),
+    .we1        (arrayRoundKey_2_we1),
+    .address1   (arrayRoundKey_2_address1),
+    .din1       (arrayRoundKey_2_din1),
+    .dout1      (arrayRoundKey_2_dout1),
+    .ready      (arrayRoundKey_2_ready),
+    .done    (arrayRoundKey_2_done)
+);
+
+// Assignment between dut and arrayRoundKey_2
+assign arrayRoundKey_2_address0 = RoundKey_2_address0;
+assign arrayRoundKey_2_ce0 = RoundKey_2_ce0;
+assign RoundKey_2_q0 = arrayRoundKey_2_dout0;
+assign arrayRoundKey_2_we0 = RoundKey_2_we0;
+assign arrayRoundKey_2_din0 = RoundKey_2_d0;
+assign arrayRoundKey_2_we1 = 0;
+assign arrayRoundKey_2_din1 = 0;
+assign arrayRoundKey_2_ready= ready;
+assign arrayRoundKey_2_done = interface_done;
+
+
+//------------------------arrayRoundKey_3 Instantiation--------------
+
+// The input and output of arrayRoundKey_3
+wire    arrayRoundKey_3_ce0, arrayRoundKey_3_ce1;
+wire    arrayRoundKey_3_we0, arrayRoundKey_3_we1;
+wire    [3 : 0]    arrayRoundKey_3_address0, arrayRoundKey_3_address1;
+wire    [7 : 0]    arrayRoundKey_3_din0, arrayRoundKey_3_din1;
+wire    [7 : 0]    arrayRoundKey_3_dout0, arrayRoundKey_3_dout1;
+wire    arrayRoundKey_3_ready;
+wire    arrayRoundKey_3_done;
+
+`AESL_MEM_RoundKey_3 `AESL_MEM_INST_RoundKey_3(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_3_ce0),
+    .we0        (arrayRoundKey_3_we0),
+    .address0   (arrayRoundKey_3_address0),
+    .din0       (arrayRoundKey_3_din0),
+    .dout0      (arrayRoundKey_3_dout0),
+    .ce1        (arrayRoundKey_3_ce1),
+    .we1        (arrayRoundKey_3_we1),
+    .address1   (arrayRoundKey_3_address1),
+    .din1       (arrayRoundKey_3_din1),
+    .dout1      (arrayRoundKey_3_dout1),
+    .ready      (arrayRoundKey_3_ready),
+    .done    (arrayRoundKey_3_done)
+);
+
+// Assignment between dut and arrayRoundKey_3
+assign arrayRoundKey_3_address0 = RoundKey_3_address0;
+assign arrayRoundKey_3_ce0 = RoundKey_3_ce0;
+assign RoundKey_3_q0 = arrayRoundKey_3_dout0;
+assign arrayRoundKey_3_we0 = RoundKey_3_we0;
+assign arrayRoundKey_3_din0 = RoundKey_3_d0;
+assign arrayRoundKey_3_we1 = 0;
+assign arrayRoundKey_3_din1 = 0;
+assign arrayRoundKey_3_ready= ready;
+assign arrayRoundKey_3_done = interface_done;
+
+
+//------------------------arrayRoundKey_4 Instantiation--------------
+
+// The input and output of arrayRoundKey_4
+wire    arrayRoundKey_4_ce0, arrayRoundKey_4_ce1;
+wire    arrayRoundKey_4_we0, arrayRoundKey_4_we1;
+wire    [3 : 0]    arrayRoundKey_4_address0, arrayRoundKey_4_address1;
+wire    [7 : 0]    arrayRoundKey_4_din0, arrayRoundKey_4_din1;
+wire    [7 : 0]    arrayRoundKey_4_dout0, arrayRoundKey_4_dout1;
+wire    arrayRoundKey_4_ready;
+wire    arrayRoundKey_4_done;
+
+`AESL_MEM_RoundKey_4 `AESL_MEM_INST_RoundKey_4(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_4_ce0),
+    .we0        (arrayRoundKey_4_we0),
+    .address0   (arrayRoundKey_4_address0),
+    .din0       (arrayRoundKey_4_din0),
+    .dout0      (arrayRoundKey_4_dout0),
+    .ce1        (arrayRoundKey_4_ce1),
+    .we1        (arrayRoundKey_4_we1),
+    .address1   (arrayRoundKey_4_address1),
+    .din1       (arrayRoundKey_4_din1),
+    .dout1      (arrayRoundKey_4_dout1),
+    .ready      (arrayRoundKey_4_ready),
+    .done    (arrayRoundKey_4_done)
+);
+
+// Assignment between dut and arrayRoundKey_4
+assign arrayRoundKey_4_address0 = RoundKey_4_address0;
+assign arrayRoundKey_4_ce0 = RoundKey_4_ce0;
+assign RoundKey_4_q0 = arrayRoundKey_4_dout0;
+assign arrayRoundKey_4_we0 = RoundKey_4_we0;
+assign arrayRoundKey_4_din0 = RoundKey_4_d0;
+assign arrayRoundKey_4_we1 = 0;
+assign arrayRoundKey_4_din1 = 0;
+assign arrayRoundKey_4_ready= ready;
+assign arrayRoundKey_4_done = interface_done;
+
+
+//------------------------arrayRoundKey_5 Instantiation--------------
+
+// The input and output of arrayRoundKey_5
+wire    arrayRoundKey_5_ce0, arrayRoundKey_5_ce1;
+wire    arrayRoundKey_5_we0, arrayRoundKey_5_we1;
+wire    [3 : 0]    arrayRoundKey_5_address0, arrayRoundKey_5_address1;
+wire    [7 : 0]    arrayRoundKey_5_din0, arrayRoundKey_5_din1;
+wire    [7 : 0]    arrayRoundKey_5_dout0, arrayRoundKey_5_dout1;
+wire    arrayRoundKey_5_ready;
+wire    arrayRoundKey_5_done;
+
+`AESL_MEM_RoundKey_5 `AESL_MEM_INST_RoundKey_5(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_5_ce0),
+    .we0        (arrayRoundKey_5_we0),
+    .address0   (arrayRoundKey_5_address0),
+    .din0       (arrayRoundKey_5_din0),
+    .dout0      (arrayRoundKey_5_dout0),
+    .ce1        (arrayRoundKey_5_ce1),
+    .we1        (arrayRoundKey_5_we1),
+    .address1   (arrayRoundKey_5_address1),
+    .din1       (arrayRoundKey_5_din1),
+    .dout1      (arrayRoundKey_5_dout1),
+    .ready      (arrayRoundKey_5_ready),
+    .done    (arrayRoundKey_5_done)
+);
+
+// Assignment between dut and arrayRoundKey_5
+assign arrayRoundKey_5_address0 = RoundKey_5_address0;
+assign arrayRoundKey_5_ce0 = RoundKey_5_ce0;
+assign RoundKey_5_q0 = arrayRoundKey_5_dout0;
+assign arrayRoundKey_5_we0 = RoundKey_5_we0;
+assign arrayRoundKey_5_din0 = RoundKey_5_d0;
+assign arrayRoundKey_5_we1 = 0;
+assign arrayRoundKey_5_din1 = 0;
+assign arrayRoundKey_5_ready= ready;
+assign arrayRoundKey_5_done = interface_done;
+
+
+//------------------------arrayRoundKey_6 Instantiation--------------
+
+// The input and output of arrayRoundKey_6
+wire    arrayRoundKey_6_ce0, arrayRoundKey_6_ce1;
+wire    arrayRoundKey_6_we0, arrayRoundKey_6_we1;
+wire    [3 : 0]    arrayRoundKey_6_address0, arrayRoundKey_6_address1;
+wire    [7 : 0]    arrayRoundKey_6_din0, arrayRoundKey_6_din1;
+wire    [7 : 0]    arrayRoundKey_6_dout0, arrayRoundKey_6_dout1;
+wire    arrayRoundKey_6_ready;
+wire    arrayRoundKey_6_done;
+
+`AESL_MEM_RoundKey_6 `AESL_MEM_INST_RoundKey_6(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_6_ce0),
+    .we0        (arrayRoundKey_6_we0),
+    .address0   (arrayRoundKey_6_address0),
+    .din0       (arrayRoundKey_6_din0),
+    .dout0      (arrayRoundKey_6_dout0),
+    .ce1        (arrayRoundKey_6_ce1),
+    .we1        (arrayRoundKey_6_we1),
+    .address1   (arrayRoundKey_6_address1),
+    .din1       (arrayRoundKey_6_din1),
+    .dout1      (arrayRoundKey_6_dout1),
+    .ready      (arrayRoundKey_6_ready),
+    .done    (arrayRoundKey_6_done)
+);
+
+// Assignment between dut and arrayRoundKey_6
+assign arrayRoundKey_6_address0 = RoundKey_6_address0;
+assign arrayRoundKey_6_ce0 = RoundKey_6_ce0;
+assign RoundKey_6_q0 = arrayRoundKey_6_dout0;
+assign arrayRoundKey_6_we0 = RoundKey_6_we0;
+assign arrayRoundKey_6_din0 = RoundKey_6_d0;
+assign arrayRoundKey_6_we1 = 0;
+assign arrayRoundKey_6_din1 = 0;
+assign arrayRoundKey_6_ready= ready;
+assign arrayRoundKey_6_done = interface_done;
+
+
+//------------------------arrayRoundKey_7 Instantiation--------------
+
+// The input and output of arrayRoundKey_7
+wire    arrayRoundKey_7_ce0, arrayRoundKey_7_ce1;
+wire    arrayRoundKey_7_we0, arrayRoundKey_7_we1;
+wire    [3 : 0]    arrayRoundKey_7_address0, arrayRoundKey_7_address1;
+wire    [7 : 0]    arrayRoundKey_7_din0, arrayRoundKey_7_din1;
+wire    [7 : 0]    arrayRoundKey_7_dout0, arrayRoundKey_7_dout1;
+wire    arrayRoundKey_7_ready;
+wire    arrayRoundKey_7_done;
+
+`AESL_MEM_RoundKey_7 `AESL_MEM_INST_RoundKey_7(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_7_ce0),
+    .we0        (arrayRoundKey_7_we0),
+    .address0   (arrayRoundKey_7_address0),
+    .din0       (arrayRoundKey_7_din0),
+    .dout0      (arrayRoundKey_7_dout0),
+    .ce1        (arrayRoundKey_7_ce1),
+    .we1        (arrayRoundKey_7_we1),
+    .address1   (arrayRoundKey_7_address1),
+    .din1       (arrayRoundKey_7_din1),
+    .dout1      (arrayRoundKey_7_dout1),
+    .ready      (arrayRoundKey_7_ready),
+    .done    (arrayRoundKey_7_done)
+);
+
+// Assignment between dut and arrayRoundKey_7
+assign arrayRoundKey_7_address0 = RoundKey_7_address0;
+assign arrayRoundKey_7_ce0 = RoundKey_7_ce0;
+assign RoundKey_7_q0 = arrayRoundKey_7_dout0;
+assign arrayRoundKey_7_we0 = RoundKey_7_we0;
+assign arrayRoundKey_7_din0 = RoundKey_7_d0;
+assign arrayRoundKey_7_we1 = 0;
+assign arrayRoundKey_7_din1 = 0;
+assign arrayRoundKey_7_ready= ready;
+assign arrayRoundKey_7_done = interface_done;
+
+
+//------------------------arrayRoundKey_8 Instantiation--------------
+
+// The input and output of arrayRoundKey_8
+wire    arrayRoundKey_8_ce0, arrayRoundKey_8_ce1;
+wire    arrayRoundKey_8_we0, arrayRoundKey_8_we1;
+wire    [3 : 0]    arrayRoundKey_8_address0, arrayRoundKey_8_address1;
+wire    [7 : 0]    arrayRoundKey_8_din0, arrayRoundKey_8_din1;
+wire    [7 : 0]    arrayRoundKey_8_dout0, arrayRoundKey_8_dout1;
+wire    arrayRoundKey_8_ready;
+wire    arrayRoundKey_8_done;
+
+`AESL_MEM_RoundKey_8 `AESL_MEM_INST_RoundKey_8(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_8_ce0),
+    .we0        (arrayRoundKey_8_we0),
+    .address0   (arrayRoundKey_8_address0),
+    .din0       (arrayRoundKey_8_din0),
+    .dout0      (arrayRoundKey_8_dout0),
+    .ce1        (arrayRoundKey_8_ce1),
+    .we1        (arrayRoundKey_8_we1),
+    .address1   (arrayRoundKey_8_address1),
+    .din1       (arrayRoundKey_8_din1),
+    .dout1      (arrayRoundKey_8_dout1),
+    .ready      (arrayRoundKey_8_ready),
+    .done    (arrayRoundKey_8_done)
+);
+
+// Assignment between dut and arrayRoundKey_8
+assign arrayRoundKey_8_address0 = RoundKey_8_address0;
+assign arrayRoundKey_8_ce0 = RoundKey_8_ce0;
+assign RoundKey_8_q0 = arrayRoundKey_8_dout0;
+assign arrayRoundKey_8_we0 = RoundKey_8_we0;
+assign arrayRoundKey_8_din0 = RoundKey_8_d0;
+assign arrayRoundKey_8_we1 = 0;
+assign arrayRoundKey_8_din1 = 0;
+assign arrayRoundKey_8_ready= ready;
+assign arrayRoundKey_8_done = interface_done;
+
+
+//------------------------arrayRoundKey_9 Instantiation--------------
+
+// The input and output of arrayRoundKey_9
+wire    arrayRoundKey_9_ce0, arrayRoundKey_9_ce1;
+wire    arrayRoundKey_9_we0, arrayRoundKey_9_we1;
+wire    [3 : 0]    arrayRoundKey_9_address0, arrayRoundKey_9_address1;
+wire    [7 : 0]    arrayRoundKey_9_din0, arrayRoundKey_9_din1;
+wire    [7 : 0]    arrayRoundKey_9_dout0, arrayRoundKey_9_dout1;
+wire    arrayRoundKey_9_ready;
+wire    arrayRoundKey_9_done;
+
+`AESL_MEM_RoundKey_9 `AESL_MEM_INST_RoundKey_9(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_9_ce0),
+    .we0        (arrayRoundKey_9_we0),
+    .address0   (arrayRoundKey_9_address0),
+    .din0       (arrayRoundKey_9_din0),
+    .dout0      (arrayRoundKey_9_dout0),
+    .ce1        (arrayRoundKey_9_ce1),
+    .we1        (arrayRoundKey_9_we1),
+    .address1   (arrayRoundKey_9_address1),
+    .din1       (arrayRoundKey_9_din1),
+    .dout1      (arrayRoundKey_9_dout1),
+    .ready      (arrayRoundKey_9_ready),
+    .done    (arrayRoundKey_9_done)
+);
+
+// Assignment between dut and arrayRoundKey_9
+assign arrayRoundKey_9_address0 = RoundKey_9_address0;
+assign arrayRoundKey_9_ce0 = RoundKey_9_ce0;
+assign RoundKey_9_q0 = arrayRoundKey_9_dout0;
+assign arrayRoundKey_9_we0 = RoundKey_9_we0;
+assign arrayRoundKey_9_din0 = RoundKey_9_d0;
+assign arrayRoundKey_9_we1 = 0;
+assign arrayRoundKey_9_din1 = 0;
+assign arrayRoundKey_9_ready= ready;
+assign arrayRoundKey_9_done = interface_done;
+
+
+//------------------------arrayRoundKey_10 Instantiation--------------
+
+// The input and output of arrayRoundKey_10
+wire    arrayRoundKey_10_ce0, arrayRoundKey_10_ce1;
+wire    arrayRoundKey_10_we0, arrayRoundKey_10_we1;
+wire    [3 : 0]    arrayRoundKey_10_address0, arrayRoundKey_10_address1;
+wire    [7 : 0]    arrayRoundKey_10_din0, arrayRoundKey_10_din1;
+wire    [7 : 0]    arrayRoundKey_10_dout0, arrayRoundKey_10_dout1;
+wire    arrayRoundKey_10_ready;
+wire    arrayRoundKey_10_done;
+
+`AESL_MEM_RoundKey_10 `AESL_MEM_INST_RoundKey_10(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_10_ce0),
+    .we0        (arrayRoundKey_10_we0),
+    .address0   (arrayRoundKey_10_address0),
+    .din0       (arrayRoundKey_10_din0),
+    .dout0      (arrayRoundKey_10_dout0),
+    .ce1        (arrayRoundKey_10_ce1),
+    .we1        (arrayRoundKey_10_we1),
+    .address1   (arrayRoundKey_10_address1),
+    .din1       (arrayRoundKey_10_din1),
+    .dout1      (arrayRoundKey_10_dout1),
+    .ready      (arrayRoundKey_10_ready),
+    .done    (arrayRoundKey_10_done)
+);
+
+// Assignment between dut and arrayRoundKey_10
+assign arrayRoundKey_10_address0 = RoundKey_10_address0;
+assign arrayRoundKey_10_ce0 = RoundKey_10_ce0;
+assign RoundKey_10_q0 = arrayRoundKey_10_dout0;
+assign arrayRoundKey_10_we0 = RoundKey_10_we0;
+assign arrayRoundKey_10_din0 = RoundKey_10_d0;
+assign arrayRoundKey_10_we1 = 0;
+assign arrayRoundKey_10_din1 = 0;
+assign arrayRoundKey_10_ready= ready;
+assign arrayRoundKey_10_done = interface_done;
+
+
+//------------------------arrayRoundKey_11 Instantiation--------------
+
+// The input and output of arrayRoundKey_11
+wire    arrayRoundKey_11_ce0, arrayRoundKey_11_ce1;
+wire    arrayRoundKey_11_we0, arrayRoundKey_11_we1;
+wire    [3 : 0]    arrayRoundKey_11_address0, arrayRoundKey_11_address1;
+wire    [7 : 0]    arrayRoundKey_11_din0, arrayRoundKey_11_din1;
+wire    [7 : 0]    arrayRoundKey_11_dout0, arrayRoundKey_11_dout1;
+wire    arrayRoundKey_11_ready;
+wire    arrayRoundKey_11_done;
+
+`AESL_MEM_RoundKey_11 `AESL_MEM_INST_RoundKey_11(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_11_ce0),
+    .we0        (arrayRoundKey_11_we0),
+    .address0   (arrayRoundKey_11_address0),
+    .din0       (arrayRoundKey_11_din0),
+    .dout0      (arrayRoundKey_11_dout0),
+    .ce1        (arrayRoundKey_11_ce1),
+    .we1        (arrayRoundKey_11_we1),
+    .address1   (arrayRoundKey_11_address1),
+    .din1       (arrayRoundKey_11_din1),
+    .dout1      (arrayRoundKey_11_dout1),
+    .ready      (arrayRoundKey_11_ready),
+    .done    (arrayRoundKey_11_done)
+);
+
+// Assignment between dut and arrayRoundKey_11
+assign arrayRoundKey_11_address0 = RoundKey_11_address0;
+assign arrayRoundKey_11_ce0 = RoundKey_11_ce0;
+assign RoundKey_11_q0 = arrayRoundKey_11_dout0;
+assign arrayRoundKey_11_we0 = RoundKey_11_we0;
+assign arrayRoundKey_11_din0 = RoundKey_11_d0;
+assign arrayRoundKey_11_we1 = 0;
+assign arrayRoundKey_11_din1 = 0;
+assign arrayRoundKey_11_ready= ready;
+assign arrayRoundKey_11_done = interface_done;
+
+
+//------------------------arrayRoundKey_12 Instantiation--------------
+
+// The input and output of arrayRoundKey_12
+wire    arrayRoundKey_12_ce0, arrayRoundKey_12_ce1;
+wire    arrayRoundKey_12_we0, arrayRoundKey_12_we1;
+wire    [3 : 0]    arrayRoundKey_12_address0, arrayRoundKey_12_address1;
+wire    [7 : 0]    arrayRoundKey_12_din0, arrayRoundKey_12_din1;
+wire    [7 : 0]    arrayRoundKey_12_dout0, arrayRoundKey_12_dout1;
+wire    arrayRoundKey_12_ready;
+wire    arrayRoundKey_12_done;
+
+`AESL_MEM_RoundKey_12 `AESL_MEM_INST_RoundKey_12(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_12_ce0),
+    .we0        (arrayRoundKey_12_we0),
+    .address0   (arrayRoundKey_12_address0),
+    .din0       (arrayRoundKey_12_din0),
+    .dout0      (arrayRoundKey_12_dout0),
+    .ce1        (arrayRoundKey_12_ce1),
+    .we1        (arrayRoundKey_12_we1),
+    .address1   (arrayRoundKey_12_address1),
+    .din1       (arrayRoundKey_12_din1),
+    .dout1      (arrayRoundKey_12_dout1),
+    .ready      (arrayRoundKey_12_ready),
+    .done    (arrayRoundKey_12_done)
+);
+
+// Assignment between dut and arrayRoundKey_12
+assign arrayRoundKey_12_address0 = RoundKey_12_address0;
+assign arrayRoundKey_12_ce0 = RoundKey_12_ce0;
+assign RoundKey_12_q0 = arrayRoundKey_12_dout0;
+assign arrayRoundKey_12_we0 = RoundKey_12_we0;
+assign arrayRoundKey_12_din0 = RoundKey_12_d0;
+assign arrayRoundKey_12_we1 = 0;
+assign arrayRoundKey_12_din1 = 0;
+assign arrayRoundKey_12_ready= ready;
+assign arrayRoundKey_12_done = interface_done;
+
+
+//------------------------arrayRoundKey_13 Instantiation--------------
+
+// The input and output of arrayRoundKey_13
+wire    arrayRoundKey_13_ce0, arrayRoundKey_13_ce1;
+wire    arrayRoundKey_13_we0, arrayRoundKey_13_we1;
+wire    [3 : 0]    arrayRoundKey_13_address0, arrayRoundKey_13_address1;
+wire    [7 : 0]    arrayRoundKey_13_din0, arrayRoundKey_13_din1;
+wire    [7 : 0]    arrayRoundKey_13_dout0, arrayRoundKey_13_dout1;
+wire    arrayRoundKey_13_ready;
+wire    arrayRoundKey_13_done;
+
+`AESL_MEM_RoundKey_13 `AESL_MEM_INST_RoundKey_13(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_13_ce0),
+    .we0        (arrayRoundKey_13_we0),
+    .address0   (arrayRoundKey_13_address0),
+    .din0       (arrayRoundKey_13_din0),
+    .dout0      (arrayRoundKey_13_dout0),
+    .ce1        (arrayRoundKey_13_ce1),
+    .we1        (arrayRoundKey_13_we1),
+    .address1   (arrayRoundKey_13_address1),
+    .din1       (arrayRoundKey_13_din1),
+    .dout1      (arrayRoundKey_13_dout1),
+    .ready      (arrayRoundKey_13_ready),
+    .done    (arrayRoundKey_13_done)
+);
+
+// Assignment between dut and arrayRoundKey_13
+assign arrayRoundKey_13_address0 = RoundKey_13_address0;
+assign arrayRoundKey_13_ce0 = RoundKey_13_ce0;
+assign RoundKey_13_q0 = arrayRoundKey_13_dout0;
+assign arrayRoundKey_13_we0 = RoundKey_13_we0;
+assign arrayRoundKey_13_din0 = RoundKey_13_d0;
+assign arrayRoundKey_13_we1 = 0;
+assign arrayRoundKey_13_din1 = 0;
+assign arrayRoundKey_13_ready= ready;
+assign arrayRoundKey_13_done = interface_done;
+
+
+//------------------------arrayRoundKey_14 Instantiation--------------
+
+// The input and output of arrayRoundKey_14
+wire    arrayRoundKey_14_ce0, arrayRoundKey_14_ce1;
+wire    arrayRoundKey_14_we0, arrayRoundKey_14_we1;
+wire    [3 : 0]    arrayRoundKey_14_address0, arrayRoundKey_14_address1;
+wire    [7 : 0]    arrayRoundKey_14_din0, arrayRoundKey_14_din1;
+wire    [7 : 0]    arrayRoundKey_14_dout0, arrayRoundKey_14_dout1;
+wire    arrayRoundKey_14_ready;
+wire    arrayRoundKey_14_done;
+
+`AESL_MEM_RoundKey_14 `AESL_MEM_INST_RoundKey_14(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_14_ce0),
+    .we0        (arrayRoundKey_14_we0),
+    .address0   (arrayRoundKey_14_address0),
+    .din0       (arrayRoundKey_14_din0),
+    .dout0      (arrayRoundKey_14_dout0),
+    .ce1        (arrayRoundKey_14_ce1),
+    .we1        (arrayRoundKey_14_we1),
+    .address1   (arrayRoundKey_14_address1),
+    .din1       (arrayRoundKey_14_din1),
+    .dout1      (arrayRoundKey_14_dout1),
+    .ready      (arrayRoundKey_14_ready),
+    .done    (arrayRoundKey_14_done)
+);
+
+// Assignment between dut and arrayRoundKey_14
+assign arrayRoundKey_14_address0 = RoundKey_14_address0;
+assign arrayRoundKey_14_ce0 = RoundKey_14_ce0;
+assign RoundKey_14_q0 = arrayRoundKey_14_dout0;
+assign arrayRoundKey_14_we0 = RoundKey_14_we0;
+assign arrayRoundKey_14_din0 = RoundKey_14_d0;
+assign arrayRoundKey_14_we1 = 0;
+assign arrayRoundKey_14_din1 = 0;
+assign arrayRoundKey_14_ready= ready;
+assign arrayRoundKey_14_done = interface_done;
+
+
+//------------------------arrayRoundKey_15 Instantiation--------------
+
+// The input and output of arrayRoundKey_15
+wire    arrayRoundKey_15_ce0, arrayRoundKey_15_ce1;
+wire    arrayRoundKey_15_we0, arrayRoundKey_15_we1;
+wire    [3 : 0]    arrayRoundKey_15_address0, arrayRoundKey_15_address1;
+wire    [7 : 0]    arrayRoundKey_15_din0, arrayRoundKey_15_din1;
+wire    [7 : 0]    arrayRoundKey_15_dout0, arrayRoundKey_15_dout1;
+wire    arrayRoundKey_15_ready;
+wire    arrayRoundKey_15_done;
+
+`AESL_MEM_RoundKey_15 `AESL_MEM_INST_RoundKey_15(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayRoundKey_15_ce0),
+    .we0        (arrayRoundKey_15_we0),
+    .address0   (arrayRoundKey_15_address0),
+    .din0       (arrayRoundKey_15_din0),
+    .dout0      (arrayRoundKey_15_dout0),
+    .ce1        (arrayRoundKey_15_ce1),
+    .we1        (arrayRoundKey_15_we1),
+    .address1   (arrayRoundKey_15_address1),
+    .din1       (arrayRoundKey_15_din1),
+    .dout1      (arrayRoundKey_15_dout1),
+    .ready      (arrayRoundKey_15_ready),
+    .done    (arrayRoundKey_15_done)
+);
+
+// Assignment between dut and arrayRoundKey_15
+assign arrayRoundKey_15_address0 = RoundKey_15_address0;
+assign arrayRoundKey_15_ce0 = RoundKey_15_ce0;
+assign RoundKey_15_q0 = arrayRoundKey_15_dout0;
+assign arrayRoundKey_15_we0 = RoundKey_15_we0;
+assign arrayRoundKey_15_din0 = RoundKey_15_d0;
+assign arrayRoundKey_15_we1 = 0;
+assign arrayRoundKey_15_din1 = 0;
+assign arrayRoundKey_15_ready= ready;
+assign arrayRoundKey_15_done = interface_done;
+
+
+// The signal of port Key_0
+reg [7: 0] AESL_REG_Key_0 = 0;
+assign Key_0 = AESL_REG_Key_0;
+initial begin : read_file_process_Key_0
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_0,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_0);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_0);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_1
+reg [7: 0] AESL_REG_Key_1 = 0;
+assign Key_1 = AESL_REG_Key_1;
+initial begin : read_file_process_Key_1
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_1,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_1);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_1);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_2
+reg [7: 0] AESL_REG_Key_2 = 0;
+assign Key_2 = AESL_REG_Key_2;
+initial begin : read_file_process_Key_2
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_2,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_2);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_2);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_3
+reg [7: 0] AESL_REG_Key_3 = 0;
+assign Key_3 = AESL_REG_Key_3;
+initial begin : read_file_process_Key_3
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_3,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_3);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_3);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_4
+reg [7: 0] AESL_REG_Key_4 = 0;
+assign Key_4 = AESL_REG_Key_4;
+initial begin : read_file_process_Key_4
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_4,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_4);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_4);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_5
+reg [7: 0] AESL_REG_Key_5 = 0;
+assign Key_5 = AESL_REG_Key_5;
+initial begin : read_file_process_Key_5
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_5,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_5);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_5);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_6
+reg [7: 0] AESL_REG_Key_6 = 0;
+assign Key_6 = AESL_REG_Key_6;
+initial begin : read_file_process_Key_6
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_6,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_6);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_6);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_7
+reg [7: 0] AESL_REG_Key_7 = 0;
+assign Key_7 = AESL_REG_Key_7;
+initial begin : read_file_process_Key_7
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_7,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_7);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_7);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_8
+reg [7: 0] AESL_REG_Key_8 = 0;
+assign Key_8 = AESL_REG_Key_8;
+initial begin : read_file_process_Key_8
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_8,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_8);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_8);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_9
+reg [7: 0] AESL_REG_Key_9 = 0;
+assign Key_9 = AESL_REG_Key_9;
+initial begin : read_file_process_Key_9
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_9,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_9);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_9);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_10
+reg [7: 0] AESL_REG_Key_10 = 0;
+assign Key_10 = AESL_REG_Key_10;
+initial begin : read_file_process_Key_10
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_10,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_10);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_10);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_11
+reg [7: 0] AESL_REG_Key_11 = 0;
+assign Key_11 = AESL_REG_Key_11;
+initial begin : read_file_process_Key_11
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_11,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_11);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_11);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_12
+reg [7: 0] AESL_REG_Key_12 = 0;
+assign Key_12 = AESL_REG_Key_12;
+initial begin : read_file_process_Key_12
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_12,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_12);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_12);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_13
+reg [7: 0] AESL_REG_Key_13 = 0;
+assign Key_13 = AESL_REG_Key_13;
+initial begin : read_file_process_Key_13
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_13,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_13);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_13);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_14
+reg [7: 0] AESL_REG_Key_14 = 0;
+assign Key_14 = AESL_REG_Key_14;
+initial begin : read_file_process_Key_14
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_14,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_14);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_14);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+// The signal of port Key_15
+reg [7: 0] AESL_REG_Key_15 = 0;
+assign Key_15 = AESL_REG_Key_15;
+initial begin : read_file_process_Key_15
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [183  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 0);
+    fp = $fopen(`AUTOTB_TVIN_Key_15,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_Key_15);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_Key_15);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
 
 
 initial begin : generate_AESL_ready_cnt_proc
@@ -290,12 +2038,102 @@ initial begin
 end
 
 
-reg end_RoundKey;
-reg [31:0] size_RoundKey;
-reg [31:0] size_RoundKey_backup;
-reg end_Key;
-reg [31:0] size_Key;
-reg [31:0] size_Key_backup;
+reg end_RoundKey_0;
+reg [31:0] size_RoundKey_0;
+reg [31:0] size_RoundKey_0_backup;
+reg end_RoundKey_1;
+reg [31:0] size_RoundKey_1;
+reg [31:0] size_RoundKey_1_backup;
+reg end_RoundKey_2;
+reg [31:0] size_RoundKey_2;
+reg [31:0] size_RoundKey_2_backup;
+reg end_RoundKey_3;
+reg [31:0] size_RoundKey_3;
+reg [31:0] size_RoundKey_3_backup;
+reg end_RoundKey_4;
+reg [31:0] size_RoundKey_4;
+reg [31:0] size_RoundKey_4_backup;
+reg end_RoundKey_5;
+reg [31:0] size_RoundKey_5;
+reg [31:0] size_RoundKey_5_backup;
+reg end_RoundKey_6;
+reg [31:0] size_RoundKey_6;
+reg [31:0] size_RoundKey_6_backup;
+reg end_RoundKey_7;
+reg [31:0] size_RoundKey_7;
+reg [31:0] size_RoundKey_7_backup;
+reg end_RoundKey_8;
+reg [31:0] size_RoundKey_8;
+reg [31:0] size_RoundKey_8_backup;
+reg end_RoundKey_9;
+reg [31:0] size_RoundKey_9;
+reg [31:0] size_RoundKey_9_backup;
+reg end_RoundKey_10;
+reg [31:0] size_RoundKey_10;
+reg [31:0] size_RoundKey_10_backup;
+reg end_RoundKey_11;
+reg [31:0] size_RoundKey_11;
+reg [31:0] size_RoundKey_11_backup;
+reg end_RoundKey_12;
+reg [31:0] size_RoundKey_12;
+reg [31:0] size_RoundKey_12_backup;
+reg end_RoundKey_13;
+reg [31:0] size_RoundKey_13;
+reg [31:0] size_RoundKey_13_backup;
+reg end_RoundKey_14;
+reg [31:0] size_RoundKey_14;
+reg [31:0] size_RoundKey_14_backup;
+reg end_RoundKey_15;
+reg [31:0] size_RoundKey_15;
+reg [31:0] size_RoundKey_15_backup;
+reg end_Key_0;
+reg [31:0] size_Key_0;
+reg [31:0] size_Key_0_backup;
+reg end_Key_1;
+reg [31:0] size_Key_1;
+reg [31:0] size_Key_1_backup;
+reg end_Key_2;
+reg [31:0] size_Key_2;
+reg [31:0] size_Key_2_backup;
+reg end_Key_3;
+reg [31:0] size_Key_3;
+reg [31:0] size_Key_3_backup;
+reg end_Key_4;
+reg [31:0] size_Key_4;
+reg [31:0] size_Key_4_backup;
+reg end_Key_5;
+reg [31:0] size_Key_5;
+reg [31:0] size_Key_5_backup;
+reg end_Key_6;
+reg [31:0] size_Key_6;
+reg [31:0] size_Key_6_backup;
+reg end_Key_7;
+reg [31:0] size_Key_7;
+reg [31:0] size_Key_7_backup;
+reg end_Key_8;
+reg [31:0] size_Key_8;
+reg [31:0] size_Key_8_backup;
+reg end_Key_9;
+reg [31:0] size_Key_9;
+reg [31:0] size_Key_9_backup;
+reg end_Key_10;
+reg [31:0] size_Key_10;
+reg [31:0] size_Key_10_backup;
+reg end_Key_11;
+reg [31:0] size_Key_11;
+reg [31:0] size_Key_11_backup;
+reg end_Key_12;
+reg [31:0] size_Key_12;
+reg [31:0] size_Key_12_backup;
+reg end_Key_13;
+reg [31:0] size_Key_13;
+reg [31:0] size_Key_13_backup;
+reg end_Key_14;
+reg [31:0] size_Key_14;
+reg [31:0] size_Key_14_backup;
+reg end_Key_15;
+reg [31:0] size_Key_15;
+reg [31:0] size_Key_15_backup;
 
 initial begin : initial_process
     integer proc_rand;
@@ -397,14 +2235,14 @@ begin
   end
 end
 
-reg dump_tvout_finish_RoundKey;
+reg dump_tvout_finish_RoundKey_0;
 
-initial begin : dump_tvout_runtime_sign_RoundKey
+initial begin : dump_tvout_runtime_sign_RoundKey_0
     integer fp;
-    dump_tvout_finish_RoundKey = 0;
-    fp = $fopen(`AUTOTB_TVOUT_RoundKey_out_wrapc, "w");
+    dump_tvout_finish_RoundKey_0 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_0_out_wrapc, "w");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_0_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
@@ -415,15 +2253,465 @@ initial begin : dump_tvout_runtime_sign_RoundKey
     @ (posedge AESL_clock);
     @ (posedge AESL_clock);
     @ (posedge AESL_clock);
-    fp = $fopen(`AUTOTB_TVOUT_RoundKey_out_wrapc, "a");
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_0_out_wrapc, "a");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_0_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
     $fdisplay(fp,"[[[/runtime]]]");
     $fclose(fp);
-    dump_tvout_finish_RoundKey = 1;
+    dump_tvout_finish_RoundKey_0 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_1;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_1
+    integer fp;
+    dump_tvout_finish_RoundKey_1 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_1_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_1_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_1_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_1_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_1 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_2;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_2
+    integer fp;
+    dump_tvout_finish_RoundKey_2 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_2_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_2_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_2_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_2_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_2 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_3;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_3
+    integer fp;
+    dump_tvout_finish_RoundKey_3 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_3_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_3_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_3_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_3_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_3 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_4;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_4
+    integer fp;
+    dump_tvout_finish_RoundKey_4 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_4_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_4_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_4_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_4_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_4 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_5;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_5
+    integer fp;
+    dump_tvout_finish_RoundKey_5 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_5_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_5_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_5_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_5_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_5 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_6;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_6
+    integer fp;
+    dump_tvout_finish_RoundKey_6 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_6_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_6_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_6_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_6_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_6 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_7;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_7
+    integer fp;
+    dump_tvout_finish_RoundKey_7 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_7_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_7_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_7_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_7_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_7 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_8;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_8
+    integer fp;
+    dump_tvout_finish_RoundKey_8 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_8_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_8_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_8_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_8_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_8 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_9;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_9
+    integer fp;
+    dump_tvout_finish_RoundKey_9 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_9_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_9_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_9_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_9_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_9 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_10;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_10
+    integer fp;
+    dump_tvout_finish_RoundKey_10 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_10_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_10_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_10_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_10_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_10 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_11;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_11
+    integer fp;
+    dump_tvout_finish_RoundKey_11 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_11_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_11_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_11_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_11_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_11 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_12;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_12
+    integer fp;
+    dump_tvout_finish_RoundKey_12 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_12_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_12_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_12_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_12_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_12 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_13;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_13
+    integer fp;
+    dump_tvout_finish_RoundKey_13 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_13_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_13_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_13_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_13_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_13 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_14;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_14
+    integer fp;
+    dump_tvout_finish_RoundKey_14 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_14_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_14_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_14_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_14_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_14 = 1;
+end
+
+
+reg dump_tvout_finish_RoundKey_15;
+
+initial begin : dump_tvout_runtime_sign_RoundKey_15
+    integer fp;
+    dump_tvout_finish_RoundKey_15 = 0;
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_15_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_15_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_RoundKey_15_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_RoundKey_15_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_RoundKey_15 = 1;
 end
 
 
@@ -520,13 +2808,6 @@ initial begin : simulation_progress
                 end
             end
         end
-        // non-dataflow design && latency is predictable && no AXI master/slave interface
-        get_intra_progress(intra_progress);
-        if (intra_progress > 1000) begin
-            $display("// RTL Simulation : transaction %0d run-time latency is greater than %0f time(s) of the prediction @ \"%0t\"", start_cnt, intra_progress, $time);
-            $display("////////////////////////////////////////////////////////////////////////////////////");
-            $finish;
-        end
     end
     print_progress();
     $display("////////////////////////////////////////////////////////////////////////////////////");
@@ -592,7 +2873,7 @@ task calculate_performance();
                 interval_min = 0;
                 interval_total = 0;
             end else if (i < AUTOTB_TRANSACTION_NUM - 1) begin
-                interval[i] = start_timestamp[i + 1] - start_timestamp[i];
+                interval[i] = finish_timestamp[i] - start_timestamp[i]+1;
                 if (interval[i] > interval_max) interval_max = interval[i];
                 if (interval[i] < interval_min) interval_min = interval[i];
                 interval_total = interval_total + interval[i];

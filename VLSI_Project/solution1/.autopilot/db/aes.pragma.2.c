@@ -712,34 +712,28 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2 ;
  uint8_t tempa[4];
 
-_ssdm_SpecArrayReshape( &sbox, 1,  "CYCLIC",  4, "");
-_ssdm_SpecArrayReshape( &rsbox, 1,  "CYCLIC",  4, "");
-_ssdm_SpecArrayReshape( Key, 1,  "CYCLIC",  4, "");
-_ssdm_SpecArrayReshape( RoundKey, 1,  "CYCLIC",  4, "");
-_ssdm_SpecArrayReshape( tempa, 1,  "COMPLETE",  0, "");
+_ssdm_SpecArrayPartition( &sbox, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( &rsbox, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( Key, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( RoundKey, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( tempa, 1, "COMPLETE", 0, "");
+
+ for (j=0;j<16;j++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-
- for (j = 0; j < cnt; j += 4)
- {
-  RoundKey[j] = Key[j];
-  RoundKey[j + 1] = Key[j + 1];
-  RoundKey[j + 2] = Key[j + 2];
-  RoundKey[j + 3] = Key[j + 3];
+_ssdm_Unroll(1, 0, 16, "");
+ RoundKey[j] = Key[j];
  }
-
-
-
 
 
  for (s = cnt; s < cnt2; s+=4)
  {
-  {
-   k = s-4;
-   tempa[0] = RoundKey[k + 0];
-   tempa[1] = RoundKey[k + 1];
-   tempa[2] = RoundKey[k + 2];
-   tempa[3] = RoundKey[k + 3];
-  }
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+_ssdm_Unroll(1, 0, 4, "");
+_ssdm_SpecDependence( RoundKey, 0, 1, -1, 1, 1);
+ tempa[0] = RoundKey[s-4];
+  tempa[1] = RoundKey[s-3];
+  tempa[2] = RoundKey[s-2];
+  tempa[3] = RoundKey[s-1];
 
   if (s % cnt == 0)
   {
@@ -747,34 +741,28 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 
-   {
-    const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
-    tempa[0] = u8tmp1;
-    tempa[1] = u8tmp2;
-    tempa[2] = u8tmp3;
-    tempa[3] = u8tmp0;
-   }
+   const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
+   tempa[0] = u8tmp1;
+   tempa[1] = u8tmp2;
+   tempa[2] = u8tmp3;
+   tempa[3] = u8tmp0;
 
 
 
 
 
-   {
-    tempa[0] = (sbox[(tempa[0])]);
-    tempa[1] = (sbox[(tempa[1])]);
-    tempa[2] = (sbox[(tempa[2])]);
-    tempa[3] = (sbox[(tempa[3])]);
-   }
-   tempa[0] = tempa[0] ^ Rcon[s / cnt];
+   tempa[0] = (sbox[(tempa[0])]) ^ Rcon[s / cnt];
+   tempa[1] = (sbox[(tempa[1])]);
+   tempa[2] = (sbox[(tempa[2])]);
+   tempa[3] = (sbox[(tempa[3])]);
+
+
   }
-# 224 "aes.c"
-  j = s;
-  k = s - cnt;
-  uint8_t tmp0 = RoundKey[k], tmp1 = RoundKey[k+1], tmp2 = RoundKey[k+2], tmp3 = RoundKey[k+3];
-  RoundKey[j] = tmp0 ^ tempa[0];
-  RoundKey[j + 1] = tmp1 ^ tempa[1];
-  RoundKey[j + 2] = tmp2 ^ tempa[2];
-  RoundKey[j + 3] = tmp3 ^ tempa[3];
+# 213 "aes.c"
+  RoundKey[s] = RoundKey[s-16] ^ tempa[0];
+  RoundKey[s + 1] = RoundKey[s-15] ^ tempa[1];
+  RoundKey[s + 2] = RoundKey[s-14] ^ tempa[2];
+  RoundKey[s + 3] = RoundKey[s-13] ^ tempa[3];
  }
 }
 
@@ -873,7 +861,7 @@ MixColumns_label36:for (i = 0; i < 4; ++i)
       Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
      }
 }
-# 357 "aes.c"
+# 343 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -987,7 +975,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 478 "aes.c"
+# 464 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1059,7 +1047,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 557 "aes.c"
+# 543 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];
