@@ -156,9 +156,9 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 
 	#pragma HLS ARRAY_RESHAPE variable=sbox  cyclic factor=4 dim=1
 	#pragma HLS ARRAY_RESHAPE variable=rsbox cyclic factor=4 dim=1
-	#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=4 dim=1
-	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=4 dim=1
-	#pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
+	#pragma HLS ARRAY_RESHAPE variable=Key cyclic factor=4 dim=1
+	#pragma HLS ARRAY_RESHAPE variable=RoundKey cyclic factor=4 dim=1
+	#pragma HLS ARRAY_RESHAPE variable=tempa complete dim=1
 	#pragma HLS pipeline
 	// The first round key is the key itself.
 	for (j = 0; j < cnt; j += 4)
@@ -168,6 +168,9 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 		RoundKey[j + 2] = Key[j + 2];
 		RoundKey[j + 3] = Key[j + 3];
 	}
+//	for (j=0;j<cnt;j++){
+//		RoundKey[j] = Key[j];
+//	}
 
 	// All other round keys are found from the previous round keys.
 	for (s = cnt; s < cnt2; s+=4)

@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "KeyExpansion.autotb.v"
+sv xil_defaultlib "AESL_automem_Key.v"
+sv xil_defaultlib "KeyExpansion.v"
+sv xil_defaultlib "AESL_automem_RoundKey.v"
+sv xil_defaultlib "KeyExpansion_sbox.v"
+
