@@ -786,9 +786,11 @@ static void InvSubBytes(state_t* state)
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-  for (j = 0; j < 4; ++j)
+#pragma HLS unroll
+ for (j = 0; j < 4; ++j)
   {
-   (*state)[j][i] = (rsbox[((*state)[j][i])]);
+#pragma HLS unroll
+ (*state)[j][i] = (rsbox[((*state)[j][i])]);
   }
  }
 }
@@ -873,7 +875,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 494 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -945,7 +947,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 571 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 573 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

@@ -51,7 +51,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "458",
+    "Latency": "48",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -69,18 +69,12 @@
   "Files": {
     "CSource": ["..\/..\/aes.c"],
     "Vhdl": [
-      "impl\/vhdl\/InvCipher_mux_42_cud.vhd",
-      "impl\/vhdl\/InvCipher_mux_165bkb.vhd",
-      "impl\/vhdl\/InvSubBytes.vhd",
-      "impl\/vhdl\/InvSubBytes_rsbox.vhd",
+      "impl\/vhdl\/InvCipher_rsbox.vhd",
       "impl\/vhdl\/InvCipher.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/InvCipher_mux_42_cud.v",
-      "impl\/verilog\/InvCipher_mux_165bkb.v",
-      "impl\/verilog\/InvSubBytes.v",
-      "impl\/verilog\/InvSubBytes_rsbox.v",
-      "impl\/verilog\/InvSubBytes_rsbox_rom.dat",
+      "impl\/verilog\/InvCipher_rsbox.v",
+      "impl\/verilog\/InvCipher_rsbox_rom.dat",
       "impl\/verilog\/InvCipher.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -1238,86 +1232,34 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {
-      "ModuleName": "InvCipher",
-      "Instances": [{
-          "ModuleName": "InvSubBytes",
-          "InstanceName": "grp_InvSubBytes_fu_907"
-        }]
-    },
-    "Info": {
-      "InvSubBytes": {
+    "Hierarchy": {"ModuleName": "InvCipher"},
+    "Info": {"InvCipher": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
-      },
-      "InvCipher": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      }
-    },
-    "Metrics": {
-      "InvSubBytes": {
+      }},
+    "Metrics": {"InvCipher": {
         "Latency": {
-          "LatencyBest": "41",
-          "LatencyAvg": "41",
-          "LatencyWorst": "41",
-          "PipelineII": "41",
+          "LatencyBest": "48",
+          "LatencyAvg": "48",
+          "LatencyWorst": "48",
+          "PipelineII": "49",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.112"
-        },
-        "Loops": [{
-            "Name": "Loop 1",
-            "TripCount": "4",
-            "Latency": "40",
-            "PipelineII": "",
-            "PipelineDepth": "10",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "4",
-                "Latency": "8",
-                "PipelineII": "",
-                "PipelineDepth": "2"
-              }]
-          }],
-        "Area": {
-          "BRAM_18K": "1",
-          "FF": "276",
-          "LUT": "588",
-          "DSP48E": "0",
-          "URAM": "0"
-        }
-      },
-      "InvCipher": {
-        "Latency": {
-          "LatencyBest": "458",
-          "LatencyAvg": "458",
-          "LatencyWorst": "458",
-          "PipelineII": "459",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "7.050"
+          "Estimate": "6.390"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "9",
-            "Latency": "414",
+            "Latency": "45",
             "PipelineII": "",
-            "PipelineDepth": "46",
+            "PipelineDepth": "5",
             "Loops": [{
                 "Name": "Loop 1.1",
                 "TripCount": "2",
@@ -1327,14 +1269,13 @@
               }]
           }],
         "Area": {
-          "BRAM_18K": "1",
-          "FF": "546",
-          "LUT": "3001",
+          "BRAM_18K": "8",
+          "FF": "237",
+          "LUT": "2305",
           "DSP48E": "0",
           "URAM": "0"
         }
-      }
-    }
+      }}
   },
   "Sdx": {
     "Target": "none",
@@ -1346,7 +1287,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-14 00:26:45 IST",
+    "Time": "2020-05-14 00:35:02 IST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

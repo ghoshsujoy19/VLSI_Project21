@@ -49,13 +49,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher_mux_165bkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvCipher_mux_165bkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher_mux_42_cud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvCipher_mux_42_cud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvSubBytes_rsbox.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvSubBytes_rsbox_rom
-INFO: [VRFC 10-311] analyzing module InvSubBytes_rsbox
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InvCipher
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.autotb.v" into library xil_defaultlib
@@ -68,8 +61,9 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_12
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_6.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvSubBytes.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvSubBytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher_rsbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InvCipher_rsbox_rom
+INFO: [VRFC 10-311] analyzing module InvCipher_rsbox
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_10.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_10
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_14.v" into library xil_defaultlib
@@ -84,11 +78,8 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.InvSubBytes_rsbox_rom
-Compiling module xil_defaultlib.InvSubBytes_rsbox(DataWidth=8,Ad...
-Compiling module xil_defaultlib.InvCipher_mux_165bkb(ID=1,din0_W...
-Compiling module xil_defaultlib.InvCipher_mux_42_cud(ID=1,din0_W...
-Compiling module xil_defaultlib.InvSubBytes
+Compiling module xil_defaultlib.InvCipher_rsbox_rom
+Compiling module xil_defaultlib.InvCipher_rsbox(DataWidth=8,Addr...
 Compiling module xil_defaultlib.InvCipher
 Compiling module xil_defaultlib.AESL_automem_RoundKey_0
 Compiling module xil_defaultlib.AESL_automem_RoundKey_1
@@ -116,9 +107,9 @@ Built simulation snapshot InvCipher
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/InvCipher/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/InvCipher/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu May 14 00:30:49 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 3841 ; free virtual = 16890
-INFO: [Common 17-206] Exiting Webtalk at Thu May 14 00:30:49 2020...
+INFO: [Common 17-186] '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/InvCipher/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu May 14 00:36:32 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 3845 ; free virtual = 16881
+INFO: [Common 17-206] Exiting Webtalk at Thu May 14 00:36:32 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -138,15 +129,15 @@ source InvCipher.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 5 [0.00%] @ "125000"
-// RTL Simulation : 1 / 5 [100.00%] @ "4725000"
-// RTL Simulation : 2 / 5 [100.00%] @ "9315000"
-// RTL Simulation : 3 / 5 [100.00%] @ "13905000"
-// RTL Simulation : 4 / 5 [100.00%] @ "18495000"
-// RTL Simulation : 5 / 5 [100.00%] @ "23085000"
+// RTL Simulation : 1 / 5 [100.00%] @ "625000"
+// RTL Simulation : 2 / 5 [100.00%] @ "1115000"
+// RTL Simulation : 3 / 5 [100.00%] @ "1605000"
+// RTL Simulation : 4 / 5 [100.00%] @ "2095000"
+// RTL Simulation : 5 / 5 [100.00%] @ "2585000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 23125 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.autotb.v" Line 2960
+$finish called at time : 2625 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.autotb.v" Line 2960
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu May 14 00:31:14 2020...
+INFO: [Common 17-206] Exiting xsim at Thu May 14 00:36:51 2020...
 
 Testing AES128
 

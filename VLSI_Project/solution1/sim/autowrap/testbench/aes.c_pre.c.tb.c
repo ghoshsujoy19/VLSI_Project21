@@ -790,9 +790,11 @@ static void InvSubBytes(state_t* state)
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-  for (j = 0; j < 4; ++j)
+#pragma HLS unroll
+ for (j = 0; j < 4; ++j)
   {
-   (*state)[j][i] = (rsbox[((*state)[j][i])]);
+#pragma HLS unroll
+ (*state)[j][i] = (rsbox[((*state)[j][i])]);
   }
  }
 }
@@ -877,7 +879,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 494 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -888,7 +890,7 @@ void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 #ifndef HLS_FASTSIM
 #include "apatb_InvCipher.h"
 #endif
-# 498 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 500 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 {
 
@@ -896,14 +898,14 @@ void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 #ifndef HLS_FASTSIM
 #define InvCipher AESL_WRAP_InvCipher
 #endif
-# 501 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 503 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 InvCipher((state_t*)buf, ctx->RoundKey);
 #undef InvCipher
-# 501 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 503 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 }
 #endif
-# 502 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 504 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 
@@ -955,7 +957,7 @@ void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
 #ifndef HLS_FASTSIM
 #include "apatb_InvCipher.h"
 #endif
-# 549 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 551 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uintptr_t i;
@@ -967,10 +969,10 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 #ifndef HLS_FASTSIM
 #define InvCipher AESL_WRAP_InvCipher
 #endif
-# 556 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 558 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 InvCipher((state_t*)buf, ctx->RoundKey);
 #undef InvCipher
-# 556 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 558 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
   XorWithIv(buf, ctx->Iv);
   memcpy(ctx->Iv, storeNextIv, 16);
@@ -979,9 +981,9 @@ InvCipher((state_t*)buf, ctx->RoundKey);
 
 }
 #endif
-# 562 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 564 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
-# 571 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 573 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

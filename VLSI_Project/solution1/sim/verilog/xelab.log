@@ -22,13 +22,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher_mux_165bkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvCipher_mux_165bkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher_mux_42_cud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvCipher_mux_42_cud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvSubBytes_rsbox.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvSubBytes_rsbox_rom
-INFO: [VRFC 10-311] analyzing module InvSubBytes_rsbox
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InvCipher
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.autotb.v" into library xil_defaultlib
@@ -41,8 +34,9 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_12
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_6.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvSubBytes.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module InvSubBytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher_rsbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InvCipher_rsbox_rom
+INFO: [VRFC 10-311] analyzing module InvCipher_rsbox
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_10.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_10
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_14.v" into library xil_defaultlib
@@ -57,11 +51,8 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.InvSubBytes_rsbox_rom
-Compiling module xil_defaultlib.InvSubBytes_rsbox(DataWidth=8,Ad...
-Compiling module xil_defaultlib.InvCipher_mux_165bkb(ID=1,din0_W...
-Compiling module xil_defaultlib.InvCipher_mux_42_cud(ID=1,din0_W...
-Compiling module xil_defaultlib.InvSubBytes
+Compiling module xil_defaultlib.InvCipher_rsbox_rom
+Compiling module xil_defaultlib.InvCipher_rsbox(DataWidth=8,Addr...
 Compiling module xil_defaultlib.InvCipher
 Compiling module xil_defaultlib.AESL_automem_RoundKey_0
 Compiling module xil_defaultlib.AESL_automem_RoundKey_1
