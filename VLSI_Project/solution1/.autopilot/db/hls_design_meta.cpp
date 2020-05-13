@@ -103,4 +103,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("RoundKey_15_ce0", 1, hls_out, 31, "ap_memory", "mem_ce", 1),
 	Port_Property("RoundKey_15_q0", 8, hls_in, 31, "ap_memory", "mem_dout", 1),
 };
-const char* HLS_Design_Meta::dut_name = "Cipher";
+const char* HLS_Design_Meta::dut_name = "InvCipher";

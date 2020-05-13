@@ -863,25 +863,27 @@ static void MixColumns(state_t* state)
 {
 
  uint8_t i;
- uint8_t Tmp, Tm[4], t;
+ uint8_t Tmp[4], Tm[4][4], t;
 
-#pragma HLS ARRAY_PARTITION variable=&Tm complete dim=1
+#pragma HLS ARRAY_PARTITION variable=&Tm complete dim=0
+#pragma HLS ARRAY_PARTITION variable=&Tmp complete dim=1
+
  MixColumns_label36:for (i = 0; i < 4; ++i)
  {
 #pragma HLS unroll
- Tm[0] = ((*state)[i][0] ^ (*state)[i][1]);
-  Tm[1] = ((*state)[i][1] ^ (*state)[i][2]);
-  Tm[2] = ((*state)[i][2] ^ (*state)[i][3]);
-  Tm[3] = ((*state)[i][3] ^ (*state)[i][0]);
-  Tmp = Tm[0] ^ Tm[2];
+ Tm[i][0] = ((*state)[i][0] ^ (*state)[i][1]);
+  Tm[i][1] = ((*state)[i][1] ^ (*state)[i][2]);
+  Tm[i][2] = ((*state)[i][2] ^ (*state)[i][3]);
+  Tm[i][3] = ((*state)[i][3] ^ (*state)[i][0]);
+  Tmp[i] = Tm[i][0] ^ Tm[i][2];
 
-  (*state)[i][0] ^= xtime(Tm[0]) ^ Tmp ;
-  (*state)[i][1] ^= xtime(Tm[1]) ^ Tmp ;
-  (*state)[i][2] ^= xtime(Tm[2]) ^ Tmp ;
-  (*state)[i][3] ^= xtime(Tm[3]) ^ Tmp ;
+  (*state)[i][0] ^= xtime(Tm[i][0]) ^ Tmp[i];
+  (*state)[i][1] ^= xtime(Tm[i][1]) ^ Tmp[i];
+  (*state)[i][2] ^= xtime(Tm[i][2]) ^ Tmp[i];
+  (*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
  }
 }
-# 363 "aes.c"
+# 365 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -954,7 +956,6 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 
 
 
-
  Cipher_label33:for (round = 1; round < 10; ++round)
  {
 #pragma HLS pipeline
@@ -996,7 +997,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 485 "aes.c"
+# 486 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1068,7 +1069,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 564 "aes.c"
+# 565 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

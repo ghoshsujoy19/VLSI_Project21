@@ -314,22 +314,24 @@ static void MixColumns(state_t* state)
 {
 //	#pragma HLS allocation instances=XOR limit=4 operation
 	uint8_t i;
-	uint8_t Tmp, Tm[4], t;
+	uint8_t Tmp[4], Tm[4][4], t;
 //	#pragma HLS INLINE
-	#pragma HLS ARRAY_PARTITION variable=Tm complete dim=1
+	#pragma HLS ARRAY_PARTITION variable=Tm  complete dim=0
+	#pragma HLS ARRAY_PARTITION variable=Tmp complete dim=1
+
 	MixColumns_label36:for (i = 0; i < 4; ++i)
 	{
 		#pragma HLS unroll
-		Tm[0] = ((*state)[i][0] ^ (*state)[i][1]);
-		Tm[1] = ((*state)[i][1] ^ (*state)[i][2]);
-		Tm[2] = ((*state)[i][2] ^ (*state)[i][3]);
-		Tm[3] = ((*state)[i][3] ^ (*state)[i][0]);
-		Tmp = Tm[0] ^ Tm[2];
+		Tm[i][0] = ((*state)[i][0] ^ (*state)[i][1]);
+		Tm[i][1] = ((*state)[i][1] ^ (*state)[i][2]);
+		Tm[i][2] = ((*state)[i][2] ^ (*state)[i][3]);
+		Tm[i][3] = ((*state)[i][3] ^ (*state)[i][0]);
+		Tmp[i] = Tm[i][0] ^ Tm[i][2];
 
-		(*state)[i][0] ^= xtime(Tm[0]) ^ Tmp ;
-		(*state)[i][1] ^= xtime(Tm[1]) ^ Tmp ;
-		(*state)[i][2] ^= xtime(Tm[2]) ^ Tmp ;
-		(*state)[i][3] ^= xtime(Tm[3]) ^ Tmp ;
+		(*state)[i][0] ^= xtime(Tm[i][0]) ^ Tmp[i];
+		(*state)[i][1] ^= xtime(Tm[i][1]) ^ Tmp[i];
+		(*state)[i][2] ^= xtime(Tm[i][2]) ^ Tmp[i];
+		(*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
 	}
 }
 
@@ -429,7 +431,6 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 
 	// Add the First round key to the state before starting the rounds.
 	AddRoundKey(0, state, RoundKey);
-
 	// There will be Nr rounds.
 	// The first Nr-1 rounds are identical.
 	// These Nr-1 rounds are executed in the loop below.

@@ -737,25 +737,27 @@ static void MixColumns(state_t* state)
 {
 
  uint8_t i;
- uint8_t Tmp, Tm[4], t;
+ uint8_t Tmp[4], Tm[4][4], t;
 
-#pragma HLS ARRAY_PARTITION variable=Tm complete dim=1
+#pragma HLS ARRAY_PARTITION variable=Tm complete dim=0
+#pragma HLS ARRAY_PARTITION variable=Tmp complete dim=1
+
  MixColumns_label36:for (i = 0; i < 4; ++i)
  {
 #pragma HLS unroll
- Tm[0] = ((*state)[i][0] ^ (*state)[i][1]);
-  Tm[1] = ((*state)[i][1] ^ (*state)[i][2]);
-  Tm[2] = ((*state)[i][2] ^ (*state)[i][3]);
-  Tm[3] = ((*state)[i][3] ^ (*state)[i][0]);
-  Tmp = Tm[0] ^ Tm[2];
+ Tm[i][0] = ((*state)[i][0] ^ (*state)[i][1]);
+  Tm[i][1] = ((*state)[i][1] ^ (*state)[i][2]);
+  Tm[i][2] = ((*state)[i][2] ^ (*state)[i][3]);
+  Tm[i][3] = ((*state)[i][3] ^ (*state)[i][0]);
+  Tmp[i] = Tm[i][0] ^ Tm[i][2];
 
-  (*state)[i][0] ^= xtime(Tm[0]) ^ Tmp ;
-  (*state)[i][1] ^= xtime(Tm[1]) ^ Tmp ;
-  (*state)[i][2] ^= xtime(Tm[2]) ^ Tmp ;
-  (*state)[i][3] ^= xtime(Tm[3]) ^ Tmp ;
+  (*state)[i][0] ^= xtime(Tm[i][0]) ^ Tmp[i];
+  (*state)[i][1] ^= xtime(Tm[i][1]) ^ Tmp[i];
+  (*state)[i][2] ^= xtime(Tm[i][2]) ^ Tmp[i];
+  (*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
  }
 }
-# 363 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 365 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -828,7 +830,6 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 
 
 
-
  Cipher_label33:for (round = 1; round < 10; ++round)
  {
 #pragma HLS pipeline
@@ -870,59 +871,43 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 485 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_Cipher.h"
-#endif
-# 485 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 486 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
- 
-#ifndef HLS_FASTSIM
-#define Cipher AESL_WRAP_Cipher
-#endif
-# 488 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-Cipher((state_t*)buf, ctx->RoundKey);
-#undef Cipher
-# 488 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
+ Cipher((state_t*)buf, ctx->RoundKey);
 }
+
+#ifndef HLS_FASTSIM
+#ifndef HLS_FASTSIM
+#include "apatb_InvCipher.h"
 #endif
-# 489 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
-
+# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 {
 
- InvCipher((state_t*)buf, ctx->RoundKey);
-}
-
-
-
-
+ 
 #ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_Cipher.h"
+#define InvCipher AESL_WRAP_InvCipher
 #endif
-# 500 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 495 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+InvCipher((state_t*)buf, ctx->RoundKey);
+#undef InvCipher
+# 495 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
+}
+#endif
+# 496 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
+
+
+
+
 void AES_ECB_encrypt2(struct AES_ctx *ctx, state_t* buf)
 {
 
- 
-#ifndef HLS_FASTSIM
-#define Cipher AESL_WRAP_Cipher
-#endif
-# 503 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-Cipher(buf, ctx->RoundKey);
-#undef Cipher
-# 503 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
+ Cipher(buf, ctx->RoundKey);
 }
-#endif
-# 504 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
 
 void AES(struct AES_ctx* ctx, uint8_t key[16], state_t* in)
 {
@@ -944,11 +929,6 @@ static void XorWithIv(uint8_t* buf, uint8_t* Iv)
  }
 }
 
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_Cipher.h"
-#endif
-# 526 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
 {
  uintptr_t i;
@@ -956,15 +936,7 @@ void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
  for (i = 0; i < length; i += 16)
  {
   XorWithIv(buf, Iv);
-  
-#ifndef HLS_FASTSIM
-#define Cipher AESL_WRAP_Cipher
-#endif
-# 533 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-Cipher((state_t*)buf, ctx->RoundKey);
-#undef Cipher
-# 533 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
+  Cipher((state_t*)buf, ctx->RoundKey);
   Iv = buf;
   buf += 16;
 
@@ -972,10 +944,12 @@ Cipher((state_t*)buf, ctx->RoundKey);
 
  memcpy(ctx->Iv, Iv, 16);
 }
+
+#ifndef HLS_FASTSIM
+#ifndef HLS_FASTSIM
+#include "apatb_InvCipher.h"
 #endif
-# 540 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
-
+# 543 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uintptr_t i;
@@ -983,19 +957,25 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  for (i = 0; i < length; i += 16)
  {
   memcpy(storeNextIv, buf, 16);
-  InvCipher((state_t*)buf, ctx->RoundKey);
+  
+#ifndef HLS_FASTSIM
+#define InvCipher AESL_WRAP_InvCipher
+#endif
+# 550 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+InvCipher((state_t*)buf, ctx->RoundKey);
+#undef InvCipher
+# 550 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
   XorWithIv(buf, ctx->Iv);
   memcpy(ctx->Iv, storeNextIv, 16);
   buf += 16;
  }
 
 }
-# 564 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_Cipher.h"
 #endif
-# 564 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 556 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
+# 565 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];
@@ -1008,15 +988,7 @@ void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
   {
 
    memcpy(buffer, ctx->Iv, 16);
-   
-#ifndef HLS_FASTSIM
-#define Cipher AESL_WRAP_Cipher
-#endif
-# 576 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-Cipher((state_t*)buffer,ctx->RoundKey);
-#undef Cipher
-# 576 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
+   Cipher((state_t*)buffer,ctx->RoundKey);
 
 
    for (bi = (16 - 1); bi >= 0; --bi)
@@ -1036,6 +1008,3 @@ Cipher((state_t*)buffer,ctx->RoundKey);
   buf[i] = (buf[i] ^ buffer[bi]);
  }
 }
-#endif
-# 595 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-

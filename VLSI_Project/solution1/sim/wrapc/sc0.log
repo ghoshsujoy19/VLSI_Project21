@@ -1,50 +1,36 @@
    Build using "/tools/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/bin/g++"
-   Compiling apatb_Cipher.cpp
+   Compiling apatb_InvCipher.cpp
    Compiling (apcc) test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 20:19:35 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 23:28:23 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/109351589381375947638
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/173551589392704028599
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) aes.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 20:19:50 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 23:28:34 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
 In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:488:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
-Cipher((state_t*)buf, ctx->RoundKey);
-       ^~~~~~~~~~~~~
-./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
+/home/sujoy/Documents/VLSI_project/project21/aes.c:495:11: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
+InvCipher((state_t*)buf, ctx->RoundKey);
+          ^~~~~~~~~~~~~
+./apatb_InvCipher.h:7:15: note: passing argument to parameter 'state' here
 unsigned char state[4][4],
               ^
 In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:503:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
-Cipher(buf, ctx->RoundKey);
-       ^~~
-./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
+/home/sujoy/Documents/VLSI_project/project21/aes.c:550:11: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
+InvCipher((state_t*)buf, ctx->RoundKey);
+          ^~~~~~~~~~~~~
+./apatb_InvCipher.h:7:15: note: passing argument to parameter 'state' here
 unsigned char state[4][4],
               ^
-In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:533:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
-Cipher((state_t*)buf, ctx->RoundKey);
-       ^~~~~~~~~~~~~
-./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
-unsigned char state[4][4],
-              ^
-In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:576:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
-Cipher((state_t*)buffer,ctx->RoundKey);
-       ^~~~~~~~~~~~~~~~
-./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
-unsigned char state[4][4],
-              ^
-4 warnings generated.
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/110041589381390815128
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/174221589392714897306
 INFO: [APCC 202-1] APCC is done.
    Generating cosim.tv.exe

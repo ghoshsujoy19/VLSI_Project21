@@ -32,4 +32,4 @@ set depth_list {
 {RoundKey_14 15}
 {RoundKey_15 15}
 }
-set trans_num 17
+set trans_num 5

@@ -1,0 +1,247 @@
+
+
+================================================================
+== Vivado HLS Report for 'InvSubBytes'
+================================================================
+* Date:           Wed May 13 23:23:34 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        VLSI_Project
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 5.112 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       41|       41| 0.410 us | 0.410 us |   41|   41|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |       40|       40|        10|          -|          -|     4|    no    |
+        | + Loop 1.1  |        8|        8|         2|          -|          -|     4|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      42|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       0|     357|    -|
+|Memory           |        1|      -|       0|       0|    -|
+|Multiplexer      |        -|      -|       -|     189|    -|
+|Register         |        -|      -|     276|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        1|      0|     276|     588|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     2060|   2800|  607200|  303600|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |    ~0   |      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+---+----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E| FF| LUT| URAM|
+    +--------------------------+----------------------+---------+-------+---+----+-----+
+    |InvCipher_mux_165bkb_U1   |InvCipher_mux_165bkb  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U2   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U3   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U4   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U5   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U6   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U7   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U8   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U9   |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U10  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U11  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U12  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U13  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U14  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U15  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U16  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    |InvCipher_mux_42_cud_U17  |InvCipher_mux_42_cud  |        0|      0|  0|  21|    0|
+    +--------------------------+----------------------+---------+-------+---+----+-----+
+    |Total                     |                      |        0|      0|  0| 357|    0|
+    +--------------------------+----------------------+---------+-------+---+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |  Memory |       Module      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |rsbox_U  |InvSubBytes_rsbox  |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total    |                   |        1|  0|   0|    0|   256|    8|     1|         2048|
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |i_fu_393_p2           |     +    |      0|  0|  12|           3|           1|
+    |j_fu_505_p2           |     +    |      0|  0|  12|           3|           1|
+    |icmp_ln389_fu_387_p2  |   icmp   |      0|  0|   9|           3|           4|
+    |icmp_ln391_fu_499_p2  |   icmp   |      0|  0|   9|           3|           4|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0|  42|          12|          10|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  27|          5|    1|          5|
+    |i_0_reg_237         |   9|          2|    3|          6|
+    |j_0_reg_248         |   9|          2|    3|          6|
+    |state_0_0_0_fu_124  |   9|          2|    8|         16|
+    |state_0_1_0_fu_120  |   9|          2|    8|         16|
+    |state_0_2_0_fu_116  |   9|          2|    8|         16|
+    |state_0_3_0_fu_112  |   9|          2|    8|         16|
+    |state_1_0_0_fu_108  |   9|          2|    8|         16|
+    |state_1_1_0_fu_104  |   9|          2|    8|         16|
+    |state_1_2_0_fu_100  |   9|          2|    8|         16|
+    |state_1_3_0_fu_96   |   9|          2|    8|         16|
+    |state_2_0_0_fu_92   |   9|          2|    8|         16|
+    |state_2_1_0_fu_88   |   9|          2|    8|         16|
+    |state_2_2_0_fu_84   |   9|          2|    8|         16|
+    |state_2_3_0_fu_80   |   9|          2|    8|         16|
+    |state_3_0_0_fu_76   |   9|          2|    8|         16|
+    |state_3_1_0_fu_72   |   9|          2|    8|         16|
+    |state_3_2_0_fu_68   |   9|          2|    8|         16|
+    |state_3_3_0_fu_64   |   9|          2|    8|         16|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 189|         41|  135|        273|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+---+----+-----+-----------+
+    |             Name            | FF| LUT| Bits| Const Bits|
+    +-----------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                    |  4|   0|    4|          0|
+    |i_0_reg_237                  |  3|   0|    3|          0|
+    |i_reg_924                    |  3|   0|    3|          0|
+    |j_0_reg_248                  |  3|   0|    3|          0|
+    |j_reg_953                    |  3|   0|    3|          0|
+    |state_0_0_0_fu_124           |  8|   0|    8|          0|
+    |state_0_0_0_load_1_reg_1063  |  8|   0|    8|          0|
+    |state_0_1_0_fu_120           |  8|   0|    8|          0|
+    |state_0_1_0_load_1_reg_1056  |  8|   0|    8|          0|
+    |state_0_2_0_fu_116           |  8|   0|    8|          0|
+    |state_0_2_0_load_1_reg_1049  |  8|   0|    8|          0|
+    |state_0_3_0_fu_112           |  8|   0|    8|          0|
+    |state_0_3_0_load_1_reg_1042  |  8|   0|    8|          0|
+    |state_1_0_0_fu_108           |  8|   0|    8|          0|
+    |state_1_0_0_load_1_reg_1035  |  8|   0|    8|          0|
+    |state_1_1_0_fu_104           |  8|   0|    8|          0|
+    |state_1_1_0_load_1_reg_1028  |  8|   0|    8|          0|
+    |state_1_2_0_fu_100           |  8|   0|    8|          0|
+    |state_1_2_0_load_1_reg_1021  |  8|   0|    8|          0|
+    |state_1_3_0_fu_96            |  8|   0|    8|          0|
+    |state_1_3_0_load_1_reg_1014  |  8|   0|    8|          0|
+    |state_2_0_0_fu_92            |  8|   0|    8|          0|
+    |state_2_0_0_load_1_reg_1007  |  8|   0|    8|          0|
+    |state_2_1_0_fu_88            |  8|   0|    8|          0|
+    |state_2_1_0_load_1_reg_1000  |  8|   0|    8|          0|
+    |state_2_2_0_fu_84            |  8|   0|    8|          0|
+    |state_2_2_0_load_1_reg_993   |  8|   0|    8|          0|
+    |state_2_3_0_fu_80            |  8|   0|    8|          0|
+    |state_2_3_0_load_1_reg_986   |  8|   0|    8|          0|
+    |state_3_0_0_fu_76            |  8|   0|    8|          0|
+    |state_3_0_0_load_1_reg_979   |  8|   0|    8|          0|
+    |state_3_1_0_fu_72            |  8|   0|    8|          0|
+    |state_3_1_0_load_1_reg_972   |  8|   0|    8|          0|
+    |state_3_2_0_fu_68            |  8|   0|    8|          0|
+    |state_3_2_0_load_1_reg_965   |  8|   0|    8|          0|
+    |state_3_3_0_fu_64            |  8|   0|    8|          0|
+    |state_3_3_0_load_1_reg_958   |  8|   0|    8|          0|
+    |trunc_ln393_1_reg_1070       |  2|   0|    2|          0|
+    |trunc_ln393_reg_929          |  2|   0|    2|          0|
+    +-----------------------------+---+----+-----+-----------+
+    |Total                        |276|   0|  276|          0|
+    +-----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+----------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++----------------+-----+-----+------------+----------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_start        |  in |    1| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_done         | out |    1| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_idle         | out |    1| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_ready        | out |    1| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_0     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_1     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_2     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_3     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_4     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_5     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_6     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_7     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_8     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_9     | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_10    | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_11    | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_12    | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_13    | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_14    | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|ap_return_15    | out |    8| ap_ctrl_hs |   InvSubBytes  | return value |
+|state_0_0_read  |  in |    8|   ap_none  | state_0_0_read |    scalar    |
+|state_0_1_read  |  in |    8|   ap_none  | state_0_1_read |    scalar    |
+|state_0_2_read  |  in |    8|   ap_none  | state_0_2_read |    scalar    |
+|state_0_3_read  |  in |    8|   ap_none  | state_0_3_read |    scalar    |
+|state_1_0_read  |  in |    8|   ap_none  | state_1_0_read |    scalar    |
+|state_1_1_read  |  in |    8|   ap_none  | state_1_1_read |    scalar    |
+|state_1_2_read  |  in |    8|   ap_none  | state_1_2_read |    scalar    |
+|state_1_3_read  |  in |    8|   ap_none  | state_1_3_read |    scalar    |
+|state_2_0_read  |  in |    8|   ap_none  | state_2_0_read |    scalar    |
+|state_2_1_read  |  in |    8|   ap_none  | state_2_1_read |    scalar    |
+|state_2_2_read  |  in |    8|   ap_none  | state_2_2_read |    scalar    |
+|state_2_3_read  |  in |    8|   ap_none  | state_2_3_read |    scalar    |
+|state_3_0_read  |  in |    8|   ap_none  | state_3_0_read |    scalar    |
+|state_3_1_read  |  in |    8|   ap_none  | state_3_1_read |    scalar    |
+|state_3_2_read  |  in |    8|   ap_none  | state_3_2_read |    scalar    |
+|state_3_3_read  |  in |    8|   ap_none  | state_3_3_read |    scalar    |
++----------------+-----+-----+------------+----------------+--------------+
+
