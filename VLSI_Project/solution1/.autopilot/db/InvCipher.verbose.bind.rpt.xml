@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'InvCipher'" level="0">
-<item name = "Date">Wed May 13 23:30:47 2020
+<item name = "Date">Thu May 14 00:26:39 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.821 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 7.050 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,20 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">485, 485, 4.850 us, 4.850 us, 485, 485, none</column>
+<column name="">458, 458, 4.580 us, 4.580 us, 458, 458, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_InvMixColumns_fu_981">InvMixColumns, 5, 5, 50.000 ns, 50.000 ns, 5, 5, none</column>
-<column name="grp_InvSubBytes_fu_1001">InvSubBytes, 41, 41, 0.410 us, 0.410 us, 41, 41, none</column>
+<column name="grp_InvSubBytes_fu_907">InvSubBytes, 41, 41, 0.410 us, 0.410 us, 41, 41, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">441, 441, 49, -, -, 9, no</column>
+<column name="- Loop 1">414, 414, 46, -, -, 9, no</column>
+<column name=" + Loop 1.1">2, 2, 1, -, -, 2, no</column>
 </table>
 </item>
 </section>

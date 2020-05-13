@@ -60,7 +60,7 @@ For AES192/256 the key size is proportionally larger.
 // reduces code size considerably with the Keil ARM compiler.
 // See this link for more information: https://github.com/kokke/tiny-AES-C/pull/3
 #ifndef MULTIPLY_AS_A_FUNCTION
-#define MULTIPLY_AS_A_FUNCTION 1
+#define MULTIPLY_AS_A_FUNCTION 0
 #endif
 
 
@@ -365,9 +365,15 @@ static uint8_t Multiply(uint8_t x, uint8_t y)
 static void InvMixColumns(state_t* state)
 {
 	int i;
+	#pragma HLS INLINE
+	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
+//	#pragma HLS allocation instances=xor limit=60 operation
 	uint8_t a, b, c, d;
+
 	for (i = 0; i < 4; ++i)
 	{ 
+		#pragma HLS unroll factor=2
+//		#pragma HLS pipeline
 		a = (*state)[i][0];
 		b = (*state)[i][1];
 		c = (*state)[i][2];
@@ -388,8 +394,10 @@ static void InvSubBytes(state_t* state)
 	uint8_t i, j;
 	for (i = 0; i < 4; ++i)
 	{
+		#pragma HLS unroll
 		for (j = 0; j < 4; ++j)
 		{
+			#pragma HLS unroll
 			(*state)[j][i] = getSBoxInvert((*state)[j][i]);
 		}
 	}

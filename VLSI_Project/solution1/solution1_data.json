@@ -51,7 +51,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "485",
+    "Latency": "458",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -71,20 +71,16 @@
     "Vhdl": [
       "impl\/vhdl\/InvCipher_mux_42_cud.vhd",
       "impl\/vhdl\/InvCipher_mux_165bkb.vhd",
-      "impl\/vhdl\/InvMixColumns.vhd",
       "impl\/vhdl\/InvSubBytes.vhd",
       "impl\/vhdl\/InvSubBytes_rsbox.vhd",
-      "impl\/vhdl\/Multiply.vhd",
       "impl\/vhdl\/InvCipher.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/InvCipher_mux_42_cud.v",
       "impl\/verilog\/InvCipher_mux_165bkb.v",
-      "impl\/verilog\/InvMixColumns.v",
       "impl\/verilog\/InvSubBytes.v",
       "impl\/verilog\/InvSubBytes_rsbox.v",
       "impl\/verilog\/InvSubBytes_rsbox_rom.dat",
-      "impl\/verilog\/Multiply.v",
       "impl\/verilog\/InvCipher.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -1244,99 +1240,13 @@
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "InvCipher",
-      "Instances": [
-        {
-          "ModuleName": "InvMixColumns",
-          "InstanceName": "grp_InvMixColumns_fu_981",
-          "Instances": [
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_Multiply_fu_309"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_s_Multiply_fu_316"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_1_Multiply_fu_323"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_2_Multiply_fu_330"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_3_Multiply_fu_337"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_4_Multiply_fu_344"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_5_Multiply_fu_351"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_6_Multiply_fu_358"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_7_Multiply_fu_365"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_8_Multiply_fu_372"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_9_Multiply_fu_379"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_10_Multiply_fu_386"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_11_Multiply_fu_393"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_12_Multiply_fu_400"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_13_Multiply_fu_407"
-            },
-            {
-              "ModuleName": "Multiply",
-              "InstanceName": "tmp_14_Multiply_fu_414"
-            }
-          ]
-        },
-        {
+      "Instances": [{
           "ModuleName": "InvSubBytes",
-          "InstanceName": "grp_InvSubBytes_fu_1001"
-        }
-      ]
+          "InstanceName": "grp_InvSubBytes_fu_907"
+        }]
     },
     "Info": {
       "InvSubBytes": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "Multiply": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "1",
-        "isOneStateSeq": "0"
-      },
-      "InvMixColumns": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1388,82 +1298,38 @@
           "URAM": "0"
         }
       },
-      "Multiply": {
-        "Latency": {
-          "LatencyBest": "0",
-          "LatencyAvg": "0",
-          "LatencyWorst": "0",
-          "PipelineII": "0",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "2.931"
-        },
-        "Area": {
-          "FF": "0",
-          "LUT": "103",
-          "BRAM_18K": "0",
-          "DSP48E": "0",
-          "URAM": "0"
-        }
-      },
-      "InvMixColumns": {
-        "Latency": {
-          "LatencyBest": "5",
-          "LatencyAvg": "5",
-          "LatencyWorst": "5",
-          "PipelineII": "5",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "7.821"
-        },
-        "Loops": [{
-            "Name": "Loop 1",
-            "TripCount": "4",
-            "Latency": "4",
-            "PipelineII": "",
-            "PipelineDepth": "1"
-          }],
-        "Area": {
-          "FF": "261",
-          "LUT": "2497",
-          "BRAM_18K": "0",
-          "DSP48E": "0",
-          "URAM": "0"
-        }
-      },
       "InvCipher": {
         "Latency": {
-          "LatencyBest": "485",
-          "LatencyAvg": "485",
-          "LatencyWorst": "485",
-          "PipelineII": "486",
+          "LatencyBest": "458",
+          "LatencyAvg": "458",
+          "LatencyWorst": "458",
+          "PipelineII": "459",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.821"
+          "Estimate": "7.050"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "9",
-            "Latency": "441",
+            "Latency": "414",
             "PipelineII": "",
-            "PipelineDepth": "49"
+            "PipelineDepth": "46",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "2",
+                "Latency": "2",
+                "PipelineII": "",
+                "PipelineDepth": "1"
+              }]
           }],
         "Area": {
           "BRAM_18K": "1",
-          "FF": "809",
-          "LUT": "4378",
+          "FF": "546",
+          "LUT": "3001",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -1480,7 +1346,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-13 23:30:53 IST",
+    "Time": "2020-05-14 00:26:45 IST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

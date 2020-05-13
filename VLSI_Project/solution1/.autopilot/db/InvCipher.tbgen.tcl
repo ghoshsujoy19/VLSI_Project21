@@ -291,13 +291,13 @@ set NewPortList {[
  	{ "name": "RoundKey_15_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_15", "role": "q0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "38"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "InvCipher",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "485", "EstimateLatencyMax" : "485",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "458", "EstimateLatencyMax" : "458",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -305,9 +305,8 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"WaitState" : [
-			{"State" : "ap_ST_fsm_state5", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_InvMixColumns_fu_981"},
-			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_InvSubBytes_fu_1001"},
-			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_InvSubBytes_fu_1001"}],
+			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_InvSubBytes_fu_907"},
+			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_InvSubBytes_fu_907"}],
 		"Port" : [
 			{"Name" : "state_0_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "state_0_1", "Type" : "OVld", "Direction" : "IO"},
@@ -343,314 +342,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "RoundKey_15", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "rsbox", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "38", "SubInstance" : "grp_InvSubBytes_fu_1001", "Port" : "rsbox"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37"],
-		"CDFG" : "InvMixColumns",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "5", "EstimateLatencyMax" : "5",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "state_0_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_0_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_0_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_0_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_3_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_Multiply_fu_309", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_s_Multiply_fu_316", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_1_Multiply_fu_323", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_2_Multiply_fu_330", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_3_Multiply_fu_337", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_4_Multiply_fu_344", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_5_Multiply_fu_351", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_6_Multiply_fu_358", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_7_Multiply_fu_365", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_8_Multiply_fu_372", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_9_Multiply_fu_379", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_10_Multiply_fu_386", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_11_Multiply_fu_393", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_12_Multiply_fu_400", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_13_Multiply_fu_407", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.tmp_14_Multiply_fu_414", "Parent" : "1",
-		"CDFG" : "Multiply",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
-		"Combinational" : "1",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "y", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U39", "Parent" : "1"},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U40", "Parent" : "1"},
-	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U41", "Parent" : "1"},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U42", "Parent" : "1"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U43", "Parent" : "1"},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U44", "Parent" : "1"},
-	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U45", "Parent" : "1"},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U46", "Parent" : "1"},
-	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U47", "Parent" : "1"},
-	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U48", "Parent" : "1"},
-	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U49", "Parent" : "1"},
-	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U50", "Parent" : "1"},
-	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U51", "Parent" : "1"},
-	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U52", "Parent" : "1"},
-	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U53", "Parent" : "1"},
-	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U54", "Parent" : "1"},
-	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U55", "Parent" : "1"},
-	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U56", "Parent" : "1"},
-	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U57", "Parent" : "1"},
-	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvMixColumns_fu_981.InvCipher_mux_42_cud_U58", "Parent" : "1"},
-	{"ID" : "38", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001", "Parent" : "0", "Child" : ["39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56"],
+					{"ID" : "1", "SubInstance" : "grp_InvSubBytes_fu_907", "Port" : "rsbox"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"],
 		"CDFG" : "InvSubBytes",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -681,24 +374,24 @@ set RtlHierarchyInfo {[
 			{"Name" : "state_3_2_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "state_3_3_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "rsbox", "Type" : "Memory", "Direction" : "I"}]},
-	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.rsbox_U", "Parent" : "38"},
-	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_165bkb_U1", "Parent" : "38"},
-	{"ID" : "41", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U2", "Parent" : "38"},
-	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U3", "Parent" : "38"},
-	{"ID" : "43", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U4", "Parent" : "38"},
-	{"ID" : "44", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U5", "Parent" : "38"},
-	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U6", "Parent" : "38"},
-	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U7", "Parent" : "38"},
-	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U8", "Parent" : "38"},
-	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U9", "Parent" : "38"},
-	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U10", "Parent" : "38"},
-	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U11", "Parent" : "38"},
-	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U12", "Parent" : "38"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U13", "Parent" : "38"},
-	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U14", "Parent" : "38"},
-	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U15", "Parent" : "38"},
-	{"ID" : "55", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U16", "Parent" : "38"},
-	{"ID" : "56", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_1001.InvCipher_mux_42_cud_U17", "Parent" : "38"}]}
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.rsbox_U", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_165bkb_U1", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U2", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U3", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U4", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U5", "Parent" : "1"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U6", "Parent" : "1"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U7", "Parent" : "1"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U8", "Parent" : "1"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U9", "Parent" : "1"},
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U10", "Parent" : "1"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U11", "Parent" : "1"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U12", "Parent" : "1"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U13", "Parent" : "1"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U14", "Parent" : "1"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U15", "Parent" : "1"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U16", "Parent" : "1"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_InvSubBytes_fu_907.InvCipher_mux_42_cud_U17", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -736,71 +429,6 @@ set ArgLastReadFirstWriteLatency {
 		RoundKey_14 {Type I LastRead 3 FirstWrite -1}
 		RoundKey_15 {Type I LastRead 3 FirstWrite -1}
 		rsbox {Type I LastRead -1 FirstWrite -1}}
-	InvMixColumns {
-		state_0_0_read {Type I LastRead 0 FirstWrite -1}
-		state_0_1_read {Type I LastRead 0 FirstWrite -1}
-		state_0_2_read {Type I LastRead 0 FirstWrite -1}
-		state_0_3_read {Type I LastRead 0 FirstWrite -1}
-		state_1_0_read {Type I LastRead 0 FirstWrite -1}
-		state_1_1_read {Type I LastRead 0 FirstWrite -1}
-		state_1_2_read {Type I LastRead 0 FirstWrite -1}
-		state_1_3_read {Type I LastRead 0 FirstWrite -1}
-		state_2_0_read {Type I LastRead 0 FirstWrite -1}
-		state_2_1_read {Type I LastRead 0 FirstWrite -1}
-		state_2_2_read {Type I LastRead 0 FirstWrite -1}
-		state_2_3_read {Type I LastRead 0 FirstWrite -1}
-		state_3_0_read {Type I LastRead 0 FirstWrite -1}
-		state_3_1_read {Type I LastRead 0 FirstWrite -1}
-		state_3_2_read {Type I LastRead 0 FirstWrite -1}
-		state_3_3_read {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
-	Multiply {
-		x {Type I LastRead 0 FirstWrite -1}
-		y {Type I LastRead 0 FirstWrite -1}}
 	InvSubBytes {
 		state_0_0_read {Type I LastRead 0 FirstWrite -1}
 		state_0_1_read {Type I LastRead 0 FirstWrite -1}
@@ -823,8 +451,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "485", "Max" : "485"}
-	, {"Name" : "Interval", "Min" : "486", "Max" : "486"}
+	{"Name" : "Latency", "Min" : "458", "Max" : "458"}
+	, {"Name" : "Interval", "Min" : "459", "Max" : "459"}
 ]}
 
 set PipelineEnableSignalInfo {[
