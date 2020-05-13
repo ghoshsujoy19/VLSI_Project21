@@ -237,14 +237,20 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 // The round key is added to the state by an XOR function.
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
+	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
+	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
 	uint8_t i,j;
-AddRoundKey_label38:for (i = 0; i < 4; ++i)
-		    {
-AddRoundKey_label37:for (j = 0; j < 4; ++j)
-		    {
-			    (*state)[i][j] ^= RoundKey[(round * Nb * 4) + (i * Nb) + j];
-		    }
-		    }
+	const uint8_t c = 4*Nb*round;
+
+	AddRoundKey_label38:for (i = 0; i < 4; ++i)
+	{
+		#pragma HLS unroll
+		AddRoundKey_label37:for (j = 0; j < 4; ++j)
+		{
+			#pragma HLS unroll
+			(*state)[i][j] ^= RoundKey[c + (i * Nb) + j];
+		}
+	}
 }
 
 // The SubBytes Function Substitutes the values in the

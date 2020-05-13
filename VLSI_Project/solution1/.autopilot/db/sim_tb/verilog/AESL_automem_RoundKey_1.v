@@ -23,8 +23,8 @@ module AESL_automem_RoundKey_1 (
 
 //------------------------Parameter----------------------
 localparam
-    TV_IN  = "c.KeyExpansion.autotvin_RoundKey_1.dat", 
-    TV_OUT = "impl_rtl.KeyExpansion.autotvout_RoundKey_1.dat"; 
+    TV_IN  = "c.Cipher.autotvin_RoundKey_1.dat", 
+    TV_OUT = "impl_rtl.Cipher.autotvout_RoundKey_1.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 8;
 parameter ADDR_WIDTH = 32'd 4;

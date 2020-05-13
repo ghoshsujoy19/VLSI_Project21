@@ -32,12 +32,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile KeyExpansion.autotvin.dat]} {
-	file delete -force KeyExpansion.autotvin.dat
+if {[file isfile Cipher.autotvin.dat]} {
+	file delete -force Cipher.autotvin.dat
 }
 
-if {[file isfile KeyExpansion.autotvout.dat]} {
-	file delete -force KeyExpansion.autotvout.dat
+if {[file isfile Cipher.autotvout.dat]} {
+	file delete -force Cipher.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

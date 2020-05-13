@@ -11,14 +11,9 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_14_load_2', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:198) on array 'sbox_14' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_14'." projectName="VLSI_Project" solutionName="solution1" date="2020-05-13T03:42:39.878+0530" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xA;   between 'store' operation ('RoundKey_15_addr_2_write_ln216', aes.c:216) of variable 'xor_ln216_3', aes.c:216 on array 'RoundKey_15' and 'load' operation ('RoundKey_15_load', aes.c:178) on array 'RoundKey_15'." projectName="VLSI_Project" solutionName="solution1" date="2020-05-13T03:42:39.710+0530" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation ('RoundKey_0_addr_2_write_ln213', aes.c:213) of variable 'xor_ln213', aes.c:213 on array 'RoundKey_0' and 'load' operation ('RoundKey_0_load', aes.c:213) on array 'RoundKey_0'." projectName="VLSI_Project" solutionName="solution1" date="2020-05-13T03:42:39.358+0530" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'Loop-1' (aes.c:163) in function 'KeyExpansion' has been removed because the loop is unrolled completely." projectName="VLSI_Project" solutionName="solution1" date="2020-05-13T03:42:38.319+0530" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog>
-        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="VLSI_Project" solutionName="solution1" date="2020-05-13T03:46:37.571+0530" type="Warning"/>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="VLSI_Project" solutionName="solution1" date="2020-05-13T18:40:03.438+0530" type="Warning"/>
       </simLog>
       <mgLog/>
       <packageLog/>

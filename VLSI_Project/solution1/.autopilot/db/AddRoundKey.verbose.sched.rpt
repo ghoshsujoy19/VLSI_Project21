@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vivado HLS Report for 'AddRoundKey'
+================================================================
+* Date:           Wed May 13 18:38:58 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        VLSI_Project
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 2.085 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1| 10.000 ns | 10.000 ns |    1|    1|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.42>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%round_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %round)" [aes.c:238]   --->   Operation 3 'read' 'round_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln251 = trunc i6 %round_read to i4" [aes.c:251]   --->   Operation 4 'trunc' 'trunc_ln251' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%and_ln = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 0, i4 %trunc_ln251)" [aes.c:251]   --->   Operation 5 'bitconcatenate' 'and_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%zext_ln251 = zext i4 %trunc_ln251 to i64" [aes.c:251]   --->   Operation 6 'zext' 'zext_ln251' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%RoundKey_0_addr = getelementptr [15 x i8]* %RoundKey_0, i64 0, i64 %zext_ln251" [aes.c:251]   --->   Operation 7 'getelementptr' 'RoundKey_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (1.42ns)   --->   "%RoundKey_0_load = load i8* %RoundKey_0_addr, align 1" [aes.c:251]   --->   Operation 8 'load' 'RoundKey_0_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln251_1 = zext i8 %and_ln to i64" [aes.c:251]   --->   Operation 9 'zext' 'zext_ln251_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%RoundKey_1_addr = getelementptr [15 x i8]* %RoundKey_1, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 10 'getelementptr' 'RoundKey_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (1.42ns)   --->   "%RoundKey_1_load = load i8* %RoundKey_1_addr, align 1" [aes.c:251]   --->   Operation 11 'load' 'RoundKey_1_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%RoundKey_2_addr = getelementptr [15 x i8]* %RoundKey_2, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 12 'getelementptr' 'RoundKey_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (1.42ns)   --->   "%RoundKey_2_load = load i8* %RoundKey_2_addr, align 1" [aes.c:251]   --->   Operation 13 'load' 'RoundKey_2_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%RoundKey_3_addr = getelementptr [15 x i8]* %RoundKey_3, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 14 'getelementptr' 'RoundKey_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (1.42ns)   --->   "%RoundKey_3_load = load i8* %RoundKey_3_addr, align 1" [aes.c:251]   --->   Operation 15 'load' 'RoundKey_3_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%RoundKey_4_addr = getelementptr [15 x i8]* %RoundKey_4, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 16 'getelementptr' 'RoundKey_4_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (1.42ns)   --->   "%RoundKey_4_load = load i8* %RoundKey_4_addr, align 1" [aes.c:251]   --->   Operation 17 'load' 'RoundKey_4_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%RoundKey_5_addr = getelementptr [15 x i8]* %RoundKey_5, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 18 'getelementptr' 'RoundKey_5_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (1.42ns)   --->   "%RoundKey_5_load = load i8* %RoundKey_5_addr, align 1" [aes.c:251]   --->   Operation 19 'load' 'RoundKey_5_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%RoundKey_6_addr = getelementptr [15 x i8]* %RoundKey_6, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 20 'getelementptr' 'RoundKey_6_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (1.42ns)   --->   "%RoundKey_6_load = load i8* %RoundKey_6_addr, align 1" [aes.c:251]   --->   Operation 21 'load' 'RoundKey_6_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%RoundKey_7_addr = getelementptr [15 x i8]* %RoundKey_7, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 22 'getelementptr' 'RoundKey_7_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [2/2] (1.42ns)   --->   "%RoundKey_7_load = load i8* %RoundKey_7_addr, align 1" [aes.c:251]   --->   Operation 23 'load' 'RoundKey_7_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%RoundKey_8_addr = getelementptr [15 x i8]* %RoundKey_8, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 24 'getelementptr' 'RoundKey_8_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [2/2] (1.42ns)   --->   "%RoundKey_8_load = load i8* %RoundKey_8_addr, align 1" [aes.c:251]   --->   Operation 25 'load' 'RoundKey_8_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%RoundKey_9_addr = getelementptr [15 x i8]* %RoundKey_9, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 26 'getelementptr' 'RoundKey_9_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [2/2] (1.42ns)   --->   "%RoundKey_9_load = load i8* %RoundKey_9_addr, align 1" [aes.c:251]   --->   Operation 27 'load' 'RoundKey_9_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%RoundKey_10_addr = getelementptr [15 x i8]* %RoundKey_10, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 28 'getelementptr' 'RoundKey_10_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [2/2] (1.42ns)   --->   "%RoundKey_10_load = load i8* %RoundKey_10_addr, align 1" [aes.c:251]   --->   Operation 29 'load' 'RoundKey_10_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%RoundKey_11_addr = getelementptr [15 x i8]* %RoundKey_11, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 30 'getelementptr' 'RoundKey_11_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (1.42ns)   --->   "%RoundKey_11_load = load i8* %RoundKey_11_addr, align 1" [aes.c:251]   --->   Operation 31 'load' 'RoundKey_11_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%RoundKey_12_addr = getelementptr [15 x i8]* %RoundKey_12, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 32 'getelementptr' 'RoundKey_12_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [2/2] (1.42ns)   --->   "%RoundKey_12_load = load i8* %RoundKey_12_addr, align 1" [aes.c:251]   --->   Operation 33 'load' 'RoundKey_12_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%RoundKey_13_addr = getelementptr [15 x i8]* %RoundKey_13, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 34 'getelementptr' 'RoundKey_13_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [2/2] (1.42ns)   --->   "%RoundKey_13_load = load i8* %RoundKey_13_addr, align 1" [aes.c:251]   --->   Operation 35 'load' 'RoundKey_13_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%RoundKey_14_addr = getelementptr [15 x i8]* %RoundKey_14, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 36 'getelementptr' 'RoundKey_14_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (1.42ns)   --->   "%RoundKey_14_load = load i8* %RoundKey_14_addr, align 1" [aes.c:251]   --->   Operation 37 'load' 'RoundKey_14_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%RoundKey_15_addr = getelementptr [15 x i8]* %RoundKey_15, i64 0, i64 %zext_ln251_1" [aes.c:251]   --->   Operation 38 'getelementptr' 'RoundKey_15_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [2/2] (1.42ns)   --->   "%RoundKey_15_load = load i8* %RoundKey_15_addr, align 1" [aes.c:251]   --->   Operation 39 'load' 'RoundKey_15_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+
+State 2 <SV = 1> <Delay = 2.08>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%state_3_3_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_3_read)" [aes.c:238]   --->   Operation 40 'read' 'state_3_3_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%state_3_2_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_2_read)" [aes.c:238]   --->   Operation 41 'read' 'state_3_2_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%state_3_1_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_1_read)" [aes.c:238]   --->   Operation 42 'read' 'state_3_1_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%state_3_0_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_0_read)" [aes.c:238]   --->   Operation 43 'read' 'state_3_0_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%state_2_3_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_3_read)" [aes.c:238]   --->   Operation 44 'read' 'state_2_3_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%state_2_2_read12 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_2_read)" [aes.c:238]   --->   Operation 45 'read' 'state_2_2_read12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%state_2_1_read11 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_1_read)" [aes.c:238]   --->   Operation 46 'read' 'state_2_1_read11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%state_2_0_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_0_read)" [aes.c:238]   --->   Operation 47 'read' 'state_2_0_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%state_1_3_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_3_read)" [aes.c:238]   --->   Operation 48 'read' 'state_1_3_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%state_1_2_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_2_read)" [aes.c:238]   --->   Operation 49 'read' 'state_1_2_read_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%state_1_1_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_1_read)" [aes.c:238]   --->   Operation 50 'read' 'state_1_1_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%state_1_0_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_0_read)" [aes.c:238]   --->   Operation 51 'read' 'state_1_0_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%state_0_3_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_3_read)" [aes.c:238]   --->   Operation 52 'read' 'state_0_3_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%state_0_2_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_2_read)" [aes.c:238]   --->   Operation 53 'read' 'state_0_2_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%state_0_1_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_1_read)" [aes.c:238]   --->   Operation 54 'read' 'state_0_1_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%state_0_0_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_0_read)" [aes.c:238]   --->   Operation 55 'read' 'state_0_0_read_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/2] (1.42ns)   --->   "%RoundKey_0_load = load i8* %RoundKey_0_addr, align 1" [aes.c:251]   --->   Operation 56 'load' 'RoundKey_0_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 57 [1/1] (0.66ns)   --->   "%xor_ln251 = xor i8 %RoundKey_0_load, %state_0_0_read_3" [aes.c:251]   --->   Operation 57 'xor' 'xor_ln251' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/2] (1.42ns)   --->   "%RoundKey_1_load = load i8* %RoundKey_1_addr, align 1" [aes.c:251]   --->   Operation 58 'load' 'RoundKey_1_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 59 [1/1] (0.66ns)   --->   "%xor_ln251_1 = xor i8 %RoundKey_1_load, %state_0_1_read_3" [aes.c:251]   --->   Operation 59 'xor' 'xor_ln251_1' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/2] (1.42ns)   --->   "%RoundKey_2_load = load i8* %RoundKey_2_addr, align 1" [aes.c:251]   --->   Operation 60 'load' 'RoundKey_2_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 61 [1/1] (0.66ns)   --->   "%xor_ln251_2 = xor i8 %RoundKey_2_load, %state_0_2_read_3" [aes.c:251]   --->   Operation 61 'xor' 'xor_ln251_2' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/2] (1.42ns)   --->   "%RoundKey_3_load = load i8* %RoundKey_3_addr, align 1" [aes.c:251]   --->   Operation 62 'load' 'RoundKey_3_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 63 [1/1] (0.66ns)   --->   "%xor_ln251_3 = xor i8 %RoundKey_3_load, %state_0_3_read_3" [aes.c:251]   --->   Operation 63 'xor' 'xor_ln251_3' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/2] (1.42ns)   --->   "%RoundKey_4_load = load i8* %RoundKey_4_addr, align 1" [aes.c:251]   --->   Operation 64 'load' 'RoundKey_4_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 65 [1/1] (0.66ns)   --->   "%xor_ln251_4 = xor i8 %RoundKey_4_load, %state_1_0_read_3" [aes.c:251]   --->   Operation 65 'xor' 'xor_ln251_4' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/2] (1.42ns)   --->   "%RoundKey_5_load = load i8* %RoundKey_5_addr, align 1" [aes.c:251]   --->   Operation 66 'load' 'RoundKey_5_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 67 [1/1] (0.66ns)   --->   "%xor_ln251_5 = xor i8 %RoundKey_5_load, %state_1_1_read_3" [aes.c:251]   --->   Operation 67 'xor' 'xor_ln251_5' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/2] (1.42ns)   --->   "%RoundKey_6_load = load i8* %RoundKey_6_addr, align 1" [aes.c:251]   --->   Operation 68 'load' 'RoundKey_6_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 69 [1/1] (0.66ns)   --->   "%xor_ln251_6 = xor i8 %RoundKey_6_load, %state_1_2_read_2" [aes.c:251]   --->   Operation 69 'xor' 'xor_ln251_6' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/2] (1.42ns)   --->   "%RoundKey_7_load = load i8* %RoundKey_7_addr, align 1" [aes.c:251]   --->   Operation 70 'load' 'RoundKey_7_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 71 [1/1] (0.66ns)   --->   "%xor_ln251_7 = xor i8 %RoundKey_7_load, %state_1_3_read_3" [aes.c:251]   --->   Operation 71 'xor' 'xor_ln251_7' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/2] (1.42ns)   --->   "%RoundKey_8_load = load i8* %RoundKey_8_addr, align 1" [aes.c:251]   --->   Operation 72 'load' 'RoundKey_8_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 73 [1/1] (0.66ns)   --->   "%xor_ln251_8 = xor i8 %RoundKey_8_load, %state_2_0_read_3" [aes.c:251]   --->   Operation 73 'xor' 'xor_ln251_8' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 74 [1/2] (1.42ns)   --->   "%RoundKey_9_load = load i8* %RoundKey_9_addr, align 1" [aes.c:251]   --->   Operation 74 'load' 'RoundKey_9_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 75 [1/1] (0.66ns)   --->   "%xor_ln251_9 = xor i8 %RoundKey_9_load, %state_2_1_read11" [aes.c:251]   --->   Operation 75 'xor' 'xor_ln251_9' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 76 [1/2] (1.42ns)   --->   "%RoundKey_10_load = load i8* %RoundKey_10_addr, align 1" [aes.c:251]   --->   Operation 76 'load' 'RoundKey_10_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 77 [1/1] (0.66ns)   --->   "%xor_ln251_10 = xor i8 %RoundKey_10_load, %state_2_2_read12" [aes.c:251]   --->   Operation 77 'xor' 'xor_ln251_10' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 78 [1/2] (1.42ns)   --->   "%RoundKey_11_load = load i8* %RoundKey_11_addr, align 1" [aes.c:251]   --->   Operation 78 'load' 'RoundKey_11_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 79 [1/1] (0.66ns)   --->   "%xor_ln251_11 = xor i8 %RoundKey_11_load, %state_2_3_read_3" [aes.c:251]   --->   Operation 79 'xor' 'xor_ln251_11' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/2] (1.42ns)   --->   "%RoundKey_12_load = load i8* %RoundKey_12_addr, align 1" [aes.c:251]   --->   Operation 80 'load' 'RoundKey_12_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 81 [1/1] (0.66ns)   --->   "%xor_ln251_12 = xor i8 %RoundKey_12_load, %state_3_0_read_3" [aes.c:251]   --->   Operation 81 'xor' 'xor_ln251_12' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 82 [1/2] (1.42ns)   --->   "%RoundKey_13_load = load i8* %RoundKey_13_addr, align 1" [aes.c:251]   --->   Operation 82 'load' 'RoundKey_13_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 83 [1/1] (0.66ns)   --->   "%xor_ln251_13 = xor i8 %RoundKey_13_load, %state_3_1_read_3" [aes.c:251]   --->   Operation 83 'xor' 'xor_ln251_13' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 84 [1/2] (1.42ns)   --->   "%RoundKey_14_load = load i8* %RoundKey_14_addr, align 1" [aes.c:251]   --->   Operation 84 'load' 'RoundKey_14_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 85 [1/1] (0.66ns)   --->   "%xor_ln251_14 = xor i8 %RoundKey_14_load, %state_3_2_read_3" [aes.c:251]   --->   Operation 85 'xor' 'xor_ln251_14' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 86 [1/2] (1.42ns)   --->   "%RoundKey_15_load = load i8* %RoundKey_15_addr, align 1" [aes.c:251]   --->   Operation 86 'load' 'RoundKey_15_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
+ST_2 : Operation 87 [1/1] (0.66ns)   --->   "%xor_ln251_15 = xor i8 %RoundKey_15_load, %state_3_3_read_3" [aes.c:251]   --->   Operation 87 'xor' 'xor_ln251_15' <Predicate = true> <Delay = 0.66> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %xor_ln251, 0" [aes.c:254]   --->   Operation 88 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %xor_ln251_1, 1" [aes.c:254]   --->   Operation 89 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %xor_ln251_2, 2" [aes.c:254]   --->   Operation 90 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %xor_ln251_3, 3" [aes.c:254]   --->   Operation 91 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %xor_ln251_4, 4" [aes.c:254]   --->   Operation 92 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %xor_ln251_5, 5" [aes.c:254]   --->   Operation 93 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %xor_ln251_6, 6" [aes.c:254]   --->   Operation 94 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %xor_ln251_7, 7" [aes.c:254]   --->   Operation 95 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7, i8 %xor_ln251_8, 8" [aes.c:254]   --->   Operation 96 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_8, i8 %xor_ln251_9, 9" [aes.c:254]   --->   Operation 97 'insertvalue' 'mrv_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_9, i8 %xor_ln251_10, 10" [aes.c:254]   --->   Operation 98 'insertvalue' 'mrv_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_10, i8 %xor_ln251_11, 11" [aes.c:254]   --->   Operation 99 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_s, i8 %xor_ln251_12, 12" [aes.c:254]   --->   Operation 100 'insertvalue' 'mrv_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_11, i8 %xor_ln251_13, 13" [aes.c:254]   --->   Operation 101 'insertvalue' 'mrv_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_12, i8 %xor_ln251_14, 14" [aes.c:254]   --->   Operation 102 'insertvalue' 'mrv_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_13, i8 %xor_ln251_15, 15" [aes.c:254]   --->   Operation 103 'insertvalue' 'mrv_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_14" [aes.c:254]   --->   Operation 104 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.43ns
+The critical path consists of the following:
+	wire read on port 'round' (aes.c:238) [50]  (0 ns)
+	'getelementptr' operation ('RoundKey_0_addr', aes.c:251) [54]  (0 ns)
+	'load' operation ('RoundKey_0_load', aes.c:251) on array 'RoundKey_0' [55]  (1.43 ns)
+
+ <State 2>: 2.08ns
+The critical path consists of the following:
+	'load' operation ('RoundKey_0_load', aes.c:251) on array 'RoundKey_0' [55]  (1.43 ns)
+	'xor' operation ('state[0][0]', aes.c:251) [56]  (0.66 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

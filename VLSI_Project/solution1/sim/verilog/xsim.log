@@ -2,18 +2,18 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed May 13 03:46:52 2020
-# Process ID: 15219
+# Start of session at: Wed May 13 18:40:27 2020
+# Process ID: 4626
 # Current directory: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog
-# Command line: xsim -mode tcl -source {xsim.dir/KeyExpansion/xsim_script.tcl}
+# Command line: xsim -mode tcl -source {xsim.dir/Cipher/xsim_script.tcl}
 # Log file: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.log
 # Journal file: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/KeyExpansion/xsim_script.tcl
-# xsim {KeyExpansion} -autoloadwcfg -tclbatch {KeyExpansion.tcl}
+source xsim.dir/Cipher/xsim_script.tcl
+# xsim {Cipher} -autoloadwcfg -tclbatch {Cipher.tcl}
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-source KeyExpansion.tcl
+source Cipher.tcl
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -21,15 +21,25 @@ source KeyExpansion.tcl
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 7 [0.00%] @ "125000"
-// RTL Simulation : 1 / 7 [100.00%] @ "575000"
-// RTL Simulation : 2 / 7 [100.00%] @ "1015000"
-// RTL Simulation : 3 / 7 [100.00%] @ "1455000"
-// RTL Simulation : 4 / 7 [100.00%] @ "1895000"
-// RTL Simulation : 5 / 7 [100.00%] @ "2335000"
-// RTL Simulation : 6 / 7 [100.00%] @ "2775000"
-// RTL Simulation : 7 / 7 [100.00%] @ "3215000"
+// RTL Simulation : 0 / 17 [0.00%] @ "125000"
+// RTL Simulation : 1 / 17 [100.00%] @ "5205000"
+// RTL Simulation : 2 / 17 [100.00%] @ "10275000"
+// RTL Simulation : 3 / 17 [100.00%] @ "15345000"
+// RTL Simulation : 4 / 17 [100.00%] @ "20415000"
+// RTL Simulation : 5 / 17 [100.00%] @ "25485000"
+// RTL Simulation : 6 / 17 [100.00%] @ "30555000"
+// RTL Simulation : 7 / 17 [100.00%] @ "35625000"
+// RTL Simulation : 8 / 17 [100.00%] @ "40695000"
+// RTL Simulation : 9 / 17 [100.00%] @ "45765000"
+// RTL Simulation : 10 / 17 [100.00%] @ "50835000"
+// RTL Simulation : 11 / 17 [100.00%] @ "55905000"
+// RTL Simulation : 12 / 17 [100.00%] @ "60975000"
+// RTL Simulation : 13 / 17 [100.00%] @ "66045000"
+// RTL Simulation : 14 / 17 [100.00%] @ "71115000"
+// RTL Simulation : 15 / 17 [100.00%] @ "76185000"
+// RTL Simulation : 16 / 17 [100.00%] @ "81255000"
+// RTL Simulation : 17 / 17 [100.00%] @ "86325000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 3255 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 2032
+$finish called at time : 86365 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher.autotb.v" Line 2960
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed May 13 03:47:09 2020...
+INFO: [Common 17-206] Exiting xsim at Wed May 13 18:41:05 2020...

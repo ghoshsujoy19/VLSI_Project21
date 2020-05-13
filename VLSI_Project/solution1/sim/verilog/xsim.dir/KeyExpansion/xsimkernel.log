@@ -1,7 +1,0 @@
-Running: xsim.dir/KeyExpansion/xsimk -simmode gui -wdb KeyExpansion.wdb -simrunnum 0 -socket 48241
-Design successfully loaded
-Design Loading Memory Usage: 38432 KB (Peak: 38440 KB)
-Design Loading CPU Usage: 10 ms
-Simulation completed
-Simulation Memory Usage: 120620 KB (Peak: 177700 KB)
-Simulation CPU Usage: 90 ms

@@ -786,14 +786,20 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
+#pragma HLS ARRAY_PARTITION variable=&state complete dim=0
+#pragma HLS ARRAY_PARTITION variable=&RoundKey cyclic factor=16 dim=1
  uint8_t i,j;
-AddRoundKey_label38:for (i = 0; i < 4; ++i)
-      {
-AddRoundKey_label37:for (j = 0; j < 4; ++j)
-      {
-       (*state)[i][j] ^= RoundKey[(round * 4 * 4) + (i * 4) + j];
-      }
-      }
+ const uint8_t c = 4*4*round;
+
+ AddRoundKey_label38:for (i = 0; i < 4; ++i)
+ {
+#pragma HLS unroll
+ AddRoundKey_label37:for (j = 0; j < 4; ++j)
+  {
+#pragma HLS unroll
+ (*state)[i][j] ^= RoundKey[c + (i * 4) + j];
+  }
+ }
 }
 
 
@@ -861,7 +867,7 @@ MixColumns_label36:for (i = 0; i < 4; ++i)
       Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
      }
 }
-# 343 "aes.c"
+# 349 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -975,7 +981,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 464 "aes.c"
+# 470 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1047,7 +1053,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 543 "aes.c"
+# 549 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

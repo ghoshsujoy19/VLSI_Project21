@@ -2,177 +2,135 @@
 <Messages>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;aes.c&apos; ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1155 ; free virtual = 16011"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1155 ; free virtual = 16011"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6970 ; free virtual = 18247"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6970 ; free virtual = 18248"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
-	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_311" tag="" content="Unrolling loop &apos;Loop-1&apos; (aes.c:163) in function &apos;KeyExpansion&apos;: changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1149 ; free virtual = 16009"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6966 ; free virtual = 18246"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1149 ; free virtual = 16010"/>
-	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_311" tag="" content="Unrolling loop &apos;Loop-1&apos; (aes.c:163) in function &apos;KeyExpansion&apos;: changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16)."/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1&apos; (aes.c:163) in function &apos;KeyExpansion&apos; completely with a factor of 16."/>
-	<Message severity="WARNING" prefix="[XFORM 203-505]" key="XFORM_UNROLL_DEAD_PIPELINE_318" tag="LOOP,SDX_LOOP" content="Pipeline directive for loop &apos;Loop-1&apos; (aes.c:163) in function &apos;KeyExpansion&apos; has been removed because the loop is unrolled completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_310" tag="" content="Unrolling loop &apos;Loop-2&apos; (aes.c:170) in function &apos;KeyExpansion&apos; partially with a factor of 4."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_109" tag="" content="Partitioning array &apos;sbox&apos;  in dimension 1 with a cyclic factor 16."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_109" tag="" content="Partitioning array &apos;rsbox&apos;  in dimension 1 with a cyclic factor 16."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;Key&apos; (aes.c:152) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_109" tag="" content="Partitioning array &apos;RoundKey&apos; (aes.c:152) in dimension 1 with a cyclic factor 16."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;tempa&apos; (aes.c:155) in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.16[16 x i8]P.i8.i64&apos; into &apos;KeyExpansion&apos; (aes.c:196)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.16[16 x i8]P.i8.i64&apos; into &apos;KeyExpansion&apos; (aes.c:197)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.16[16 x i8]P.i8.i64&apos; into &apos;KeyExpansion&apos; (aes.c:198)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.16[16 x i8]P.i8.i64&apos; into &apos;KeyExpansion&apos; (aes.c:199)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1126 ; free virtual = 15989"/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[2]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[7]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[12]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[10]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[11]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[3]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[15]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[4]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[13]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[8]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[6]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[0]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[9]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[5]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[14]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[1]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[2]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[7]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[12]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[10]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[11]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[3]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[15]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[4]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[13]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[8]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[6]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[0]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[9]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[5]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[14]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[1]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[2]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[7]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[12]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[10]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[11]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[3]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[15]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[4]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[13]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[8]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[6]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[0]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[9]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[5]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[14]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[1]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[2]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[7]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[12]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[10]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[11]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[3]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[15]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[4]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[13]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[8]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[6]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[0]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[9]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[5]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[14]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[ANALYSIS 214-51]" key="ANALYSIS_USER_DEPENDENCE_SET_243" tag="" content="Found inter dependency for variable &apos;RoundKey[1]&apos; (aes.c:152) (distance = 1)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1124 ; free virtual = 15987"/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;xtime&apos; into &apos;MixColumns&apos; (aes.c:315) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ShiftRows&apos; into &apos;Cipher&apos; (aes.c:425) automatically."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6966 ; free virtual = 18245"/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;AddRoundKey_label38&apos; (aes.c:246) in function &apos;AddRoundKey&apos; completely with a factor of 4."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;AddRoundKey_label37&apos; (aes.c:249) in function &apos;AddRoundKey&apos; completely with a factor of 4."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;state&apos; (aes.c:412) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_109" tag="" content="Partitioning array &apos;RoundKey&apos; (aes.c:412) in dimension 1 with a cyclic factor 16."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;state&apos; (aes.c:412) in dimension 2 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;xtime&apos; into &apos;MixColumns&apos; (aes.c:315) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;ShiftRows&apos; into &apos;Cipher&apos; (aes.c:425) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;MixColumns&apos; (aes.c:307)...12 expression(s) balanced."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6945 ; free virtual = 18226"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6925 ; free virtual = 18205"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;KeyExpansion&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;Cipher&apos; ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;KeyExpansion&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;AddRoundKey&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
-	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;KeyExpansion&apos; (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between &apos;store&apos; operation (&apos;RoundKey_0_addr_2_write_ln213&apos;, aes.c:213) of variable &apos;xor_ln213&apos;, aes.c:213 on array &apos;RoundKey_0&apos; and &apos;load&apos; operation (&apos;RoundKey_0_load&apos;, aes.c:213) on array &apos;RoundKey_0&apos;."/>
-	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;KeyExpansion&apos; (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
-   between &apos;store&apos; operation (&apos;RoundKey_15_addr_2_write_ln216&apos;, aes.c:216) of variable &apos;xor_ln216_3&apos;, aes.c:216 on array &apos;RoundKey_15&apos; and &apos;load&apos; operation (&apos;RoundKey_15_load&apos;, aes.c:178) on array &apos;RoundKey_15&apos;."/>
-	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;sbox_14_load_2&apos;, aesl_mux_load.16[16 x i8]P.i8.i64:44-&gt;aes.c:198) on array &apos;sbox_14&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;sbox_14&apos;."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 4, Depth = 6."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 18.36 seconds; current allocated memory: 110.102 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 18.12 seconds; current allocated memory: 138.907 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.52 seconds; current allocated memory: 112.630 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.1 seconds; current allocated memory: 139.256 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;SubBytes&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.18 seconds; current allocated memory: 139.706 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.1 seconds; current allocated memory: 140.307 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;MixColumns&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.21 seconds; current allocated memory: 140.685 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.12 seconds; current allocated memory: 141.218 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;Cipher&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.3 seconds; current allocated memory: 141.876 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.38 seconds; current allocated memory: 142.848 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;KeyExpansion&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;AddRoundKey&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_0&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_1&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_2&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_3&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_4&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_5&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_6&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_7&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_8&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_9&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_10&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_11&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_12&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_13&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_14&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/RoundKey_15&apos; to &apos;ap_memory&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_0&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_1&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_2&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_3&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_4&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_5&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_6&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_7&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_8&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_9&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_10&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_11&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_12&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_13&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_14&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;KeyExpansion/Key_15&apos; to &apos;ap_none&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;KeyExpansion&apos; to &apos;ap_ctrl_hs&apos;."/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KeyExpansion_sbox_10&apos; to &apos;KeyExpansion_sboxbkb&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KeyExpansion_sbox_11&apos; to &apos;KeyExpansion_sboxcud&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KeyExpansion_sbox_12&apos; to &apos;KeyExpansion_sboxdEe&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KeyExpansion_sbox_13&apos; to &apos;KeyExpansion_sboxeOg&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KeyExpansion_sbox_14&apos; to &apos;KeyExpansion_sboxfYi&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;KeyExpansion_sbox_15&apos; to &apos;KeyExpansion_sboxg8j&apos; due to the length limit 20"/>
-	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;KeyExpansion&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.04 seconds; current allocated memory: 115.044 MB."/>
-	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,SDX_LOOP" content="**** Loop Constraint Status: All loop constraints were NOT satisfied."/>
-	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,SDX_KERNEL" content="**** Estimated Fmax: 118.62 MHz"/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_0_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_1_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_2_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_3_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_4_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_5_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_6_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_7_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_8_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sbox_9_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sboxbkb_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sboxcud_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sboxdEe_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sboxeOg_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sboxfYi_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_sboxg8j_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;KeyExpansion_Rcon_rom&apos; using distributed ROMs."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 1110 ; free virtual = 15974"/>
-	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for KeyExpansion."/>
-	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for KeyExpansion."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;AddRoundKey&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.37 seconds; current allocated memory: 144.009 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;SubBytes&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;Cipher_mux_165_8_1_1&apos; to &apos;Cipher_mux_165_8_bkb&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;Cipher_mux_165_8_bkb&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;Cipher_mux_42_8_1_1&apos;: 16 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;SubBytes&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.28 seconds; current allocated memory: 147.134 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;MixColumns&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;Cipher_mux_42_8_1_1&apos;: 25 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;MixColumns&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.37 seconds; current allocated memory: 151.148 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;Cipher&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_0_0&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_0_1&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_0_2&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_0_3&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_1_0&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_1_1&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_1_2&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_1_3&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_2_0&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_2_1&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_2_2&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_2_3&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_3_0&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_3_1&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_3_2&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/state_3_3&apos; to &apos;ap_ovld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_0&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_1&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_2&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_3&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_4&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_5&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_6&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_7&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_8&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_9&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_10&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_11&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_12&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_13&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_14&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;Cipher/RoundKey_15&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;Cipher&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;Cipher&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.65 seconds; current allocated memory: 155.621 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,SDX_LOOP" content="**** Loop Constraint Status: All loop constraints were satisfied."/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,SDX_KERNEL" content="**** Estimated Fmax: 195.64 MHz"/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;SubBytes_sbox_rom&apos; using auto ROMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6883 ; free virtual = 18173"/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for Cipher."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for Cipher."/>
 </Messages>

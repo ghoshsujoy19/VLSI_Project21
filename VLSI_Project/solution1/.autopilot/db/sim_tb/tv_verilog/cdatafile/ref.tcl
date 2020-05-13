@@ -1,4 +1,20 @@
 set depth_list {
+{state_0_0 1}
+{state_0_1 1}
+{state_0_2 1}
+{state_0_3 1}
+{state_1_0 1}
+{state_1_1 1}
+{state_1_2 1}
+{state_1_3 1}
+{state_2_0 1}
+{state_2_1 1}
+{state_2_2 1}
+{state_2_3 1}
+{state_3_0 1}
+{state_3_1 1}
+{state_3_2 1}
+{state_3_3 1}
 {RoundKey_0 15}
 {RoundKey_1 15}
 {RoundKey_2 15}
@@ -15,21 +31,5 @@ set depth_list {
 {RoundKey_13 15}
 {RoundKey_14 15}
 {RoundKey_15 15}
-{Key_0 1}
-{Key_1 1}
-{Key_2 1}
-{Key_3 1}
-{Key_4 1}
-{Key_5 1}
-{Key_6 1}
-{Key_7 1}
-{Key_8 1}
-{Key_9 1}
-{Key_10 1}
-{Key_11 1}
-{Key_12 1}
-{Key_13 1}
-{Key_14 1}
-{Key_15 1}
 }
-set trans_num 7
+set trans_num 17
