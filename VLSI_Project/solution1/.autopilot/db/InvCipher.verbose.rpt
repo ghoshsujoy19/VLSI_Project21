@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'InvCipher'
 ================================================================
-* Date:           Wed May 13 23:23:35 2020
+* Date:           Wed May 13 23:30:50 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        VLSI_Project
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  | 10.00 ns | 6.780 ns |   1.25 ns  |
+    |ap_clk  | 10.00 ns | 7.821 ns |   1.25 ns  |
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -62,12 +62,12 @@
 |DSP              |        -|      -|       -|       -|    -|
 |Expression       |        -|      -|       0|     406|    -|
 |FIFO             |        -|      -|       -|       -|    -|
-|Instance         |        1|      -|     537|    1785|    -|
+|Instance         |        1|      -|     537|    3085|    -|
 |Memory           |        -|      -|       -|       -|    -|
 |Multiplexer      |        -|      -|       -|     887|    -|
 |Register         |        -|      -|     272|       -|    -|
 +-----------------+---------+-------+--------+--------+-----+
-|Total            |        1|      0|     809|    3078|    0|
+|Total            |        1|      0|     809|    4378|    0|
 +-----------------+---------+-------+--------+--------+-----+
 |Available        |     2060|   2800|  607200|  303600|    0|
 +-----------------+---------+-------+--------+--------+-----+
@@ -79,10 +79,10 @@
     +--------------------------+---------------+---------+-------+-----+------+-----+
     |         Instance         |     Module    | BRAM_18K| DSP48E|  FF |  LUT | URAM|
     +--------------------------+---------------+---------+-------+-----+------+-----+
-    |grp_InvMixColumns_fu_981  |InvMixColumns  |        0|      0|  261|  1197|    0|
+    |grp_InvMixColumns_fu_981  |InvMixColumns  |        0|      0|  261|  2497|    0|
     |grp_InvSubBytes_fu_1001   |InvSubBytes    |        1|      0|  276|   588|    0|
     +--------------------------+---------------+---------+-------+-----+------+-----+
-    |Total                     |               |        1|      0|  537|  1785|    0|
+    |Total                     |               |        1|      0|  537|  3085|    0|
     +--------------------------+---------------+---------+-------+-----+------+-----+
 
     * DSP48E: 
@@ -443,38 +443,38 @@ ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%RoundKey_15_addr = getelementptr [
 ST_1 : Operation 38 [2/2] (1.42ns)   --->   "%RoundKey_15_load = load i8* %RoundKey_15_addr, align 1" [aes.c:252->aes.c:459]   --->   Operation 38 'load' 'RoundKey_15_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
 
 State 2 <SV = 1> <Delay = 2.08>
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_3), !map !50"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_2), !map !56"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_1), !map !62"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_0), !map !68"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_3), !map !74"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_2), !map !79"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_1), !map !84"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_0), !map !89"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_3), !map !94"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_2), !map !99"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_1), !map !104"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_0), !map !109"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_3), !map !114"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_2), !map !119"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_1), !map !124"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_0), !map !129"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_15), !map !134"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_14), !map !140"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_13), !map !146"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_12), !map !152"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_11), !map !158"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_10), !map !164"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_9), !map !170"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_8), !map !176"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_7), !map !182"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_6), !map !188"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_5), !map !194"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_4), !map !200"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_3), !map !206"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_2), !map !212"   --->   Operation 68 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_1), !map !218"   --->   Operation 69 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_0), !map !224"   --->   Operation 70 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_3), !map !54"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_2), !map !60"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_1), !map !66"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_3_0), !map !72"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_3), !map !78"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_2), !map !83"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_1), !map !88"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_2_0), !map !93"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_3), !map !98"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_2), !map !103"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_1), !map !108"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_1_0), !map !113"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_3), !map !118"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_2), !map !123"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_1), !map !128"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %state_0_0), !map !133"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_15), !map !138"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_14), !map !144"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_13), !map !150"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_12), !map !156"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_11), !map !162"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_10), !map !168"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_9), !map !174"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_8), !map !180"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_7), !map !186"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_6), !map !192"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_5), !map !198"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_4), !map !204"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_3), !map !210"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_2), !map !216"   --->   Operation 68 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_1), !map !222"   --->   Operation 69 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([15 x i8]* %RoundKey_0), !map !228"   --->   Operation 70 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @InvCipher_str) nounwind"   --->   Operation 71 'spectopmodule' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 72 [1/2] (1.42ns)   --->   "%RoundKey_0_load = load i8* %RoundKey_0_addr, align 1" [aes.c:252->aes.c:459]   --->   Operation 72 'load' 'RoundKey_0_load' <Predicate = true> <Delay = 1.42> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 15> <RAM>
 ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%state_0_0_read = call i8 @_ssdm_op_Read.ap_auto.i8P(i8* %state_0_0)" [aes.c:252->aes.c:459]   --->   Operation 73 'read' 'state_0_0_read' <Predicate = true> <Delay = 0.00>
@@ -7133,7 +7133,7 @@ ret_ln477          (ret              ) [ 0000000]
 |----------|----------------------------|---------|---------|---------|
 | Operation|       Functional Unit      |  Delay  |    FF   |   LUT   |
 |----------|----------------------------|---------|---------|---------|
-|   call   |  grp_InvMixColumns_fu_981  |    0    |   390   |   921   |
+|   call   |  grp_InvMixColumns_fu_981  |    0    |   390   |   2713  |
 |          |   grp_InvSubBytes_fu_1001  |  1.183  |   280   |   408   |
 |----------|----------------------------|---------|---------|---------|
 |          |      xor_ln252_fu_1039     |    0    |    0    |    8    |
@@ -7274,7 +7274,7 @@ ret_ln477          (ret              ) [ 0000000]
 |          |    state_3_2_ret_fu_1487   |    0    |    0    |    0    |
 |          |    state_3_3_ret_fu_1491   |    0    |    0    |    0    |
 |----------|----------------------------|---------|---------|---------|
-|   Total  |                            |  1.183  |   670   |   1735  |
+|   Total  |                            |  1.183  |   670   |   3527  |
 |----------|----------------------------|---------|---------|---------|
 
 Memories:
@@ -7470,10 +7470,10 @@ Memories:
 +-----------+--------+--------+--------+--------+
 |           |  BRAM  |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |    -   |    1   |   670  |  1735  |
+|  Function |    -   |    1   |   670  |  3527  |
 |   Memory  |    1   |    -   |    0   |    0   |
 |Multiplexer|    -   |   61   |    -   |   936  |
 |  Register |    -   |    -   |   712  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    1   |   62   |  1382  |  2671  |
+|   Total   |    1   |   62   |  1382  |  4463  |
 +-----------+--------+--------+--------+--------+

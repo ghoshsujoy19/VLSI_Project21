@@ -74,6 +74,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module InvSubBytes
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_10.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Multiply.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiply
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_14.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_14
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_4.v" into library xil_defaultlib
@@ -86,6 +88,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Multiply
 Compiling module xil_defaultlib.InvCipher_mux_42_cud(ID=1,din0_W...
 Compiling module xil_defaultlib.InvMixColumns
 Compiling module xil_defaultlib.InvSubBytes_rsbox_rom
@@ -119,9 +122,8 @@ Built simulation snapshot InvCipher
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/InvCipher/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/InvCipher/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed May 13 23:29:00 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 5322 ; free virtual = 17374
-INFO: [Common 17-206] Exiting Webtalk at Wed May 13 23:29:00 2020...
+INFO: [Common 17-186] '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/InvCipher/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed May 13 23:33:15 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed May 13 23:33:15 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -149,7 +151,7 @@ source InvCipher.tcl
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 24475 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/InvCipher.autotb.v" Line 2960
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed May 13 23:29:19 2020...
+INFO: [Common 17-206] Exiting xsim at Wed May 13 23:33:34 2020...
 
 Testing AES128
 

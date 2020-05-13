@@ -8166,3 +8166,113 @@ INFO: [RTGEN 206-500]===========================================================
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5535 ; free virtual = 17581
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5535 ; free virtual = 17581
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:476).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:468).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:459).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5530 ; free virtual = 17579
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'Multiply' (aes.c:346) automatically.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:466) automatically.
+INFO: [XFORM 203-602] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:469) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5530 ; free virtual = 17579
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:247) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:250) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:454) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:454) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:454) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'Multiply' (aes.c:346) automatically.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:466) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'Multiply' (aes.c:343)...4 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvMixColumns' (aes.c:365)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5507 ; free virtual = 17559
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5487 ; free virtual = 17539
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvSubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.31 seconds; current allocated memory: 138.681 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 139.278 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 139.478 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 139.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvMixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 139.912 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 140.452 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.18 seconds; current allocated memory: 141.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 143.132 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvSubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'InvCipher_mux_165_8_1_1' to 'InvCipher_mux_165bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'InvCipher_mux_42_8_1_1' to 'InvCipher_mux_42_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_165bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_42_cud': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvSubBytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.96 seconds; current allocated memory: 145.116 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Multiply'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 147.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvMixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_42_cud': 20 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvMixColumns'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 149.912 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

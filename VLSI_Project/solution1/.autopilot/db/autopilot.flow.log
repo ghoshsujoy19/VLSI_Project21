@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 23:23:14 IST 2020
+INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 23:30:26 IST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -40,7 +40,7 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.13 sec.
+Command         ap_source done; 0.14 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
 Command       ap_source done; 0.19 sec.
@@ -59,7 +59,7 @@ Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7vx485t-ffg1157-1 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
-Command       ap_part_info done; 2.07 sec.
+Command       ap_part_info done; 2.1 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
 Execute         get_default_platform 
@@ -75,7 +75,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.33 sec.
+Command     set_part done; 2.37 sec.
 Execute     ap_part_info -data single -name xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -89,7 +89,7 @@ Execute     config_interface -m_axi_addr64=0
 Execute     config_interface -m_axi_offset=off 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 2.66 sec.
+Command   open_solution done; 2.72 sec.
 Execute   set_part xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -106,7 +106,7 @@ Execute     add_library xilinx/virtex7/virtex7_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.26 sec.
+Command   set_part done; 0.27 sec.
 Execute   create_clock -period 10 -name default 
 Execute   config_interface -clock_enable=0 -expose_global -m_axi_addr64=0 -m_axi_offset off -register_io off -trim_dangling_port=0 
 Execute   csynth_design 
@@ -134,13 +134,13 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "aes.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c" 
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E aes.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c
-Command       clang done; 3.22 sec.
+Command       clang done; 3.25 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c std=gnu89 
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c"  -o "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/useless.bc
-Command       clang done; 3.19 sec.
+Command       clang done; 3.18 sec.
 INFO-FLOW: Done: GCC PP time: 6.5 seconds per iteration
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -158,7 +158,7 @@ Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.2/lnx64/too
 Execute         source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/xilinx-legacy-rewriter.aes.pp.0.c.out.log 2> /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/xilinx-legacy-rewriter.aes.pp.0.c.err.log 
-Command       tidy_31 done; 0.13 sec.
+Command       tidy_31 done; 0.12 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.2 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.1.c std=gnu89 
@@ -167,12 +167,12 @@ Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info
 INFO-FLOW: Processing labels
 Execute       clang -src /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.bc" 
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.bc
-Command       clang done; 3.2 sec.
+Command       clang done; 3.19 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.g.bc -hls-opt -except-internalize InvCipher -L/tools/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g 
 Command       llvm-ld done; 1.6 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5423 ; free virtual = 17461
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5423 ; free virtual = 17461
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5535 ; free virtual = 17581
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5535 ; free virtual = 17581
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
@@ -185,14 +185,16 @@ Execute         transform -hls -share-std-xform -demangle-name -inline-byval-mem
 INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:476).
 INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:468).
 INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:459).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5418 ; free virtual = 17459
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5530 ; free virtual = 17579
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'Multiply' (aes.c:346) automatically.
 INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:466) automatically.
+INFO: [XFORM 203-602] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:469) automatically.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5418 ; free virtual = 17459
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5530 ; free virtual = 17579
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc to /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -202,20 +204,21 @@ INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:250) in function
 INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:454) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:454) in dimension 1 with a cyclic factor 16.
 INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:454) in dimension 2 completely.
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvMixColumns' (aes.c:376) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'Multiply' (aes.c:346) automatically.
 INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:466) automatically.
-Command         transform done; 0.44 sec.
+Command         transform done; 0.42 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-11] Balancing expressions in function 'InvMixColumns' (aes.c:365)...72 expression(s) balanced.
-Command         transform done; 0.24 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5395 ; free virtual = 17439
+INFO: [XFORM 203-11] Balancing expressions in function 'Multiply' (aes.c:343)...4 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvMixColumns' (aes.c:365)...12 expression(s) balanced.
+Command         transform done; 0.25 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5507 ; free virtual = 17559
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.2.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform done; 0.7 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5383 ; free virtual = 17427
+Command         transform done; 0.72 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5487 ; free virtual = 17539
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 3.15 sec.
+Command       opt_and_import_c done; 3.16 sec.
 Command     elaborate done; 14.82 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -225,23 +228,31 @@ Execute       ap_set_top_model InvCipher
 Execute       get_model_list InvCipher -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model InvCipher 
 Execute       preproc_iomode -model InvMixColumns 
+Execute       preproc_iomode -model Multiply 
 Execute       preproc_iomode -model InvSubBytes 
 Execute       get_model_list InvCipher -filter all-wo-channel 
-INFO-FLOW: Model list for configure: InvSubBytes InvMixColumns InvCipher
+INFO-FLOW: Model list for configure: InvSubBytes Multiply InvMixColumns InvCipher
 INFO-FLOW: Configuring Module : InvSubBytes ...
 Execute       set_default_model InvSubBytes 
 Execute       apply_spec_resource_limit InvSubBytes 
+INFO-FLOW: Configuring Module : Multiply ...
+Execute       set_default_model Multiply 
+Execute       apply_spec_resource_limit Multiply 
 INFO-FLOW: Configuring Module : InvMixColumns ...
 Execute       set_default_model InvMixColumns 
 Execute       apply_spec_resource_limit InvMixColumns 
 INFO-FLOW: Configuring Module : InvCipher ...
 Execute       set_default_model InvCipher 
 Execute       apply_spec_resource_limit InvCipher 
-INFO-FLOW: Model list for preprocess: InvSubBytes InvMixColumns InvCipher
+INFO-FLOW: Model list for preprocess: InvSubBytes Multiply InvMixColumns InvCipher
 INFO-FLOW: Preprocessing Module: InvSubBytes ...
 Execute       set_default_model InvSubBytes 
 Execute       cdfg_preprocess -model InvSubBytes 
 Execute       rtl_gen_preprocess InvSubBytes 
+INFO-FLOW: Preprocessing Module: Multiply ...
+Execute       set_default_model Multiply 
+Execute       cdfg_preprocess -model Multiply 
+Execute       rtl_gen_preprocess Multiply 
 INFO-FLOW: Preprocessing Module: InvMixColumns ...
 Execute       set_default_model InvMixColumns 
 Execute       cdfg_preprocess -model InvMixColumns 
@@ -250,7 +261,7 @@ INFO-FLOW: Preprocessing Module: InvCipher ...
 Execute       set_default_model InvCipher 
 Execute       cdfg_preprocess -model InvCipher 
 Execute       rtl_gen_preprocess InvCipher 
-INFO-FLOW: Model list for synthesis: InvSubBytes InvMixColumns InvCipher
+INFO-FLOW: Model list for synthesis: InvSubBytes Multiply InvMixColumns InvCipher
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'InvSubBytes' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -258,7 +269,7 @@ Execute       set_default_model InvSubBytes
 Execute       schedule -model InvSubBytes 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 18.23 seconds; current allocated memory: 129.540 MB.
+INFO: [HLS 200-111]  Elapsed time: 18.31 seconds; current allocated memory: 138.681 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.verbose.sched.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.sched.adb -f 
 INFO-FLOW: Finish scheduling InvSubBytes.
@@ -270,10 +281,33 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 130.139 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 139.278 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.verbose.bind.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.bind.adb -f 
 INFO-FLOW: Finish binding InvSubBytes.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Multiply 
+Execute       schedule -model Multiply 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 139.478 MB.
+Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.verbose.sched.rpt 
+Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.sched.adb -f 
+INFO-FLOW: Finish scheduling Multiply.
+Execute       set_default_model Multiply 
+Execute       bind -model Multiply 
+BIND OPTION: model=Multiply
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 139.594 MB.
+Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.verbose.bind.rpt 
+Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.bind.adb -f 
+INFO-FLOW: Finish binding Multiply.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'InvMixColumns' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -281,7 +315,8 @@ Execute       set_default_model InvMixColumns
 Execute       schedule -model InvMixColumns 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 130.634 MB.
+Command       schedule done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 139.912 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.verbose.sched.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.sched.adb -f 
 INFO-FLOW: Finish scheduling InvMixColumns.
@@ -293,9 +328,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 131.338 MB.
+Command       bind done; 0.27 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 140.452 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.verbose.bind.rpt 
-Command       syn_report done; 0.21 sec.
+Command       syn_report done; 0.51 sec.
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.bind.adb -f 
 INFO-FLOW: Finish binding InvMixColumns.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -305,8 +341,8 @@ Execute       set_default_model InvCipher
 Execute       schedule -model InvCipher 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.63 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 132.227 MB.
+Command       schedule done; 0.65 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.18 seconds; current allocated memory: 141.699 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.verbose.sched.rpt 
 Command       syn_report done; 0.16 sec.
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.sched.adb -f 
@@ -319,18 +355,19 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.24 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 133.487 MB.
+Command       bind done; 0.46 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 143.132 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.verbose.bind.rpt 
-Command       syn_report done; 0.5 sec.
+Command       syn_report done; 0.84 sec.
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.bind.adb -f 
 INFO-FLOW: Finish binding InvCipher.
 Execute       get_model_list InvCipher -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
 Execute       rtl_gen_preprocess InvSubBytes 
+Execute       rtl_gen_preprocess Multiply 
 Execute       rtl_gen_preprocess InvMixColumns 
 Execute       rtl_gen_preprocess InvCipher 
-INFO-FLOW: Model list for RTL generation: InvSubBytes InvMixColumns InvCipher
+INFO-FLOW: Model list for RTL generation: InvSubBytes Multiply InvMixColumns InvCipher
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'InvSubBytes' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -342,17 +379,34 @@ INFO: [SYN 201-210] Renamed object name 'InvCipher_mux_42_8_1_1' to 'InvCipher_m
 INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_165bkb': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_42_cud': 16 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'InvSubBytes'.
-INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 135.227 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.96 seconds; current allocated memory: 145.116 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
-Execute       gen_rtl InvSubBytes -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvSubBytes -synmodules InvSubBytes InvMixColumns InvCipher 
+Execute       gen_rtl InvSubBytes -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvSubBytes -synmodules InvSubBytes Multiply InvMixColumns InvCipher 
 Execute       gen_rtl InvSubBytes -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/InvSubBytes 
 Execute       gen_rtl InvSubBytes -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/InvSubBytes 
 Execute       syn_report -csynth -model InvSubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvSubBytes_csynth.rpt 
 Execute       syn_report -rtlxml -model InvSubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvSubBytes_csynth.xml 
 Execute       syn_report -verbosereport -model InvSubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.verbose.rpt 
-Command       syn_report done; 0.11 sec.
+Command       syn_report done; 0.12 sec.
 Execute       db_write -model InvSubBytes -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.adb 
 Execute       gen_tb_info InvSubBytes -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Multiply -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Multiply'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 147.709 MB.
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Multiply -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/Multiply -synmodules InvSubBytes Multiply InvMixColumns InvCipher 
+Execute       gen_rtl Multiply -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/Multiply 
+Execute       gen_rtl Multiply -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/Multiply 
+Execute       syn_report -csynth -model Multiply -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/Multiply_csynth.rpt 
+Execute       syn_report -rtlxml -model Multiply -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/Multiply_csynth.xml 
+Execute       syn_report -verbosereport -model Multiply -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.verbose.rpt 
+Execute       db_write -model Multiply -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.adb 
+Execute       gen_tb_info Multiply -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'InvMixColumns' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -361,18 +415,16 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       create_rtl_model InvMixColumns -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_42_cud': 20 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'InvMixColumns'.
-INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 139.538 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 149.912 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
-Execute       gen_rtl InvMixColumns -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvMixColumns -synmodules InvSubBytes InvMixColumns InvCipher 
+Execute       gen_rtl InvMixColumns -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvMixColumns -synmodules InvSubBytes Multiply InvMixColumns InvCipher 
 Execute       gen_rtl InvMixColumns -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/InvMixColumns 
 Execute       gen_rtl InvMixColumns -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/InvMixColumns 
 Execute       syn_report -csynth -model InvMixColumns -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvMixColumns_csynth.rpt 
-Command       syn_report done; 0.13 sec.
 Execute       syn_report -rtlxml -model InvMixColumns -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvMixColumns_csynth.xml 
 Execute       syn_report -verbosereport -model InvMixColumns -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.verbose.rpt 
-Command       syn_report done; 0.26 sec.
+Command       syn_report done; 0.51 sec.
 Execute       db_write -model InvMixColumns -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.adb 
-Command       db_write done; 0.13 sec.
 Execute       gen_tb_info InvMixColumns -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
@@ -414,22 +466,23 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 
 INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
-Command       create_rtl_model done; 0.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.79 seconds; current allocated memory: 144.848 MB.
+Command       create_rtl_model done; 0.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.92 seconds; current allocated memory: 154.620 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
-Execute       gen_rtl InvCipher -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvCipher -synmodules InvSubBytes InvMixColumns InvCipher 
+Execute       gen_rtl InvCipher -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvCipher -synmodules InvSubBytes Multiply InvMixColumns InvCipher 
 Execute       gen_rtl InvCipher -istop -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/InvCipher 
+Command       gen_rtl done; 0.11 sec.
 Execute       gen_rtl InvCipher -istop -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/InvCipher 
 Execute       syn_report -csynth -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvCipher_csynth.rpt 
 Execute       syn_report -rtlxml -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvCipher_csynth.xml 
 Execute       syn_report -verbosereport -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.verbose.rpt 
-Command       syn_report done; 0.54 sec.
+Command       syn_report done; 0.85 sec.
 Execute       db_write -model InvCipher -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.adb 
-Command       db_write done; 0.16 sec.
+Command       db_write done; 0.14 sec.
 Execute       gen_tb_info InvCipher -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher 
 Execute       export_constraint_db -f -tool general -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.constraint.tcl 
 Execute       syn_report -designview -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.design.xml 
-Command       syn_report done; 0.26 sec.
+Command       syn_report done; 0.23 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.protoinst 
@@ -437,7 +490,7 @@ Execute       get_config_debug -directory
 Execute       sc_get_clocks InvCipher 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain InvCipher 
-INFO-FLOW: Model list for RTL component generation: InvSubBytes InvMixColumns InvCipher
+INFO-FLOW: Model list for RTL component generation: InvSubBytes Multiply InvMixColumns InvCipher
 INFO-FLOW: Handling components in module [InvSubBytes] ... 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
 INFO-FLOW: Found component InvCipher_mux_165bkb.
@@ -446,19 +499,23 @@ INFO-FLOW: Found component InvCipher_mux_42_cud.
 INFO-FLOW: Append model InvCipher_mux_42_cud
 INFO-FLOW: Found component InvSubBytes_rsbox.
 INFO-FLOW: Append model InvSubBytes_rsbox
+INFO-FLOW: Handling components in module [Multiply] ... 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.compgen.tcl 
 INFO-FLOW: Handling components in module [InvMixColumns] ... 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.compgen.tcl 
 INFO-FLOW: Handling components in module [InvCipher] ... 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 INFO-FLOW: Append model InvSubBytes
+INFO-FLOW: Append model Multiply
 INFO-FLOW: Append model InvMixColumns
 INFO-FLOW: Append model InvCipher
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: InvCipher_mux_165bkb InvCipher_mux_42_cud InvSubBytes_rsbox InvSubBytes InvMixColumns InvCipher
+INFO-FLOW: All models in this session: InvCipher_mux_165bkb InvCipher_mux_42_cud InvSubBytes_rsbox InvSubBytes Multiply InvMixColumns InvCipher
 INFO-FLOW: To file: write model InvCipher_mux_165bkb
 INFO-FLOW: To file: write model InvCipher_mux_42_cud
 INFO-FLOW: To file: write model InvSubBytes_rsbox
 INFO-FLOW: To file: write model InvSubBytes
+INFO-FLOW: To file: write model Multiply
 INFO-FLOW: To file: write model InvMixColumns
 INFO-FLOW: To file: write model InvCipher
 INFO-FLOW: Finished generating RTL model list.
@@ -469,7 +526,7 @@ INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 Execute       syn_report -model InvCipher -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 147.49 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 127.86 MHz
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
 INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -493,7 +550,7 @@ Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/in
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.13 sec.
+Command           ap_source done; 0.12 sec.
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
 Command         ap_source done; 0.18 sec.
@@ -520,6 +577,7 @@ Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Command       ap_source done; 0.18 sec.
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1
@@ -544,7 +602,7 @@ Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/in
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.11 sec.
+Command           ap_source done; 0.12 sec.
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
 Command         ap_source done; 0.17 sec.
@@ -561,11 +619,13 @@ INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
@@ -630,12 +690,13 @@ Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Command       ap_source done; 0.79 sec.
+Command       ap_source done; 0.75 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.compgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
@@ -649,7 +710,7 @@ Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/s
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=66
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=32
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=6 #gSsdmPorts=66
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=7 #gSsdmPorts=66
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -686,6 +747,7 @@ Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Multiply.tbgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvMixColumns.tbgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute       get_config_sdx -target 
@@ -695,14 +757,14 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5343 ; free virtual = 17396
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5433 ; free virtual = 17494
 INFO: [VHDL 208-304] Generating VHDL RTL for InvCipher.
 INFO: [VLOG 209-307] Generating Verilog RTL for InvCipher.
-Command     autosyn done; 7.31 sec.
-Command   csynth_design done; 22.14 sec.
-Command ap_source done; 25.07 sec.
+Command     autosyn done; 9.03 sec.
+Command   csynth_design done; 23.86 sec.
+Command ap_source done; 26.86 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 23:28:07 IST 2020
+INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 23:32:22 IST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -747,8 +809,8 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/x
 Command         ap_source done; 0.15 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.22 sec.
-Command     ap_source done; 0.22 sec.
+Command       ap_source done; 0.2 sec.
+Command     ap_source done; 0.2 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6 
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -763,7 +825,7 @@ Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7vx485t-ffg1157-1 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
-Command       ap_part_info done; 2.22 sec.
+Command       ap_part_info done; 2.07 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
 Execute         get_default_platform 
@@ -779,7 +841,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.49 sec.
+Command     set_part done; 2.32 sec.
 Execute     ap_part_info -data single -name xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -793,7 +855,7 @@ Execute     config_interface -m_axi_addr64=0
 Execute     config_interface -m_axi_offset=off 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 2.86 sec.
+Command   open_solution done; 2.68 sec.
 Execute   cosim_design 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -821,8 +883,8 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/x
 Command         ap_source done; 0.12 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.19 sec.
-Command     ap_source done; 0.19 sec.
+Command       ap_source done; 0.18 sec.
+Command     ap_source done; 0.18 sec.
 Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -860,7 +922,7 @@ Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
 Execute     source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.36 sec.
+Command     ap_source done; 0.38 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
@@ -905,8 +967,8 @@ Execute       source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 35.24 sec.
+Command     ap_source done; 35.75 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-Command   cosim_design done; 70.58 sec.
-Command ap_source done; 73.44 sec.
+Command   cosim_design done; 71 sec.
+Command ap_source done; 73.68 sec.
 Execute cleanup_all 

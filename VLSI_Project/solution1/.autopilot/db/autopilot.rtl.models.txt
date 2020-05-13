@@ -2,5 +2,6 @@ InvCipher_mux_165bkb
 InvCipher_mux_42_cud
 InvSubBytes_rsbox
 InvSubBytes
+Multiply
 InvMixColumns
 InvCipher

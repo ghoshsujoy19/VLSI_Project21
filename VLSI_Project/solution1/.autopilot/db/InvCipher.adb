@@ -24904,7 +24904,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>1197</second>
+              <second>2497</second>
             </item>
           </second>
         </item>

@@ -47,6 +47,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module InvSubBytes
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_10.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Multiply.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiply
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_14.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_14
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_4.v" into library xil_defaultlib
@@ -59,6 +61,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Multiply
 Compiling module xil_defaultlib.InvCipher_mux_42_cud(ID=1,din0_W...
 Compiling module xil_defaultlib.InvMixColumns
 Compiling module xil_defaultlib.InvSubBytes_rsbox_rom

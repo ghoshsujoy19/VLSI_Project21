@@ -60,7 +60,7 @@ For AES192/256 the key size is proportionally larger.
 // reduces code size considerably with the Keil ARM compiler.
 // See this link for more information: https://github.com/kokke/tiny-AES-C/pull/3
 #ifndef MULTIPLY_AS_A_FUNCTION
-#define MULTIPLY_AS_A_FUNCTION 0
+#define MULTIPLY_AS_A_FUNCTION 1
 #endif
 
 

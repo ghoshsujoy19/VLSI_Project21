@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'InvCipher'" level="0">
-<item name = "Date">Wed May 13 23:23:35 2020
+<item name = "Date">Wed May 13 23:30:50 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.780 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 7.821 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -52,7 +52,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 406, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, -, 537, 1785, -</column>
+<column name="Instance">1, -, 537, 3085, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 887, -</column>
 <column name="Register">-, -, 272, -, -</column>
@@ -64,7 +64,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_InvMixColumns_fu_981">InvMixColumns, 0, 0, 261, 1197, 0</column>
+<column name="grp_InvMixColumns_fu_981">InvMixColumns, 0, 0, 261, 2497, 0</column>
 <column name="grp_InvSubBytes_fu_1001">InvSubBytes, 1, 0, 276, 588, 0</column>
 </table>
 </item>

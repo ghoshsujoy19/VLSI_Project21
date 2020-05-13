@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'InvSubBytes'
 ================================================================
-* Date:           Wed May 13 23:23:31 2020
+* Date:           Wed May 13 23:30:44 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        VLSI_Project
@@ -179,7 +179,7 @@ ST_2 : Operation 93 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i
 State 3 <SV = 2> <Delay = 3.95>
 ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ 0, %.preheader.preheader ], [ %j, %.preheader.backedge ]"   --->   Operation 94 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 95 [1/1] (0.86ns)   --->   "%icmp_ln391 = icmp eq i3 %j_0, -4" [aes.c:391]   --->   Operation 95 'icmp' 'icmp_ln391' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 96 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 96 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 97 [1/1] (1.18ns)   --->   "%j = add i3 %j_0, 1" [aes.c:391]   --->   Operation 97 'add' 'j' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 98 [1/1] (0.00ns)   --->   "br i1 %icmp_ln391, label %.loopexit.loopexit, label %1" [aes.c:391]   --->   Operation 98 'br' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%state_3_3_0_load_1 = load i8* %state_3_3_0" [aes.c:393]   --->   Operation 99 'load' 'state_3_3_0_load_1' <Predicate = (!icmp_ln391)> <Delay = 0.00>
@@ -378,7 +378,7 @@ mrv_14             (insertvalue      ) [ 00000]
 ret_ln396          (ret              ) [ 00000]
 j_0                (phi              ) [ 00010]
 icmp_ln391         (icmp             ) [ 00111]
-empty_9            (speclooptripcount) [ 00000]
+empty_12           (speclooptripcount) [ 00000]
 j                  (add              ) [ 00111]
 br_ln391           (br               ) [ 00000]
 state_3_3_0_load_1 (load             ) [ 00001]

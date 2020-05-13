@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'InvMixColumns'" level="0">
-<item name = "Date">Wed May 13 23:23:34 2020
+<item name = "Date">Wed May 13 23:30:49 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.780 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 7.821 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -31,6 +31,22 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="tmp_Multiply_fu_309">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_s_Multiply_fu_316">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_1_Multiply_fu_323">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_2_Multiply_fu_330">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_3_Multiply_fu_337">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_4_Multiply_fu_344">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_5_Multiply_fu_351">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_6_Multiply_fu_358">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_7_Multiply_fu_365">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_8_Multiply_fu_372">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_9_Multiply_fu_379">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_10_Multiply_fu_386">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_11_Multiply_fu_393">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_12_Multiply_fu_400">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_13_Multiply_fu_407">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="tmp_14_Multiply_fu_414">Multiply, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,9 +64,9 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 465, -</column>
+<column name="Expression">-, -, 0, 117, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 0, 420, -</column>
+<column name="Instance">-, -, 0, 2068, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 312, -</column>
 <column name="Register">-, -, 261, -, -</column>
@@ -62,8 +78,6 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="InvCipher_mux_42_cud_U37">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
-<column name="InvCipher_mux_42_cud_U38">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
 <column name="InvCipher_mux_42_cud_U39">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
 <column name="InvCipher_mux_42_cud_U40">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
 <column name="InvCipher_mux_42_cud_U41">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
@@ -82,6 +96,24 @@
 <column name="InvCipher_mux_42_cud_U54">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
 <column name="InvCipher_mux_42_cud_U55">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
 <column name="InvCipher_mux_42_cud_U56">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
+<column name="InvCipher_mux_42_cud_U57">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
+<column name="InvCipher_mux_42_cud_U58">InvCipher_mux_42_cud, 0, 0, 0, 21, 0</column>
+<column name="tmp_Multiply_fu_309">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_s_Multiply_fu_316">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_1_Multiply_fu_323">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_2_Multiply_fu_330">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_3_Multiply_fu_337">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_4_Multiply_fu_344">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_5_Multiply_fu_351">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_6_Multiply_fu_358">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_7_Multiply_fu_365">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_8_Multiply_fu_372">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_9_Multiply_fu_379">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_10_Multiply_fu_386">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_11_Multiply_fu_393">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_12_Multiply_fu_400">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_13_Multiply_fu_407">Multiply, 0, 0, 0, 103, 0</column>
+<column name="tmp_14_Multiply_fu_414">Multiply, 0, 0, 0, 103, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -98,68 +130,20 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_fu_315_p2">+, 0, 0, 12, 3, 1</column>
-<column name="icmp_ln369_fu_309_p2">icmp, 0, 0, 9, 3, 4</column>
-<column name="select_ln309_10_fu_675_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_11_fu_703_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_1_fu_423_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_2_fu_451_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_3_fu_479_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_4_fu_507_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_5_fu_535_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_6_fu_563_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_7_fu_591_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_8_fu_619_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_9_fu_647_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln309_fu_395_p3">select, 0, 0, 5, 1, 5</column>
-<column name="xor_ln309_10_fu_655_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_11_fu_683_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_1_fu_403_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_2_fu_431_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_3_fu_543_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_4_fu_487_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_5_fu_515_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_6_fu_627_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_7_fu_571_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_8_fu_599_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_9_fu_711_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln309_fu_459_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_1_fu_723_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_2_fu_729_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_3_fu_735_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_4_fu_741_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_5_fu_747_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_6_fu_753_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_7_fu_759_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_8_fu_765_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_9_fu_771_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln376_fu_717_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_1_fu_783_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_2_fu_789_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_3_fu_795_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_4_fu_801_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_5_fu_807_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_6_fu_813_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_7_fu_819_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_8_fu_825_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln377_fu_777_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_1_fu_837_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_2_fu_843_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_3_fu_849_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_4_fu_855_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_5_fu_861_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_6_fu_867_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_7_fu_873_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_8_fu_879_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_9_fu_885_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln378_fu_831_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_1_fu_897_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_2_fu_903_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_3_fu_909_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_4_fu_915_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_5_fu_921_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_6_fu_927_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln379_fu_891_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="i_fu_427_p2">+, 0, 0, 12, 3, 1</column>
+<column name="icmp_ln369_fu_421_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="xor_ln376_1_fu_515_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln376_2_fu_521_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln376_fu_509_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln377_1_fu_533_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln377_2_fu_539_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln377_fu_527_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln378_1_fu_551_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln378_2_fu_557_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln378_fu_545_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln379_1_fu_569_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln379_2_fu_575_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln379_fu_563_p2">xor, 0, 0, 8, 8, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

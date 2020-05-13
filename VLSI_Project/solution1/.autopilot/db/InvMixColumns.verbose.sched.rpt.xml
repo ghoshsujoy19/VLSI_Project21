@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'InvMixColumns'" level="0">
-<item name = "Date">Wed May 13 23:23:32 2020
+<item name = "Date">Wed May 13 23:30:45 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.780 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 7.821 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
