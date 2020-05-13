@@ -51,7 +51,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "506",
+    "Latency": "106",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -71,7 +71,6 @@
     "Vhdl": [
       "impl\/vhdl\/AddRoundKey.vhd",
       "impl\/vhdl\/Cipher_mux_42_8_1_1.vhd",
-      "impl\/vhdl\/Cipher_mux_165_8_bkb.vhd",
       "impl\/vhdl\/MixColumns.vhd",
       "impl\/vhdl\/SubBytes.vhd",
       "impl\/vhdl\/SubBytes_sbox.vhd",
@@ -80,7 +79,6 @@
     "Verilog": [
       "impl\/verilog\/AddRoundKey.v",
       "impl\/verilog\/Cipher_mux_42_8_1_1.v",
-      "impl\/verilog\/Cipher_mux_165_8_bkb.v",
       "impl\/verilog\/MixColumns.v",
       "impl\/verilog\/SubBytes.v",
       "impl\/verilog\/SubBytes_sbox.v",
@@ -1250,12 +1248,12 @@
           "InstanceName": "grp_MixColumns_fu_478"
         },
         {
-          "ModuleName": "SubBytes",
-          "InstanceName": "grp_SubBytes_fu_498"
+          "ModuleName": "AddRoundKey",
+          "InstanceName": "grp_AddRoundKey_fu_498"
         },
         {
-          "ModuleName": "AddRoundKey",
-          "InstanceName": "grp_AddRoundKey_fu_536"
+          "ModuleName": "SubBytes",
+          "InstanceName": "grp_SubBytes_fu_569"
         }
       ]
     },
@@ -1314,36 +1312,22 @@
       },
       "SubBytes": {
         "Latency": {
-          "LatencyBest": "41",
-          "LatencyAvg": "41",
-          "LatencyWorst": "41",
-          "PipelineII": "41",
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.112"
+          "Estimate": "2.664"
         },
-        "Loops": [{
-            "Name": "SubBytes_label35",
-            "TripCount": "4",
-            "Latency": "40",
-            "PipelineII": "",
-            "PipelineDepth": "10",
-            "Loops": [{
-                "Name": "SubBytes_label34",
-                "TripCount": "4",
-                "Latency": "8",
-                "PipelineII": "",
-                "PipelineDepth": "2"
-              }]
-          }],
         "Area": {
-          "BRAM_18K": "1",
-          "FF": "276",
-          "LUT": "588",
+          "BRAM_18K": "8",
+          "FF": "130",
+          "LUT": "159",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -1379,29 +1363,29 @@
       },
       "Cipher": {
         "Latency": {
-          "LatencyBest": "506",
-          "LatencyAvg": "506",
-          "LatencyWorst": "506",
-          "PipelineII": "507",
+          "LatencyBest": "106",
+          "LatencyAvg": "106",
+          "LatencyWorst": "106",
+          "PipelineII": "107",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.112"
+          "Estimate": "5.329"
         },
         "Loops": [{
             "Name": "Cipher_label33",
             "TripCount": "9",
-            "Latency": "459",
+            "Latency": "99",
             "PipelineII": "",
-            "PipelineDepth": "51"
+            "PipelineDepth": "11"
           }],
         "Area": {
-          "BRAM_18K": "1",
-          "FF": "1074",
-          "LUT": "2809",
+          "BRAM_18K": "8",
+          "FF": "928",
+          "LUT": "2380",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -1418,7 +1402,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-13 18:39:04 IST",
+    "Time": "2020-05-13 18:57:24 IST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

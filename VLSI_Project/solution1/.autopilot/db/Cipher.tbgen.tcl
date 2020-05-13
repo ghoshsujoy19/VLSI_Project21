@@ -291,13 +291,13 @@ set NewPortList {[
  	{ "name": "RoundKey_15_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_15", "role": "q0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "27", "46"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "27", "28"],
 		"CDFG" : "Cipher",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "506", "EstimateLatencyMax" : "506",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "106", "EstimateLatencyMax" : "106",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -306,11 +306,11 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"WaitState" : [
 			{"State" : "ap_ST_fsm_state5", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_MixColumns_fu_478"},
-			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_SubBytes_fu_498"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_SubBytes_fu_498"},
-			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_AddRoundKey_fu_536"},
-			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_AddRoundKey_fu_536"},
-			{"State" : "ap_ST_fsm_state8", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_AddRoundKey_fu_536"}],
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_AddRoundKey_fu_498"},
+			{"State" : "ap_ST_fsm_state6", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_AddRoundKey_fu_498"},
+			{"State" : "ap_ST_fsm_state8", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_AddRoundKey_fu_498"},
+			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_SubBytes_fu_569"},
+			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_SubBytes_fu_569"}],
 		"Port" : [
 			{"Name" : "state_0_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "state_0_1", "Type" : "OVld", "Direction" : "IO"},
@@ -330,55 +330,55 @@ set RtlHierarchyInfo {[
 			{"Name" : "state_3_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "RoundKey_0", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_0"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_0"}]},
 			{"Name" : "RoundKey_1", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_1"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_1"}]},
 			{"Name" : "RoundKey_2", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_2"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_2"}]},
 			{"Name" : "RoundKey_3", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_3"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_3"}]},
 			{"Name" : "RoundKey_4", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_4"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_4"}]},
 			{"Name" : "RoundKey_5", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_5"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_5"}]},
 			{"Name" : "RoundKey_6", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_6"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_6"}]},
 			{"Name" : "RoundKey_7", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_7"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_7"}]},
 			{"Name" : "RoundKey_8", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_8"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_8"}]},
 			{"Name" : "RoundKey_9", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_9"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_9"}]},
 			{"Name" : "RoundKey_10", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_10"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_10"}]},
 			{"Name" : "RoundKey_11", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_11"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_11"}]},
 			{"Name" : "RoundKey_12", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_12"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_12"}]},
 			{"Name" : "RoundKey_13", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_13"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_13"}]},
 			{"Name" : "RoundKey_14", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_14"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_14"}]},
 			{"Name" : "RoundKey_15", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_AddRoundKey_fu_536", "Port" : "RoundKey_15"}]},
+					{"ID" : "27", "SubInstance" : "grp_AddRoundKey_fu_498", "Port" : "RoundKey_15"}]},
 			{"Name" : "sbox", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "27", "SubInstance" : "grp_SubBytes_fu_498", "Port" : "sbox"}]}]},
+					{"ID" : "28", "SubInstance" : "grp_SubBytes_fu_569", "Port" : "sbox"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"],
 		"CDFG" : "MixColumns",
 		"Protocol" : "ap_ctrl_hs",
@@ -409,81 +409,32 @@ set RtlHierarchyInfo {[
 			{"Name" : "state_3_1_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "state_3_2_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "state_3_3_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U70", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U71", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U72", "Parent" : "1"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U73", "Parent" : "1"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U74", "Parent" : "1"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U75", "Parent" : "1"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U76", "Parent" : "1"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U77", "Parent" : "1"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U78", "Parent" : "1"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U79", "Parent" : "1"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U80", "Parent" : "1"},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U81", "Parent" : "1"},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U82", "Parent" : "1"},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U83", "Parent" : "1"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U84", "Parent" : "1"},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U85", "Parent" : "1"},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U86", "Parent" : "1"},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U87", "Parent" : "1"},
-	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U88", "Parent" : "1"},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U89", "Parent" : "1"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U90", "Parent" : "1"},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U91", "Parent" : "1"},
-	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U92", "Parent" : "1"},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U93", "Parent" : "1"},
-	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U94", "Parent" : "1"},
-	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498", "Parent" : "0", "Child" : ["28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
-		"CDFG" : "SubBytes",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "41", "EstimateLatencyMax" : "41",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "state_0_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_0_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_0_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_0_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_1_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_2_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_0_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_1_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_2_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "state_3_3_read", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sbox", "Type" : "Memory", "Direction" : "I"}]},
-	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.sbox_U", "Parent" : "27"},
-	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_165_8_bkb_U34", "Parent" : "27"},
-	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U35", "Parent" : "27"},
-	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U36", "Parent" : "27"},
-	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U37", "Parent" : "27"},
-	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U38", "Parent" : "27"},
-	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U39", "Parent" : "27"},
-	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U40", "Parent" : "27"},
-	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U41", "Parent" : "27"},
-	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U42", "Parent" : "27"},
-	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U43", "Parent" : "27"},
-	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U44", "Parent" : "27"},
-	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U45", "Parent" : "27"},
-	{"ID" : "41", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U46", "Parent" : "27"},
-	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U47", "Parent" : "27"},
-	{"ID" : "43", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U48", "Parent" : "27"},
-	{"ID" : "44", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U49", "Parent" : "27"},
-	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_498.Cipher_mux_42_8_1_1_U50", "Parent" : "27"},
-	{"ID" : "46", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_AddRoundKey_fu_536", "Parent" : "0",
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U51", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U52", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U53", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U54", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U55", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U56", "Parent" : "1"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U57", "Parent" : "1"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U58", "Parent" : "1"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U59", "Parent" : "1"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U60", "Parent" : "1"},
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U61", "Parent" : "1"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U62", "Parent" : "1"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U63", "Parent" : "1"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U64", "Parent" : "1"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U65", "Parent" : "1"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U66", "Parent" : "1"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U67", "Parent" : "1"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U68", "Parent" : "1"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U69", "Parent" : "1"},
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U70", "Parent" : "1"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U71", "Parent" : "1"},
+	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U72", "Parent" : "1"},
+	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U73", "Parent" : "1"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U74", "Parent" : "1"},
+	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_MixColumns_fu_478.Cipher_mux_42_8_1_1_U75", "Parent" : "1"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_AddRoundKey_fu_498", "Parent" : "0",
 		"CDFG" : "AddRoundKey",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -529,27 +480,59 @@ set RtlHierarchyInfo {[
 			{"Name" : "RoundKey_12", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "RoundKey_13", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "RoundKey_14", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "RoundKey_15", "Type" : "Memory", "Direction" : "I"}]}]}
+			{"Name" : "RoundKey_15", "Type" : "Memory", "Direction" : "I"}]},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_569", "Parent" : "0", "Child" : ["29"],
+		"CDFG" : "SubBytes",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "state_0_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_0_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_0_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_0_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_1_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_1_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_1_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_1_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_2_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_2_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_2_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_2_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_3_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_3_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_3_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "state_3_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sbox", "Type" : "Memory", "Direction" : "I"}]},
+	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SubBytes_fu_569.sbox_U", "Parent" : "28"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	Cipher {
-		state_0_0 {Type IO LastRead 0 FirstWrite 1}
-		state_0_1 {Type IO LastRead 0 FirstWrite 1}
-		state_0_2 {Type IO LastRead 0 FirstWrite 1}
-		state_0_3 {Type IO LastRead 0 FirstWrite 1}
-		state_1_0 {Type IO LastRead 0 FirstWrite 1}
-		state_1_1 {Type IO LastRead 0 FirstWrite 1}
-		state_1_2 {Type IO LastRead 0 FirstWrite 1}
-		state_1_3 {Type IO LastRead 0 FirstWrite 1}
-		state_2_0 {Type IO LastRead 0 FirstWrite 1}
-		state_2_1 {Type IO LastRead 0 FirstWrite 1}
-		state_2_2 {Type IO LastRead 0 FirstWrite 1}
-		state_2_3 {Type IO LastRead 0 FirstWrite 1}
-		state_3_0 {Type IO LastRead 0 FirstWrite 1}
-		state_3_1 {Type IO LastRead 0 FirstWrite 1}
-		state_3_2 {Type IO LastRead 0 FirstWrite 1}
-		state_3_3 {Type IO LastRead 0 FirstWrite 1}
+		state_0_0 {Type IO LastRead 0 FirstWrite 3}
+		state_0_1 {Type IO LastRead 0 FirstWrite 3}
+		state_0_2 {Type IO LastRead 0 FirstWrite 3}
+		state_0_3 {Type IO LastRead 0 FirstWrite 3}
+		state_1_0 {Type IO LastRead 0 FirstWrite 3}
+		state_1_1 {Type IO LastRead 0 FirstWrite 3}
+		state_1_2 {Type IO LastRead 0 FirstWrite 3}
+		state_1_3 {Type IO LastRead 0 FirstWrite 3}
+		state_2_0 {Type IO LastRead 0 FirstWrite 3}
+		state_2_1 {Type IO LastRead 0 FirstWrite 3}
+		state_2_2 {Type IO LastRead 0 FirstWrite 3}
+		state_2_3 {Type IO LastRead 0 FirstWrite 3}
+		state_3_0 {Type IO LastRead 0 FirstWrite 3}
+		state_3_1 {Type IO LastRead 0 FirstWrite 3}
+		state_3_2 {Type IO LastRead 0 FirstWrite 3}
+		state_3_3 {Type IO LastRead 0 FirstWrite 3}
 		RoundKey_0 {Type I LastRead 0 FirstWrite -1}
 		RoundKey_1 {Type I LastRead 0 FirstWrite -1}
 		RoundKey_2 {Type I LastRead 0 FirstWrite -1}
@@ -584,24 +567,6 @@ set ArgLastReadFirstWriteLatency {
 		state_3_1_read {Type I LastRead 0 FirstWrite -1}
 		state_3_2_read {Type I LastRead 0 FirstWrite -1}
 		state_3_3_read {Type I LastRead 0 FirstWrite -1}}
-	SubBytes {
-		state_0_0_read {Type I LastRead 0 FirstWrite -1}
-		state_0_1_read {Type I LastRead 0 FirstWrite -1}
-		state_0_2_read {Type I LastRead 0 FirstWrite -1}
-		state_0_3_read {Type I LastRead 0 FirstWrite -1}
-		state_1_0_read {Type I LastRead 0 FirstWrite -1}
-		state_1_1_read {Type I LastRead 0 FirstWrite -1}
-		state_1_2_read {Type I LastRead 0 FirstWrite -1}
-		state_1_3_read {Type I LastRead 0 FirstWrite -1}
-		state_2_0_read {Type I LastRead 0 FirstWrite -1}
-		state_2_1_read {Type I LastRead 0 FirstWrite -1}
-		state_2_2_read {Type I LastRead 0 FirstWrite -1}
-		state_2_3_read {Type I LastRead 0 FirstWrite -1}
-		state_3_0_read {Type I LastRead 0 FirstWrite -1}
-		state_3_1_read {Type I LastRead 0 FirstWrite -1}
-		state_3_2_read {Type I LastRead 0 FirstWrite -1}
-		state_3_3_read {Type I LastRead 0 FirstWrite -1}
-		sbox {Type I LastRead -1 FirstWrite -1}}
 	AddRoundKey {
 		round {Type I LastRead 0 FirstWrite -1}
 		state_0_0_read {Type I LastRead 1 FirstWrite -1}
@@ -635,13 +600,31 @@ set ArgLastReadFirstWriteLatency {
 		RoundKey_12 {Type I LastRead 0 FirstWrite -1}
 		RoundKey_13 {Type I LastRead 0 FirstWrite -1}
 		RoundKey_14 {Type I LastRead 0 FirstWrite -1}
-		RoundKey_15 {Type I LastRead 0 FirstWrite -1}}}
+		RoundKey_15 {Type I LastRead 0 FirstWrite -1}}
+	SubBytes {
+		state_0_0_read {Type I LastRead 0 FirstWrite -1}
+		state_0_1_read {Type I LastRead 0 FirstWrite -1}
+		state_0_2_read {Type I LastRead 0 FirstWrite -1}
+		state_0_3_read {Type I LastRead 0 FirstWrite -1}
+		state_1_0_read {Type I LastRead 0 FirstWrite -1}
+		state_1_1_read {Type I LastRead 0 FirstWrite -1}
+		state_1_2_read {Type I LastRead 0 FirstWrite -1}
+		state_1_3_read {Type I LastRead 0 FirstWrite -1}
+		state_2_0_read {Type I LastRead 0 FirstWrite -1}
+		state_2_1_read {Type I LastRead 0 FirstWrite -1}
+		state_2_2_read {Type I LastRead 0 FirstWrite -1}
+		state_2_3_read {Type I LastRead 0 FirstWrite -1}
+		state_3_0_read {Type I LastRead 0 FirstWrite -1}
+		state_3_1_read {Type I LastRead 0 FirstWrite -1}
+		state_3_2_read {Type I LastRead 0 FirstWrite -1}
+		state_3_3_read {Type I LastRead 0 FirstWrite -1}
+		sbox {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "506", "Max" : "506"}
-	, {"Name" : "Interval", "Min" : "507", "Max" : "507"}
+	{"Name" : "Latency", "Min" : "106", "Max" : "106"}
+	, {"Name" : "Interval", "Min" : "107", "Max" : "107"}
 ]}
 
 set PipelineEnableSignalInfo {[

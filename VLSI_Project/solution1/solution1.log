@@ -3844,3 +3844,536 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_1' to 'ap_o
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6395 ; free virtual = 18156
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6395 ; free virtual = 18156
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6393 ; free virtual = 18155
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6392 ; free virtual = 18155
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label35' (aes.c:263) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:266) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:246) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:249) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:415) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [XFORM 203-602] Inlining function 'SubBytes' into 'Cipher' (aes.c:427) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:310)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6371 ; free virtual = 18134
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6358 ; free virtual = 18122
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Cipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.85 seconds; current allocated memory: 128.006 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 128.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 128.732 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 129.302 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 130.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 131.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 132.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 25 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumns'.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 135.603 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_5' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6391 ; free virtual = 18152
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6391 ; free virtual = 18152
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6389 ; free virtual = 18151
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6389 ; free virtual = 18151
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:266) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:246) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:249) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:415) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:310)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6370 ; free virtual = 18133
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6349 ; free virtual = 18112
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Cipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.07 seconds; current allocated memory: 138.423 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 138.772 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 139.109 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 139.581 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 139.897 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 140.467 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 141.112 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 142.085 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 143.276 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 20 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SubBytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 146.329 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 25 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumns'.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 149.748 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_2' to 'ap_ovld'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6340 ; free virtual = 18103
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6340 ; free virtual = 18103
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6338 ; free virtual = 18103
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6338 ; free virtual = 18102
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:266) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:246) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:249) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:415) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:310)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6319 ; free virtual = 18084
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6298 ; free virtual = 18064
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Cipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.3 seconds; current allocated memory: 138.421 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 138.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 139.107 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 139.579 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 139.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 140.464 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 141.113 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 142.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 143.276 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 20 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SubBytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 146.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 25 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumns'.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 149.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_2' to 'ap_ovld'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6321 ; free virtual = 18096
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6321 ; free virtual = 18096
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6308 ; free virtual = 18095
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6308 ; free virtual = 18095
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label35' (aes.c:263) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:266) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:246) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:249) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:415) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:415) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:318) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:428) automatically.
+INFO: [XFORM 203-602] Inlining function 'SubBytes' into 'Cipher' (aes.c:427) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:310)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6283 ; free virtual = 18077
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6274 ; free virtual = 18066
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Cipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.12 seconds; current allocated memory: 128.007 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 128.356 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 128.733 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 129.303 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 130.063 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 131.196 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 132.365 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 25 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumns'.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 135.604 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_5' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6317 ; free virtual = 18082
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6317 ; free virtual = 18082
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6315 ; free virtual = 18082
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:319) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:429) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6315 ; free virtual = 18082
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label35' (aes.c:264) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:267) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:246) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:249) in function 'AddRoundKey' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:416) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:416) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:416) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:319) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:429) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:311)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6295 ; free virtual = 18064
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6274 ; free virtual = 18044
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Cipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.98 seconds; current allocated memory: 137.821 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 138.169 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 138.476 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 138.767 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 139.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 139.653 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 140.262 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 141.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AddRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 142.388 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SubBytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SubBytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 144.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MixColumns' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 25 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumns'.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 147.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/state_2_1' to 'ap_ovld'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

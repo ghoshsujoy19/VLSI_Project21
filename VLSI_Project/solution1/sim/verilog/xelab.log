@@ -41,8 +41,6 @@ INFO: [VRFC 10-311] analyzing module Cipher_mux_42_8_1_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/SubBytes_sbox.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module SubBytes_sbox_rom
 INFO: [VRFC 10-311] analyzing module SubBytes_sbox
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_mux_165_8_bkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cipher_mux_165_8_bkb
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/SubBytes.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module SubBytes
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_6.v" into library xil_defaultlib
@@ -63,11 +61,10 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Cipher_mux_42_8_1_1(ID=1,din0_WI...
 Compiling module xil_defaultlib.MixColumns
+Compiling module xil_defaultlib.AddRoundKey
 Compiling module xil_defaultlib.SubBytes_sbox_rom
 Compiling module xil_defaultlib.SubBytes_sbox(DataWidth=8,Addres...
-Compiling module xil_defaultlib.Cipher_mux_165_8_bkb(ID=1,din0_W...
 Compiling module xil_defaultlib.SubBytes
-Compiling module xil_defaultlib.AddRoundKey
 Compiling module xil_defaultlib.Cipher
 Compiling module xil_defaultlib.AESL_automem_RoundKey_0
 Compiling module xil_defaultlib.AESL_automem_RoundKey_1

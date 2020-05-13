@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 18:38:41 IST 2020
+INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 18:57:01 IST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -40,11 +40,11 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.13 sec.
+Command         ap_source done; 0.11 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.19 sec.
-Command     ap_source done; 0.19 sec.
+Command       ap_source done; 0.17 sec.
+Command     ap_source done; 0.17 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6 
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -75,7 +75,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.29 sec.
+Command     set_part done; 2.27 sec.
 Execute     ap_part_info -data single -name xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -89,7 +89,7 @@ Execute     config_interface -m_axi_addr64=0
 Execute     config_interface -m_axi_offset=off 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 2.62 sec.
+Command   open_solution done; 2.56 sec.
 Execute   set_part xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -106,7 +106,7 @@ Execute     add_library xilinx/virtex7/virtex7_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.25 sec.
+Command   set_part done; 0.24 sec.
 Execute   create_clock -period 10 -name default 
 Execute   config_interface -clock_enable=0 -expose_global -m_axi_addr64=0 -m_axi_offset off -register_io off -trim_dangling_port=0 
 Execute   csynth_design 
@@ -134,14 +134,14 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "aes.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c" 
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E aes.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c
-Command       clang done; 3.19 sec.
+Command       clang done; 3.31 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c std=gnu89 
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c"  -o "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/useless.bc
-Command       clang done; 3.18 sec.
-INFO-FLOW: Done: GCC PP time: 6.4 seconds per iteration
+Command       clang done; 3.35 sec.
+INFO-FLOW: Done: GCC PP time: 6.7 seconds per iteration
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 Execute         source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
@@ -158,7 +158,7 @@ Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.2/lnx64/too
 Execute         source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/xilinx-legacy-rewriter.aes.pp.0.c.out.log 2> /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/xilinx-legacy-rewriter.aes.pp.0.c.err.log 
-Command       tidy_31 done; 0.12 sec.
+Command       tidy_31 done; 0.11 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.2 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.1.c std=gnu89 
@@ -167,54 +167,56 @@ Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info
 INFO-FLOW: Processing labels
 Execute       clang -src /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.bc" 
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.bc
-Command       clang done; 3.18 sec.
+Command       clang done; 3.19 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.g.bc -hls-opt -except-internalize Cipher -L/tools/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 1.61 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6970 ; free virtual = 18247
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6970 ; free virtual = 18248
+Command       llvm-ld done; 1.59 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6317 ; free virtual = 18082
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6317 ; free virtual = 18082
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.pp.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/tools/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.62 sec.
+Command         llvm-ld done; 1.61 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top Cipher -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.0.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6966 ; free virtual = 18246
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6315 ; free virtual = 18082
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:315) automatically.
-INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:425) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:319) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:429) automatically.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6966 ; free virtual = 18245
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6315 ; free virtual = 18082
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc to /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label35' (aes.c:264) in function 'SubBytes' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:267) in function 'SubBytes' completely with a factor of 4.
 INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:246) in function 'AddRoundKey' completely with a factor of 4.
 INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:249) in function 'AddRoundKey' completely with a factor of 4.
-INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:412) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:412) in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:412) in dimension 2 completely.
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:315) automatically.
-INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:425) automatically.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:416) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:416) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:416) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'MixColumns' (aes.c:319) automatically.
+INFO: [XFORM 203-602] Inlining function 'ShiftRows' into 'Cipher' (aes.c:429) automatically.
 Command         transform done; 0.36 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:307)...12 expression(s) balanced.
-Command         transform done; 0.25 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6945 ; free virtual = 18226
+INFO: [XFORM 203-11] Balancing expressions in function 'MixColumns' (aes.c:311)...12 expression(s) balanced.
+Command         transform done; 0.21 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6295 ; free virtual = 18064
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.2.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform done; 0.79 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6925 ; free virtual = 18205
+Command         transform done; 0.61 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6274 ; free virtual = 18044
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 3.18 sec.
-Command     elaborate done; 14.77 sec.
+Command       opt_and_import_c done; 2.9 sec.
+Command     elaborate done; 14.75 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -264,7 +266,7 @@ Execute       set_default_model AddRoundKey
 Execute       schedule -model AddRoundKey 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 18.12 seconds; current allocated memory: 138.907 MB.
+INFO: [HLS 200-111]  Elapsed time: 17.98 seconds; current allocated memory: 137.821 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.verbose.sched.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.sched.adb -f 
 INFO-FLOW: Finish scheduling AddRoundKey.
@@ -276,7 +278,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 139.256 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 138.169 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.verbose.bind.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.bind.adb -f 
 INFO-FLOW: Finish binding AddRoundKey.
@@ -287,7 +289,7 @@ Execute       set_default_model SubBytes
 Execute       schedule -model SubBytes 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 139.706 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 138.476 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.verbose.sched.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.sched.adb -f 
 INFO-FLOW: Finish scheduling SubBytes.
@@ -299,7 +301,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 140.307 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 138.767 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.verbose.bind.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.bind.adb -f 
 INFO-FLOW: Finish binding SubBytes.
@@ -310,7 +312,7 @@ Execute       set_default_model MixColumns
 Execute       schedule -model MixColumns 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 140.685 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 139.082 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.verbose.sched.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.sched.adb -f 
 INFO-FLOW: Finish scheduling MixColumns.
@@ -322,7 +324,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 141.218 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 139.653 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.verbose.bind.rpt 
 Command       syn_report done; 0.14 sec.
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.bind.adb -f 
@@ -335,7 +337,7 @@ Execute       schedule -model Cipher
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.12 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 141.876 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 140.262 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.verbose.sched.rpt 
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.sched.adb -f 
 INFO-FLOW: Finish scheduling Cipher.
@@ -347,10 +349,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.32 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 142.848 MB.
+Command       bind done; 0.33 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 141.184 MB.
 Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.verbose.bind.rpt 
-Command       syn_report done; 0.29 sec.
+Command       syn_report done; 0.26 sec.
 Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.bind.adb -f 
 INFO-FLOW: Finish binding Cipher.
 Execute       get_model_list Cipher -filter all-wo-channel 
@@ -367,7 +369,7 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model AddRoundKey -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AddRoundKey'.
-INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 144.009 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 142.388 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.rtl_wrap.cfg.tcl 
 Execute       gen_rtl AddRoundKey -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/AddRoundKey -synmodules AddRoundKey SubBytes MixColumns Cipher 
 Execute       gen_rtl AddRoundKey -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/AddRoundKey 
@@ -375,7 +377,7 @@ Execute       gen_rtl AddRoundKey -style xilinx -f -lang vlog -o /home/sujoy/Doc
 Execute       syn_report -csynth -model AddRoundKey -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/AddRoundKey_csynth.rpt 
 Execute       syn_report -rtlxml -model AddRoundKey -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/AddRoundKey_csynth.xml 
 Execute       syn_report -verbosereport -model AddRoundKey -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.verbose.rpt 
-Command       syn_report done; 0.11 sec.
+Command       syn_report done; 0.12 sec.
 Execute       db_write -model AddRoundKey -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.adb 
 Execute       gen_tb_info AddRoundKey -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -384,11 +386,8 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model SubBytes -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.compgen.tcl 
-INFO: [SYN 201-210] Renamed object name 'Cipher_mux_165_8_1_1' to 'Cipher_mux_165_8_bkb' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_165_8_bkb': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 16 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'SubBytes'.
-INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 147.134 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 144.957 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.rtl_wrap.cfg.tcl 
 Execute       gen_rtl SubBytes -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/SubBytes -synmodules AddRoundKey SubBytes MixColumns Cipher 
 Execute       gen_rtl SubBytes -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/SubBytes 
@@ -396,7 +395,6 @@ Execute       gen_rtl SubBytes -style xilinx -f -lang vlog -o /home/sujoy/Docume
 Execute       syn_report -csynth -model SubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/SubBytes_csynth.rpt 
 Execute       syn_report -rtlxml -model SubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/SubBytes_csynth.xml 
 Execute       syn_report -verbosereport -model SubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.verbose.rpt 
-Command       syn_report done; 0.12 sec.
 Execute       db_write -model SubBytes -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.adb 
 Execute       gen_tb_info SubBytes -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -407,7 +405,7 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       create_rtl_model MixColumns -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'Cipher_mux_42_8_1_1': 25 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MixColumns'.
-INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 151.148 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 147.867 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.rtl_wrap.cfg.tcl 
 Execute       gen_rtl MixColumns -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/MixColumns -synmodules AddRoundKey SubBytes MixColumns Cipher 
 Execute       gen_rtl MixColumns -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/MixColumns 
@@ -415,7 +413,7 @@ Execute       gen_rtl MixColumns -style xilinx -f -lang vlog -o /home/sujoy/Docu
 Execute       syn_report -csynth -model MixColumns -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/MixColumns_csynth.rpt 
 Execute       syn_report -rtlxml -model MixColumns -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/MixColumns_csynth.xml 
 Execute       syn_report -verbosereport -model MixColumns -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.verbose.rpt 
-Command       syn_report done; 0.19 sec.
+Command       syn_report done; 0.18 sec.
 Execute       db_write -model MixColumns -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.adb 
 Execute       gen_tb_info MixColumns -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -458,8 +456,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_14' to 'ap
 INFO: [RTGEN 206-500] Setting interface mode on port 'Cipher/RoundKey_15' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'Cipher' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Cipher'.
-Command       create_rtl_model done; 0.17 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 155.621 MB.
+Command       create_rtl_model done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.62 seconds; current allocated memory: 152.414 MB.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.rtl_wrap.cfg.tcl 
 Execute       gen_rtl Cipher -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/Cipher -synmodules AddRoundKey SubBytes MixColumns Cipher 
 Execute       gen_rtl Cipher -istop -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/Cipher 
@@ -467,13 +465,12 @@ Execute       gen_rtl Cipher -istop -style xilinx -f -lang vlog -o /home/sujoy/D
 Execute       syn_report -csynth -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/Cipher_csynth.rpt 
 Execute       syn_report -rtlxml -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/Cipher_csynth.xml 
 Execute       syn_report -verbosereport -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.verbose.rpt 
-Command       syn_report done; 0.3 sec.
+Command       syn_report done; 0.27 sec.
 Execute       db_write -model Cipher -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.adb 
-Command       db_write done; 0.11 sec.
 Execute       gen_tb_info Cipher -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher 
 Execute       export_constraint_db -f -tool general -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.constraint.tcl 
 Execute       syn_report -designview -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.design.xml 
-Command       syn_report done; 0.2 sec.
+Command       syn_report done; 0.18 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.protoinst 
@@ -486,14 +483,12 @@ INFO-FLOW: Handling components in module [AddRoundKey] ...
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AddRoundKey.compgen.tcl 
 INFO-FLOW: Handling components in module [SubBytes] ... 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.compgen.tcl 
-INFO-FLOW: Found component Cipher_mux_165_8_bkb.
-INFO-FLOW: Append model Cipher_mux_165_8_bkb
-INFO-FLOW: Found component Cipher_mux_42_8_1_1.
-INFO-FLOW: Append model Cipher_mux_42_8_1_1
 INFO-FLOW: Found component SubBytes_sbox.
 INFO-FLOW: Append model SubBytes_sbox
 INFO-FLOW: Handling components in module [MixColumns] ... 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.compgen.tcl 
+INFO-FLOW: Found component Cipher_mux_42_8_1_1.
+INFO-FLOW: Append model Cipher_mux_42_8_1_1
 INFO-FLOW: Handling components in module [Cipher] ... 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
 INFO-FLOW: Append model AddRoundKey
@@ -501,10 +496,9 @@ INFO-FLOW: Append model SubBytes
 INFO-FLOW: Append model MixColumns
 INFO-FLOW: Append model Cipher
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: Cipher_mux_165_8_bkb Cipher_mux_42_8_1_1 SubBytes_sbox AddRoundKey SubBytes MixColumns Cipher
-INFO-FLOW: To file: write model Cipher_mux_165_8_bkb
-INFO-FLOW: To file: write model Cipher_mux_42_8_1_1
+INFO-FLOW: All models in this session: SubBytes_sbox Cipher_mux_42_8_1_1 AddRoundKey SubBytes MixColumns Cipher
 INFO-FLOW: To file: write model SubBytes_sbox
+INFO-FLOW: To file: write model Cipher_mux_42_8_1_1
 INFO-FLOW: To file: write model AddRoundKey
 INFO-FLOW: To file: write model SubBytes
 INFO-FLOW: To file: write model MixColumns
@@ -517,7 +511,7 @@ INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 Execute       syn_report -model Cipher -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 195.64 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 187.67 MHz
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
 INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -544,8 +538,8 @@ Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip
 Command           ap_source done; 0.11 sec.
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.17 sec.
-Command       ap_source done; 0.17 sec.
+Command         ap_source done; 0.16 sec.
+Command       ap_source done; 0.16 sec.
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -559,17 +553,45 @@ Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/s
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/SubBytes.compgen.tcl 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SubBytes_sbox_rom' using block ROMs.
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'SubBytes_sbox_rom' using auto ROMs.
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Command       ap_source done; 0.17 sec.
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Command       ap_source done; 0.58 sec.
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/MixColumns.compgen.tcl 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -593,11 +615,11 @@ Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/in
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.12 sec.
+Command           ap_source done; 0.11 sec.
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.17 sec.
-Command       ap_source done; 0.17 sec.
+Command         ap_source done; 0.16 sec.
+Command       ap_source done; 0.16 sec.
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=Cipher xml_exists=0
@@ -681,7 +703,7 @@ Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Command       ap_source done; 0.69 sec.
+Command       ap_source done; 0.72 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
@@ -701,7 +723,7 @@ Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/s
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=66
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=32
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=7 #gSsdmPorts=66
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=6 #gSsdmPorts=66
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -748,14 +770,14 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6883 ; free virtual = 18173
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 6238 ; free virtual = 18013
 INFO: [VHDL 208-304] Generating VHDL RTL for Cipher.
 INFO: [VLOG 209-307] Generating Verilog RTL for Cipher.
-Command     autosyn done; 6.15 sec.
-Command   csynth_design done; 20.93 sec.
-Command ap_source done; 23.81 sec.
+Command     autosyn done; 6.22 sec.
+Command   csynth_design done; 20.98 sec.
+Command ap_source done; 23.79 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 18:39:13 IST 2020
+INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Wed May 13 18:58:46 IST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -797,7 +819,7 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.12 sec.
+Command         ap_source done; 0.13 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
 Command       ap_source done; 0.19 sec.
@@ -816,7 +838,7 @@ Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7vx485t-ffg1157-1 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
-Command       ap_part_info done; 2.05 sec.
+Command       ap_part_info done; 2.02 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
 Execute         get_default_platform 
@@ -832,7 +854,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.31 sec.
+Command     set_part done; 2.28 sec.
 Execute     ap_part_info -data single -name xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -846,7 +868,7 @@ Execute     config_interface -m_axi_addr64=0
 Execute     config_interface -m_axi_offset=off 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 2.69 sec.
+Command   open_solution done; 2.61 sec.
 Execute   cosim_design 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -871,11 +893,11 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.13 sec.
+Command         ap_source done; 0.12 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.18 sec.
-Command     ap_source done; 0.18 sec.
+Command       ap_source done; 0.17 sec.
+Command     ap_source done; 0.17 sec.
 Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -913,7 +935,7 @@ Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.rtl_wrap.cfg.tcl 
 Execute     source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.48 sec.
+Command     ap_source done; 0.38 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.rtl_wrap.cfg.tcl 
@@ -958,8 +980,8 @@ Execute       source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 67.33 sec.
+Command     ap_source done; 42.44 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-Command   cosim_design done; 110.93 sec.
-Command ap_source done; 113.62 sec.
+Command   cosim_design done; 77.2 sec.
+Command ap_source done; 79.81 sec.
 Execute cleanup_all 

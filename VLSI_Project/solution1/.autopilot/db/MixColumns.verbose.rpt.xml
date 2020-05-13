@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'MixColumns'" level="0">
-<item name = "Date">Wed May 13 18:39:01 2020
+<item name = "Date">Wed May 13 18:57:20 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -62,31 +62,31 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="Cipher_mux_42_8_1_1_U51">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U52">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U53">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U54">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U55">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U56">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U57">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U58">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U59">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U60">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U61">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U62">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U63">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U64">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U65">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U66">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U67">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U68">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
+<column name="Cipher_mux_42_8_1_1_U69">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 <column name="Cipher_mux_42_8_1_1_U70">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 <column name="Cipher_mux_42_8_1_1_U71">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 <column name="Cipher_mux_42_8_1_1_U72">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 <column name="Cipher_mux_42_8_1_1_U73">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 <column name="Cipher_mux_42_8_1_1_U74">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 <column name="Cipher_mux_42_8_1_1_U75">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U76">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U77">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U78">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U79">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U80">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U81">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U82">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U83">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U84">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U85">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U86">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U87">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U88">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U89">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U90">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U91">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U92">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U93">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
-<column name="Cipher_mux_42_8_1_1_U94">Cipher_mux_42_8_1_1, 0, 0, 0, 21, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -104,29 +104,29 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="i_fu_319_p2">+, 0, 0, 12, 3, 1</column>
-<column name="icmp_ln311_fu_313_p2">icmp, 0, 0, 9, 3, 4</column>
-<column name="select_ln303_1_fu_547_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln303_2_fu_677_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln303_3_fu_793_p3">select, 0, 0, 5, 1, 5</column>
-<column name="select_ln303_fu_417_p3">select, 0, 0, 5, 1, 5</column>
+<column name="icmp_ln315_fu_313_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="select_ln307_1_fu_547_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln307_2_fu_677_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln307_3_fu_793_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln307_fu_417_p3">select, 0, 0, 5, 1, 5</column>
 <column name="Tm_1_fu_527_p2">xor, 0, 0, 8, 8, 8</column>
 <column name="Tm_2_fu_657_p2">xor, 0, 0, 8, 8, 8</column>
 <column name="Tm_3_fu_773_p2">xor, 0, 0, 8, 8, 8</column>
 <column name="Tm_fu_385_p2">xor, 0, 0, 8, 8, 8</column>
 <column name="Tmp_fu_397_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln314_1_fu_391_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln315_1_fu_437_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln315_2_fu_431_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln315_fu_425_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln316_1_fu_567_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln316_2_fu_561_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln316_fu_555_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln317_1_fu_697_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln317_2_fu_691_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln317_fu_685_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln318_1_fu_813_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln318_2_fu_807_p2">xor, 0, 0, 8, 8, 8</column>
-<column name="xor_ln318_fu_801_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln318_1_fu_391_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln319_1_fu_437_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln319_2_fu_431_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln319_fu_425_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln320_1_fu_567_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln320_2_fu_561_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln320_fu_555_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln321_1_fu_697_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln321_2_fu_691_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln321_fu_685_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln322_1_fu_813_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln322_2_fu_807_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="xor_ln322_fu_801_p2">xor, 0, 0, 8, 8, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

@@ -257,14 +257,18 @@ static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 // state matrix with values in an S-box.
 static void SubBytes(state_t* state)
 {
+	#pragma HLS inline OFF
+	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
 	uint8_t i, j;
-SubBytes_label35:for (i = 0; i < 4; ++i)
-		 {
-SubBytes_label34:for (j = 0; j < 4; ++j)
-		 {
-			 (*state)[j][i] = getSBoxValue((*state)[j][i]);
-		 }
-		 }
+	SubBytes_label35:for (i = 0; i < 4; ++i)
+	{
+		#pragma HLS unroll
+		SubBytes_label34:for (j = 0; j < 4; ++j)
+		{
+			#pragma HLS unroll
+			(*state)[j][i] = getSBoxValue((*state)[j][i]);
+		}
+	}
 }
 
 // The ShiftRows() function shifts the rows in the state to the left.

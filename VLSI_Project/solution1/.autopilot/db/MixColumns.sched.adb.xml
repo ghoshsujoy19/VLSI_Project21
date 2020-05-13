@@ -11,7 +11,7 @@
 
 <trans id="117" from="2" to="2">
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -275,7 +275,7 @@
 :16  br label %1
 
 ]]></Node>
-<StgValue><ssdm name="br_ln311"/></StgValue>
+<StgValue><ssdm name="br_ln315"/></StgValue>
 </operation>
 </state>
 
@@ -545,10 +545,10 @@
 
 <Node id="52" bw="1" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-:17  %icmp_ln311 = icmp eq i3 %i_0, -4
+:17  %icmp_ln315 = icmp eq i3 %i_0, -4
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln311"/></StgValue>
+<StgValue><ssdm name="icmp_ln315"/></StgValue>
 </operation>
 
 <operation id="38" st_id="2" stage="1" lat="1">
@@ -590,17 +590,17 @@
 
 <Node id="55" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:20  br i1 %icmp_ln311, label %2, label %branch12
+:20  br i1 %icmp_ln315, label %2, label %branch12
 
 ]]></Node>
-<StgValue><ssdm name="br_ln311"/></StgValue>
+<StgValue><ssdm name="br_ln315"/></StgValue>
 </operation>
 
 <operation id="41" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -609,36 +609,36 @@
 branch12:0  call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str6) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="specloopname_ln312"/></StgValue>
+<StgValue><ssdm name="specloopname_ln316"/></StgValue>
 </operation>
 
 <operation id="42" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="58" bw="2" op_0_bw="3">
 <![CDATA[
-branch12:1  %trunc_ln313 = trunc i3 %i_0 to i2
+branch12:1  %trunc_ln317 = trunc i3 %i_0 to i2
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln313"/></StgValue>
+<StgValue><ssdm name="trunc_ln317"/></StgValue>
 </operation>
 
 <operation id="43" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="59" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:2  %t = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_0_0, i8 %state_1_0_0, i8 %state_2_0_0, i8 %state_3_0_0, i2 %trunc_ln313)
+branch12:2  %t = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_0_0, i8 %state_1_0_0, i8 %state_2_0_0, i8 %state_3_0_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="t"/></StgValue>
@@ -648,61 +648,61 @@ branch12:2  %t = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_0_0, i8 %state
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="60" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:3  %tmp_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_1_0, i8 %state_1_1_0, i8 %state_2_1_0, i8 %state_3_1_0, i2 %trunc_ln313)
+branch12:3  %tmp_2 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_1_0, i8 %state_1_1_0, i8 %state_2_1_0, i8 %state_3_1_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="45" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="61" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:4  %tmp_4 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0, i8 %state_1_2_0, i8 %state_2_2_0, i8 %state_3_2_0, i2 %trunc_ln313)
+branch12:4  %tmp_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0, i8 %state_1_2_0, i8 %state_2_2_0, i8 %state_3_2_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
 <operation id="46" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="62" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:5  %tmp_5 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0, i8 %state_1_3_0, i8 %state_2_3_0, i8 %state_3_3_0, i2 %trunc_ln313)
+branch12:5  %tmp_4 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0, i8 %state_1_3_0, i8 %state_2_3_0, i8 %state_3_3_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="tmp_4"/></StgValue>
 </operation>
 
 <operation id="47" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="63" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:6  %Tm = xor i8 %tmp_3, %t
+branch12:6  %Tm = xor i8 %tmp_2, %t
 
 ]]></Node>
 <StgValue><ssdm name="Tm"/></StgValue>
@@ -712,29 +712,29 @@ branch12:6  %Tm = xor i8 %tmp_3, %t
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="64" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:7  %xor_ln314_1 = xor i8 %Tm, %tmp_5
+branch12:7  %xor_ln318_1 = xor i8 %Tm, %tmp_4
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln314_1"/></StgValue>
+<StgValue><ssdm name="xor_ln318_1"/></StgValue>
 </operation>
 
 <operation id="49" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="65" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:8  %Tmp = xor i8 %xor_ln314_1, %tmp_4
+branch12:8  %Tmp = xor i8 %xor_ln318_1, %tmp_3
 
 ]]></Node>
 <StgValue><ssdm name="Tmp"/></StgValue>
@@ -744,23 +744,23 @@ branch12:8  %Tmp = xor i8 %xor_ln314_1, %tmp_4
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="66" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:9  %shl_ln303 = shl i8 %Tm, 1
+branch12:9  %shl_ln307 = shl i8 %Tm, 1
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln303"/></StgValue>
+<StgValue><ssdm name="shl_ln307"/></StgValue>
 </operation>
 
 <operation id="51" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -776,77 +776,77 @@ branch12:10  %tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %Tm, i32 7)
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="68" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-branch12:11  %select_ln303 = select i1 %tmp_1, i8 27, i8 0
+branch12:11  %select_ln307 = select i1 %tmp_1, i8 27, i8 0
 
 ]]></Node>
-<StgValue><ssdm name="select_ln303"/></StgValue>
+<StgValue><ssdm name="select_ln307"/></StgValue>
 </operation>
 
 <operation id="53" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="69" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:12  %xor_ln315 = xor i8 %shl_ln303, %Tmp
+branch12:12  %xor_ln319 = xor i8 %shl_ln307, %Tmp
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln315"/></StgValue>
+<StgValue><ssdm name="xor_ln319"/></StgValue>
 </operation>
 
 <operation id="54" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="70" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:13  %xor_ln315_2 = xor i8 %select_ln303, %t
+branch12:13  %xor_ln319_2 = xor i8 %select_ln307, %t
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln315_2"/></StgValue>
+<StgValue><ssdm name="xor_ln319_2"/></StgValue>
 </operation>
 
 <operation id="55" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="71" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:14  %xor_ln315_1 = xor i8 %xor_ln315_2, %xor_ln315
+branch12:14  %xor_ln319_1 = xor i8 %xor_ln319_2, %xor_ln319
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln315_1"/></StgValue>
+<StgValue><ssdm name="xor_ln319_1"/></StgValue>
 </operation>
 
 <operation id="56" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="72" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:15  %state_3_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_0_0, i8 %state_3_0_0, i8 %state_3_0_0, i8 %xor_ln315_1, i2 %trunc_ln313)
+branch12:15  %state_3_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_0_0, i8 %state_3_0_0, i8 %state_3_0_0, i8 %xor_ln319_1, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_3_0_1"/></StgValue>
@@ -856,13 +856,13 @@ branch12:15  %state_3_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_0_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="73" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:16  %state_2_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_0_0, i8 %state_2_0_0, i8 %xor_ln315_1, i8 %state_2_0_0, i2 %trunc_ln313)
+branch12:16  %state_2_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_0_0, i8 %state_2_0_0, i8 %xor_ln319_1, i8 %state_2_0_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_2_0_1"/></StgValue>
@@ -872,13 +872,13 @@ branch12:16  %state_2_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_0_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="74" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:17  %state_1_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_0_0, i8 %xor_ln315_1, i8 %state_1_0_0, i8 %state_1_0_0, i2 %trunc_ln313)
+branch12:17  %state_1_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_0_0, i8 %xor_ln319_1, i8 %state_1_0_0, i8 %state_1_0_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_1_0_1"/></StgValue>
@@ -888,13 +888,13 @@ branch12:17  %state_1_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_0_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="75" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:18  %state_0_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln315_1, i8 %state_0_0_0, i8 %state_0_0_0, i8 %state_0_0_0, i2 %trunc_ln313)
+branch12:18  %state_0_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln319_1, i8 %state_0_0_0, i8 %state_0_0_0, i8 %state_0_0_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_0_0_1"/></StgValue>
@@ -904,13 +904,13 @@ branch12:18  %state_0_0_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln315_1
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="76" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:19  %tmp = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_1_0, i8 %state_1_1_0, i8 %state_2_1_0, i8 %state_3_1_0, i2 %trunc_ln313)
+branch12:19  %tmp = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_1_0, i8 %state_1_1_0, i8 %state_2_1_0, i8 %state_3_1_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -920,29 +920,29 @@ branch12:19  %tmp = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_1_0, i8 %st
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="77" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:20  %tmp_6 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0, i8 %state_1_2_0, i8 %state_2_2_0, i8 %state_3_2_0, i2 %trunc_ln313)
+branch12:20  %tmp_5 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0, i8 %state_1_2_0, i8 %state_2_2_0, i8 %state_3_2_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="62" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="78" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:21  %Tm_1 = xor i8 %tmp_6, %tmp
+branch12:21  %Tm_1 = xor i8 %tmp_5, %tmp
 
 ]]></Node>
 <StgValue><ssdm name="Tm_1"/></StgValue>
@@ -952,109 +952,109 @@ branch12:21  %Tm_1 = xor i8 %tmp_6, %tmp
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="79" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:22  %shl_ln303_1 = shl i8 %Tm_1, 1
+branch12:22  %shl_ln307_1 = shl i8 %Tm_1, 1
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln303_1"/></StgValue>
+<StgValue><ssdm name="shl_ln307_1"/></StgValue>
 </operation>
 
 <operation id="64" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="80" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-branch12:23  %tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %Tm_1, i32 7)
+branch12:23  %tmp_9 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %Tm_1, i32 7)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_9"/></StgValue>
 </operation>
 
 <operation id="65" st_id="2" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="81" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-branch12:24  %select_ln303_1 = select i1 %tmp_2, i8 27, i8 0
+branch12:24  %select_ln307_1 = select i1 %tmp_9, i8 27, i8 0
 
 ]]></Node>
-<StgValue><ssdm name="select_ln303_1"/></StgValue>
+<StgValue><ssdm name="select_ln307_1"/></StgValue>
 </operation>
 
 <operation id="66" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:25  %xor_ln316 = xor i8 %shl_ln303_1, %Tmp
+branch12:25  %xor_ln320 = xor i8 %shl_ln307_1, %Tmp
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln316"/></StgValue>
+<StgValue><ssdm name="xor_ln320"/></StgValue>
 </operation>
 
 <operation id="67" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="83" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:26  %xor_ln316_2 = xor i8 %select_ln303_1, %tmp
+branch12:26  %xor_ln320_2 = xor i8 %select_ln307_1, %tmp
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln316_2"/></StgValue>
+<StgValue><ssdm name="xor_ln320_2"/></StgValue>
 </operation>
 
 <operation id="68" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="84" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:27  %xor_ln316_1 = xor i8 %xor_ln316_2, %xor_ln316
+branch12:27  %xor_ln320_1 = xor i8 %xor_ln320_2, %xor_ln320
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln316_1"/></StgValue>
+<StgValue><ssdm name="xor_ln320_1"/></StgValue>
 </operation>
 
 <operation id="69" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="85" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:28  %state_3_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_1_0, i8 %state_3_1_0, i8 %state_3_1_0, i8 %xor_ln316_1, i2 %trunc_ln313)
+branch12:28  %state_3_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_1_0, i8 %state_3_1_0, i8 %state_3_1_0, i8 %xor_ln320_1, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_3_1_1"/></StgValue>
@@ -1064,13 +1064,13 @@ branch12:28  %state_3_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_1_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="86" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:29  %state_2_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_1_0, i8 %state_2_1_0, i8 %xor_ln316_1, i8 %state_2_1_0, i2 %trunc_ln313)
+branch12:29  %state_2_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_1_0, i8 %state_2_1_0, i8 %xor_ln320_1, i8 %state_2_1_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_2_1_1"/></StgValue>
@@ -1080,13 +1080,13 @@ branch12:29  %state_2_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_1_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="87" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:30  %state_1_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_1_0, i8 %xor_ln316_1, i8 %state_1_1_0, i8 %state_1_1_0, i2 %trunc_ln313)
+branch12:30  %state_1_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_1_0, i8 %xor_ln320_1, i8 %state_1_1_0, i8 %state_1_1_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_1_1_1"/></StgValue>
@@ -1096,13 +1096,13 @@ branch12:30  %state_1_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_1_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="88" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:31  %state_0_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln316_1, i8 %state_0_1_0, i8 %state_0_1_0, i8 %state_0_1_0, i2 %trunc_ln313)
+branch12:31  %state_0_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln320_1, i8 %state_0_1_0, i8 %state_0_1_0, i8 %state_0_1_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_0_1_1"/></StgValue>
@@ -1112,45 +1112,45 @@ branch12:31  %state_0_1_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln316_1
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="89" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:32  %tmp_7 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0, i8 %state_1_2_0, i8 %state_2_2_0, i8 %state_3_2_0, i2 %trunc_ln313)
+branch12:32  %tmp_6 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0, i8 %state_1_2_0, i8 %state_2_2_0, i8 %state_3_2_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="74" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="90" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:33  %tmp_8 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0, i8 %state_1_3_0, i8 %state_2_3_0, i8 %state_3_3_0, i2 %trunc_ln313)
+branch12:33  %tmp_7 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0, i8 %state_1_3_0, i8 %state_2_3_0, i8 %state_3_3_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="75" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="91" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:34  %Tm_2 = xor i8 %tmp_8, %tmp_7
+branch12:34  %Tm_2 = xor i8 %tmp_7, %tmp_6
 
 ]]></Node>
 <StgValue><ssdm name="Tm_2"/></StgValue>
@@ -1160,23 +1160,23 @@ branch12:34  %Tm_2 = xor i8 %tmp_8, %tmp_7
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="92" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:35  %shl_ln303_2 = shl i8 %Tm_2, 1
+branch12:35  %shl_ln307_2 = shl i8 %Tm_2, 1
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln303_2"/></StgValue>
+<StgValue><ssdm name="shl_ln307_2"/></StgValue>
 </operation>
 
 <operation id="77" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1192,77 +1192,77 @@ branch12:36  %tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %Tm_2, i32 7)
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="94" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-branch12:37  %select_ln303_2 = select i1 %tmp_10, i8 27, i8 0
+branch12:37  %select_ln307_2 = select i1 %tmp_10, i8 27, i8 0
 
 ]]></Node>
-<StgValue><ssdm name="select_ln303_2"/></StgValue>
+<StgValue><ssdm name="select_ln307_2"/></StgValue>
 </operation>
 
 <operation id="79" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="95" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:38  %xor_ln317 = xor i8 %shl_ln303_2, %Tmp
+branch12:38  %xor_ln321 = xor i8 %shl_ln307_2, %Tmp
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln317"/></StgValue>
+<StgValue><ssdm name="xor_ln321"/></StgValue>
 </operation>
 
 <operation id="80" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="96" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:39  %xor_ln317_2 = xor i8 %select_ln303_2, %tmp_7
+branch12:39  %xor_ln321_2 = xor i8 %select_ln307_2, %tmp_6
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln317_2"/></StgValue>
+<StgValue><ssdm name="xor_ln321_2"/></StgValue>
 </operation>
 
 <operation id="81" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="97" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:40  %xor_ln317_1 = xor i8 %xor_ln317_2, %xor_ln317
+branch12:40  %xor_ln321_1 = xor i8 %xor_ln321_2, %xor_ln321
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln317_1"/></StgValue>
+<StgValue><ssdm name="xor_ln321_1"/></StgValue>
 </operation>
 
 <operation id="82" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="98" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:41  %state_3_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_2_0, i8 %state_3_2_0, i8 %state_3_2_0, i8 %xor_ln317_1, i2 %trunc_ln313)
+branch12:41  %state_3_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_2_0, i8 %state_3_2_0, i8 %state_3_2_0, i8 %xor_ln321_1, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_3_2_1"/></StgValue>
@@ -1272,13 +1272,13 @@ branch12:41  %state_3_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_2_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="99" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:42  %state_2_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_2_0, i8 %state_2_2_0, i8 %xor_ln317_1, i8 %state_2_2_0, i2 %trunc_ln313)
+branch12:42  %state_2_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_2_0, i8 %state_2_2_0, i8 %xor_ln321_1, i8 %state_2_2_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_2_2_1"/></StgValue>
@@ -1288,13 +1288,13 @@ branch12:42  %state_2_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_2_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="100" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:43  %state_1_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_2_0, i8 %xor_ln317_1, i8 %state_1_2_0, i8 %state_1_2_0, i2 %trunc_ln313)
+branch12:43  %state_1_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_2_0, i8 %xor_ln321_1, i8 %state_1_2_0, i8 %state_1_2_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_1_2_1"/></StgValue>
@@ -1304,13 +1304,13 @@ branch12:43  %state_1_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_2_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="101" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:44  %state_0_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln317_1, i8 %state_0_2_0, i8 %state_0_2_0, i8 %state_0_2_0, i2 %trunc_ln313)
+branch12:44  %state_0_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln321_1, i8 %state_0_2_0, i8 %state_0_2_0, i8 %state_0_2_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_0_2_1"/></StgValue>
@@ -1320,29 +1320,29 @@ branch12:44  %state_0_2_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln317_1
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="102" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:45  %tmp_9 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0, i8 %state_1_3_0, i8 %state_2_3_0, i8 %state_3_3_0, i2 %trunc_ln313)
+branch12:45  %tmp_8 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0, i8 %state_1_3_0, i8 %state_2_3_0, i8 %state_3_3_0, i2 %trunc_ln317)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="87" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="103" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:46  %Tm_3 = xor i8 %tmp_9, %t
+branch12:46  %Tm_3 = xor i8 %tmp_8, %t
 
 ]]></Node>
 <StgValue><ssdm name="Tm_3"/></StgValue>
@@ -1352,23 +1352,23 @@ branch12:46  %Tm_3 = xor i8 %tmp_9, %t
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="104" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:47  %shl_ln303_3 = shl i8 %Tm_3, 1
+branch12:47  %shl_ln307_3 = shl i8 %Tm_3, 1
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln303_3"/></StgValue>
+<StgValue><ssdm name="shl_ln307_3"/></StgValue>
 </operation>
 
 <operation id="89" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1384,77 +1384,77 @@ branch12:48  %tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %Tm_3, i32 7)
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="106" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-branch12:49  %select_ln303_3 = select i1 %tmp_11, i8 27, i8 0
+branch12:49  %select_ln307_3 = select i1 %tmp_11, i8 27, i8 0
 
 ]]></Node>
-<StgValue><ssdm name="select_ln303_3"/></StgValue>
+<StgValue><ssdm name="select_ln307_3"/></StgValue>
 </operation>
 
 <operation id="91" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="107" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:50  %xor_ln318 = xor i8 %shl_ln303_3, %Tmp
+branch12:50  %xor_ln322 = xor i8 %shl_ln307_3, %Tmp
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln318"/></StgValue>
+<StgValue><ssdm name="xor_ln322"/></StgValue>
 </operation>
 
 <operation id="92" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="108" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:51  %xor_ln318_2 = xor i8 %select_ln303_3, %tmp_9
+branch12:51  %xor_ln322_2 = xor i8 %select_ln307_3, %tmp_8
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln318_2"/></StgValue>
+<StgValue><ssdm name="xor_ln322_2"/></StgValue>
 </operation>
 
 <operation id="93" st_id="2" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="109" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-branch12:52  %xor_ln318_1 = xor i8 %xor_ln318_2, %xor_ln318
+branch12:52  %xor_ln322_1 = xor i8 %xor_ln322_2, %xor_ln322
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln318_1"/></StgValue>
+<StgValue><ssdm name="xor_ln322_1"/></StgValue>
 </operation>
 
 <operation id="94" st_id="2" stage="1" lat="1">
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="110" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:53  %state_3_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_3_0, i8 %state_3_3_0, i8 %state_3_3_0, i8 %xor_ln318_1, i2 %trunc_ln313)
+branch12:53  %state_3_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_3_0, i8 %state_3_3_0, i8 %state_3_3_0, i8 %xor_ln322_1, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_3_3_1"/></StgValue>
@@ -1464,13 +1464,13 @@ branch12:53  %state_3_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_3_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="111" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:54  %state_2_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_3_0, i8 %state_2_3_0, i8 %xor_ln318_1, i8 %state_2_3_0, i2 %trunc_ln313)
+branch12:54  %state_2_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_3_0, i8 %state_2_3_0, i8 %xor_ln322_1, i8 %state_2_3_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_2_3_1"/></StgValue>
@@ -1480,13 +1480,13 @@ branch12:54  %state_2_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_3_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="112" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:55  %state_1_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_3_0, i8 %xor_ln318_1, i8 %state_1_3_0, i8 %state_1_3_0, i2 %trunc_ln313)
+branch12:55  %state_1_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_3_0, i8 %xor_ln322_1, i8 %state_1_3_0, i8 %state_1_3_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_1_3_1"/></StgValue>
@@ -1496,13 +1496,13 @@ branch12:55  %state_1_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_3_0
 <core>MuxnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="113" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="2">
 <![CDATA[
-branch12:56  %state_0_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln318_1, i8 %state_0_3_0, i8 %state_0_3_0, i8 %state_0_3_0, i2 %trunc_ln313)
+branch12:56  %state_0_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln322_1, i8 %state_0_3_0, i8 %state_0_3_0, i8 %state_0_3_0, i2 %trunc_ln317)
 
 ]]></Node>
 <StgValue><ssdm name="state_0_3_1"/></StgValue>
@@ -1512,7 +1512,7 @@ branch12:56  %state_0_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln318_1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="0"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1521,14 +1521,14 @@ branch12:56  %state_0_3_1 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %xor_ln318_1
 branch12:57  br label %1
 
 ]]></Node>
-<StgValue><ssdm name="br_ln311"/></StgValue>
+<StgValue><ssdm name="br_ln315"/></StgValue>
 </operation>
 
 <operation id="99" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1544,7 +1544,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1560,7 +1560,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1576,7 +1576,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1592,7 +1592,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1608,7 +1608,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1624,7 +1624,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1640,7 +1640,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1656,7 +1656,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1672,7 +1672,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1688,7 +1688,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1704,7 +1704,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1720,7 +1720,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1736,7 +1736,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1752,7 +1752,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1768,7 +1768,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1784,7 +1784,7 @@ branch12:57  br label %1
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln311" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln315" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -1793,7 +1793,7 @@ branch12:57  br label %1
 :16  ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_s
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln320"/></StgValue>
+<StgValue><ssdm name="ret_ln324"/></StgValue>
 </operation>
 </state>
 </state_list>

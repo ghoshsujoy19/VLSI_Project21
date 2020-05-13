@@ -4861,7 +4861,7 @@
 					<Obj>
 						<type>0</type>
 						<id>114</id>
-						<name>mrv_s</name>
+						<name>mrv_11</name>
 						<fileName>aes.c</fileName>
 						<fileDirectory>/home/sujoy/Documents/VLSI_project/project21</fileDirectory>
 						<lineNumber>254</lineNumber>
@@ -4910,7 +4910,7 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>mrv_11</name>
+						<name>mrv_12</name>
 						<fileName>aes.c</fileName>
 						<fileDirectory>/home/sujoy/Documents/VLSI_project/project21</fileDirectory>
 						<lineNumber>254</lineNumber>
@@ -4959,7 +4959,7 @@
 					<Obj>
 						<type>0</type>
 						<id>116</id>
-						<name>mrv_12</name>
+						<name>mrv_13</name>
 						<fileName>aes.c</fileName>
 						<fileDirectory>/home/sujoy/Documents/VLSI_project/project21</fileDirectory>
 						<lineNumber>254</lineNumber>
@@ -5008,7 +5008,7 @@
 					<Obj>
 						<type>0</type>
 						<id>117</id>
-						<name>mrv_13</name>
+						<name>mrv_14</name>
 						<fileName>aes.c</fileName>
 						<fileDirectory>/home/sujoy/Documents/VLSI_project/project21</fileDirectory>
 						<lineNumber>254</lineNumber>
@@ -5057,7 +5057,7 @@
 					<Obj>
 						<type>0</type>
 						<id>118</id>
-						<name>mrv_14</name>
+						<name>mrv_s</name>
 						<fileName>aes.c</fileName>
 						<fileDirectory>/home/sujoy/Documents/VLSI_project/project21</fileDirectory>
 						<lineNumber>254</lineNumber>

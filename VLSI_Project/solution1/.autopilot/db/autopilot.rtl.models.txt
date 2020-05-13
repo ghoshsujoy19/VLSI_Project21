@@ -1,6 +1,5 @@
-Cipher_mux_165_8_bkb
-Cipher_mux_42_8_1_1
 SubBytes_sbox
+Cipher_mux_42_8_1_1
 AddRoundKey
 SubBytes
 MixColumns

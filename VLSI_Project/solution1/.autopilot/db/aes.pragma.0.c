@@ -806,14 +806,18 @@ static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 
 static void SubBytes(state_t* state)
 {
+#pragma HLS inline OFF
+#pragma HLS ARRAY_PARTITION variable=&state complete dim=0
  uint8_t i, j;
-SubBytes_label35:for (i = 0; i < 4; ++i)
-   {
-SubBytes_label34:for (j = 0; j < 4; ++j)
-   {
-    (*state)[j][i] = (sbox[((*state)[j][i])]);
-   }
-   }
+ SubBytes_label35:for (i = 0; i < 4; ++i)
+ {
+#pragma HLS unroll
+ SubBytes_label34:for (j = 0; j < 4; ++j)
+  {
+#pragma HLS unroll
+ (*state)[j][i] = (sbox[((*state)[j][i])]);
+  }
+ }
 }
 
 
@@ -867,7 +871,7 @@ MixColumns_label36:for (i = 0; i < 4; ++i)
       Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
      }
 }
-# 349 "aes.c"
+# 353 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -981,7 +985,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 470 "aes.c"
+# 474 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1053,7 +1057,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 549 "aes.c"
+# 553 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

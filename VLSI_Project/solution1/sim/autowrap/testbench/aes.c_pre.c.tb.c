@@ -680,14 +680,18 @@ static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 
 static void SubBytes(state_t* state)
 {
+#pragma HLS inline OFF
+#pragma HLS ARRAY_PARTITION variable=state complete dim=0
  uint8_t i, j;
-SubBytes_label35:for (i = 0; i < 4; ++i)
-   {
-SubBytes_label34:for (j = 0; j < 4; ++j)
-   {
-    (*state)[j][i] = (sbox[((*state)[j][i])]);
-   }
-   }
+ SubBytes_label35:for (i = 0; i < 4; ++i)
+ {
+#pragma HLS unroll
+ SubBytes_label34:for (j = 0; j < 4; ++j)
+  {
+#pragma HLS unroll
+ (*state)[j][i] = (sbox[((*state)[j][i])]);
+  }
+ }
 }
 
 
@@ -741,7 +745,7 @@ MixColumns_label36:for (i = 0; i < 4; ++i)
       Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
      }
 }
-# 349 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 353 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -855,12 +859,12 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 470 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 474 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
 #include "apatb_Cipher.h"
 #endif
-# 470 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 474 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -868,14 +872,14 @@ void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 #ifndef HLS_FASTSIM
 #define Cipher AESL_WRAP_Cipher
 #endif
-# 473 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 477 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 Cipher((state_t*)buf, ctx->RoundKey);
 #undef Cipher
-# 473 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 477 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 }
 #endif
-# 474 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 478 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
@@ -891,7 +895,7 @@ void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 #ifndef HLS_FASTSIM
 #include "apatb_Cipher.h"
 #endif
-# 485 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 489 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt2(struct AES_ctx *ctx, state_t* buf)
 {
 
@@ -899,14 +903,14 @@ void AES_ECB_encrypt2(struct AES_ctx *ctx, state_t* buf)
 #ifndef HLS_FASTSIM
 #define Cipher AESL_WRAP_Cipher
 #endif
-# 488 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 Cipher(buf, ctx->RoundKey);
 #undef Cipher
-# 488 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 }
 #endif
-# 489 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 493 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 void AES(struct AES_ctx* ctx, uint8_t key[16], state_t* in)
@@ -933,7 +937,7 @@ static void XorWithIv(uint8_t* buf, uint8_t* Iv)
 #ifndef HLS_FASTSIM
 #include "apatb_Cipher.h"
 #endif
-# 511 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 515 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
 {
  uintptr_t i;
@@ -945,10 +949,10 @@ void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
 #ifndef HLS_FASTSIM
 #define Cipher AESL_WRAP_Cipher
 #endif
-# 518 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 522 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 Cipher((state_t*)buf, ctx->RoundKey);
 #undef Cipher
-# 518 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 522 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
   Iv = buf;
   buf += 16;
@@ -958,7 +962,7 @@ Cipher((state_t*)buf, ctx->RoundKey);
  memcpy(ctx->Iv, Iv, 16);
 }
 #endif
-# 525 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 529 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
@@ -975,12 +979,12 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 549 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 553 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
 #include "apatb_Cipher.h"
 #endif
-# 549 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 553 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];
@@ -997,10 +1001,10 @@ void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 #ifndef HLS_FASTSIM
 #define Cipher AESL_WRAP_Cipher
 #endif
-# 561 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 565 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 Cipher((state_t*)buffer,ctx->RoundKey);
 #undef Cipher
-# 561 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 565 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 
@@ -1022,5 +1026,5 @@ Cipher((state_t*)buffer,ctx->RoundKey);
  }
 }
 #endif
-# 580 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 584 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'AddRoundKey'
 ================================================================
-* Date:           Wed May 13 18:38:58 2020
+* Date:           Wed May 13 18:57:18 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        VLSI_Project
@@ -174,12 +174,12 @@ ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i8, i8, i8, 
 ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7, i8 %xor_ln251_8, 8" [aes.c:254]   --->   Operation 96 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_8, i8 %xor_ln251_9, 9" [aes.c:254]   --->   Operation 97 'insertvalue' 'mrv_9' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_9, i8 %xor_ln251_10, 10" [aes.c:254]   --->   Operation 98 'insertvalue' 'mrv_10' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_10, i8 %xor_ln251_11, 11" [aes.c:254]   --->   Operation 99 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_s, i8 %xor_ln251_12, 12" [aes.c:254]   --->   Operation 100 'insertvalue' 'mrv_11' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_11, i8 %xor_ln251_13, 13" [aes.c:254]   --->   Operation 101 'insertvalue' 'mrv_12' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_12, i8 %xor_ln251_14, 14" [aes.c:254]   --->   Operation 102 'insertvalue' 'mrv_13' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_13, i8 %xor_ln251_15, 15" [aes.c:254]   --->   Operation 103 'insertvalue' 'mrv_14' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 104 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_14" [aes.c:254]   --->   Operation 104 'ret' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_10, i8 %xor_ln251_11, 11" [aes.c:254]   --->   Operation 99 'insertvalue' 'mrv_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_11, i8 %xor_ln251_12, 12" [aes.c:254]   --->   Operation 100 'insertvalue' 'mrv_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_12, i8 %xor_ln251_13, 13" [aes.c:254]   --->   Operation 101 'insertvalue' 'mrv_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_13, i8 %xor_ln251_14, 14" [aes.c:254]   --->   Operation 102 'insertvalue' 'mrv_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_14, i8 %xor_ln251_15, 15" [aes.c:254]   --->   Operation 103 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_s" [aes.c:254]   --->   Operation 104 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================

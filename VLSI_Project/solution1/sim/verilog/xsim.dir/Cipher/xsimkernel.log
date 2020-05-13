@@ -1,7 +1,7 @@
-Running: xsim.dir/Cipher/xsimk -simmode gui -wdb Cipher.wdb -simrunnum 0 -socket 59229
+Running: xsim.dir/Cipher/xsimk -simmode gui -wdb Cipher.wdb -simrunnum 0 -socket 60479
 Design successfully loaded
-Design Loading Memory Usage: 38788 KB (Peak: 38796 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 38716 KB (Peak: 38724 KB)
+Design Loading CPU Usage: 10 ms
 Simulation completed
-Simulation Memory Usage: 120976 KB (Peak: 178056 KB)
-Simulation CPU Usage: 990 ms
+Simulation Memory Usage: 120904 KB (Peak: 177984 KB)
+Simulation CPU Usage: 320 ms

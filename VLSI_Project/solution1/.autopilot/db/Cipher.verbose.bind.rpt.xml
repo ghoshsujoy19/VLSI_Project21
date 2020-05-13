@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Cipher'" level="0">
-<item name = "Date">Wed May 13 18:39:00 2020
+<item name = "Date">Wed May 13 18:57:20 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.112 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 5.329 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">506, 506, 5.060 us, 5.060 us, 506, 506, none</column>
+<column name="">106, 106, 1.060 us, 1.060 us, 106, 106, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,13 +32,13 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_MixColumns_fu_478">MixColumns, 5, 5, 50.000 ns, 50.000 ns, 5, 5, none</column>
-<column name="grp_SubBytes_fu_498">SubBytes, 41, 41, 0.410 us, 0.410 us, 41, 41, none</column>
-<column name="grp_AddRoundKey_fu_536">AddRoundKey, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+<column name="grp_AddRoundKey_fu_498">AddRoundKey, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+<column name="grp_SubBytes_fu_569">SubBytes, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Cipher_label33">459, 459, 51, -, -, 9, no</column>
+<column name="- Cipher_label33">99, 99, 11, -, -, 9, no</column>
 </table>
 </item>
 </section>

@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_AddRoundKey_fu_536/grp_AddRoundKey_fu_536_activity": {
+				"grp_AddRoundKey_fu_498/grp_AddRoundKey_fu_498_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,7 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SubBytes_fu_498/grp_SubBytes_fu_498_activity": {
+				"grp_SubBytes_fu_569/grp_SubBytes_fu_569_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
