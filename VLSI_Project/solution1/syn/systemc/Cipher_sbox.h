@@ -2,8 +2,8 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-#ifndef __SubBytes_sbox_H__
-#define __SubBytes_sbox_H__
+#ifndef __Cipher_sbox_H__
+#define __Cipher_sbox_H__
 
 
 #include <systemc>
@@ -16,7 +16,7 @@ using namespace sc_dt;
 #include <iostream>
 #include <fstream>
 
-struct SubBytes_sbox_ram : public sc_core::sc_module {
+struct Cipher_sbox_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 8;
   static const unsigned AddressRange = 256;
@@ -80,7 +80,7 @@ sc_core::sc_in<bool> clk;
 sc_lv<DataWidth> ram[AddressRange];
 
 
-   SC_CTOR(SubBytes_sbox_ram) {
+   SC_CTOR(Cipher_sbox_ram) {
         ram[0] = "0b01100011";
         ram[1] = "0b01111100";
         ram[2] = "0b01110111";
@@ -599,7 +599,7 @@ void prc_write_15()
 }; //endmodule
 
 
-SC_MODULE(SubBytes_sbox) {
+SC_MODULE(Cipher_sbox) {
 
 
 static const unsigned DataWidth = 8;
@@ -658,11 +658,11 @@ sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
 
-SubBytes_sbox_ram* meminst;
+Cipher_sbox_ram* meminst;
 
 
-SC_CTOR(SubBytes_sbox) {
-meminst = new SubBytes_sbox_ram("SubBytes_sbox_ram");
+SC_CTOR(Cipher_sbox) {
+meminst = new Cipher_sbox_ram("Cipher_sbox_ram");
 meminst->address0(address0);
 meminst->ce0(ce0);
 meminst->q0(q0);
@@ -730,7 +730,7 @@ meminst->q15(q15);
 meminst->reset(reset);
 meminst->clk(clk);
 }
-~SubBytes_sbox() {
+~Cipher_sbox() {
     delete meminst;
 }
 

@@ -3,7 +3,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1 ns / 1 ps
-(* rom_style = "block" *) module SubBytes_sbox_rom (
+(* rom_style = "block" *) module Cipher_sbox_rom (
 addr0, ce0, q0, addr1, ce1, q1, addr2, ce2, q2, addr3, ce3, q3, addr4, ce4, q4, addr5, ce5, q5, addr6, ce6, q6, addr7, ce7, q7, addr8, ce8, q8, addr9, ce9, q9, addr10, ce10, q10, addr11, ce11, q11, addr12, ce12, q12, addr13, ce13, q13, addr14, ce14, q14, addr15, ce15, q15, clk);
 
 parameter DWIDTH = 8;
@@ -70,14 +70,14 @@ input clk;
 (* ram_style = "block" *)reg [DWIDTH-1:0] ram7[0:MEM_SIZE-1];
 
 initial begin
-    $readmemh("./SubBytes_sbox_rom.dat", ram0);
-    $readmemh("./SubBytes_sbox_rom.dat", ram1);
-    $readmemh("./SubBytes_sbox_rom.dat", ram2);
-    $readmemh("./SubBytes_sbox_rom.dat", ram3);
-    $readmemh("./SubBytes_sbox_rom.dat", ram4);
-    $readmemh("./SubBytes_sbox_rom.dat", ram5);
-    $readmemh("./SubBytes_sbox_rom.dat", ram6);
-    $readmemh("./SubBytes_sbox_rom.dat", ram7);
+    $readmemh("./Cipher_sbox_rom.dat", ram0);
+    $readmemh("./Cipher_sbox_rom.dat", ram1);
+    $readmemh("./Cipher_sbox_rom.dat", ram2);
+    $readmemh("./Cipher_sbox_rom.dat", ram3);
+    $readmemh("./Cipher_sbox_rom.dat", ram4);
+    $readmemh("./Cipher_sbox_rom.dat", ram5);
+    $readmemh("./Cipher_sbox_rom.dat", ram6);
+    $readmemh("./Cipher_sbox_rom.dat", ram7);
 end
 
 
@@ -245,7 +245,7 @@ end
 endmodule
 
 `timescale 1 ns / 1 ps
-module SubBytes_sbox(
+module Cipher_sbox(
     reset,
     clk,
     address0,
@@ -353,7 +353,7 @@ output[DataWidth - 1:0] q15;
 
 
 
-SubBytes_sbox_rom SubBytes_sbox_rom_U(
+Cipher_sbox_rom Cipher_sbox_rom_U(
     .clk( clk ),
     .addr0( address0 ),
     .ce0( ce0 ),

@@ -656,6 +656,7 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
+#pragma HLS INLINE
 #pragma HLS ARRAY_PARTITION variable=state complete dim=0
 #pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
  uint8_t i,j;
@@ -676,7 +677,7 @@ static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 
 static void SubBytes(state_t* state)
 {
-#pragma HLS inline OFF
+#pragma HLS INLINE
 #pragma HLS ARRAY_PARTITION variable=state complete dim=0
  uint8_t i, j;
  SubBytes_label35:for (i = 0; i < 4; ++i)
@@ -695,6 +696,7 @@ static void SubBytes(state_t* state)
 
 static void ShiftRows(state_t* state)
 {
+#pragma HLS INLINE
  uint8_t temp;
 
 
@@ -729,19 +731,27 @@ static uint8_t xtime(uint8_t x)
 
 static void MixColumns(state_t* state)
 {
+
  uint8_t i;
- uint8_t Tmp, Tm, t;
-MixColumns_label36:for (i = 0; i < 4; ++i)
-     {
-      t = (*state)[i][0];
-      Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3] ;
-      Tm = (*state)[i][0] ^ (*state)[i][1] ; Tm = xtime(Tm); (*state)[i][0] ^= Tm ^ Tmp ;
-      Tm = (*state)[i][1] ^ (*state)[i][2] ; Tm = xtime(Tm); (*state)[i][1] ^= Tm ^ Tmp ;
-      Tm = (*state)[i][2] ^ (*state)[i][3] ; Tm = xtime(Tm); (*state)[i][2] ^= Tm ^ Tmp ;
-      Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
-     }
+ uint8_t Tmp, Tm[4], t;
+
+#pragma HLS ARRAY_PARTITION variable=Tm complete dim=1
+ MixColumns_label36:for (i = 0; i < 4; ++i)
+ {
+#pragma HLS unroll
+ Tm[0] = ((*state)[i][0] ^ (*state)[i][1]);
+  Tm[1] = ((*state)[i][1] ^ (*state)[i][2]);
+  Tm[2] = ((*state)[i][2] ^ (*state)[i][3]);
+  Tm[3] = ((*state)[i][3] ^ (*state)[i][0]);
+  Tmp = Tm[0] ^ Tm[2];
+
+  (*state)[i][0] ^= xtime(Tm[0]) ^ Tmp ;
+  (*state)[i][1] ^= xtime(Tm[1]) ^ Tmp ;
+  (*state)[i][2] ^= xtime(Tm[2]) ^ Tmp ;
+  (*state)[i][3] ^= xtime(Tm[3]) ^ Tmp ;
+ }
 }
-# 353 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 363 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -815,19 +825,20 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 
 
 
-Cipher_label33:for (round = 1; round < 10; ++round)
-        {
-         SubBytes(state);
-         ShiftRows(state);
-         MixColumns(state);
-         AddRoundKey(round, state, RoundKey);
-        }
+ Cipher_label33:for (round = 1; round < 10; ++round)
+ {
+#pragma HLS pipeline
+ SubBytes(state);
+  ShiftRows(state);
+  MixColumns(state);
+  AddRoundKey(round, state, RoundKey);
+ }
 
 
 
-        SubBytes(state);
-        ShiftRows(state);
-        AddRoundKey(10, state, RoundKey);
+ SubBytes(state);
+ ShiftRows(state);
+ AddRoundKey(10, state, RoundKey);
 }
 
 
@@ -855,7 +866,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 474 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 485 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -927,7 +938,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 553 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 564 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

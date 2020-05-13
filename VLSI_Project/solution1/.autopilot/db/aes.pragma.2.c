@@ -786,6 +786,7 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
+_ssdm_InlineSelf(0, "");
 _ssdm_SpecArrayPartition( state, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( RoundKey, 1, "CYCLIC", 16, "");
  uint8_t i,j;
@@ -806,7 +807,7 @@ _ssdm_Unroll(0,0,0, "");
 
 static void SubBytes(state_t* state)
 {
-_ssdm_InlineSelf(2, "");
+_ssdm_InlineSelf(0, "");
 _ssdm_SpecArrayPartition( state, 0, "COMPLETE", 0, "");
  uint8_t i, j;
  SubBytes_label35:for (i = 0; i < 4; ++i)
@@ -825,6 +826,7 @@ _ssdm_Unroll(0,0,0, "");
 
 static void ShiftRows(state_t* state)
 {
+_ssdm_InlineSelf(0, "");
  uint8_t temp;
 
 
@@ -859,19 +861,27 @@ static uint8_t xtime(uint8_t x)
 
 static void MixColumns(state_t* state)
 {
+
  uint8_t i;
- uint8_t Tmp, Tm, t;
-MixColumns_label36:for (i = 0; i < 4; ++i)
-     {
-      t = (*state)[i][0];
-      Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3] ;
-      Tm = (*state)[i][0] ^ (*state)[i][1] ; Tm = xtime(Tm); (*state)[i][0] ^= Tm ^ Tmp ;
-      Tm = (*state)[i][1] ^ (*state)[i][2] ; Tm = xtime(Tm); (*state)[i][1] ^= Tm ^ Tmp ;
-      Tm = (*state)[i][2] ^ (*state)[i][3] ; Tm = xtime(Tm); (*state)[i][2] ^= Tm ^ Tmp ;
-      Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
-     }
+ uint8_t Tmp, Tm[4], t;
+
+_ssdm_SpecArrayPartition( Tm, 1, "COMPLETE", 0, "");
+ MixColumns_label36:for (i = 0; i < 4; ++i)
+ {
+_ssdm_Unroll(0,0,0, "");
+ Tm[0] = ((*state)[i][0] ^ (*state)[i][1]);
+  Tm[1] = ((*state)[i][1] ^ (*state)[i][2]);
+  Tm[2] = ((*state)[i][2] ^ (*state)[i][3]);
+  Tm[3] = ((*state)[i][3] ^ (*state)[i][0]);
+  Tmp = Tm[0] ^ Tm[2];
+
+  (*state)[i][0] ^= xtime(Tm[0]) ^ Tmp ;
+  (*state)[i][1] ^= xtime(Tm[1]) ^ Tmp ;
+  (*state)[i][2] ^= xtime(Tm[2]) ^ Tmp ;
+  (*state)[i][3] ^= xtime(Tm[3]) ^ Tmp ;
+ }
 }
-# 353 "aes.c"
+# 363 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -945,19 +955,20 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 
 
 
-Cipher_label33:for (round = 1; round < 10; ++round)
-        {
-         SubBytes(state);
-         ShiftRows(state);
-         MixColumns(state);
-         AddRoundKey(round, state, RoundKey);
-        }
+ Cipher_label33:for (round = 1; round < 10; ++round)
+ {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ SubBytes(state);
+  ShiftRows(state);
+  MixColumns(state);
+  AddRoundKey(round, state, RoundKey);
+ }
 
 
 
-        SubBytes(state);
-        ShiftRows(state);
-        AddRoundKey(10, state, RoundKey);
+ SubBytes(state);
+ ShiftRows(state);
+ AddRoundKey(10, state, RoundKey);
 }
 
 
@@ -985,7 +996,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 474 "aes.c"
+# 485 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1057,7 +1068,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 553 "aes.c"
+# 564 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

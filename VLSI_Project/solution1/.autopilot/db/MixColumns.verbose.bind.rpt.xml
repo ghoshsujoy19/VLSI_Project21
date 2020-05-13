@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'MixColumns'" level="0">
-<item name = "Date">Wed May 13 18:57:19 2020
+<item name = "Date">Wed May 13 20:18:51 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 4.606 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 1.417 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5, 5, 50.000 ns, 50.000 ns, 5, 5, none</column>
+<column name="">0, 0, 0 ns, 0 ns, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,6 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- MixColumns_label36">4, 4, 1, -, -, 4, no</column>
 </table>
 </item>
 </section>

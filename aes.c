@@ -237,6 +237,7 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 // The round key is added to the state by an XOR function.
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
+	#pragma HLS INLINE
 	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
 	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
 	uint8_t i,j;
@@ -257,7 +258,7 @@ static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 // state matrix with values in an S-box.
 static void SubBytes(state_t* state)
 {
-	#pragma HLS inline OFF
+	#pragma HLS INLINE
 	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
 	uint8_t i, j;
 	SubBytes_label35:for (i = 0; i < 4; ++i)
@@ -276,6 +277,7 @@ static void SubBytes(state_t* state)
 // Offset = Row number. So the first row is not shifted.
 static void ShiftRows(state_t* state)
 {
+	#pragma HLS INLINE
 	uint8_t temp;
 
 	// Rotate first row 1 columns to left  
@@ -310,17 +312,25 @@ static uint8_t xtime(uint8_t x)
 // MixColumns function mixes the columns of the state matrix
 static void MixColumns(state_t* state)
 {
+//	#pragma HLS allocation instances=XOR limit=4 operation
 	uint8_t i;
-	uint8_t Tmp, Tm, t;
-MixColumns_label36:for (i = 0; i < 4; ++i)
-		   {  
-			   t   = (*state)[i][0];
-			   Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3] ;
-			   Tm  = (*state)[i][0] ^ (*state)[i][1] ; Tm = xtime(Tm);  (*state)[i][0] ^= Tm ^ Tmp ;
-			   Tm  = (*state)[i][1] ^ (*state)[i][2] ; Tm = xtime(Tm);  (*state)[i][1] ^= Tm ^ Tmp ;
-			   Tm  = (*state)[i][2] ^ (*state)[i][3] ; Tm = xtime(Tm);  (*state)[i][2] ^= Tm ^ Tmp ;
-			   Tm  = (*state)[i][3] ^ t ;              Tm = xtime(Tm);  (*state)[i][3] ^= Tm ^ Tmp ;
-		   }
+	uint8_t Tmp, Tm[4], t;
+//	#pragma HLS INLINE
+	#pragma HLS ARRAY_PARTITION variable=Tm complete dim=1
+	MixColumns_label36:for (i = 0; i < 4; ++i)
+	{
+		#pragma HLS unroll
+		Tm[0] = ((*state)[i][0] ^ (*state)[i][1]);
+		Tm[1] = ((*state)[i][1] ^ (*state)[i][2]);
+		Tm[2] = ((*state)[i][2] ^ (*state)[i][3]);
+		Tm[3] = ((*state)[i][3] ^ (*state)[i][0]);
+		Tmp = Tm[0] ^ Tm[2];
+
+		(*state)[i][0] ^= xtime(Tm[0]) ^ Tmp ;
+		(*state)[i][1] ^= xtime(Tm[1]) ^ Tmp ;
+		(*state)[i][2] ^= xtime(Tm[2]) ^ Tmp ;
+		(*state)[i][3] ^= xtime(Tm[3]) ^ Tmp ;
+	}
 }
 
 // Multiply is used to multiply numbers in the field GF(2^8)
@@ -423,19 +433,20 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 	// There will be Nr rounds.
 	// The first Nr-1 rounds are identical.
 	// These Nr-1 rounds are executed in the loop below.
-Cipher_label33:for (round = 1; round < Nr; ++round)
-	       {
-		       SubBytes(state);
-		       ShiftRows(state);
-		       MixColumns(state);
-		       AddRoundKey(round, state, RoundKey);
-	       }
+	Cipher_label33:for (round = 1; round < Nr; ++round)
+	{
+		#pragma HLS pipeline
+		SubBytes(state);
+		ShiftRows(state);
+		MixColumns(state);
+		AddRoundKey(round, state, RoundKey);
+	}
 
-	       // The last round is given below.
-	       // The MixColumns function is not here in the last round.
-	       SubBytes(state);
-	       ShiftRows(state);
-	       AddRoundKey(Nr, state, RoundKey);
+	// The last round is given below.
+	// The MixColumns function is not here in the last round.
+	SubBytes(state);
+	ShiftRows(state);
+	AddRoundKey(Nr, state, RoundKey);
 }
 
 #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)

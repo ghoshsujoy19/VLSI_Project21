@@ -6,7 +6,7 @@ library ieee;
 use ieee.std_logic_1164.all; 
 use ieee.std_logic_unsigned.all;
 
-entity SubBytes_sbox_rom is 
+entity Cipher_sbox_rom is 
     generic(
              DWIDTH     : integer := 8; 
              AWIDTH     : integer := 8; 
@@ -66,7 +66,7 @@ entity SubBytes_sbox_rom is
 end entity; 
 
 
-architecture rtl of SubBytes_sbox_rom is 
+architecture rtl of Cipher_sbox_rom is 
 
 signal addr0_tmp : std_logic_vector(AWIDTH-1 downto 0); 
 signal addr1_tmp : std_logic_vector(AWIDTH-1 downto 0); 
@@ -879,7 +879,7 @@ end rtl;
 Library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity SubBytes_sbox is
+entity Cipher_sbox is
     generic (
         DataWidth : INTEGER := 8;
         AddressRange : INTEGER := 256;
@@ -937,8 +937,8 @@ entity SubBytes_sbox is
         q15 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0));
 end entity;
 
-architecture arch of SubBytes_sbox is
-    component SubBytes_sbox_rom is
+architecture arch of Cipher_sbox is
+    component Cipher_sbox_rom is
         port (
             clk : IN STD_LOGIC;
             addr0 : IN STD_LOGIC_VECTOR;
@@ -994,7 +994,7 @@ architecture arch of SubBytes_sbox is
 
 
 begin
-    SubBytes_sbox_rom_U :  component SubBytes_sbox_rom
+    Cipher_sbox_rom_U :  component Cipher_sbox_rom
     port map (
         clk => clk,
         addr0 => address0,

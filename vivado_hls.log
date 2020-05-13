@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 18:58:46 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 20:19:12 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21'
 Sourcing Tcl script '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/cosim.tcl'
@@ -13,50 +13,50 @@ INFO: [COSIM 212-14] Instrumenting C test bench ...
    Compiling apatb_Cipher.cpp
    Compiling (apcc) test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 18:59:02 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 20:19:35 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/55381589376542818640
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/109351589381375947638
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) aes.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 18:59:13 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Wed May 13 20:19:50 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
 In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:477:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
+/home/sujoy/Documents/VLSI_project/project21/aes.c:488:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
 Cipher((state_t*)buf, ctx->RoundKey);
        ^~~~~~~~~~~~~
 ./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
 unsigned char state[4][4],
               ^
 In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:492:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
+/home/sujoy/Documents/VLSI_project/project21/aes.c:503:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
 Cipher(buf, ctx->RoundKey);
        ^~~
 ./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
 unsigned char state[4][4],
               ^
 In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:522:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
+/home/sujoy/Documents/VLSI_project/project21/aes.c:533:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
 Cipher((state_t*)buf, ctx->RoundKey);
        ^~~~~~~~~~~~~
 ./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
 unsigned char state[4][4],
               ^
 In file included from /home/sujoy/Documents/VLSI_project/project21/aes.c:1:
-/home/sujoy/Documents/VLSI_project/project21/aes.c:565:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
+/home/sujoy/Documents/VLSI_project/project21/aes.c:576:8: warning: incompatible pointer types passing 'state_t *' (aka 'uint8_t (*)[4][4]') to parameter of type 'unsigned char (*)[4]' [-Wincompatible-pointer-types]
 Cipher((state_t*)buffer,ctx->RoundKey);
        ^~~~~~~~~~~~~~~~
 ./apatb_Cipher.h:7:15: note: passing argument to parameter 'state' here
 unsigned char state[4][4],
               ^
 4 warnings generated.
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/56061589376553564734
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/110041589381390815128
 INFO: [APCC 202-1] APCC is done.
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
@@ -100,8 +100,6 @@ WARNING: [XSIM 43-3431] One or more environment variables have been detected whi
     LIBRARY_PATH
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AddRoundKey.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AddRoundKey
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_13.v" into library xil_defaultlib
@@ -130,13 +128,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_8
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_12.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_12
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_mux_42_8_1_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cipher_mux_42_8_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/SubBytes_sbox.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SubBytes_sbox_rom
-INFO: [VRFC 10-311] analyzing module SubBytes_sbox
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/SubBytes.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SubBytes
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_6.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_6
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_10.v" into library xil_defaultlib
@@ -145,6 +136,9 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_pr
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_14
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_4.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_7.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_7
 Starting static elaboration
@@ -153,12 +147,9 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Cipher_mux_42_8_1_1(ID=1,din0_WI...
+Compiling module xil_defaultlib.Cipher_sbox_rom
+Compiling module xil_defaultlib.Cipher_sbox(DataWidth=8,AddressR...
 Compiling module xil_defaultlib.MixColumns
-Compiling module xil_defaultlib.AddRoundKey
-Compiling module xil_defaultlib.SubBytes_sbox_rom
-Compiling module xil_defaultlib.SubBytes_sbox(DataWidth=8,Addres...
-Compiling module xil_defaultlib.SubBytes
 Compiling module xil_defaultlib.Cipher
 Compiling module xil_defaultlib.AESL_automem_RoundKey_0
 Compiling module xil_defaultlib.AESL_automem_RoundKey_1
@@ -186,8 +177,7 @@ Built simulation snapshot Cipher
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/Cipher/webtalk/xsim_webtalk.tcl -notrace
-webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 6086 ; free virtual = 17859
-INFO: [Common 17-206] Exiting Webtalk at Wed May 13 18:59:42 2020...
+INFO: [Common 17-206] Exiting Webtalk at Wed May 13 20:20:22 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -207,27 +197,27 @@ source Cipher.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 17 [0.00%] @ "125000"
-// RTL Simulation : 1 / 17 [100.00%] @ "1205000"
-// RTL Simulation : 2 / 17 [100.00%] @ "2275000"
-// RTL Simulation : 3 / 17 [100.00%] @ "3345000"
-// RTL Simulation : 4 / 17 [100.00%] @ "4415000"
-// RTL Simulation : 5 / 17 [100.00%] @ "5485000"
-// RTL Simulation : 6 / 17 [100.00%] @ "6555000"
-// RTL Simulation : 7 / 17 [100.00%] @ "7625000"
-// RTL Simulation : 8 / 17 [100.00%] @ "8695000"
-// RTL Simulation : 9 / 17 [100.00%] @ "9765000"
-// RTL Simulation : 10 / 17 [100.00%] @ "10835000"
-// RTL Simulation : 11 / 17 [100.00%] @ "11905000"
-// RTL Simulation : 12 / 17 [100.00%] @ "12975000"
-// RTL Simulation : 13 / 17 [100.00%] @ "14045000"
-// RTL Simulation : 14 / 17 [100.00%] @ "15115000"
-// RTL Simulation : 15 / 17 [100.00%] @ "16185000"
-// RTL Simulation : 16 / 17 [100.00%] @ "17255000"
-// RTL Simulation : 17 / 17 [100.00%] @ "18325000"
+// RTL Simulation : 1 / 17 [100.00%] @ "275000"
+// RTL Simulation : 2 / 17 [100.00%] @ "415000"
+// RTL Simulation : 3 / 17 [100.00%] @ "555000"
+// RTL Simulation : 4 / 17 [100.00%] @ "695000"
+// RTL Simulation : 5 / 17 [100.00%] @ "835000"
+// RTL Simulation : 6 / 17 [100.00%] @ "975000"
+// RTL Simulation : 7 / 17 [100.00%] @ "1115000"
+// RTL Simulation : 8 / 17 [100.00%] @ "1255000"
+// RTL Simulation : 9 / 17 [100.00%] @ "1395000"
+// RTL Simulation : 10 / 17 [100.00%] @ "1535000"
+// RTL Simulation : 11 / 17 [100.00%] @ "1675000"
+// RTL Simulation : 12 / 17 [100.00%] @ "1815000"
+// RTL Simulation : 13 / 17 [100.00%] @ "1955000"
+// RTL Simulation : 14 / 17 [100.00%] @ "2095000"
+// RTL Simulation : 15 / 17 [100.00%] @ "2235000"
+// RTL Simulation : 16 / 17 [100.00%] @ "2375000"
+// RTL Simulation : 17 / 17 [100.00%] @ "2515000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 18365 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher.autotb.v" Line 2960
+$finish called at time : 2555 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher.autotb.v" Line 2960
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed May 13 19:00:05 2020...
+INFO: [Common 17-206] Exiting xsim at Wed May 13 20:20:44 2020...
 INFO: [COSIM 212-316] Starting C post checking ...
 
 Testing AES128
