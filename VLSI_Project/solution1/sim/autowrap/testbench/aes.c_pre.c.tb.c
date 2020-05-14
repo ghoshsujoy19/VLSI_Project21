@@ -744,7 +744,7 @@ static void MixColumns(state_t* state)
   (*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
  }
 }
-# 353 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 351 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -762,10 +762,10 @@ static void InvMixColumns(state_t* state)
   c = (*state)[i][2];
   d = (*state)[i][3];
 
-  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
-  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
-  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
-  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
  }
 }
 
@@ -774,15 +774,15 @@ static void InvMixColumns(state_t* state)
 
 static void InvSubBytes(state_t* state)
 {
-
+#pragma HLS INLINE
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-
-  for (j = 0; j < 4; ++j)
+#pragma HLS unroll
+ for (j = 0; j < 4; ++j)
   {
-
-   (*state)[j][i] = (rsbox[((*state)[j][i])]);
+#pragma HLS unroll
+ (*state)[i][j] = (rsbox[((*state)[i][j])]);
   }
  }
 }
@@ -846,28 +846,28 @@ void Cipher(state_t* state, uint8_t RoundKey[240])
 void InvCipher(state_t* state,uint8_t RoundKey[240])
 {
  uint8_t round = 0;
-
-
+# 469 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
  AddRoundKey(10, state, RoundKey);
-
+ InvShiftRows(state);
+ InvSubBytes(state);
 
 
 
  for (round = (10 - 1); round > 0; --round)
  {
-  InvShiftRows(state);
-  InvSubBytes(state);
+
   AddRoundKey(round, state, RoundKey);
   InvMixColumns(state);
+  InvShiftRows(state);
+  InvSubBytes(state);
  }
-
-
-
- InvShiftRows(state);
- InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
+
+
+
+
 }
-# 483 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 497 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -878,7 +878,7 @@ void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 #ifndef HLS_FASTSIM
 #include "apatb_InvCipher.h"
 #endif
-# 489 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 503 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 {
 
@@ -886,14 +886,14 @@ void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 #ifndef HLS_FASTSIM
 #define InvCipher AESL_WRAP_InvCipher
 #endif
-# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 506 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 InvCipher((state_t*)buf, ctx->RoundKey);
 #undef InvCipher
-# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 506 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 }
 #endif
-# 493 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 507 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
 
 
@@ -945,7 +945,7 @@ void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
 #ifndef HLS_FASTSIM
 #include "apatb_InvCipher.h"
 #endif
-# 540 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 554 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uintptr_t i;
@@ -957,10 +957,10 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 #ifndef HLS_FASTSIM
 #define InvCipher AESL_WRAP_InvCipher
 #endif
-# 547 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 561 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 InvCipher((state_t*)buf, ctx->RoundKey);
 #undef InvCipher
-# 547 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 561 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
   XorWithIv(buf, ctx->Iv);
   memcpy(ctx->Iv, storeNextIv, 16);
@@ -969,9 +969,9 @@ InvCipher((state_t*)buf, ctx->RoundKey);
 
 }
 #endif
-# 553 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 567 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
-# 562 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 576 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

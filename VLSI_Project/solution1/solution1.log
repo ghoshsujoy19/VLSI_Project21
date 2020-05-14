@@ -21455,3 +21455,954 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from aes.c:1:
+aes.c:369:533: error: expected ')'
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:369:407: note: to match this '('
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+aes.c:369:533: error: expected ')'
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:369:278: note: to match this '('
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                     ^
+aes.c:369:533: error: expected ')'
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:369:149: note: to match this '('
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                    ^
+aes.c:369:533: error: expected ')'
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:369:20: note: to match this '('
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d))));
+                   ^
+aes.c:370:533: error: expected ')'
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:370:407: note: to match this '('
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+aes.c:370:533: error: expected ')'
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:370:278: note: to match this '('
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                     ^
+aes.c:370:533: error: expected ')'
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:370:149: note: to match this '('
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                    ^
+aes.c:370:533: error: expected ')'
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:370:20: note: to match this '('
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d))));
+                   ^
+aes.c:371:533: error: expected ')'
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:371:407: note: to match this '('
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+aes.c:371:533: error: expected ')'
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:371:278: note: to match this '('
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                     ^
+aes.c:371:533: error: expected ')'
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:371:149: note: to match this '('
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                    ^
+aes.c:371:533: error: expected ')'
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:371:20: note: to match this '('
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d))));
+                   ^
+aes.c:372:533: error: expected ')'
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:372:407: note: to match this '('
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+aes.c:372:533: error: expected ')'
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:372:278: note: to match this '('
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                     ^
+aes.c:372:533: error: expected ')'
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:372:149: note: to match this '('
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                    ^
+aes.c:372:533: error: expected ')'
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+aes.c:372:20: note: to match this '('
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d))));
+                   ^
+16 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2194 ; free virtual = 15327
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2194 ; free virtual = 15327
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:472).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:464).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:455).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:463).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:465).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2201 ; free virtual = 15325
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:462) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2201 ; free virtual = 15325
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:383) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (aes.c:386) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (aes.c:360) in function 'InvCipher' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (aes.c:383) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (aes.c:386) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:450) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:450) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:450) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:462) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:369->aes.c:465) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:450)...144 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2179 ; free virtual = 15306
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2178 ; free virtual = 15305
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.46 seconds; current allocated memory: 110.543 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 112.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 115.454 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 156.48 MHz
+INFO: [RTMG 210-279] Implementing memory 'InvCipher_rsbox_rom' using block ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2150 ; free virtual = 15284
+INFO: [VHDL 208-304]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2269 ; free virtual = 15402
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2269 ; free virtual = 15402
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:463).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:454).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:470).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:462).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:464).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2276 ; free virtual = 15403
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2274 ; free virtual = 15403
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (aes.c:359) in function 'InvCipher' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:368->aes.c:464) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...144 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2256 ; free virtual = 15391
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2255 ; free virtual = 15391
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.51 seconds; current allocated memory: 110.552 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 112.603 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+INFO: [HLS 200-111]  Elapsed time: 0.83 seconds; current allocated memory: 115.463 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 156.48 MHz
+INFO: [RTMG 210-279] Implementing memory 'InvCipher_rsbox_rom' using block ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2241 ; free virtual = 15371
+INFO: [VHDL 208-304]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2284 ; free virtual = 15405
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2284 ; free virtual = 15405
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (aes.c:359) in function 'InvMixColumns': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:463).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:454).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:470).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:462).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:464).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2280 ; free virtual = 15404
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2280 ; free virtual = 15404
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (aes.c:359) in function 'InvCipher': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (aes.c:359) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...152 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2259 ; free virtual = 15384
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2258 ; free virtual = 15383
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.67 seconds; current allocated memory: 118.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 118.322 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (10.639ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'InvCipher' consists of the following:
+	'call' operation ('tmp', aes.c:368->aes.c:464) to 'xtime' [252]  (3.11 ns)
+	'call' operation ('tmp_2', aes.c:368->aes.c:464) to 'xtime' [253]  (3.11 ns)
+	'call' operation ('tmp_5', aes.c:368->aes.c:464) to 'xtime' [254]  (3.11 ns)
+	'xor' operation ('xor_ln368_5', aes.c:368->aes.c:464) [269]  (0 ns)
+	'xor' operation ('xor_ln368_8', aes.c:368->aes.c:464) [272]  (0.66 ns)
+	'xor' operation ('xor_ln368_9', aes.c:368->aes.c:464) [273]  (0.66 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.47 seconds; current allocated memory: 119.751 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.62 seconds; current allocated memory: 121.653 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xtime'.
+INFO: [HLS 200-111]  Elapsed time: 0.86 seconds; current allocated memory: 122.107 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2247 ; free virtual = 15369
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2247 ; free virtual = 15369
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:463).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:454).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:470).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:462).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:464).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2244 ; free virtual = 15368
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2244 ; free virtual = 15367
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (aes.c:359) in function 'InvCipher' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:368->aes.c:464) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...144 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2223 ; free virtual = 15348
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (aes.c:459:7) in function 'InvCipher' : 
+
+the outer loop is not a perfect loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2221 ; free virtual = 15347
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.37 seconds; current allocated memory: 110.638 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 112.708 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+INFO: [HLS 200-111]  Elapsed time: 0.86 seconds; current allocated memory: 115.586 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 156.48 MHz
+INFO: [RTMG 210-279] Implementing memory 'InvCipher_rsbox_rom' using block ROMs.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2230 ; free virtual = 15362
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2230 ; free virtual = 15362
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:463).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:454).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:470).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:462).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:464).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2238 ; free virtual = 15361
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2220 ; free virtual = 15361
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (aes.c:359) in function 'InvCipher' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:461) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:368->aes.c:464) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...144 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2200 ; free virtual = 15342
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2197 ; free virtual = 15341
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.62 seconds; current allocated memory: 110.551 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 112.601 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 115.461 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 156.48 MHz
+INFO: [RTMG 210-279] Implementing memory 'InvCipher_rsbox_rom' using block ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2165 ; free virtual = 15321
+INFO: [VHDL 208-304]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2229 ; free virtual = 15361
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2229 ; free virtual = 15361
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:472).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:464).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:454).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:463).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:465).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2212 ; free virtual = 15360
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:462) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2216 ; free virtual = 15360
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (aes.c:459) in function 'InvCipher' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.3' (aes.c:359) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (aes.c:359) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:462) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...152 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2210 ; free virtual = 15340
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2196 ; free virtual = 15339
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xtime'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.25 seconds; current allocated memory: 118.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 118.370 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'InvCipher' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('rsbox_load_27', aes.c:388->aes.c:463) on array 'rsbox' and 'load' operation ('rsbox_load_29', aes.c:388->aes.c:463) on array 'rsbox'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('rsbox_load_20', aes.c:388->aes.c:463) on array 'rsbox' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'rsbox'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 119.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 121.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xtime'.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 122.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2211 ; free virtual = 15344
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2211 ; free virtual = 15344
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:483).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:478).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:469).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:481).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:479).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2199 ; free virtual = 15343
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2197 ; free virtual = 15343
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.2' (aes.c:359) in function 'InvCipher' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:368->aes.c:479) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...144 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2191 ; free virtual = 15323
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2190 ; free virtual = 15322
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.42 seconds; current allocated memory: 110.650 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 112.713 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+INFO: [HLS 200-111]  Elapsed time: 0.84 seconds; current allocated memory: 115.594 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.09 MHz
+INFO: [RTMG 210-279] Implementing memory 'InvCipher_rsbox_rom' using block ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2164 ; free virtual = 15305
+INFO: [VHDL 208-304]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2222 ; free virtual = 15344
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2222 ; free virtual = 15344
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:483).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:478).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:469).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:481).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:479).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2219 ; free virtual = 15343
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2219 ; free virtual = 15343
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3' (aes.c:475) in function 'InvCipher' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-3.2' (aes.c:359) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.2' (aes.c:359) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...152 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2198 ; free virtual = 15324
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2187 ; free virtual = 15323
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xtime'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.96 seconds; current allocated memory: 118.299 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 118.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'InvCipher' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('rsbox_load_27', aes.c:388->aes.c:481) on array 'rsbox' and 'load' operation ('rsbox_load_29', aes.c:388->aes.c:481) on array 'rsbox'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('rsbox_load_20', aes.c:388->aes.c:481) on array 'rsbox' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'rsbox'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.72 seconds; current allocated memory: 119.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 121.657 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xtime'.
+INFO: [HLS 200-111]  Elapsed time: 0.76 seconds; current allocated memory: 122.097 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2187 ; free virtual = 15320
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2187 ; free virtual = 15320
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:483).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:478).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:469).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:481).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:479).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2170 ; free virtual = 15319
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2174 ; free virtual = 15319
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.2' (aes.c:359) in function 'InvCipher' partially with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:368->aes.c:479) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...144 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2154 ; free virtual = 15300
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2168 ; free virtual = 15299
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.59 seconds; current allocated memory: 110.646 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 112.708 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+INFO: [HLS 200-111]  Elapsed time: 0.83 seconds; current allocated memory: 115.590 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.09 MHz
+INFO: [RTMG 210-279] Implementing memory 'InvCipher_rsbox_rom' using block ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2137 ; free virtual = 15280
+INFO: [VHDL 208-304]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

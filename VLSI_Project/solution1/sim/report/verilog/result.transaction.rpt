@@ -1,6 +1,6 @@
                              latency        interval
-transaction       0:             458             459
-transaction       1:             458             459
-transaction       2:             458             459
-transaction       3:             458             459
-transaction       4:             458               x
+transaction       0:              58              59
+transaction       1:              58              59
+transaction       2:              58              59
+transaction       3:              58              59
+transaction       4:              58               x

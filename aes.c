@@ -333,16 +333,14 @@ static uint8_t Multiply(uint8_t x, uint8_t y)
 	return (((y & 1) * x) ^
 			((y>>1 & 1) * xtime(x)) ^
 			((y>>2 & 1) * xtime(xtime(x))) ^
-			((y>>3 & 1) * xtime(xtime(xtime(x)))) ^
-			((y>>4 & 1) * xtime(xtime(xtime(xtime(x)))))); /* this last call to xtime() can be omitted */
+			(xtime(xtime(xtime(x))))); /* this last call to xtime() can be omitted */
 }
 #else
 #define Multiply(x, y)                                \
 	(  ((y & 1) * x) ^                              \
 	   ((y>>1 & 1) * xtime(x)) ^                       \
 	   ((y>>2 & 1) * xtime(xtime(x))) ^                \
-	   ((y>>3 & 1) * xtime(xtime(xtime(x)))) ^         \
-	   ((y>>4 & 1) * xtime(xtime(xtime(xtime(x))))))   \
+	   (xtime(xtime(xtime(x)))))
 
 #endif
 
@@ -379,15 +377,15 @@ static void InvMixColumns(state_t* state)
 // state matrix with values in an S-box.
 static void InvSubBytes(state_t* state)
 {
-//	#pragma HLS INLINE
+	#pragma HLS INLINE
 	uint8_t i, j;
 	for (i = 0; i < 4; ++i)
 	{
-//		#pragma HLS unroll
+		#pragma HLS unroll
 		for (j = 0; j < 4; ++j)
 		{
-//			#pragma HLS unroll
-			(*state)[j][i] = getSBoxInvert((*state)[j][i]);
+			#pragma HLS unroll
+			(*state)[i][j] = getSBoxInvert((*state)[i][j]);
 		}
 	}
 }
@@ -453,24 +451,40 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
 	uint8_t round = 0;
 
 	// Add the First round key to the state before starting the rounds.
-	AddRoundKey(Nr, state, RoundKey);
+//	AddRoundKey(Nr, state, RoundKey);
+//
+//	// There will be Nr rounds.
+//	// The first Nr-1 rounds are identical.
+//	// These Nr-1 rounds are executed in the loop below.
+//	for (round = (Nr - 1); round > 0; --round)
+//	{
+//#pragma HLS pipeline
+//		InvShiftRows(state);
+//		InvSubBytes(state);
+//		AddRoundKey(round, state, RoundKey);
+//		InvMixColumns(state);
+//	}
 
-	// There will be Nr rounds.
-	// The first Nr-1 rounds are identical.
-	// These Nr-1 rounds are executed in the loop below.
+
+	AddRoundKey(Nr, state, RoundKey);
+	InvShiftRows(state);
+	InvSubBytes(state);
+		// There will be Nr rounds.
+		// The first Nr-1 rounds are identical.
+		// These Nr-1 rounds are executed in the loop below.
 	for (round = (Nr - 1); round > 0; --round)
 	{
-		InvShiftRows(state);
-		InvSubBytes(state);
+//#pragma HLS pipeline
 		AddRoundKey(round, state, RoundKey);
 		InvMixColumns(state);
+		InvShiftRows(state);
+		InvSubBytes(state);
 	}
+	AddRoundKey(0, state, RoundKey);
 
 	// The last round is given below.
 	// The MixColumns function is not here in the last round.
-	InvShiftRows(state);
-	InvSubBytes(state);
-	AddRoundKey(0, state, RoundKey);
+
 }
 #endif // #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
 
