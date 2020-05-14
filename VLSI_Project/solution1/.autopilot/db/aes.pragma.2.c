@@ -900,15 +900,15 @@ _ssdm_Unroll(1, 0, 2, "");
 
 static void InvSubBytes(state_t* state)
 {
-_ssdm_InlineSelf(0, "");
+
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-_ssdm_Unroll(0,0,0, "");
- for (j = 0; j < 4; ++j)
+
+  for (j = 0; j < 4; ++j)
   {
-_ssdm_Unroll(0,0,0, "");
- (*state)[j][i] = (rsbox[((*state)[j][i])]);
+
+   (*state)[j][i] = (rsbox[((*state)[j][i])]);
   }
  }
 }

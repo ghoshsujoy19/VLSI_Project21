@@ -774,15 +774,15 @@ static void InvMixColumns(state_t* state)
 
 static void InvSubBytes(state_t* state)
 {
-#pragma HLS INLINE
+
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-#pragma HLS unroll
- for (j = 0; j < 4; ++j)
+
+  for (j = 0; j < 4; ++j)
   {
-#pragma HLS unroll
- (*state)[j][i] = (rsbox[((*state)[j][i])]);
+
+   (*state)[j][i] = (rsbox[((*state)[j][i])]);
   }
  }
 }
@@ -874,11 +874,27 @@ void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
  Cipher((state_t*)buf, ctx->RoundKey);
 }
 
+#ifndef HLS_FASTSIM
+#ifndef HLS_FASTSIM
+#include "apatb_InvCipher.h"
+#endif
+# 489 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_decrypt(struct AES_ctx* ctx, uint8_t* buf)
 {
 
- InvCipher((state_t*)buf, ctx->RoundKey);
+ 
+#ifndef HLS_FASTSIM
+#define InvCipher AESL_WRAP_InvCipher
+#endif
+# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+InvCipher((state_t*)buf, ctx->RoundKey);
+#undef InvCipher
+# 492 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
 }
+#endif
+# 493 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
 
 
 
@@ -925,6 +941,11 @@ void AES_CBC_encrypt_buffer(struct AES_ctx *ctx,uint8_t* buf, uint32_t length)
  memcpy(ctx->Iv, Iv, 16);
 }
 
+#ifndef HLS_FASTSIM
+#ifndef HLS_FASTSIM
+#include "apatb_InvCipher.h"
+#endif
+# 540 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uintptr_t i;
@@ -932,13 +953,24 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  for (i = 0; i < length; i += 16)
  {
   memcpy(storeNextIv, buf, 16);
-  InvCipher((state_t*)buf, ctx->RoundKey);
+  
+#ifndef HLS_FASTSIM
+#define InvCipher AESL_WRAP_InvCipher
+#endif
+# 547 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+InvCipher((state_t*)buf, ctx->RoundKey);
+#undef InvCipher
+# 547 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
   XorWithIv(buf, ctx->Iv);
   memcpy(ctx->Iv, storeNextIv, 16);
   buf += 16;
  }
 
 }
+#endif
+# 553 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+
 # 562 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {

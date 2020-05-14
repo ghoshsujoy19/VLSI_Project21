@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Fri May 15 04:23:51 IST 2020
+INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Fri May 15 04:41:18 IST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -40,11 +40,11 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.14 sec.
+Command         ap_source done; 0.12 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.2 sec.
-Command     ap_source done; 0.2 sec.
+Command       ap_source done; 0.18 sec.
+Command     ap_source done; 0.18 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6 
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -59,7 +59,7 @@ Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7vx485t-ffg1157-1 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
-Command       ap_part_info done; 2.06 sec.
+Command       ap_part_info done; 2.03 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
 Execute         get_default_platform 
@@ -75,7 +75,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.34 sec.
+Command     set_part done; 2.29 sec.
 Execute     ap_part_info -data single -name xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -89,7 +89,7 @@ Execute     config_interface -m_axi_addr64=0
 Execute     config_interface -m_axi_offset=off 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 2.68 sec.
+Command   open_solution done; 2.61 sec.
 Execute   set_part xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -106,7 +106,7 @@ Execute     add_library xilinx/virtex7/virtex7_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.25 sec.
+Command   set_part done; 0.27 sec.
 Execute   create_clock -period 10 -name default 
 Execute   config_interface -clock_enable=0 -expose_global -m_axi_addr64=0 -m_axi_offset off -register_io off -trim_dangling_port=0 
 Execute   csynth_design 
@@ -169,527 +169,255 @@ Execute       clang -src /home/sujoy/Documents/VLSI_project/project21/VLSI_Proje
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.bc
 Command       clang done; 3.17 sec.
 INFO-FLOW: Linking Debug ...
-Execute       llvm-ld /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.g.bc -hls-opt -except-internalize AES -L/tools/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g 
+Execute       llvm-ld /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/aes.g.bc -hls-opt -except-internalize InvCipher -L/tools/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g 
 Command       llvm-ld done; 1.59 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2407 ; free virtual = 15493
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2407 ; free virtual = 15493
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2392 ; free virtual = 15532
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2393 ; free virtual = 15532
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.pp.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/tools/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.62 sec.
+Command         llvm-ld done; 1.61 sec.
 INFO-FLOW: Running Standard Transforms...
-Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top AES -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.0.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'Cipher' (aes.c:447).
-INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'Cipher' (aes.c:440).
-INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'Cipher' (aes.c:430).
-INFO: [XFORM 203-603] Inlining function 'SubBytes' into 'Cipher' (aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'SubBytes' into 'Cipher' (aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'ShiftRows' into 'Cipher' (aes.c:446).
-INFO: [XFORM 203-603] Inlining function 'ShiftRows' into 'Cipher' (aes.c:438).
-INFO: [XFORM 203-603] Inlining function 'MixColumns' into 'Cipher' (aes.c:439).
-Command         transform done; 0.12 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2405 ; free virtual = 15493
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top InvCipher -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.0.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:473).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:465).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:456).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:466).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2390 ; free virtual = 15532
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'Cipher' (aes.c:319->aes.c:439) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_init_ctx' into 'AES' (aes.c:506) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_ECB_encrypt2' into 'AES' (aes.c:507) automatically.
-Command         transform done; 0.13 sec.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:463) automatically.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2405 ; free virtual = 15493
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2389 ; free virtual = 15531
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.g.1.bc to /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Cipher_label33' (aes.c:435) in function 'Cipher' for pipelining.
-INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'Cipher' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'Cipher' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'SubBytes_label35' (aes.c:253) in function 'Cipher' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'SubBytes_label34' (aes.c:256) in function 'Cipher' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'MixColumns_label36' (aes.c:311) in function 'Cipher' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:165) in function 'KeyExpansion' completely with a factor of 16.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:175) in function 'KeyExpansion' partially with a factor of 4.
-INFO: [XFORM 203-101] Partitioning array 'in' (aes.c:504) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ctx.RoundKey' (aes.c:504) in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'Tm' (aes.c:305) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'Tmp' (aes.c:305) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'key' (aes.c:504) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'in' (aes.c:504) in dimension 2 completely.
-INFO: [XFORM 203-101] Partitioning array 'Tm' (aes.c:305) in dimension 2 completely.
-INFO: [XFORM 203-602] Inlining function 'xtime' into 'Cipher' (aes.c:319->aes.c:439) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_init_ctx' into 'AES' (aes.c:506) automatically.
-INFO: [XFORM 203-602] Inlining function 'AES_ECB_encrypt2' into 'AES' (aes.c:507) automatically.
-Command         transform done; 0.9 sec.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (aes.c:361) in function 'InvCipher' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:451) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:451) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:451) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:463) automatically.
+INFO: [XFORM 203-602] Inlining function 'xtime' into 'InvCipher' (aes.c:370->aes.c:466) automatically.
+Command         transform done; 0.49 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:185).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:188).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:437).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.16[16 x i8]P.i8.i64' into 'Cipher' (aes.c:258->aes.c:445).
-INFO: [XFORM 203-11] Balancing expressions in function 'Cipher' (aes.c:425)...64 expression(s) balanced.
-Command         transform done; 0.97 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2381 ; free virtual = 15473
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:451)...144 expression(s) balanced.
+Command         transform done; 0.26 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2368 ; free virtual = 15512
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.2.bc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform done; 3.14 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2352 ; free virtual = 15441
+Command         transform done; 0.72 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2360 ; free virtual = 15504
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 6.91 sec.
-Command     elaborate done; 18.49 sec.
+Command       opt_and_import_c done; 3.25 sec.
+Command     elaborate done; 14.83 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
-INFO: [HLS 200-10] Synthesizing 'AES' ...
-Execute       ap_set_top_model AES 
-Execute       get_model_list AES -filter all-wo-channel -topdown 
-Execute       preproc_iomode -model AES 
-Execute       preproc_iomode -model Cipher 
-Execute       preproc_iomode -model KeyExpansion 
-Execute       get_model_list AES -filter all-wo-channel 
-INFO-FLOW: Model list for configure: KeyExpansion Cipher AES
-INFO-FLOW: Configuring Module : KeyExpansion ...
-Execute       set_default_model KeyExpansion 
-Execute       apply_spec_resource_limit KeyExpansion 
-INFO-FLOW: Configuring Module : Cipher ...
-Execute       set_default_model Cipher 
-Execute       apply_spec_resource_limit Cipher 
-INFO-FLOW: Configuring Module : AES ...
-Execute       set_default_model AES 
-Execute       apply_spec_resource_limit AES 
-INFO-FLOW: Model list for preprocess: KeyExpansion Cipher AES
-INFO-FLOW: Preprocessing Module: KeyExpansion ...
-Execute       set_default_model KeyExpansion 
-Execute       cdfg_preprocess -model KeyExpansion 
-Execute       rtl_gen_preprocess KeyExpansion 
-INFO-FLOW: Preprocessing Module: Cipher ...
-Execute       set_default_model Cipher 
-Execute       cdfg_preprocess -model Cipher 
-Command       cdfg_preprocess done; 0.23 sec.
-Execute       rtl_gen_preprocess Cipher 
-INFO-FLOW: Preprocessing Module: AES ...
-Execute       set_default_model AES 
-Execute       cdfg_preprocess -model AES 
-Execute       rtl_gen_preprocess AES 
-INFO-FLOW: Model list for synthesis: KeyExpansion Cipher AES
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+Execute       ap_set_top_model InvCipher 
+Execute       get_model_list InvCipher -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model InvCipher 
+Execute       preproc_iomode -model InvSubBytes 
+Execute       get_model_list InvCipher -filter all-wo-channel 
+INFO-FLOW: Model list for configure: InvSubBytes InvCipher
+INFO-FLOW: Configuring Module : InvSubBytes ...
+Execute       set_default_model InvSubBytes 
+Execute       apply_spec_resource_limit InvSubBytes 
+INFO-FLOW: Configuring Module : InvCipher ...
+Execute       set_default_model InvCipher 
+Execute       apply_spec_resource_limit InvCipher 
+INFO-FLOW: Model list for preprocess: InvSubBytes InvCipher
+INFO-FLOW: Preprocessing Module: InvSubBytes ...
+Execute       set_default_model InvSubBytes 
+Execute       cdfg_preprocess -model InvSubBytes 
+Execute       rtl_gen_preprocess InvSubBytes 
+INFO-FLOW: Preprocessing Module: InvCipher ...
+Execute       set_default_model InvCipher 
+Execute       cdfg_preprocess -model InvCipher 
+Execute       rtl_gen_preprocess InvCipher 
+INFO-FLOW: Model list for synthesis: InvSubBytes InvCipher
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-42] -- Implementing module 'InvSubBytes' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model KeyExpansion 
-Execute       schedule -model KeyExpansion 
+Execute       set_default_model InvSubBytes 
+Execute       schedule -model InvSubBytes 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
-WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'load' operation ('sbox_14_load', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:185) on array 'sbox_14' and 'load' operation ('sbox_14_load_3', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:188) on array 'sbox_14'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_14_load_2', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:187) on array 'sbox_14' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_14'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 1.1 sec.
-INFO: [HLS 200-111]  Elapsed time: 23.23 seconds; current allocated memory: 151.631 MB.
-Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.verbose.sched.rpt 
-Command       syn_report done; 0.34 sec.
-Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.sched.adb -f 
-Command       db_write done; 0.11 sec.
-INFO-FLOW: Finish scheduling KeyExpansion.
-Execute       set_default_model KeyExpansion 
-Execute       bind -model KeyExpansion 
-BIND OPTION: model=KeyExpansion
+INFO: [HLS 200-111]  Elapsed time: 18.21 seconds; current allocated memory: 121.011 MB.
+Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.verbose.sched.rpt 
+Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.sched.adb -f 
+INFO-FLOW: Finish scheduling InvSubBytes.
+Execute       set_default_model InvSubBytes 
+Execute       bind -model InvSubBytes 
+BIND OPTION: model=InvSubBytes
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.18 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 154.833 MB.
-Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.verbose.bind.rpt 
-Command       syn_report done; 0.44 sec.
-Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.bind.adb -f 
-Command       db_write done; 0.12 sec.
-INFO-FLOW: Finish binding KeyExpansion.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 121.609 MB.
+Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.verbose.bind.rpt 
+Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.bind.adb -f 
+INFO-FLOW: Finish binding InvSubBytes.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Cipher' 
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model Cipher 
-Execute       schedule -model Cipher 
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'Cipher_label33'.
-WARNING: [SCHED 204-68] The II Violation in module 'Cipher' (Loop: Cipher_label33): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'load' operation ('sbox_14_load_10', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:258->aes.c:437) on array 'sbox_14' and 'load' operation ('sbox_14_load_14', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:258->aes.c:437) on array 'sbox_14'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_14_load_18', aesl_mux_load.16[16 x i8]P.i8.i64:44->aes.c:258->aes.c:437) on array 'sbox_14' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_14'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 5.
-INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 39.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 39.57 seconds; current allocated memory: 174.437 MB.
-Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.verbose.sched.rpt 
-Command       syn_report done; 3.25 sec.
-Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.sched.adb -f 
-Command       db_write done; 1.99 sec.
-INFO-FLOW: Finish scheduling Cipher.
-Execute       set_default_model Cipher 
-Execute       bind -model Cipher 
-BIND OPTION: model=Cipher
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Starting global binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 2.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 7.25 seconds; current allocated memory: 187.707 MB.
-Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.verbose.bind.rpt 
-Command       syn_report done; 3.43 sec.
-Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.bind.adb -f 
-Command       db_write done; 2.91 sec.
-INFO-FLOW: Finish binding Cipher.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AES' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model AES 
-Execute       schedule -model AES 
+Execute       set_default_model InvCipher 
+Execute       schedule -model InvCipher 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 6.38 seconds; current allocated memory: 188.130 MB.
-Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.verbose.sched.rpt 
-Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.sched.adb -f 
-INFO-FLOW: Finish scheduling AES.
-Execute       set_default_model AES 
-Execute       bind -model AES 
-BIND OPTION: model=AES
+Command       schedule done; 0.29 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 123.179 MB.
+Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.verbose.sched.rpt 
+Command       syn_report done; 0.23 sec.
+Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.sched.adb -f 
+INFO-FLOW: Finish scheduling InvCipher.
+Execute       set_default_model InvCipher 
+Execute       bind -model InvCipher 
+BIND OPTION: model=InvCipher
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.53 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.59 seconds; current allocated memory: 188.676 MB.
-Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.verbose.bind.rpt 
-Command       syn_report done; 0.65 sec.
-Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.bind.adb -f 
-INFO-FLOW: Finish binding AES.
-Execute       get_model_list AES -filter all-wo-channel 
+Command       bind done; 0.22 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 125.116 MB.
+Execute       syn_report -verbosereport -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.verbose.bind.rpt 
+Command       syn_report done; 0.62 sec.
+Execute       db_write -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.bind.adb -f 
+INFO-FLOW: Finish binding InvCipher.
+Execute       get_model_list InvCipher -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
-Execute       rtl_gen_preprocess KeyExpansion 
-Execute       rtl_gen_preprocess Cipher 
-Execute       rtl_gen_preprocess AES 
-INFO-FLOW: Model list for RTL generation: KeyExpansion Cipher AES
+Execute       rtl_gen_preprocess InvSubBytes 
+Execute       rtl_gen_preprocess InvCipher 
+INFO-FLOW: Model list for RTL generation: InvSubBytes InvCipher
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       get_config_rtl -module_prefix 
-Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model KeyExpansion -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.compgen.tcl 
-INFO: [SYN 201-210] Renamed object name 'KeyExpansion_sbox_10' to 'KeyExpansion_sboxbkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'KeyExpansion_sbox_11' to 'KeyExpansion_sboxcud' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'KeyExpansion_sbox_12' to 'KeyExpansion_sboxdEe' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'KeyExpansion_sbox_13' to 'KeyExpansion_sboxeOg' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'KeyExpansion_sbox_14' to 'KeyExpansion_sboxfYi' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'KeyExpansion_sbox_15' to 'KeyExpansion_sboxg8j' due to the length limit 20
-INFO: [RTGEN 206-100] Finished creating RTL model for 'KeyExpansion'.
-Command       create_rtl_model done; 0.25 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.93 seconds; current allocated memory: 190.901 MB.
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       gen_rtl KeyExpansion -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/KeyExpansion -synmodules KeyExpansion Cipher AES 
-Execute       gen_rtl KeyExpansion -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/KeyExpansion 
-Execute       gen_rtl KeyExpansion -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/KeyExpansion 
-Execute       syn_report -csynth -model KeyExpansion -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/KeyExpansion_csynth.rpt 
-Command       syn_report done; 0.15 sec.
-Execute       syn_report -rtlxml -model KeyExpansion -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/KeyExpansion_csynth.xml 
-Execute       syn_report -verbosereport -model KeyExpansion -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.verbose.rpt 
-Command       syn_report done; 0.51 sec.
-Execute       db_write -model KeyExpansion -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.adb 
-Command       db_write done; 0.21 sec.
-Execute       gen_tb_info KeyExpansion -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Cipher' 
+INFO: [HLS 200-10] -- Generating RTL for module 'InvSubBytes' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model Cipher -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Cipher'.
-Command       create_rtl_model done; 3.97 sec.
-INFO: [HLS 200-111]  Elapsed time: 5.09 seconds; current allocated memory: 206.403 MB.
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       gen_rtl Cipher -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/Cipher -synmodules KeyExpansion Cipher AES 
-Execute       gen_rtl Cipher -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/Cipher 
-Execute       gen_rtl Cipher -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/Cipher 
-Execute       syn_report -csynth -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/Cipher_csynth.rpt 
-Command       syn_report done; 0.3 sec.
-Execute       syn_report -rtlxml -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/Cipher_csynth.xml 
-Command       syn_report done; 0.14 sec.
-Execute       syn_report -verbosereport -model Cipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.verbose.rpt 
-Command       syn_report done; 3.52 sec.
-Execute       db_write -model Cipher -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.adb 
-Command       db_write done; 3.22 sec.
-Execute       gen_tb_info Cipher -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher 
+Execute       create_rtl_model InvSubBytes -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'InvCipher_mux_165_8_1_1' to 'InvCipher_mux_165bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'InvCipher_mux_42_8_1_1' to 'InvCipher_mux_42_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_165bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'InvCipher_mux_42_cud': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvSubBytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.76 seconds; current allocated memory: 126.993 MB.
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       gen_rtl InvSubBytes -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvSubBytes -synmodules InvSubBytes InvCipher 
+Execute       gen_rtl InvSubBytes -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/InvSubBytes 
+Execute       gen_rtl InvSubBytes -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/InvSubBytes 
+Execute       syn_report -csynth -model InvSubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvSubBytes_csynth.rpt 
+Execute       syn_report -rtlxml -model InvSubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvSubBytes_csynth.xml 
+Execute       syn_report -verbosereport -model InvSubBytes -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.verbose.rpt 
+Command       syn_report done; 0.13 sec.
+Execute       db_write -model InvSubBytes -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.adb 
+Execute       gen_tb_info InvSubBytes -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AES' 
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model AES -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.tcl 
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_0' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_1' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_2' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_3' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_4' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_5' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_6' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_7' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_8' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_9' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_10' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_11' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_12' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_13' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_14' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_RoundKey_15' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/ctx_Iv' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_0' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_1' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_2' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_3' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_4' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_5' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_6' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_7' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_8' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_9' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_10' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_11' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_12' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_13' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_14' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/key_15' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_0_0' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_0_1' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_0_2' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_0_3' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_1_0' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_1_1' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_1_2' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_1_3' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_2_0' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_2_1' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_2_2' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_2_3' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_3_0' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_3_1' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_3_2' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'AES/in_3_3' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'AES' to 'ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_address0' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_ce0' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_we0' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_d0' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_q0' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_address1' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_ce1' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_we1' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_d1' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'AES/ctx_Iv_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'AES/ctx_Iv_q1' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AES'.
-Command       create_rtl_model done; 0.33 sec.
-INFO: [HLS 200-111]  Elapsed time: 8.39 seconds; current allocated memory: 241.273 MB.
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       gen_rtl AES -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/AES -synmodules KeyExpansion Cipher AES 
-Execute       gen_rtl AES -istop -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/AES 
-Execute       gen_rtl AES -istop -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/AES 
-Execute       syn_report -csynth -model AES -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/AES_csynth.rpt 
-Execute       syn_report -rtlxml -model AES -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/AES_csynth.xml 
-Execute       syn_report -verbosereport -model AES -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.verbose.rpt 
-Command       syn_report done; 0.77 sec.
-Execute       db_write -model AES -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.adb 
-Command       db_write done; 0.13 sec.
-Execute       gen_tb_info AES -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES 
-Execute       export_constraint_db -f -tool general -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.constraint.tcl 
-Execute       syn_report -designview -model AES -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.design.xml 
-Command       syn_report done; 0.44 sec.
+Execute       create_rtl_model InvCipher -vendor xilinx -mg_file /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'InvCipher' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'InvCipher'.
+Command       create_rtl_model done; 0.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 132.572 MB.
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       gen_rtl InvCipher -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/systemc/InvCipher -synmodules InvSubBytes InvCipher 
+Execute       gen_rtl InvCipher -istop -style xilinx -f -lang vhdl -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/vhdl/InvCipher 
+Command       gen_rtl done; 0.24 sec.
+Execute       gen_rtl InvCipher -istop -style xilinx -f -lang vlog -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/verilog/InvCipher 
+Command       gen_rtl done; 0.11 sec.
+Execute       syn_report -csynth -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvCipher_csynth.rpt 
+Command       syn_report done; 0.13 sec.
+Execute       syn_report -rtlxml -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/syn/report/InvCipher_csynth.xml 
+Command       syn_report done; 0.11 sec.
+Execute       syn_report -verbosereport -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.verbose.rpt 
+Command       syn_report done; 0.73 sec.
+Execute       db_write -model InvCipher -f -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.adb 
+Command       db_write done; 0.34 sec.
+Execute       gen_tb_info InvCipher -p /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher 
+Execute       export_constraint_db -f -tool general -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.constraint.tcl 
+Execute       syn_report -designview -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.design.xml 
+Command       syn_report done; 0.28 sec.
 Execute       get_config_rtl -disable_wave_debug 
-Execute       syn_report -wcfg -model AES -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES_dataflow_ana.wcfg 
-Execute       syn_report -protoinst -model AES -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.protoinst 
+Execute       syn_report -wcfg -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model InvCipher -o /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.protoinst 
 Execute       get_config_debug -directory 
-Execute       sc_get_clocks AES 
+Execute       sc_get_clocks InvCipher 
 Execute       get_config_export -vivado_clock 
-Execute       sc_get_portdomain AES 
-INFO-FLOW: Model list for RTL component generation: KeyExpansion Cipher AES
-INFO-FLOW: Handling components in module [KeyExpansion] ... 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.compgen.tcl 
-INFO-FLOW: Found component KeyExpansion_sbox_0.
-INFO-FLOW: Append model KeyExpansion_sbox_0
-INFO-FLOW: Found component KeyExpansion_sbox_1.
-INFO-FLOW: Append model KeyExpansion_sbox_1
-INFO-FLOW: Found component KeyExpansion_sbox_2.
-INFO-FLOW: Append model KeyExpansion_sbox_2
-INFO-FLOW: Found component KeyExpansion_sbox_3.
-INFO-FLOW: Append model KeyExpansion_sbox_3
-INFO-FLOW: Found component KeyExpansion_sbox_4.
-INFO-FLOW: Append model KeyExpansion_sbox_4
-INFO-FLOW: Found component KeyExpansion_sbox_5.
-INFO-FLOW: Append model KeyExpansion_sbox_5
-INFO-FLOW: Found component KeyExpansion_sbox_6.
-INFO-FLOW: Append model KeyExpansion_sbox_6
-INFO-FLOW: Found component KeyExpansion_sbox_7.
-INFO-FLOW: Append model KeyExpansion_sbox_7
-INFO-FLOW: Found component KeyExpansion_sbox_8.
-INFO-FLOW: Append model KeyExpansion_sbox_8
-INFO-FLOW: Found component KeyExpansion_sbox_9.
-INFO-FLOW: Append model KeyExpansion_sbox_9
-INFO-FLOW: Found component KeyExpansion_sboxbkb.
-INFO-FLOW: Append model KeyExpansion_sboxbkb
-INFO-FLOW: Found component KeyExpansion_sboxcud.
-INFO-FLOW: Append model KeyExpansion_sboxcud
-INFO-FLOW: Found component KeyExpansion_sboxdEe.
-INFO-FLOW: Append model KeyExpansion_sboxdEe
-INFO-FLOW: Found component KeyExpansion_sboxeOg.
-INFO-FLOW: Append model KeyExpansion_sboxeOg
-INFO-FLOW: Found component KeyExpansion_sboxfYi.
-INFO-FLOW: Append model KeyExpansion_sboxfYi
-INFO-FLOW: Found component KeyExpansion_sboxg8j.
-INFO-FLOW: Append model KeyExpansion_sboxg8j
-INFO-FLOW: Found component KeyExpansion_Rcon.
-INFO-FLOW: Append model KeyExpansion_Rcon
-INFO-FLOW: Handling components in module [Cipher] ... 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
-INFO-FLOW: Found component Cipher_sbox_0.
-INFO-FLOW: Append model Cipher_sbox_0
-INFO-FLOW: Found component Cipher_sbox_1.
-INFO-FLOW: Append model Cipher_sbox_1
-INFO-FLOW: Found component Cipher_sbox_2.
-INFO-FLOW: Append model Cipher_sbox_2
-INFO-FLOW: Found component Cipher_sbox_3.
-INFO-FLOW: Append model Cipher_sbox_3
-INFO-FLOW: Found component Cipher_sbox_4.
-INFO-FLOW: Append model Cipher_sbox_4
-INFO-FLOW: Found component Cipher_sbox_5.
-INFO-FLOW: Append model Cipher_sbox_5
-INFO-FLOW: Found component Cipher_sbox_6.
-INFO-FLOW: Append model Cipher_sbox_6
-INFO-FLOW: Found component Cipher_sbox_7.
-INFO-FLOW: Append model Cipher_sbox_7
-INFO-FLOW: Found component Cipher_sbox_8.
-INFO-FLOW: Append model Cipher_sbox_8
-INFO-FLOW: Found component Cipher_sbox_9.
-INFO-FLOW: Append model Cipher_sbox_9
-INFO-FLOW: Found component Cipher_sbox_10.
-INFO-FLOW: Append model Cipher_sbox_10
-INFO-FLOW: Found component Cipher_sbox_11.
-INFO-FLOW: Append model Cipher_sbox_11
-INFO-FLOW: Found component Cipher_sbox_12.
-INFO-FLOW: Append model Cipher_sbox_12
-INFO-FLOW: Found component Cipher_sbox_13.
-INFO-FLOW: Append model Cipher_sbox_13
-INFO-FLOW: Found component Cipher_sbox_14.
-INFO-FLOW: Append model Cipher_sbox_14
-INFO-FLOW: Found component Cipher_sbox_15.
-INFO-FLOW: Append model Cipher_sbox_15
-INFO-FLOW: Handling components in module [AES] ... 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.tcl 
-INFO-FLOW: Append model KeyExpansion
-INFO-FLOW: Append model Cipher
-INFO-FLOW: Append model AES
+Execute       sc_get_portdomain InvCipher 
+INFO-FLOW: Model list for RTL component generation: InvSubBytes InvCipher
+INFO-FLOW: Handling components in module [InvSubBytes] ... 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+INFO-FLOW: Found component InvCipher_mux_165bkb.
+INFO-FLOW: Append model InvCipher_mux_165bkb
+INFO-FLOW: Found component InvCipher_mux_42_cud.
+INFO-FLOW: Append model InvCipher_mux_42_cud
+INFO-FLOW: Found component InvSubBytes_rsbox.
+INFO-FLOW: Append model InvSubBytes_rsbox
+INFO-FLOW: Handling components in module [InvCipher] ... 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
+INFO-FLOW: Append model InvSubBytes
+INFO-FLOW: Append model InvCipher
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: KeyExpansion_sbox_0 KeyExpansion_sbox_1 KeyExpansion_sbox_2 KeyExpansion_sbox_3 KeyExpansion_sbox_4 KeyExpansion_sbox_5 KeyExpansion_sbox_6 KeyExpansion_sbox_7 KeyExpansion_sbox_8 KeyExpansion_sbox_9 KeyExpansion_sboxbkb KeyExpansion_sboxcud KeyExpansion_sboxdEe KeyExpansion_sboxeOg KeyExpansion_sboxfYi KeyExpansion_sboxg8j KeyExpansion_Rcon Cipher_sbox_0 Cipher_sbox_1 Cipher_sbox_2 Cipher_sbox_3 Cipher_sbox_4 Cipher_sbox_5 Cipher_sbox_6 Cipher_sbox_7 Cipher_sbox_8 Cipher_sbox_9 Cipher_sbox_10 Cipher_sbox_11 Cipher_sbox_12 Cipher_sbox_13 Cipher_sbox_14 Cipher_sbox_15 KeyExpansion Cipher AES
-INFO-FLOW: To file: write model KeyExpansion_sbox_0
-INFO-FLOW: To file: write model KeyExpansion_sbox_1
-INFO-FLOW: To file: write model KeyExpansion_sbox_2
-INFO-FLOW: To file: write model KeyExpansion_sbox_3
-INFO-FLOW: To file: write model KeyExpansion_sbox_4
-INFO-FLOW: To file: write model KeyExpansion_sbox_5
-INFO-FLOW: To file: write model KeyExpansion_sbox_6
-INFO-FLOW: To file: write model KeyExpansion_sbox_7
-INFO-FLOW: To file: write model KeyExpansion_sbox_8
-INFO-FLOW: To file: write model KeyExpansion_sbox_9
-INFO-FLOW: To file: write model KeyExpansion_sboxbkb
-INFO-FLOW: To file: write model KeyExpansion_sboxcud
-INFO-FLOW: To file: write model KeyExpansion_sboxdEe
-INFO-FLOW: To file: write model KeyExpansion_sboxeOg
-INFO-FLOW: To file: write model KeyExpansion_sboxfYi
-INFO-FLOW: To file: write model KeyExpansion_sboxg8j
-INFO-FLOW: To file: write model KeyExpansion_Rcon
-INFO-FLOW: To file: write model Cipher_sbox_0
-INFO-FLOW: To file: write model Cipher_sbox_1
-INFO-FLOW: To file: write model Cipher_sbox_2
-INFO-FLOW: To file: write model Cipher_sbox_3
-INFO-FLOW: To file: write model Cipher_sbox_4
-INFO-FLOW: To file: write model Cipher_sbox_5
-INFO-FLOW: To file: write model Cipher_sbox_6
-INFO-FLOW: To file: write model Cipher_sbox_7
-INFO-FLOW: To file: write model Cipher_sbox_8
-INFO-FLOW: To file: write model Cipher_sbox_9
-INFO-FLOW: To file: write model Cipher_sbox_10
-INFO-FLOW: To file: write model Cipher_sbox_11
-INFO-FLOW: To file: write model Cipher_sbox_12
-INFO-FLOW: To file: write model Cipher_sbox_13
-INFO-FLOW: To file: write model Cipher_sbox_14
-INFO-FLOW: To file: write model Cipher_sbox_15
-INFO-FLOW: To file: write model KeyExpansion
-INFO-FLOW: To file: write model Cipher
-INFO-FLOW: To file: write model AES
+INFO-FLOW: All models in this session: InvCipher_mux_165bkb InvCipher_mux_42_cud InvSubBytes_rsbox InvSubBytes InvCipher
+INFO-FLOW: To file: write model InvCipher_mux_165bkb
+INFO-FLOW: To file: write model InvCipher_mux_42_cud
+INFO-FLOW: To file: write model InvSubBytes_rsbox
+INFO-FLOW: To file: write model InvSubBytes
+INFO-FLOW: To file: write model InvCipher
 INFO-FLOW: Finished generating RTL model list.
 
 
 INFO-FLOW: RTL Generation done.
 INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
-Execute       syn_report -model AES -printsummary 
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 118.62 MHz
+Execute       syn_report -model InvCipher -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 141.83 MHz
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
 INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -727,370 +455,20 @@ Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_0_rom' using distributed ROMs.
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'InvSubBytes_rsbox_rom' using auto ROMs.
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_1_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_2_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_3_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_4_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_5_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_6_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_7_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_8_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_9_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sboxbkb_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sboxcud_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sboxdEe_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sboxeOg_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sboxfYi_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sboxg8j_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_Rcon_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Command       ap_source done; 2.26 sec.
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_0_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_1_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_2_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_3_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_4_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_5_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_6_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_7_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_8_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_9_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_10_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_11_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_12_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_13_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_14_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'Cipher_sbox_15_rom' using distributed ROMs.
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Command       ap_source done; 3.12 sec.
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.tcl 
+Command       ap_source done; 0.18 sec.
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl
@@ -1113,53 +491,48 @@ Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/in
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.11 sec.
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.17 sec.
-Command       ap_source done; 0.17 sec.
+Command         ap_source done; 0.18 sec.
+Command       ap_source done; 0.18 sec.
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=AES xml_exists=0
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=InvCipher xml_exists=0
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.compgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.compgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute         source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
@@ -1202,42 +575,13 @@ Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
-Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Command       ap_source done; 1.18 sec.
+Command       ap_source done; 0.75 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.compgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.compgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.compgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.tcl 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
@@ -1245,67 +589,48 @@ Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.constraint.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=98
-INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=49
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=36 #gSsdmPorts=98
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.constraint.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=66
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=32
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=5 #gSsdmPorts=66
 Execute       source /tools/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_export -xo 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_sdx -target 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.compgen.dataonly.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.compgen.dataonly.tcl 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.constraint.tcl 
-Execute       sc_get_clocks AES 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.constraint.tcl 
+Execute       sc_get_clocks InvCipher 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/KeyExpansion.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/Cipher.tbgen.tcl 
-Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvSubBytes.tbgen.tcl 
+Execute       source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
 Execute       get_config_rtl -kernel_profile 
@@ -1313,14 +638,14 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1109.723 ; gain = 670.008 ; free physical = 2183 ; free virtual = 15312
-INFO: [VHDL 208-304] Generating VHDL RTL for AES.
-INFO: [VLOG 209-307] Generating Verilog RTL for AES.
-Command     autosyn done; 80.48 sec.
-Command   csynth_design done; 98.97 sec.
-Command ap_source done; 101.95 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2322 ; free virtual = 15474
+INFO: [VHDL 208-304] Generating VHDL RTL for InvCipher.
+INFO: [VLOG 209-307] Generating Verilog RTL for InvCipher.
+Command     autosyn done; 6.87 sec.
+Command   csynth_design done; 21.71 sec.
+Command ap_source done; 24.61 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Fri May 15 04:25:40 IST 2020
+INFO-FLOW: Workspace /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1 opened at Fri May 15 04:42:04 IST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -1362,7 +687,7 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.14 sec.
+Command         ap_source done; 0.13 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
 Command       ap_source done; 0.2 sec.
@@ -1381,7 +706,7 @@ Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7vx485t-ffg1157-1 
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data single -quiet 
-Command       ap_part_info done; 2.06 sec.
+Command       ap_part_info done; 2.93 sec.
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
 Execute         get_default_platform 
@@ -1392,12 +717,13 @@ Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info
 Execute         config_chip_info -quiet -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP48E 2800} {BRAM 2060} {URAM 0} 
 Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.14 sec.
 Execute       add_library xilinx/virtex7/virtex7_fpv6 
 Execute         get_default_platform 
 INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
 Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.32 sec.
+Command     set_part done; 3.31 sec.
 Execute     ap_part_info -data single -name xc7vx485t-ffg1157-1 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -1411,7 +737,7 @@ Execute     config_interface -m_axi_addr64=0
 Execute     config_interface -m_axi_offset=off 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 2.72 sec.
+Command   open_solution done; 3.71 sec.
 Execute   cosim_design 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
@@ -1436,23 +762,23 @@ Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/inte
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.12 sec.
+Command         ap_source done; 0.22 sec.
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.18 sec.
-Command     ap_source done; 0.18 sec.
+Command       ap_source done; 0.29 sec.
+Command     ap_source done; 0.29 sec.
 Execute     source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
 Execute       source /tools/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data names -quiet 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info -quiet 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute     is_encrypted /home/sujoy/Documents/VLSI_project/project21/test.c 
 Execute     is_encrypted /home/sujoy/Documents/VLSI_project/project21/aes.c 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
@@ -1469,53 +795,53 @@ Execute     tidy_31 xilinx-tb31-process /home/sujoy/Documents/VLSI_project/proje
 INFO-FLOW: exec /tools/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/./sim/autowrap/testbench/aes.c_pre.c.tb.c -- -std=gnu89 -fhls -ferror-limit=0
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/./sim/autowrap/testbench/tb.status.tcl 
 Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
 Execute     source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.34 sec.
+Command     ap_source done; 0.35 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.rtl_wrap.cfg.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.rtl_wrap.cfg.tcl 
 INFO: [COSIM 212-12] Generating RTL test bench ...
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
-Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/AES.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
+Execute     source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/.autopilot/db/InvCipher.tbgen.tcl 
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
 Execute     source .run_sim.tcl 
 Execute       source check_sim.tcl 
@@ -1523,9 +849,8 @@ Execute       source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 39.08 sec.
+Command     ap_source done; 37.23 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-Command   cosim_design done; 75.55 sec.
-Command ap_source done; 78.28 sec.
+Command   cosim_design done; 76.42 sec.
+Command ap_source done; 80.14 sec.
 Execute cleanup_all 

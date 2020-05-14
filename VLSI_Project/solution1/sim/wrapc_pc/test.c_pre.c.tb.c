@@ -1285,11 +1285,6 @@ static void test_encrypt_ecb_verbose(void)
 }
 
 
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_AES.h"
-#endif
-# 109 "/home/sujoy/Documents/VLSI_project/project21/test.c"
 static int test_encrypt_ecb(void)
 {
 # 120 "/home/sujoy/Documents/VLSI_project/project21/test.c"
@@ -1301,15 +1296,7 @@ static int test_encrypt_ecb(void)
     state_t buf = { {0x6b, 0xc1, 0xbe, 0xe2}, {0x2e, 0x40, 0x9f, 0x96},{0xe9, 0x3d, 0x7e, 0x11}, {0x73, 0x93, 0x17, 0x2a} };
     struct AES_ctx ctx;
 
-    
-#ifndef HLS_FASTSIM
-#define AES AESL_WRAP_AES
-#endif
-# 128 "/home/sujoy/Documents/VLSI_project/project21/test.c"
-AES(&ctx, key, buf);
-#undef AES
-# 128 "/home/sujoy/Documents/VLSI_project/project21/test.c"
-
+    AES(&ctx, key, buf);
 
 
 
@@ -1323,9 +1310,6 @@ AES(&ctx, key, buf);
  return(1);
     }
 }
-#endif
-# 141 "/home/sujoy/Documents/VLSI_project/project21/test.c"
-
 
 static int test_decrypt_cbc(void)
 {

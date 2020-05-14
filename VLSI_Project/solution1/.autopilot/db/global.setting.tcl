@@ -1,5 +1,5 @@
 
-set TopModule "AES"
+set TopModule "InvCipher"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0

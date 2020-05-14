@@ -900,15 +900,15 @@ static void InvMixColumns(state_t* state)
 
 static void InvSubBytes(state_t* state)
 {
-#pragma HLS INLINE
+
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-#pragma HLS unroll
- for (j = 0; j < 4; ++j)
+
+  for (j = 0; j < 4; ++j)
   {
-#pragma HLS unroll
- (*state)[j][i] = (rsbox[((*state)[j][i])]);
+
+   (*state)[j][i] = (rsbox[((*state)[j][i])]);
   }
  }
 }

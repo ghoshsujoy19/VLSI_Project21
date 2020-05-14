@@ -1,0 +1,302 @@
+
+
+================================================================
+== Vivado HLS Report for 'InvSubBytes'
+================================================================
+* Date:           Fri May 15 04:41:36 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        VLSI_Project
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 5.112 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       41|       41| 0.410 us | 0.410 us |   41|   41|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |       40|       40|        10|          -|          -|     4|    no    |
+        | + Loop 1.1  |        8|        8|         2|          -|          -|     4|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.18>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%state_3_3_0 = alloca i8"   --->   Operation 5 'alloca' 'state_3_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%state_3_2_0 = alloca i8"   --->   Operation 6 'alloca' 'state_3_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%state_3_1_0 = alloca i8"   --->   Operation 7 'alloca' 'state_3_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%state_3_0_0 = alloca i8"   --->   Operation 8 'alloca' 'state_3_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%state_2_3_0 = alloca i8"   --->   Operation 9 'alloca' 'state_2_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%state_2_2_0 = alloca i8"   --->   Operation 10 'alloca' 'state_2_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%state_2_1_0 = alloca i8"   --->   Operation 11 'alloca' 'state_2_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%state_2_0_0 = alloca i8"   --->   Operation 12 'alloca' 'state_2_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%state_1_3_0 = alloca i8"   --->   Operation 13 'alloca' 'state_1_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%state_1_2_0 = alloca i8"   --->   Operation 14 'alloca' 'state_1_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%state_1_1_0 = alloca i8"   --->   Operation 15 'alloca' 'state_1_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%state_1_0_0 = alloca i8"   --->   Operation 16 'alloca' 'state_1_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%state_0_3_0 = alloca i8"   --->   Operation 17 'alloca' 'state_0_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%state_0_2_0 = alloca i8"   --->   Operation 18 'alloca' 'state_0_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%state_0_1_0 = alloca i8"   --->   Operation 19 'alloca' 'state_0_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%state_0_0_0 = alloca i8"   --->   Operation 20 'alloca' 'state_0_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%state_3_3_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_3_read)" [aes.c:380]   --->   Operation 21 'read' 'state_3_3_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%state_3_2_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_2_read)" [aes.c:380]   --->   Operation 22 'read' 'state_3_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%state_3_1_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_1_read)" [aes.c:380]   --->   Operation 23 'read' 'state_3_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%state_3_0_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_3_0_read)" [aes.c:380]   --->   Operation 24 'read' 'state_3_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%state_2_3_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_3_read)" [aes.c:380]   --->   Operation 25 'read' 'state_2_3_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%state_2_2_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_2_read)" [aes.c:380]   --->   Operation 26 'read' 'state_2_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%state_2_1_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_1_read)" [aes.c:380]   --->   Operation 27 'read' 'state_2_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%state_2_0_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_2_0_read)" [aes.c:380]   --->   Operation 28 'read' 'state_2_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%state_1_3_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_3_read)" [aes.c:380]   --->   Operation 29 'read' 'state_1_3_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%state_1_2_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_2_read)" [aes.c:380]   --->   Operation 30 'read' 'state_1_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%state_1_1_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_1_read)" [aes.c:380]   --->   Operation 31 'read' 'state_1_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%state_1_0_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_1_0_read)" [aes.c:380]   --->   Operation 32 'read' 'state_1_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%state_0_3_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_3_read)" [aes.c:380]   --->   Operation 33 'read' 'state_0_3_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%state_0_2_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_2_read)" [aes.c:380]   --->   Operation 34 'read' 'state_0_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%state_0_1_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_1_read)" [aes.c:380]   --->   Operation 35 'read' 'state_0_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%state_0_0_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %state_0_0_read)" [aes.c:380]   --->   Operation 36 'read' 'state_0_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.18ns)   --->   "store i8 %state_0_0_read_1, i8* %state_0_0_0" [aes.c:384]   --->   Operation 37 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 38 [1/1] (1.18ns)   --->   "store i8 %state_0_1_read_1, i8* %state_0_1_0" [aes.c:384]   --->   Operation 38 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 39 [1/1] (1.18ns)   --->   "store i8 %state_0_2_read_1, i8* %state_0_2_0" [aes.c:384]   --->   Operation 39 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 40 [1/1] (1.18ns)   --->   "store i8 %state_0_3_read_1, i8* %state_0_3_0" [aes.c:384]   --->   Operation 40 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 41 [1/1] (1.18ns)   --->   "store i8 %state_1_0_read_1, i8* %state_1_0_0" [aes.c:384]   --->   Operation 41 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 42 [1/1] (1.18ns)   --->   "store i8 %state_1_1_read_1, i8* %state_1_1_0" [aes.c:384]   --->   Operation 42 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 43 [1/1] (1.18ns)   --->   "store i8 %state_1_2_read_1, i8* %state_1_2_0" [aes.c:384]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 44 [1/1] (1.18ns)   --->   "store i8 %state_1_3_read_1, i8* %state_1_3_0" [aes.c:384]   --->   Operation 44 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 45 [1/1] (1.18ns)   --->   "store i8 %state_2_0_read_1, i8* %state_2_0_0" [aes.c:384]   --->   Operation 45 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 46 [1/1] (1.18ns)   --->   "store i8 %state_2_1_read_1, i8* %state_2_1_0" [aes.c:384]   --->   Operation 46 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 47 [1/1] (1.18ns)   --->   "store i8 %state_2_2_read_1, i8* %state_2_2_0" [aes.c:384]   --->   Operation 47 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 48 [1/1] (1.18ns)   --->   "store i8 %state_2_3_read_1, i8* %state_2_3_0" [aes.c:384]   --->   Operation 48 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 49 [1/1] (1.18ns)   --->   "store i8 %state_3_0_read_1, i8* %state_3_0_0" [aes.c:384]   --->   Operation 49 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 50 [1/1] (1.18ns)   --->   "store i8 %state_3_1_read_1, i8* %state_3_1_0" [aes.c:384]   --->   Operation 50 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 51 [1/1] (1.18ns)   --->   "store i8 %state_3_2_read_1, i8* %state_3_2_0" [aes.c:384]   --->   Operation 51 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 52 [1/1] (1.18ns)   --->   "store i8 %state_3_3_read_1, i8* %state_3_3_0" [aes.c:384]   --->   Operation 52 'store' <Predicate = true> <Delay = 1.18>
+ST_1 : Operation 53 [1/1] (1.18ns)   --->   "br label %.loopexit" [aes.c:384]   --->   Operation 53 'br' <Predicate = true> <Delay = 1.18>
+
+State 2 <SV = 1> <Delay = 1.18>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%i_0 = phi i3 [ 0, %0 ], [ %i, %.loopexit.loopexit ]"   --->   Operation 54 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.86ns)   --->   "%icmp_ln384 = icmp eq i3 %i_0, -4" [aes.c:384]   --->   Operation 55 'icmp' 'icmp_ln384' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 56 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (1.18ns)   --->   "%i = add i3 %i_0, 1" [aes.c:384]   --->   Operation 57 'add' 'i' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %icmp_ln384, label %2, label %.preheader.preheader" [aes.c:384]   --->   Operation 58 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%trunc_ln390 = trunc i3 %i_0 to i2" [aes.c:390]   --->   Operation 59 'trunc' 'trunc_ln390' <Predicate = (!icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (1.18ns)   --->   "br label %.preheader" [aes.c:387]   --->   Operation 60 'br' <Predicate = (!icmp_ln384)> <Delay = 1.18>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%state_3_3_0_load = load i8* %state_3_3_0" [aes.c:393]   --->   Operation 61 'load' 'state_3_3_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%state_3_2_0_load = load i8* %state_3_2_0" [aes.c:393]   --->   Operation 62 'load' 'state_3_2_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%state_3_1_0_load = load i8* %state_3_1_0" [aes.c:393]   --->   Operation 63 'load' 'state_3_1_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%state_3_0_0_load = load i8* %state_3_0_0" [aes.c:393]   --->   Operation 64 'load' 'state_3_0_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%state_2_3_0_load = load i8* %state_2_3_0" [aes.c:393]   --->   Operation 65 'load' 'state_2_3_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%state_2_2_0_load = load i8* %state_2_2_0" [aes.c:393]   --->   Operation 66 'load' 'state_2_2_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%state_2_1_0_load = load i8* %state_2_1_0" [aes.c:393]   --->   Operation 67 'load' 'state_2_1_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%state_2_0_0_load = load i8* %state_2_0_0" [aes.c:393]   --->   Operation 68 'load' 'state_2_0_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%state_1_3_0_load = load i8* %state_1_3_0" [aes.c:393]   --->   Operation 69 'load' 'state_1_3_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%state_1_2_0_load = load i8* %state_1_2_0" [aes.c:393]   --->   Operation 70 'load' 'state_1_2_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%state_1_1_0_load = load i8* %state_1_1_0" [aes.c:393]   --->   Operation 71 'load' 'state_1_1_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%state_1_0_0_load = load i8* %state_1_0_0" [aes.c:393]   --->   Operation 72 'load' 'state_1_0_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%state_0_3_0_load = load i8* %state_0_3_0" [aes.c:393]   --->   Operation 73 'load' 'state_0_3_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%state_0_2_0_load = load i8* %state_0_2_0" [aes.c:393]   --->   Operation 74 'load' 'state_0_2_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%state_0_1_0_load = load i8* %state_0_1_0" [aes.c:393]   --->   Operation 75 'load' 'state_0_1_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%state_0_0_0_load = load i8* %state_0_0_0" [aes.c:393]   --->   Operation 76 'load' 'state_0_0_0_load' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %state_0_0_0_load, 0" [aes.c:393]   --->   Operation 77 'insertvalue' 'mrv' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %state_0_1_0_load, 1" [aes.c:393]   --->   Operation 78 'insertvalue' 'mrv_1' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %state_0_2_0_load, 2" [aes.c:393]   --->   Operation 79 'insertvalue' 'mrv_2' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %state_0_3_0_load, 3" [aes.c:393]   --->   Operation 80 'insertvalue' 'mrv_3' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %state_1_0_0_load, 4" [aes.c:393]   --->   Operation 81 'insertvalue' 'mrv_4' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %state_1_1_0_load, 5" [aes.c:393]   --->   Operation 82 'insertvalue' 'mrv_5' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %state_1_2_0_load, 6" [aes.c:393]   --->   Operation 83 'insertvalue' 'mrv_6' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %state_1_3_0_load, 7" [aes.c:393]   --->   Operation 84 'insertvalue' 'mrv_7' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7, i8 %state_2_0_0_load, 8" [aes.c:393]   --->   Operation 85 'insertvalue' 'mrv_8' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_8, i8 %state_2_1_0_load, 9" [aes.c:393]   --->   Operation 86 'insertvalue' 'mrv_9' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_9, i8 %state_2_2_0_load, 10" [aes.c:393]   --->   Operation 87 'insertvalue' 'mrv_s' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_s, i8 %state_2_3_0_load, 11" [aes.c:393]   --->   Operation 88 'insertvalue' 'mrv_10' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_10, i8 %state_3_0_0_load, 12" [aes.c:393]   --->   Operation 89 'insertvalue' 'mrv_11' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_11, i8 %state_3_1_0_load, 13" [aes.c:393]   --->   Operation 90 'insertvalue' 'mrv_12' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_12, i8 %state_3_2_0_load, 14" [aes.c:393]   --->   Operation 91 'insertvalue' 'mrv_13' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_13, i8 %state_3_3_0_load, 15" [aes.c:393]   --->   Operation 92 'insertvalue' 'mrv_14' <Predicate = (icmp_ln384)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_14" [aes.c:393]   --->   Operation 93 'ret' <Predicate = (icmp_ln384)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.95>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ 0, %.preheader.preheader ], [ %j, %.preheader.backedge ]"   --->   Operation 94 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.86ns)   --->   "%icmp_ln387 = icmp eq i3 %j_0, -4" [aes.c:387]   --->   Operation 95 'icmp' 'icmp_ln387' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 96 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (1.18ns)   --->   "%j = add i3 %j_0, 1" [aes.c:387]   --->   Operation 97 'add' 'j' <Predicate = true> <Delay = 1.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "br i1 %icmp_ln387, label %.loopexit.loopexit, label %1" [aes.c:387]   --->   Operation 98 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%state_3_3_0_load_1 = load i8* %state_3_3_0" [aes.c:390]   --->   Operation 99 'load' 'state_3_3_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%state_3_2_0_load_1 = load i8* %state_3_2_0" [aes.c:390]   --->   Operation 100 'load' 'state_3_2_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%state_3_1_0_load_1 = load i8* %state_3_1_0" [aes.c:390]   --->   Operation 101 'load' 'state_3_1_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%state_3_0_0_load_1 = load i8* %state_3_0_0" [aes.c:390]   --->   Operation 102 'load' 'state_3_0_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%state_2_3_0_load_1 = load i8* %state_2_3_0" [aes.c:390]   --->   Operation 103 'load' 'state_2_3_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%state_2_2_0_load_1 = load i8* %state_2_2_0" [aes.c:390]   --->   Operation 104 'load' 'state_2_2_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%state_2_1_0_load_1 = load i8* %state_2_1_0" [aes.c:390]   --->   Operation 105 'load' 'state_2_1_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%state_2_0_0_load_1 = load i8* %state_2_0_0" [aes.c:390]   --->   Operation 106 'load' 'state_2_0_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%state_1_3_0_load_1 = load i8* %state_1_3_0" [aes.c:390]   --->   Operation 107 'load' 'state_1_3_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%state_1_2_0_load_1 = load i8* %state_1_2_0" [aes.c:390]   --->   Operation 108 'load' 'state_1_2_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%state_1_1_0_load_1 = load i8* %state_1_1_0" [aes.c:390]   --->   Operation 109 'load' 'state_1_1_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%state_1_0_0_load_1 = load i8* %state_1_0_0" [aes.c:390]   --->   Operation 110 'load' 'state_1_0_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%state_0_3_0_load_1 = load i8* %state_0_3_0" [aes.c:390]   --->   Operation 111 'load' 'state_0_3_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%state_0_2_0_load_1 = load i8* %state_0_2_0" [aes.c:390]   --->   Operation 112 'load' 'state_0_2_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%state_0_1_0_load_1 = load i8* %state_0_1_0" [aes.c:390]   --->   Operation 113 'load' 'state_0_1_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%state_0_0_0_load_1 = load i8* %state_0_0_0" [aes.c:390]   --->   Operation 114 'load' 'state_0_0_0_load_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln390_1 = trunc i3 %j_0 to i2" [aes.c:390]   --->   Operation 115 'trunc' 'trunc_ln390_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_1 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %trunc_ln390_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 116 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%zext_ln390 = zext i4 %tmp_1 to i5" [aes.c:390]   --->   Operation 117 'zext' 'zext_ln390' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (1.28ns)   --->   "%tmp = call i8 @_ssdm_op_Mux.ap_auto.16i8.i5(i8 %state_0_0_0_load_1, i8 %state_0_1_0_load_1, i8 %state_0_2_0_load_1, i8 %state_0_3_0_load_1, i8 %state_1_0_0_load_1, i8 %state_1_1_0_load_1, i8 %state_1_2_0_load_1, i8 %state_1_3_0_load_1, i8 %state_2_0_0_load_1, i8 %state_2_1_0_load_1, i8 %state_2_2_0_load_1, i8 %state_2_3_0_load_1, i8 %state_3_0_0_load_1, i8 %state_3_1_0_load_1, i8 %state_3_2_0_load_1, i8 %state_3_3_0_load_1, i5 %zext_ln390)" [aes.c:390]   --->   Operation 118 'mux' 'tmp' <Predicate = (!icmp_ln387)> <Delay = 1.28> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "%zext_ln390_1 = zext i8 %tmp to i64" [aes.c:390]   --->   Operation 119 'zext' 'zext_ln390_1' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%rsbox_addr = getelementptr inbounds [256 x i8]* @rsbox, i64 0, i64 %zext_ln390_1" [aes.c:390]   --->   Operation 120 'getelementptr' 'rsbox_addr' <Predicate = (!icmp_ln387)> <Delay = 0.00>
+ST_3 : Operation 121 [2/2] (2.66ns)   --->   "%rsbox_load = load i8* %rsbox_addr, align 1" [aes.c:390]   --->   Operation 121 'load' 'rsbox_load' <Predicate = (!icmp_ln387)> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 122 'br' <Predicate = (icmp_ln387)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.11>
+ST_4 : Operation 123 [1/2] (2.66ns)   --->   "%rsbox_load = load i8* %rsbox_addr, align 1" [aes.c:390]   --->   Operation 123 'load' 'rsbox_load' <Predicate = true> <Delay = 2.66> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 124 [1/1] (1.12ns)   --->   "switch i2 %trunc_ln390_1, label %branch3 [
+    i2 0, label %branch0
+    i2 1, label %branch1
+    i2 -2, label %branch2
+  ]" [aes.c:390]   --->   Operation 124 'switch' <Predicate = true> <Delay = 1.12>
+ST_4 : Operation 125 [1/1] (1.26ns)   --->   "%state_2_3_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_3_0_load_1, i8 %state_2_3_0_load_1, i8 %state_2_3_0_load_1, i8 %rsbox_load, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 125 'mux' 'state_2_3_3' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [1/1] (1.26ns)   --->   "%state_2_2_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_2_0_load_1, i8 %state_2_2_0_load_1, i8 %rsbox_load, i8 %state_2_2_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 126 'mux' 'state_2_2_3' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 127 [1/1] (1.26ns)   --->   "%state_2_1_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_2_1_0_load_1, i8 %rsbox_load, i8 %state_2_1_0_load_1, i8 %state_2_1_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 127 'mux' 'state_2_1_3' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 128 [1/1] (1.26ns)   --->   "%state_2_0_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %rsbox_load, i8 %state_2_0_0_load_1, i8 %state_2_0_0_load_1, i8 %state_2_0_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 128 'mux' 'state_2_0_3' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 129 [1/1] (1.18ns)   --->   "store i8 %state_2_0_3, i8* %state_2_0_0" [aes.c:390]   --->   Operation 129 'store' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.18>
+ST_4 : Operation 130 [1/1] (1.18ns)   --->   "store i8 %state_2_1_3, i8* %state_2_1_0" [aes.c:390]   --->   Operation 130 'store' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.18>
+ST_4 : Operation 131 [1/1] (1.18ns)   --->   "store i8 %state_2_2_3, i8* %state_2_2_0" [aes.c:390]   --->   Operation 131 'store' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.18>
+ST_4 : Operation 132 [1/1] (1.18ns)   --->   "store i8 %state_2_3_3, i8* %state_2_3_0" [aes.c:390]   --->   Operation 132 'store' <Predicate = (trunc_ln390_1 == 2)> <Delay = 1.18>
+ST_4 : Operation 133 [1/1] (0.00ns)   --->   "br label %.preheader.backedge" [aes.c:390]   --->   Operation 133 'br' <Predicate = (trunc_ln390_1 == 2)> <Delay = 0.00>
+ST_4 : Operation 134 [1/1] (1.26ns)   --->   "%state_1_3_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_3_0_load_1, i8 %state_1_3_0_load_1, i8 %state_1_3_0_load_1, i8 %rsbox_load, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 134 'mux' 'state_1_3_3' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 135 [1/1] (1.26ns)   --->   "%state_1_2_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_2_0_load_1, i8 %state_1_2_0_load_1, i8 %rsbox_load, i8 %state_1_2_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 135 'mux' 'state_1_2_3' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 136 [1/1] (1.26ns)   --->   "%state_1_1_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_1_1_0_load_1, i8 %rsbox_load, i8 %state_1_1_0_load_1, i8 %state_1_1_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 136 'mux' 'state_1_1_3' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 137 [1/1] (1.26ns)   --->   "%state_1_0_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %rsbox_load, i8 %state_1_0_0_load_1, i8 %state_1_0_0_load_1, i8 %state_1_0_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 137 'mux' 'state_1_0_3' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 138 [1/1] (1.18ns)   --->   "store i8 %state_1_0_3, i8* %state_1_0_0" [aes.c:390]   --->   Operation 138 'store' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.18>
+ST_4 : Operation 139 [1/1] (1.18ns)   --->   "store i8 %state_1_1_3, i8* %state_1_1_0" [aes.c:390]   --->   Operation 139 'store' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.18>
+ST_4 : Operation 140 [1/1] (1.18ns)   --->   "store i8 %state_1_2_3, i8* %state_1_2_0" [aes.c:390]   --->   Operation 140 'store' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.18>
+ST_4 : Operation 141 [1/1] (1.18ns)   --->   "store i8 %state_1_3_3, i8* %state_1_3_0" [aes.c:390]   --->   Operation 141 'store' <Predicate = (trunc_ln390_1 == 1)> <Delay = 1.18>
+ST_4 : Operation 142 [1/1] (0.00ns)   --->   "br label %.preheader.backedge" [aes.c:390]   --->   Operation 142 'br' <Predicate = (trunc_ln390_1 == 1)> <Delay = 0.00>
+ST_4 : Operation 143 [1/1] (1.26ns)   --->   "%state_0_3_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_3_0_load_1, i8 %state_0_3_0_load_1, i8 %state_0_3_0_load_1, i8 %rsbox_load, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 143 'mux' 'state_0_3_3' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 144 [1/1] (1.26ns)   --->   "%state_0_2_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_2_0_load_1, i8 %state_0_2_0_load_1, i8 %rsbox_load, i8 %state_0_2_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 144 'mux' 'state_0_2_3' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 145 [1/1] (1.26ns)   --->   "%state_0_1_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_0_1_0_load_1, i8 %rsbox_load, i8 %state_0_1_0_load_1, i8 %state_0_1_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 145 'mux' 'state_0_1_3' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 146 [1/1] (1.26ns)   --->   "%state_0_0_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %rsbox_load, i8 %state_0_0_0_load_1, i8 %state_0_0_0_load_1, i8 %state_0_0_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 146 'mux' 'state_0_0_3' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 147 [1/1] (1.18ns)   --->   "store i8 %state_0_0_3, i8* %state_0_0_0" [aes.c:390]   --->   Operation 147 'store' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.18>
+ST_4 : Operation 148 [1/1] (1.18ns)   --->   "store i8 %state_0_1_3, i8* %state_0_1_0" [aes.c:390]   --->   Operation 148 'store' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.18>
+ST_4 : Operation 149 [1/1] (1.18ns)   --->   "store i8 %state_0_2_3, i8* %state_0_2_0" [aes.c:390]   --->   Operation 149 'store' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.18>
+ST_4 : Operation 150 [1/1] (1.18ns)   --->   "store i8 %state_0_3_3, i8* %state_0_3_0" [aes.c:390]   --->   Operation 150 'store' <Predicate = (trunc_ln390_1 == 0)> <Delay = 1.18>
+ST_4 : Operation 151 [1/1] (0.00ns)   --->   "br label %.preheader.backedge" [aes.c:390]   --->   Operation 151 'br' <Predicate = (trunc_ln390_1 == 0)> <Delay = 0.00>
+ST_4 : Operation 152 [1/1] (1.26ns)   --->   "%state_3_3_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_3_0_load_1, i8 %state_3_3_0_load_1, i8 %state_3_3_0_load_1, i8 %rsbox_load, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 152 'mux' 'state_3_3_3' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 153 [1/1] (1.26ns)   --->   "%state_3_2_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_2_0_load_1, i8 %state_3_2_0_load_1, i8 %rsbox_load, i8 %state_3_2_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 153 'mux' 'state_3_2_3' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 154 [1/1] (1.26ns)   --->   "%state_3_1_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %state_3_1_0_load_1, i8 %rsbox_load, i8 %state_3_1_0_load_1, i8 %state_3_1_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 154 'mux' 'state_3_1_3' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 155 [1/1] (1.26ns)   --->   "%state_3_0_3 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %rsbox_load, i8 %state_3_0_0_load_1, i8 %state_3_0_0_load_1, i8 %state_3_0_0_load_1, i2 %trunc_ln390)" [aes.c:390]   --->   Operation 155 'mux' 'state_3_0_3' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.26> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 156 [1/1] (1.18ns)   --->   "store i8 %state_3_0_3, i8* %state_3_0_0" [aes.c:390]   --->   Operation 156 'store' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.18>
+ST_4 : Operation 157 [1/1] (1.18ns)   --->   "store i8 %state_3_1_3, i8* %state_3_1_0" [aes.c:390]   --->   Operation 157 'store' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.18>
+ST_4 : Operation 158 [1/1] (1.18ns)   --->   "store i8 %state_3_2_3, i8* %state_3_2_0" [aes.c:390]   --->   Operation 158 'store' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.18>
+ST_4 : Operation 159 [1/1] (1.18ns)   --->   "store i8 %state_3_3_3, i8* %state_3_3_0" [aes.c:390]   --->   Operation 159 'store' <Predicate = (trunc_ln390_1 == 3)> <Delay = 1.18>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "br label %.preheader.backedge" [aes.c:390]   --->   Operation 160 'br' <Predicate = (trunc_ln390_1 == 3)> <Delay = 0.00>
+ST_4 : Operation 161 [1/1] (0.00ns)   --->   "br label %.preheader"   --->   Operation 161 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.18ns
+The critical path consists of the following:
+	'alloca' operation ('state[3][3]') [19]  (0 ns)
+	'store' operation ('store_ln384', aes.c:384) of variable 'state[3][3]', aes.c:380 on local variable 'state[3][3]' [66]  (1.18 ns)
+
+ <State 2>: 1.18ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', aes.c:384) [69]  (0 ns)
+	'add' operation ('i', aes.c:384) [72]  (1.18 ns)
+
+ <State 3>: 3.95ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', aes.c:387) [78]  (0 ns)
+	'mux' operation ('tmp', aes.c:390) [103]  (1.29 ns)
+	'getelementptr' operation ('rsbox_addr', aes.c:390) [105]  (0 ns)
+	'load' operation ('rsbox_load', aes.c:390) on array 'rsbox' [106]  (2.66 ns)
+
+ <State 4>: 5.11ns
+The critical path consists of the following:
+	'load' operation ('rsbox_load', aes.c:390) on array 'rsbox' [106]  (2.66 ns)
+	'mux' operation ('state_2_0_3', aes.c:390) [112]  (1.26 ns)
+	'store' operation ('store_ln390', aes.c:390) of variable 'state_2_0_3', aes.c:390 on local variable 'state[2][0]' [113]  (1.18 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

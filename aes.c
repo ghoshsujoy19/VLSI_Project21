@@ -379,14 +379,14 @@ static void InvMixColumns(state_t* state)
 // state matrix with values in an S-box.
 static void InvSubBytes(state_t* state)
 {
-	#pragma HLS INLINE
+//	#pragma HLS INLINE
 	uint8_t i, j;
 	for (i = 0; i < 4; ++i)
 	{
-		#pragma HLS unroll
+//		#pragma HLS unroll
 		for (j = 0; j < 4; ++j)
 		{
-			#pragma HLS unroll
+//			#pragma HLS unroll
 			(*state)[j][i] = getSBoxInvert((*state)[j][i]);
 		}
 	}
