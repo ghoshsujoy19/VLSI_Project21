@@ -4,21 +4,21 @@ INFO: [COSIM-14] Instrumenting C test bench ...
    Compiling apatb_KeyExpansion.cpp
    Compiling (apcc) test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Thu May 14 23:21:53 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Fri May 15 00:33:38 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/190441589478713303426
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/224721589483018391212
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) aes.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Thu May 14 23:22:07 IST 2020
+INFO: [HLS 200-10] For user 'sujoy' on host 'sujoy-HP-Notebook' (Linux_x86_64 version 4.15.0-99-generic) on Fri May 15 00:33:52 IST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/191111589478727581371
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sujoy/225391589483032903569
 INFO: [APCC 202-1] APCC is done.
    Generating cosim.tv.exe
 INFO: [COSIM-302] Starting C TB testing ... 
@@ -177,7 +177,7 @@ Built simulation snapshot KeyExpansion
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/KeyExpansion/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Thu May 14 23:22:36 2020...
+INFO: [Common 17-206] Exiting Webtalk at Fri May 15 00:34:21 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -197,17 +197,17 @@ source KeyExpansion.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 7 [0.00%] @ "125000"
-// RTL Simulation : 1 / 7 [100.00%] @ "1175000"
-// RTL Simulation : 2 / 7 [100.00%] @ "2215000"
-// RTL Simulation : 3 / 7 [100.00%] @ "3255000"
-// RTL Simulation : 4 / 7 [100.00%] @ "4295000"
-// RTL Simulation : 5 / 7 [100.00%] @ "5335000"
-// RTL Simulation : 6 / 7 [100.00%] @ "6375000"
-// RTL Simulation : 7 / 7 [100.00%] @ "7415000"
+// RTL Simulation : 1 / 7 [100.00%] @ "475000"
+// RTL Simulation : 2 / 7 [100.00%] @ "815000"
+// RTL Simulation : 3 / 7 [100.00%] @ "1155000"
+// RTL Simulation : 4 / 7 [100.00%] @ "1495000"
+// RTL Simulation : 5 / 7 [100.00%] @ "1835000"
+// RTL Simulation : 6 / 7 [100.00%] @ "2175000"
+// RTL Simulation : 7 / 7 [100.00%] @ "2515000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 7455 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 1176
+$finish called at time : 2555 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 1194
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu May 14 23:22:58 2020...
+INFO: [Common 17-206] Exiting xsim at Fri May 15 00:34:44 2020...
 
 Testing AES128
 

@@ -16825,3 +16825,660 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5575 ; free virtual = 17440
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5575 ; free virtual = 17440
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5571 ; free virtual = 17436
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5571 ; free virtual = 17436
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:162) in function 'KeyExpansion' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:172) in function 'KeyExpansion' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'Key' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:188).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:189).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5550 ; free virtual = 17417
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.4'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5548 ; free virtual = 17416
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'KeyExpansion' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('sbox_7_load', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:186) on array 'sbox_7' and 'icmp' operation ('icmp_ln25_21', aesl_mux_load.8[32 x i8]P.i8.i64:25->aes.c:189).
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_7_load_2', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:188) on array 'sbox_7' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.14 seconds; current allocated memory: 107.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 109.029 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_5' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5598 ; free virtual = 17452
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5598 ; free virtual = 17452
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5588 ; free virtual = 17443
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5588 ; free virtual = 17443
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:162) in function 'KeyExpansion' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:172) in function 'KeyExpansion' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'Key' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:184).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:185).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5566 ; free virtual = 17423
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.5'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5563 ; free virtual = 17422
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'KeyExpansion' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('sbox_7_load', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:184) on array 'sbox_7' and 'icmp' operation ('icmp_ln25_21', aesl_mux_load.8[32 x i8]P.i8.i64:25->aes.c:187).
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_7_load_2', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:186) on array 'sbox_7' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.46 seconds; current allocated memory: 107.623 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 109.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_5' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5566 ; free virtual = 17420
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5566 ; free virtual = 17420
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5556 ; free virtual = 17411
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5556 ; free virtual = 17412
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:162) in function 'KeyExpansion' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:172) in function 'KeyExpansion' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'Key' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:185).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:188).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5534 ; free virtual = 17392
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sbox.5'.
+INFO: [HLS 200-625] Found 'occurrence' pragma in function KeyExpansion.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5532 ; free virtual = 17390
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'KeyExpansion' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('sbox_7_load', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:185) on array 'sbox_7' and 'icmp' operation ('icmp_ln25_21', aesl_mux_load.8[32 x i8]P.i8.i64:25->aes.c:188).
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_7_load_2', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:187) on array 'sbox_7' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.72 seconds; current allocated memory: 107.650 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.72 seconds; current allocated memory: 109.095 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_4' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5486 ; free virtual = 17373
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5486 ; free virtual = 17373
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5576 ; free virtual = 17442
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5576 ; free virtual = 17442
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:162) in function 'KeyExpansion' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:172) in function 'KeyExpansion' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'Key' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:185).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:188).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5551 ; free virtual = 17425
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+INFO: [HLS 200-625] Found 'occurrence' pragma in function KeyExpansion.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5550 ; free virtual = 17424
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'KeyExpansion' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('sbox_7_load', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:185) on array 'sbox_7' and 'icmp' operation ('icmp_ln25_21', aesl_mux_load.8[32 x i8]P.i8.i64:25->aes.c:188).
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_7_load_2', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:187) on array 'sbox_7' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.03 seconds; current allocated memory: 107.643 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 109.089 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'KeyExpansion' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeyExpansion'.
+INFO: [HLS 200-111]  Elapsed time: 1.12 seconds; current allocated memory: 111.084 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.50 MHz
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_7_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_0_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_3_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_4_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_5_rom' using distributed ROMs.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5498 ; free virtual = 17352
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5498 ; free virtual = 17352
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5492 ; free virtual = 17348
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5492 ; free virtual = 17348
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:162) in function 'KeyExpansion' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:172) in function 'KeyExpansion' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'Key' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:185).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:188).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5471 ; free virtual = 17328
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+INFO: [HLS 200-625] Found 'occurrence' pragma in function KeyExpansion.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5509 ; free virtual = 17367
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'KeyExpansion' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('sbox_7_load', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:185) on array 'sbox_7' and 'icmp' operation ('icmp_ln25_21', aesl_mux_load.8[32 x i8]P.i8.i64:25->aes.c:188).
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_7_load_2', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:187) on array 'sbox_7' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.95 seconds; current allocated memory: 107.643 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.89 seconds; current allocated memory: 109.088 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'KeyExpansion' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeyExpansion'.
+INFO: [HLS 200-111]  Elapsed time: 1.2 seconds; current allocated memory: 111.083 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.50 MHz
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_7_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_0_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_3_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_4_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_5_rom' using distributed ROMs.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5496 ; free virtual = 17351
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5496 ; free virtual = 17351
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5500 ; free virtual = 17357
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5500 ; free virtual = 17356
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (aes.c:162) in function 'KeyExpansion' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (aes.c:172) in function 'KeyExpansion' partially with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'sbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'rsbox'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'Key' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:152) in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:185).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:186).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:187).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8[32 x i8]P.i8.i64' into 'KeyExpansion' (aes.c:188).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5477 ; free virtual = 17335
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sbox.1'.
+INFO: [HLS 200-625] Found 'occurrence' pragma in function KeyExpansion.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 5474 ; free virtual = 17332
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'KeyExpansion' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'KeyExpansion' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('sbox_7_load', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:185) on array 'sbox_7' and 'icmp' operation ('icmp_ln25_21', aesl_mux_load.8[32 x i8]P.i8.i64:25->aes.c:188).
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('sbox_7_load_2', aesl_mux_load.8[32 x i8]P.i8.i64:23->aes.c:187) on array 'sbox_7' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'sbox_7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.96 seconds; current allocated memory: 107.642 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 109.088 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeyExpansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/RoundKey_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'KeyExpansion/Key_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'KeyExpansion' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeyExpansion'.
+INFO: [HLS 200-111]  Elapsed time: 1.08 seconds; current allocated memory: 111.083 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.50 MHz
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_7_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_0_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_3_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_4_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'KeyExpansion_sbox_5_rom' using distributed ROMs.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

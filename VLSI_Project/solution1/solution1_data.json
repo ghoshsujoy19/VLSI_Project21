@@ -48,7 +48,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "103",
+    "Latency": "33",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -545,6 +545,17 @@
       "bundle_name": "RoundKey_0",
       "bundle_role": "q0"
     },
+    "RoundKey_0_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "RoundKey_0",
+      "bundle_role": "q1"
+    },
     "RoundKey_1_address0": {
       "type": "data",
       "dir": "out",
@@ -599,6 +610,17 @@
         }},
       "bundle_name": "RoundKey_1",
       "bundle_role": "q0"
+    },
+    "RoundKey_1_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "RoundKey_1",
+      "bundle_role": "q1"
     },
     "RoundKey_2_address0": {
       "type": "data",
@@ -655,6 +677,17 @@
       "bundle_name": "RoundKey_2",
       "bundle_role": "q0"
     },
+    "RoundKey_2_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "RoundKey_2",
+      "bundle_role": "q1"
+    },
     "RoundKey_3_address0": {
       "type": "data",
       "dir": "out",
@@ -709,6 +742,17 @@
         }},
       "bundle_name": "RoundKey_3",
       "bundle_role": "q0"
+    },
+    "RoundKey_3_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "RoundKey_3",
+      "bundle_role": "q1"
     },
     "RoundKey_4_address0": {
       "type": "data",
@@ -875,6 +919,17 @@
       "bundle_name": "RoundKey_6",
       "bundle_role": "q0"
     },
+    "RoundKey_6_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "RoundKey_6",
+      "bundle_role": "q1"
+    },
     "RoundKey_7_address0": {
       "type": "data",
       "dir": "out",
@@ -929,6 +984,17 @@
         }},
       "bundle_name": "RoundKey_7",
       "bundle_role": "q0"
+    },
+    "RoundKey_7_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "RoundKey_7",
+      "bundle_role": "q1"
     }
   },
   "RtlPorts": {
@@ -992,6 +1058,10 @@
       "dir": "out",
       "width": "8"
     },
+    "RoundKey_0_q1": {
+      "dir": "in",
+      "width": "8"
+    },
     "RoundKey_1_address0": {
       "dir": "out",
       "width": "5"
@@ -1026,6 +1096,10 @@
     },
     "RoundKey_1_d1": {
       "dir": "out",
+      "width": "8"
+    },
+    "RoundKey_1_q1": {
+      "dir": "in",
       "width": "8"
     },
     "RoundKey_2_address0": {
@@ -1064,6 +1138,10 @@
       "dir": "out",
       "width": "8"
     },
+    "RoundKey_2_q1": {
+      "dir": "in",
+      "width": "8"
+    },
     "RoundKey_3_address0": {
       "dir": "out",
       "width": "5"
@@ -1098,6 +1176,10 @@
     },
     "RoundKey_3_d1": {
       "dir": "out",
+      "width": "8"
+    },
+    "RoundKey_3_q1": {
+      "dir": "in",
       "width": "8"
     },
     "RoundKey_4_address0": {
@@ -1208,6 +1290,10 @@
       "dir": "out",
       "width": "8"
     },
+    "RoundKey_6_q1": {
+      "dir": "in",
+      "width": "8"
+    },
     "RoundKey_7_address0": {
       "dir": "out",
       "width": "5"
@@ -1242,6 +1328,10 @@
     },
     "RoundKey_7_d1": {
       "dir": "out",
+      "width": "8"
+    },
+    "RoundKey_7_q1": {
+      "dir": "in",
       "width": "8"
     },
     "Key_0_address0": {
@@ -1464,29 +1554,29 @@
       }},
     "Metrics": {"KeyExpansion": {
         "Latency": {
-          "LatencyBest": "103",
-          "LatencyAvg": "103",
-          "LatencyWorst": "103",
-          "PipelineII": "104",
+          "LatencyBest": "33",
+          "LatencyAvg": "33",
+          "LatencyWorst": "33",
+          "PipelineII": "34",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.299"
+          "Estimate": "7.820"
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "20",
-            "Latency": "100",
-            "PipelineII": "5",
-            "PipelineDepth": "5"
+            "TripCount": "10",
+            "Latency": "30",
+            "PipelineII": "3",
+            "PipelineDepth": "3"
           }],
         "Area": {
           "BRAM_18K": "0",
-          "FF": "247",
-          "LUT": "1527",
+          "FF": "285",
+          "LUT": "1905",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -1502,7 +1592,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-14 23:21:01 IST",
+    "Time": "2020-05-15 00:33:01 IST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

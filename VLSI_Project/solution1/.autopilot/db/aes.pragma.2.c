@@ -712,8 +712,9 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  uint8_t a,b,c,d,e;
  unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2;
 
+_ssdm_op_SpecResourceLimit(12, "add", "", "", "");
 
-_ssdm_op_SpecResourceLimit(10, "select", "", "", "");
+
 _ssdm_SpecArrayPartition( &sbox, 1, "CYCLIC", 8, "");
 _ssdm_SpecArrayPartition( &rsbox, 1, "CYCLIC", 8, "");
 _ssdm_SpecArrayPartition( Key, 1, "CYCLIC", 8, "");
@@ -729,14 +730,10 @@ _ssdm_Unroll(0,0,0, "");
  c = RoundKey[14];
  d = RoundKey[15];
 
-
-
  for (s = cnt; s < cnt2; s+=4)
  {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-_ssdm_Unroll(1, 4, 2, "");
-
-
+_ssdm_Unroll(1, 4, 4, "");
 
  if (s % cnt == 0)
   {
@@ -748,7 +745,7 @@ _ssdm_Unroll(1, 4, 2, "");
    c = (sbox[(d)]);
    d = (sbox[(e)]);
   }
-# 204 "aes.c"
+# 201 "aes.c"
   a = RoundKey[s] = RoundKey[s-16] ^ a;
   b = RoundKey[s+1] = RoundKey[s-15] ^ b;
   c = RoundKey[s+2] = RoundKey[s-14] ^ c;
@@ -873,7 +870,7 @@ _ssdm_Unroll(0,0,0, "");
   (*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
  }
 }
-# 356 "aes.c"
+# 353 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -996,7 +993,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 486 "aes.c"
+# 483 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1068,7 +1065,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 565 "aes.c"
+# 562 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

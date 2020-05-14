@@ -5,7 +5,7 @@ set ID 1
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_7
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -31,7 +31,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -66,7 +66,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -88,7 +88,7 @@ set ID 2
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_0
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -114,7 +114,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -149,7 +149,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -171,7 +171,7 @@ set ID 3
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_1
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -197,7 +197,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -232,7 +232,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -254,7 +254,7 @@ set ID 4
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_2
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -280,7 +280,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -315,7 +315,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -337,7 +337,7 @@ set ID 5
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_3
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -363,7 +363,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -398,7 +398,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -420,7 +420,7 @@ set ID 6
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_4
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -446,7 +446,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -481,7 +481,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -503,7 +503,7 @@ set ID 7
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_5
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -529,7 +529,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -564,7 +564,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -586,7 +586,7 @@ set ID 8
 set hasByteEnable 0
 set MemName KeyExpansion_sbox_6
 set CoreName ap_simcore_mem
-set PortList { 1 }
+set PortList { 1 1 }
 set DataWd 8
 set AddrRange 32
 set AddrWd 5
@@ -612,7 +612,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -647,7 +647,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 1 \
+    port_num 2 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -766,7 +766,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename RoundKey_0 \
     op interface \
-    ports { RoundKey_0_address0 { O 5 vector } RoundKey_0_ce0 { O 1 bit } RoundKey_0_we0 { O 1 bit } RoundKey_0_d0 { O 8 vector } RoundKey_0_q0 { I 8 vector } RoundKey_0_address1 { O 5 vector } RoundKey_0_ce1 { O 1 bit } RoundKey_0_we1 { O 1 bit } RoundKey_0_d1 { O 8 vector } } \
+    ports { RoundKey_0_address0 { O 5 vector } RoundKey_0_ce0 { O 1 bit } RoundKey_0_we0 { O 1 bit } RoundKey_0_d0 { O 8 vector } RoundKey_0_q0 { I 8 vector } RoundKey_0_address1 { O 5 vector } RoundKey_0_ce1 { O 1 bit } RoundKey_0_we1 { O 1 bit } RoundKey_0_d1 { O 8 vector } RoundKey_0_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_0'"
@@ -785,7 +785,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename RoundKey_1 \
     op interface \
-    ports { RoundKey_1_address0 { O 5 vector } RoundKey_1_ce0 { O 1 bit } RoundKey_1_we0 { O 1 bit } RoundKey_1_d0 { O 8 vector } RoundKey_1_q0 { I 8 vector } RoundKey_1_address1 { O 5 vector } RoundKey_1_ce1 { O 1 bit } RoundKey_1_we1 { O 1 bit } RoundKey_1_d1 { O 8 vector } } \
+    ports { RoundKey_1_address0 { O 5 vector } RoundKey_1_ce0 { O 1 bit } RoundKey_1_we0 { O 1 bit } RoundKey_1_d0 { O 8 vector } RoundKey_1_q0 { I 8 vector } RoundKey_1_address1 { O 5 vector } RoundKey_1_ce1 { O 1 bit } RoundKey_1_we1 { O 1 bit } RoundKey_1_d1 { O 8 vector } RoundKey_1_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_1'"
@@ -804,7 +804,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename RoundKey_2 \
     op interface \
-    ports { RoundKey_2_address0 { O 5 vector } RoundKey_2_ce0 { O 1 bit } RoundKey_2_we0 { O 1 bit } RoundKey_2_d0 { O 8 vector } RoundKey_2_q0 { I 8 vector } RoundKey_2_address1 { O 5 vector } RoundKey_2_ce1 { O 1 bit } RoundKey_2_we1 { O 1 bit } RoundKey_2_d1 { O 8 vector } } \
+    ports { RoundKey_2_address0 { O 5 vector } RoundKey_2_ce0 { O 1 bit } RoundKey_2_we0 { O 1 bit } RoundKey_2_d0 { O 8 vector } RoundKey_2_q0 { I 8 vector } RoundKey_2_address1 { O 5 vector } RoundKey_2_ce1 { O 1 bit } RoundKey_2_we1 { O 1 bit } RoundKey_2_d1 { O 8 vector } RoundKey_2_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_2'"
@@ -823,7 +823,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename RoundKey_3 \
     op interface \
-    ports { RoundKey_3_address0 { O 5 vector } RoundKey_3_ce0 { O 1 bit } RoundKey_3_we0 { O 1 bit } RoundKey_3_d0 { O 8 vector } RoundKey_3_q0 { I 8 vector } RoundKey_3_address1 { O 5 vector } RoundKey_3_ce1 { O 1 bit } RoundKey_3_we1 { O 1 bit } RoundKey_3_d1 { O 8 vector } } \
+    ports { RoundKey_3_address0 { O 5 vector } RoundKey_3_ce0 { O 1 bit } RoundKey_3_we0 { O 1 bit } RoundKey_3_d0 { O 8 vector } RoundKey_3_q0 { I 8 vector } RoundKey_3_address1 { O 5 vector } RoundKey_3_ce1 { O 1 bit } RoundKey_3_we1 { O 1 bit } RoundKey_3_d1 { O 8 vector } RoundKey_3_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_3'"
@@ -880,7 +880,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename RoundKey_6 \
     op interface \
-    ports { RoundKey_6_address0 { O 5 vector } RoundKey_6_ce0 { O 1 bit } RoundKey_6_we0 { O 1 bit } RoundKey_6_d0 { O 8 vector } RoundKey_6_q0 { I 8 vector } RoundKey_6_address1 { O 5 vector } RoundKey_6_ce1 { O 1 bit } RoundKey_6_we1 { O 1 bit } RoundKey_6_d1 { O 8 vector } } \
+    ports { RoundKey_6_address0 { O 5 vector } RoundKey_6_ce0 { O 1 bit } RoundKey_6_we0 { O 1 bit } RoundKey_6_d0 { O 8 vector } RoundKey_6_q0 { I 8 vector } RoundKey_6_address1 { O 5 vector } RoundKey_6_ce1 { O 1 bit } RoundKey_6_we1 { O 1 bit } RoundKey_6_d1 { O 8 vector } RoundKey_6_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_6'"
@@ -899,7 +899,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename RoundKey_7 \
     op interface \
-    ports { RoundKey_7_address0 { O 5 vector } RoundKey_7_ce0 { O 1 bit } RoundKey_7_we0 { O 1 bit } RoundKey_7_d0 { O 8 vector } RoundKey_7_q0 { I 8 vector } RoundKey_7_address1 { O 5 vector } RoundKey_7_ce1 { O 1 bit } RoundKey_7_we1 { O 1 bit } RoundKey_7_d1 { O 8 vector } } \
+    ports { RoundKey_7_address0 { O 5 vector } RoundKey_7_ce0 { O 1 bit } RoundKey_7_we0 { O 1 bit } RoundKey_7_d0 { O 8 vector } RoundKey_7_q0 { I 8 vector } RoundKey_7_address1 { O 5 vector } RoundKey_7_ce1 { O 1 bit } RoundKey_7_we1 { O 1 bit } RoundKey_7_d1 { O 8 vector } RoundKey_7_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_7'"

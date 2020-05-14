@@ -154,8 +154,9 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 	uint8_t a,b,c,d,e; // Used for the column/row operations
 	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2;
 
-//	#pragma HLS allocation instances=icmp limit=22 operation
-	#pragma HLS allocation instances=select limit=10 operation
+	#pragma HLS allocation instances=add limit=12 operation
+//	#pragma HLS allocation instances=xor limit=5 operation
+
 	#pragma HLS ARRAY_PARTITION variable=sbox     cyclic factor=8 dim=1
 	#pragma HLS ARRAY_PARTITION variable=rsbox    cyclic factor=8 dim=1
 	#pragma HLS ARRAY_PARTITION variable=Key      cyclic factor=8 dim=1
@@ -170,15 +171,11 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 	b = RoundKey[13];
 	c = RoundKey[14];
 	d = RoundKey[15];
-
-
-//	// All other round keys are found from the previous round keys.
+	// All other round keys are found from the previous round keys.
 	for (s = cnt; s < cnt2; s+=4)
 	{
 		#pragma HLS pipeline
-		#pragma HLS unroll factor=2 skip_exit_check
-//		#pragma HLS dependence variable=sbox intra false
-//		#pragma HLS dependence variable=RoundKey inter distance=1 true
+		#pragma HLS unroll factor=4 skip_exit_check
 
 		if (s % cnt == 0)
 		{

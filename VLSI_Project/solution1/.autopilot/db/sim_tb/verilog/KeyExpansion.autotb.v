@@ -98,7 +98,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 7;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 103;
+parameter LATENCY_ESTIMATION = 33;
 parameter LENGTH_RoundKey_0 = 30;
 parameter LENGTH_RoundKey_1 = 30;
 parameter LENGTH_RoundKey_2 = 30;
@@ -210,6 +210,7 @@ wire [4 : 0] RoundKey_0_address1;
 wire  RoundKey_0_ce1;
 wire  RoundKey_0_we1;
 wire [7 : 0] RoundKey_0_d1;
+wire [7 : 0] RoundKey_0_q1;
 wire [4 : 0] RoundKey_1_address0;
 wire  RoundKey_1_ce0;
 wire  RoundKey_1_we0;
@@ -219,6 +220,7 @@ wire [4 : 0] RoundKey_1_address1;
 wire  RoundKey_1_ce1;
 wire  RoundKey_1_we1;
 wire [7 : 0] RoundKey_1_d1;
+wire [7 : 0] RoundKey_1_q1;
 wire [4 : 0] RoundKey_2_address0;
 wire  RoundKey_2_ce0;
 wire  RoundKey_2_we0;
@@ -228,6 +230,7 @@ wire [4 : 0] RoundKey_2_address1;
 wire  RoundKey_2_ce1;
 wire  RoundKey_2_we1;
 wire [7 : 0] RoundKey_2_d1;
+wire [7 : 0] RoundKey_2_q1;
 wire [4 : 0] RoundKey_3_address0;
 wire  RoundKey_3_ce0;
 wire  RoundKey_3_we0;
@@ -237,6 +240,7 @@ wire [4 : 0] RoundKey_3_address1;
 wire  RoundKey_3_ce1;
 wire  RoundKey_3_we1;
 wire [7 : 0] RoundKey_3_d1;
+wire [7 : 0] RoundKey_3_q1;
 wire [4 : 0] RoundKey_4_address0;
 wire  RoundKey_4_ce0;
 wire  RoundKey_4_we0;
@@ -264,6 +268,7 @@ wire [4 : 0] RoundKey_6_address1;
 wire  RoundKey_6_ce1;
 wire  RoundKey_6_we1;
 wire [7 : 0] RoundKey_6_d1;
+wire [7 : 0] RoundKey_6_q1;
 wire [4 : 0] RoundKey_7_address0;
 wire  RoundKey_7_ce0;
 wire  RoundKey_7_we0;
@@ -273,6 +278,7 @@ wire [4 : 0] RoundKey_7_address1;
 wire  RoundKey_7_ce1;
 wire  RoundKey_7_we1;
 wire [7 : 0] RoundKey_7_d1;
+wire [7 : 0] RoundKey_7_q1;
 wire [0 : 0] Key_0_address0;
 wire  Key_0_ce0;
 wire [7 : 0] Key_0_q0;
@@ -351,6 +357,7 @@ wire ap_rst_n;
     .RoundKey_0_ce1(RoundKey_0_ce1),
     .RoundKey_0_we1(RoundKey_0_we1),
     .RoundKey_0_d1(RoundKey_0_d1),
+    .RoundKey_0_q1(RoundKey_0_q1),
     .RoundKey_1_address0(RoundKey_1_address0),
     .RoundKey_1_ce0(RoundKey_1_ce0),
     .RoundKey_1_we0(RoundKey_1_we0),
@@ -360,6 +367,7 @@ wire ap_rst_n;
     .RoundKey_1_ce1(RoundKey_1_ce1),
     .RoundKey_1_we1(RoundKey_1_we1),
     .RoundKey_1_d1(RoundKey_1_d1),
+    .RoundKey_1_q1(RoundKey_1_q1),
     .RoundKey_2_address0(RoundKey_2_address0),
     .RoundKey_2_ce0(RoundKey_2_ce0),
     .RoundKey_2_we0(RoundKey_2_we0),
@@ -369,6 +377,7 @@ wire ap_rst_n;
     .RoundKey_2_ce1(RoundKey_2_ce1),
     .RoundKey_2_we1(RoundKey_2_we1),
     .RoundKey_2_d1(RoundKey_2_d1),
+    .RoundKey_2_q1(RoundKey_2_q1),
     .RoundKey_3_address0(RoundKey_3_address0),
     .RoundKey_3_ce0(RoundKey_3_ce0),
     .RoundKey_3_we0(RoundKey_3_we0),
@@ -378,6 +387,7 @@ wire ap_rst_n;
     .RoundKey_3_ce1(RoundKey_3_ce1),
     .RoundKey_3_we1(RoundKey_3_we1),
     .RoundKey_3_d1(RoundKey_3_d1),
+    .RoundKey_3_q1(RoundKey_3_q1),
     .RoundKey_4_address0(RoundKey_4_address0),
     .RoundKey_4_ce0(RoundKey_4_ce0),
     .RoundKey_4_we0(RoundKey_4_we0),
@@ -405,6 +415,7 @@ wire ap_rst_n;
     .RoundKey_6_ce1(RoundKey_6_ce1),
     .RoundKey_6_we1(RoundKey_6_we1),
     .RoundKey_6_d1(RoundKey_6_d1),
+    .RoundKey_6_q1(RoundKey_6_q1),
     .RoundKey_7_address0(RoundKey_7_address0),
     .RoundKey_7_ce0(RoundKey_7_ce0),
     .RoundKey_7_we0(RoundKey_7_we0),
@@ -414,6 +425,7 @@ wire ap_rst_n;
     .RoundKey_7_ce1(RoundKey_7_ce1),
     .RoundKey_7_we1(RoundKey_7_we1),
     .RoundKey_7_d1(RoundKey_7_d1),
+    .RoundKey_7_q1(RoundKey_7_q1),
     .Key_0_address0(Key_0_address0),
     .Key_0_ce0(Key_0_ce0),
     .Key_0_q0(Key_0_q0),
@@ -529,6 +541,7 @@ assign arrayRoundKey_0_we0 = RoundKey_0_we0;
 assign arrayRoundKey_0_din0 = RoundKey_0_d0;
 assign arrayRoundKey_0_address1 = RoundKey_0_address1;
 assign arrayRoundKey_0_ce1 = RoundKey_0_ce1;
+assign RoundKey_0_q1 = arrayRoundKey_0_dout1;
 assign arrayRoundKey_0_we1 = RoundKey_0_we1;
 assign arrayRoundKey_0_din1 = RoundKey_0_d1;
 assign arrayRoundKey_0_ready= ready;
@@ -571,6 +584,7 @@ assign arrayRoundKey_1_we0 = RoundKey_1_we0;
 assign arrayRoundKey_1_din0 = RoundKey_1_d0;
 assign arrayRoundKey_1_address1 = RoundKey_1_address1;
 assign arrayRoundKey_1_ce1 = RoundKey_1_ce1;
+assign RoundKey_1_q1 = arrayRoundKey_1_dout1;
 assign arrayRoundKey_1_we1 = RoundKey_1_we1;
 assign arrayRoundKey_1_din1 = RoundKey_1_d1;
 assign arrayRoundKey_1_ready= ready;
@@ -613,6 +627,7 @@ assign arrayRoundKey_2_we0 = RoundKey_2_we0;
 assign arrayRoundKey_2_din0 = RoundKey_2_d0;
 assign arrayRoundKey_2_address1 = RoundKey_2_address1;
 assign arrayRoundKey_2_ce1 = RoundKey_2_ce1;
+assign RoundKey_2_q1 = arrayRoundKey_2_dout1;
 assign arrayRoundKey_2_we1 = RoundKey_2_we1;
 assign arrayRoundKey_2_din1 = RoundKey_2_d1;
 assign arrayRoundKey_2_ready= ready;
@@ -655,6 +670,7 @@ assign arrayRoundKey_3_we0 = RoundKey_3_we0;
 assign arrayRoundKey_3_din0 = RoundKey_3_d0;
 assign arrayRoundKey_3_address1 = RoundKey_3_address1;
 assign arrayRoundKey_3_ce1 = RoundKey_3_ce1;
+assign RoundKey_3_q1 = arrayRoundKey_3_dout1;
 assign arrayRoundKey_3_we1 = RoundKey_3_we1;
 assign arrayRoundKey_3_din1 = RoundKey_3_d1;
 assign arrayRoundKey_3_ready= ready;
@@ -781,6 +797,7 @@ assign arrayRoundKey_6_we0 = RoundKey_6_we0;
 assign arrayRoundKey_6_din0 = RoundKey_6_d0;
 assign arrayRoundKey_6_address1 = RoundKey_6_address1;
 assign arrayRoundKey_6_ce1 = RoundKey_6_ce1;
+assign RoundKey_6_q1 = arrayRoundKey_6_dout1;
 assign arrayRoundKey_6_we1 = RoundKey_6_we1;
 assign arrayRoundKey_6_din1 = RoundKey_6_d1;
 assign arrayRoundKey_6_ready= ready;
@@ -823,6 +840,7 @@ assign arrayRoundKey_7_we0 = RoundKey_7_we0;
 assign arrayRoundKey_7_din0 = RoundKey_7_d0;
 assign arrayRoundKey_7_address1 = RoundKey_7_address1;
 assign arrayRoundKey_7_ce1 = RoundKey_7_ce1;
+assign RoundKey_7_q1 = arrayRoundKey_7_dout1;
 assign arrayRoundKey_7_we1 = RoundKey_7_we1;
 assign arrayRoundKey_7_din1 = RoundKey_7_d1;
 assign arrayRoundKey_7_ready= ready;

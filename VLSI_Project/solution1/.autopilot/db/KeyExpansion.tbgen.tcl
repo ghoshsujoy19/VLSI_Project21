@@ -14,14 +14,14 @@ set isEnableWaveformDebug 1
 set C_modelName {KeyExpansion}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ RoundKey_0 int 8 regular {array 30 { 2 0 } 1 1 }  }
-	{ RoundKey_1 int 8 regular {array 30 { 2 0 } 1 1 }  }
-	{ RoundKey_2 int 8 regular {array 30 { 2 0 } 1 1 }  }
-	{ RoundKey_3 int 8 regular {array 30 { 2 0 } 1 1 }  }
+	{ RoundKey_0 int 8 regular {array 30 { 2 2 } 1 1 }  }
+	{ RoundKey_1 int 8 regular {array 30 { 2 2 } 1 1 }  }
+	{ RoundKey_2 int 8 regular {array 30 { 2 2 } 1 1 }  }
+	{ RoundKey_3 int 8 regular {array 30 { 2 2 } 1 1 }  }
 	{ RoundKey_4 int 8 regular {array 30 { 2 0 } 1 1 }  }
 	{ RoundKey_5 int 8 regular {array 30 { 2 0 } 1 1 }  }
-	{ RoundKey_6 int 8 regular {array 30 { 2 0 } 1 1 }  }
-	{ RoundKey_7 int 8 regular {array 30 { 2 0 } 1 1 }  }
+	{ RoundKey_6 int 8 regular {array 30 { 2 2 } 1 1 }  }
+	{ RoundKey_7 int 8 regular {array 30 { 2 2 } 1 1 }  }
 	{ Key_0 int 8 regular {array 2 { 1 1 } 1 1 }  }
 	{ Key_1 int 8 regular {array 2 { 1 1 } 1 1 }  }
 	{ Key_2 int 8 regular {array 2 { 1 1 } 1 1 }  }
@@ -49,7 +49,7 @@ set C_modelArgMapList {[
  	{ "Name" : "Key_6", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "Key","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 6,"up" : 14,"step" : 8}]}]}]} , 
  	{ "Name" : "Key_7", "interface" : "memory", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "Key","cData": "unsigned char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 7,"up" : 15,"step" : 8}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 126
+set portNum 132
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -66,6 +66,7 @@ set portList {
 	{ RoundKey_0_ce1 sc_out sc_logic 1 signal 0 } 
 	{ RoundKey_0_we1 sc_out sc_logic 1 signal 0 } 
 	{ RoundKey_0_d1 sc_out sc_lv 8 signal 0 } 
+	{ RoundKey_0_q1 sc_in sc_lv 8 signal 0 } 
 	{ RoundKey_1_address0 sc_out sc_lv 5 signal 1 } 
 	{ RoundKey_1_ce0 sc_out sc_logic 1 signal 1 } 
 	{ RoundKey_1_we0 sc_out sc_logic 1 signal 1 } 
@@ -75,6 +76,7 @@ set portList {
 	{ RoundKey_1_ce1 sc_out sc_logic 1 signal 1 } 
 	{ RoundKey_1_we1 sc_out sc_logic 1 signal 1 } 
 	{ RoundKey_1_d1 sc_out sc_lv 8 signal 1 } 
+	{ RoundKey_1_q1 sc_in sc_lv 8 signal 1 } 
 	{ RoundKey_2_address0 sc_out sc_lv 5 signal 2 } 
 	{ RoundKey_2_ce0 sc_out sc_logic 1 signal 2 } 
 	{ RoundKey_2_we0 sc_out sc_logic 1 signal 2 } 
@@ -84,6 +86,7 @@ set portList {
 	{ RoundKey_2_ce1 sc_out sc_logic 1 signal 2 } 
 	{ RoundKey_2_we1 sc_out sc_logic 1 signal 2 } 
 	{ RoundKey_2_d1 sc_out sc_lv 8 signal 2 } 
+	{ RoundKey_2_q1 sc_in sc_lv 8 signal 2 } 
 	{ RoundKey_3_address0 sc_out sc_lv 5 signal 3 } 
 	{ RoundKey_3_ce0 sc_out sc_logic 1 signal 3 } 
 	{ RoundKey_3_we0 sc_out sc_logic 1 signal 3 } 
@@ -93,6 +96,7 @@ set portList {
 	{ RoundKey_3_ce1 sc_out sc_logic 1 signal 3 } 
 	{ RoundKey_3_we1 sc_out sc_logic 1 signal 3 } 
 	{ RoundKey_3_d1 sc_out sc_lv 8 signal 3 } 
+	{ RoundKey_3_q1 sc_in sc_lv 8 signal 3 } 
 	{ RoundKey_4_address0 sc_out sc_lv 5 signal 4 } 
 	{ RoundKey_4_ce0 sc_out sc_logic 1 signal 4 } 
 	{ RoundKey_4_we0 sc_out sc_logic 1 signal 4 } 
@@ -120,6 +124,7 @@ set portList {
 	{ RoundKey_6_ce1 sc_out sc_logic 1 signal 6 } 
 	{ RoundKey_6_we1 sc_out sc_logic 1 signal 6 } 
 	{ RoundKey_6_d1 sc_out sc_lv 8 signal 6 } 
+	{ RoundKey_6_q1 sc_in sc_lv 8 signal 6 } 
 	{ RoundKey_7_address0 sc_out sc_lv 5 signal 7 } 
 	{ RoundKey_7_ce0 sc_out sc_logic 1 signal 7 } 
 	{ RoundKey_7_we0 sc_out sc_logic 1 signal 7 } 
@@ -129,6 +134,7 @@ set portList {
 	{ RoundKey_7_ce1 sc_out sc_logic 1 signal 7 } 
 	{ RoundKey_7_we1 sc_out sc_logic 1 signal 7 } 
 	{ RoundKey_7_d1 sc_out sc_lv 8 signal 7 } 
+	{ RoundKey_7_q1 sc_in sc_lv 8 signal 7 } 
 	{ Key_0_address0 sc_out sc_lv 1 signal 8 } 
 	{ Key_0_ce0 sc_out sc_logic 1 signal 8 } 
 	{ Key_0_q0 sc_in sc_lv 8 signal 8 } 
@@ -194,6 +200,7 @@ set NewPortList {[
  	{ "name": "RoundKey_0_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_0", "role": "ce1" }} , 
  	{ "name": "RoundKey_0_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_0", "role": "we1" }} , 
  	{ "name": "RoundKey_0_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_0", "role": "d1" }} , 
+ 	{ "name": "RoundKey_0_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_0", "role": "q1" }} , 
  	{ "name": "RoundKey_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "address0" }} , 
  	{ "name": "RoundKey_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "ce0" }} , 
  	{ "name": "RoundKey_1_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "we0" }} , 
@@ -203,6 +210,7 @@ set NewPortList {[
  	{ "name": "RoundKey_1_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "ce1" }} , 
  	{ "name": "RoundKey_1_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "we1" }} , 
  	{ "name": "RoundKey_1_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "d1" }} , 
+ 	{ "name": "RoundKey_1_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_1", "role": "q1" }} , 
  	{ "name": "RoundKey_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "address0" }} , 
  	{ "name": "RoundKey_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "ce0" }} , 
  	{ "name": "RoundKey_2_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "we0" }} , 
@@ -212,6 +220,7 @@ set NewPortList {[
  	{ "name": "RoundKey_2_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "ce1" }} , 
  	{ "name": "RoundKey_2_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "we1" }} , 
  	{ "name": "RoundKey_2_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "d1" }} , 
+ 	{ "name": "RoundKey_2_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_2", "role": "q1" }} , 
  	{ "name": "RoundKey_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "address0" }} , 
  	{ "name": "RoundKey_3_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "ce0" }} , 
  	{ "name": "RoundKey_3_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "we0" }} , 
@@ -221,6 +230,7 @@ set NewPortList {[
  	{ "name": "RoundKey_3_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "ce1" }} , 
  	{ "name": "RoundKey_3_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "we1" }} , 
  	{ "name": "RoundKey_3_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "d1" }} , 
+ 	{ "name": "RoundKey_3_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_3", "role": "q1" }} , 
  	{ "name": "RoundKey_4_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "RoundKey_4", "role": "address0" }} , 
  	{ "name": "RoundKey_4_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_4", "role": "ce0" }} , 
  	{ "name": "RoundKey_4_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_4", "role": "we0" }} , 
@@ -248,6 +258,7 @@ set NewPortList {[
  	{ "name": "RoundKey_6_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_6", "role": "ce1" }} , 
  	{ "name": "RoundKey_6_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_6", "role": "we1" }} , 
  	{ "name": "RoundKey_6_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_6", "role": "d1" }} , 
+ 	{ "name": "RoundKey_6_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_6", "role": "q1" }} , 
  	{ "name": "RoundKey_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "address0" }} , 
  	{ "name": "RoundKey_7_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "ce0" }} , 
  	{ "name": "RoundKey_7_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "we0" }} , 
@@ -257,6 +268,7 @@ set NewPortList {[
  	{ "name": "RoundKey_7_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "ce1" }} , 
  	{ "name": "RoundKey_7_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "we1" }} , 
  	{ "name": "RoundKey_7_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "d1" }} , 
+ 	{ "name": "RoundKey_7_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "RoundKey_7", "role": "q1" }} , 
  	{ "name": "Key_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "Key_0", "role": "address0" }} , 
  	{ "name": "Key_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "Key_0", "role": "ce0" }} , 
  	{ "name": "Key_0_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "Key_0", "role": "q0" }} , 
@@ -313,7 +325,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "103", "EstimateLatencyMax" : "103",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "33", "EstimateLatencyMax" : "33",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -359,14 +371,14 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	KeyExpansion {
-		RoundKey_0 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_1 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_2 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_3 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_4 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_5 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_6 {Type IO LastRead 2 FirstWrite 1}
-		RoundKey_7 {Type IO LastRead 2 FirstWrite 1}
+		RoundKey_0 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_1 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_2 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_3 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_4 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_5 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_6 {Type IO LastRead 3 FirstWrite 1}
+		RoundKey_7 {Type IO LastRead 3 FirstWrite 1}
 		Key_0 {Type I LastRead 1 FirstWrite -1}
 		Key_1 {Type I LastRead 1 FirstWrite -1}
 		Key_2 {Type I LastRead 1 FirstWrite -1}
@@ -388,22 +400,22 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "103", "Max" : "103"}
-	, {"Name" : "Interval", "Min" : "104", "Max" : "104"}
+	{"Name" : "Latency", "Min" : "33", "Max" : "33"}
+	, {"Name" : "Interval", "Min" : "34", "Max" : "34"}
 ]}
 
 set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	RoundKey_0 { ap_memory {  { RoundKey_0_address0 mem_address 1 5 }  { RoundKey_0_ce0 mem_ce 1 1 }  { RoundKey_0_we0 mem_we 1 1 }  { RoundKey_0_d0 mem_din 1 8 }  { RoundKey_0_q0 mem_dout 0 8 }  { RoundKey_0_address1 MemPortADDR2 1 5 }  { RoundKey_0_ce1 MemPortCE2 1 1 }  { RoundKey_0_we1 MemPortWE2 1 1 }  { RoundKey_0_d1 MemPortDIN2 1 8 } } }
-	RoundKey_1 { ap_memory {  { RoundKey_1_address0 mem_address 1 5 }  { RoundKey_1_ce0 mem_ce 1 1 }  { RoundKey_1_we0 mem_we 1 1 }  { RoundKey_1_d0 mem_din 1 8 }  { RoundKey_1_q0 mem_dout 0 8 }  { RoundKey_1_address1 MemPortADDR2 1 5 }  { RoundKey_1_ce1 MemPortCE2 1 1 }  { RoundKey_1_we1 MemPortWE2 1 1 }  { RoundKey_1_d1 MemPortDIN2 1 8 } } }
-	RoundKey_2 { ap_memory {  { RoundKey_2_address0 mem_address 1 5 }  { RoundKey_2_ce0 mem_ce 1 1 }  { RoundKey_2_we0 mem_we 1 1 }  { RoundKey_2_d0 mem_din 1 8 }  { RoundKey_2_q0 mem_dout 0 8 }  { RoundKey_2_address1 MemPortADDR2 1 5 }  { RoundKey_2_ce1 MemPortCE2 1 1 }  { RoundKey_2_we1 MemPortWE2 1 1 }  { RoundKey_2_d1 MemPortDIN2 1 8 } } }
-	RoundKey_3 { ap_memory {  { RoundKey_3_address0 mem_address 1 5 }  { RoundKey_3_ce0 mem_ce 1 1 }  { RoundKey_3_we0 mem_we 1 1 }  { RoundKey_3_d0 mem_din 1 8 }  { RoundKey_3_q0 mem_dout 0 8 }  { RoundKey_3_address1 MemPortADDR2 1 5 }  { RoundKey_3_ce1 MemPortCE2 1 1 }  { RoundKey_3_we1 MemPortWE2 1 1 }  { RoundKey_3_d1 MemPortDIN2 1 8 } } }
+	RoundKey_0 { ap_memory {  { RoundKey_0_address0 mem_address 1 5 }  { RoundKey_0_ce0 mem_ce 1 1 }  { RoundKey_0_we0 mem_we 1 1 }  { RoundKey_0_d0 mem_din 1 8 }  { RoundKey_0_q0 mem_dout 0 8 }  { RoundKey_0_address1 MemPortADDR2 1 5 }  { RoundKey_0_ce1 MemPortCE2 1 1 }  { RoundKey_0_we1 MemPortWE2 1 1 }  { RoundKey_0_d1 MemPortDIN2 1 8 }  { RoundKey_0_q1 MemPortDOUT2 0 8 } } }
+	RoundKey_1 { ap_memory {  { RoundKey_1_address0 mem_address 1 5 }  { RoundKey_1_ce0 mem_ce 1 1 }  { RoundKey_1_we0 mem_we 1 1 }  { RoundKey_1_d0 mem_din 1 8 }  { RoundKey_1_q0 mem_dout 0 8 }  { RoundKey_1_address1 MemPortADDR2 1 5 }  { RoundKey_1_ce1 MemPortCE2 1 1 }  { RoundKey_1_we1 MemPortWE2 1 1 }  { RoundKey_1_d1 MemPortDIN2 1 8 }  { RoundKey_1_q1 MemPortDOUT2 0 8 } } }
+	RoundKey_2 { ap_memory {  { RoundKey_2_address0 mem_address 1 5 }  { RoundKey_2_ce0 mem_ce 1 1 }  { RoundKey_2_we0 mem_we 1 1 }  { RoundKey_2_d0 mem_din 1 8 }  { RoundKey_2_q0 mem_dout 0 8 }  { RoundKey_2_address1 MemPortADDR2 1 5 }  { RoundKey_2_ce1 MemPortCE2 1 1 }  { RoundKey_2_we1 MemPortWE2 1 1 }  { RoundKey_2_d1 MemPortDIN2 1 8 }  { RoundKey_2_q1 MemPortDOUT2 0 8 } } }
+	RoundKey_3 { ap_memory {  { RoundKey_3_address0 mem_address 1 5 }  { RoundKey_3_ce0 mem_ce 1 1 }  { RoundKey_3_we0 mem_we 1 1 }  { RoundKey_3_d0 mem_din 1 8 }  { RoundKey_3_q0 mem_dout 0 8 }  { RoundKey_3_address1 MemPortADDR2 1 5 }  { RoundKey_3_ce1 MemPortCE2 1 1 }  { RoundKey_3_we1 MemPortWE2 1 1 }  { RoundKey_3_d1 MemPortDIN2 1 8 }  { RoundKey_3_q1 MemPortDOUT2 0 8 } } }
 	RoundKey_4 { ap_memory {  { RoundKey_4_address0 mem_address 1 5 }  { RoundKey_4_ce0 mem_ce 1 1 }  { RoundKey_4_we0 mem_we 1 1 }  { RoundKey_4_d0 mem_din 1 8 }  { RoundKey_4_q0 mem_dout 0 8 }  { RoundKey_4_address1 MemPortADDR2 1 5 }  { RoundKey_4_ce1 MemPortCE2 1 1 }  { RoundKey_4_we1 MemPortWE2 1 1 }  { RoundKey_4_d1 MemPortDIN2 1 8 } } }
 	RoundKey_5 { ap_memory {  { RoundKey_5_address0 mem_address 1 5 }  { RoundKey_5_ce0 mem_ce 1 1 }  { RoundKey_5_we0 mem_we 1 1 }  { RoundKey_5_d0 mem_din 1 8 }  { RoundKey_5_q0 mem_dout 0 8 }  { RoundKey_5_address1 MemPortADDR2 1 5 }  { RoundKey_5_ce1 MemPortCE2 1 1 }  { RoundKey_5_we1 MemPortWE2 1 1 }  { RoundKey_5_d1 MemPortDIN2 1 8 } } }
-	RoundKey_6 { ap_memory {  { RoundKey_6_address0 mem_address 1 5 }  { RoundKey_6_ce0 mem_ce 1 1 }  { RoundKey_6_we0 mem_we 1 1 }  { RoundKey_6_d0 mem_din 1 8 }  { RoundKey_6_q0 mem_dout 0 8 }  { RoundKey_6_address1 MemPortADDR2 1 5 }  { RoundKey_6_ce1 MemPortCE2 1 1 }  { RoundKey_6_we1 MemPortWE2 1 1 }  { RoundKey_6_d1 MemPortDIN2 1 8 } } }
-	RoundKey_7 { ap_memory {  { RoundKey_7_address0 mem_address 1 5 }  { RoundKey_7_ce0 mem_ce 1 1 }  { RoundKey_7_we0 mem_we 1 1 }  { RoundKey_7_d0 mem_din 1 8 }  { RoundKey_7_q0 mem_dout 0 8 }  { RoundKey_7_address1 MemPortADDR2 1 5 }  { RoundKey_7_ce1 MemPortCE2 1 1 }  { RoundKey_7_we1 MemPortWE2 1 1 }  { RoundKey_7_d1 MemPortDIN2 1 8 } } }
+	RoundKey_6 { ap_memory {  { RoundKey_6_address0 mem_address 1 5 }  { RoundKey_6_ce0 mem_ce 1 1 }  { RoundKey_6_we0 mem_we 1 1 }  { RoundKey_6_d0 mem_din 1 8 }  { RoundKey_6_q0 mem_dout 0 8 }  { RoundKey_6_address1 MemPortADDR2 1 5 }  { RoundKey_6_ce1 MemPortCE2 1 1 }  { RoundKey_6_we1 MemPortWE2 1 1 }  { RoundKey_6_d1 MemPortDIN2 1 8 }  { RoundKey_6_q1 MemPortDOUT2 0 8 } } }
+	RoundKey_7 { ap_memory {  { RoundKey_7_address0 mem_address 1 5 }  { RoundKey_7_ce0 mem_ce 1 1 }  { RoundKey_7_we0 mem_we 1 1 }  { RoundKey_7_d0 mem_din 1 8 }  { RoundKey_7_q0 mem_dout 0 8 }  { RoundKey_7_address1 MemPortADDR2 1 5 }  { RoundKey_7_ce1 MemPortCE2 1 1 }  { RoundKey_7_we1 MemPortWE2 1 1 }  { RoundKey_7_d1 MemPortDIN2 1 8 }  { RoundKey_7_q1 MemPortDOUT2 0 8 } } }
 	Key_0 { ap_memory {  { Key_0_address0 mem_address 1 1 }  { Key_0_ce0 mem_ce 1 1 }  { Key_0_q0 mem_dout 0 8 }  { Key_0_address1 MemPortADDR2 1 1 }  { Key_0_ce1 MemPortCE2 1 1 }  { Key_0_q1 MemPortDOUT2 0 8 } } }
 	Key_1 { ap_memory {  { Key_1_address0 mem_address 1 1 }  { Key_1_ce0 mem_ce 1 1 }  { Key_1_q0 mem_dout 0 8 }  { Key_1_address1 MemPortADDR2 1 1 }  { Key_1_ce1 MemPortCE2 1 1 }  { Key_1_q1 MemPortDOUT2 0 8 } } }
 	Key_2 { ap_memory {  { Key_2_address0 mem_address 1 1 }  { Key_2_ce0 mem_ce 1 1 }  { Key_2_q0 mem_dout 0 8 }  { Key_2_address1 MemPortADDR2 1 1 }  { Key_2_ce1 MemPortCE2 1 1 }  { Key_2_q1 MemPortDOUT2 0 8 } } }
