@@ -4,7 +4,7 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project VLSI_Project
-set_top InvCipher
+set_top KeyExpansion
 add_files aes.c
 add_files -tb test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"

@@ -1,165 +1,5 @@
 <InterfaceSummary>
 <RtlPorts>
-<name>state_0_0</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_0_1</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_0_2</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_0_3</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_1_0</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_1_1</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_1_2</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_1_3</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_2_0</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_2_1</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_2_2</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_2_3</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_3_0</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_3_1</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_3_2</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>state_3_3</name>
-<CType>
-<TypeName>unsigned char</TypeName>
-<TypeWidth>8</TypeWidth>
-<PhysicalWidth>8</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
 <name>RoundKey_0</name>
 <CType>
 <TypeName>unsigned char</TypeName>
@@ -240,7 +80,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_8</name>
+<name>Key_0</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -250,7 +90,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_9</name>
+<name>Key_1</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -260,7 +100,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_10</name>
+<name>Key_2</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -270,7 +110,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_11</name>
+<name>Key_3</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -280,7 +120,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_12</name>
+<name>Key_4</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -290,7 +130,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_13</name>
+<name>Key_5</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -300,7 +140,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_14</name>
+<name>Key_6</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
@@ -310,7 +150,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>RoundKey_15</name>
+<name>Key_7</name>
 <CType>
 <TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>

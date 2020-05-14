@@ -133,12 +133,12 @@ static const uint8_t Rcon[11] = {
 /*****************************************************************************/
 /* Private functions:                                                        */
 /*****************************************************************************/
-/*
-   static uint8_t getSBoxValue(uint8_t num)
-   {
-   return sbox[num];
-   }
-   */
+
+//static uint8_t getSBoxValue(uint8_t num)
+//{
+//    return sbox[num];
+//}
+
 #define getSBoxValue(num) (sbox[(num)])
 /*
    static uint8_t getSBoxInvert(uint8_t num)
@@ -151,69 +151,59 @@ static const uint8_t Rcon[11] = {
 // This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
 void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 {
-	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2 ;
-	uint8_t tempa[4]; // Used for the column/row operations
+	uint8_t a,b,c,d,e; // Used for the column/row operations
+	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2;
 
-	#pragma HLS ARRAY_PARTITION variable=sbox  cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=rsbox cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
+	#pragma HLS allocation instances=icmp limit=22 operation
+	#pragma HLS ARRAY_PARTITION variable=sbox     cyclic factor=8 dim=1
+	#pragma HLS ARRAY_PARTITION variable=rsbox    cyclic factor=8 dim=1
+	#pragma HLS ARRAY_PARTITION variable=Key      cyclic factor=8 dim=1
+	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=8 dim=1
 
 	for (j=0;j<16;j++){
-		#pragma HLS pipeline
-		#pragma HLS unroll factor=16
+		#pragma HLS unroll
 		RoundKey[j] = Key[j];
 	}
 
-	// All other round keys are found from the previous round keys.
+	a = RoundKey[12];
+	b = RoundKey[13];
+	c = RoundKey[14];
+	d = RoundKey[15];
+
+
+//	// All other round keys are found from the previous round keys.
 	for (s = cnt; s < cnt2; s+=4)
 	{
 		#pragma HLS pipeline
-		#pragma HLS unroll factor=4
-		#pragma HLS dependence variable=RoundKey inter true
-		tempa[0] = RoundKey[s-4];
-		tempa[1] = RoundKey[s-3];
-		tempa[2] = RoundKey[s-2];
-		tempa[3] = RoundKey[s-1];
+		#pragma HLS unroll factor=2 skip_exit_check
+//		#pragma HLS dependence variable=sbox intra false
+//		#pragma HLS dependence variable=RoundKey inter distance=1 true
 
 		if (s % cnt == 0)
 		{
 			// This function shifts the 4 bytes in a word to the left once.
 			// [a0,a1,a2,a3] becomes [a1,a2,a3,a0]
-
-			// Function RotWord()
-			const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
-			tempa[0] = u8tmp1;
-			tempa[1] = u8tmp2;
-			tempa[2] = u8tmp3;
-			tempa[3] = u8tmp0;
-
-			// SubWord() is a function that takes a four-byte input word and
-			// applies the S-box to each of the four bytes to produce an output word.
-
-			// Function Subword()
-			tempa[0] = getSBoxValue(tempa[0]) ^ Rcon[s / cnt];
-			tempa[1] = getSBoxValue(tempa[1]);
-			tempa[2] = getSBoxValue(tempa[2]);
-			tempa[3] = getSBoxValue(tempa[3]);
-
-//			tempa[0] = tempa[0] ^ Rcon[s / cnt];
+			e = a;
+			a = getSBoxValue(b) ^ Rcon[s / cnt];
+			b = getSBoxValue(c);
+			c = getSBoxValue(d);
+			d = getSBoxValue(e);
 		}
 #if defined(AES256) && (AES256 == 1)
 		if (s % cnt == 4)
 		{
 			// Function Subword()
-			tempa[0] = getSBoxValue(RoundKey[s-4]);
-			tempa[1] = getSBoxValue(RoundKey[s-3]);
-			tempa[2] = getSBoxValue(RoundKey[s-2]);
-			tempa[3] = getSBoxValue(RoundKey[s-1]);
+			a = getSBoxValue(a);
+			b = getSBoxValue(b);
+			c = getSBoxValue(c);
+			d = getSBoxValue(d);
 		}
 #endif
-		RoundKey[s]     = RoundKey[s-16] ^ tempa[0];
-		RoundKey[s + 1] = RoundKey[s-15] ^ tempa[1];
-		RoundKey[s + 2] = RoundKey[s-14] ^ tempa[2];
-		RoundKey[s + 3] = RoundKey[s-13] ^ tempa[3];
+
+		a = RoundKey[s]   = RoundKey[s-16] ^ a;
+		b = RoundKey[s+1] = RoundKey[s-15] ^ b;
+		c = RoundKey[s+2] = RoundKey[s-14] ^ c;
+		d = RoundKey[s+3] = RoundKey[s-13] ^ d;
 	}
 }
 
@@ -391,6 +381,7 @@ static void InvMixColumns(state_t* state)
 // state matrix with values in an S-box.
 static void InvSubBytes(state_t* state)
 {
+	#pragma HLS INLINE
 	uint8_t i, j;
 	for (i = 0; i < 4; ++i)
 	{

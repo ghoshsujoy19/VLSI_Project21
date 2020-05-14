@@ -23,12 +23,12 @@ module AESL_automem_RoundKey_3 (
 
 //------------------------Parameter----------------------
 localparam
-    TV_IN  = "c.InvCipher.autotvin_RoundKey_3.dat", 
-    TV_OUT = "impl_rtl.InvCipher.autotvout_RoundKey_3.dat"; 
+    TV_IN  = "c.KeyExpansion.autotvin_RoundKey_3.dat", 
+    TV_OUT = "impl_rtl.KeyExpansion.autotvout_RoundKey_3.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 8;
-parameter ADDR_WIDTH = 32'd 4;
-parameter DEPTH = 32'd 15;
+parameter ADDR_WIDTH = 32'd 5;
+parameter DEPTH = 32'd 30;
 parameter DLY = 0.1;
 
 // Input and Output

@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="VLSI_Project" top="InvCipher">
+<project xmlns="com.autoesl.autopilot.project" name="VLSI_Project" top="KeyExpansion">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
