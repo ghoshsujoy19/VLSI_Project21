@@ -19,8 +19,8 @@ using namespace sc_dt;
 struct KeyExpansion_sbox_5_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 8;
-  static const unsigned AddressRange = 32;
-  static const unsigned AddressWidth = 5;
+  static const unsigned AddressRange = 16;
+  static const unsigned AddressWidth = 4;
 
 //latency = 1
 //input_reg = 1
@@ -40,37 +40,21 @@ sc_lv<DataWidth> ram[AddressRange];
 
    SC_CTOR(KeyExpansion_sbox_5_ram) {
         ram[0] = "0b01101011";
-        ram[1] = "0b11010111";
-        ram[2] = "0b01011001";
-        ram[3] = "0b10100100";
-        ram[4] = "0b00111111";
-        ram[5] = "0b11011000";
-        ram[6] = "0b10010110";
-        ram[7] = "0b00100111";
-        ram[8] = "0b01101110";
-        ram[9] = "0b11100011";
-        ram[10] = "0b11111100";
-        ram[11] = "0b01001100";
-        ram[12] = "0b01001101";
-        ram[13] = "0b00111100";
-        ram[14] = "0b10011101";
-        ram[15] = "0b11111111";
-        ram[16] = "0b10010111";
-        ram[17] = "0b01011101";
-        ram[18] = "0b00101010";
-        ram[19] = "0b01011110";
-        ram[20] = "0b00000110";
-        ram[21] = "0b10010101";
-        ram[22] = "0b11010101";
-        ram[23] = "0b01111010";
-        ram[24] = "0b10100110";
-        ram[25] = "0b10111101";
-        ram[26] = "0b00000011";
-        ram[27] = "0b11000001";
-        ram[28] = "0b11011001";
-        ram[29] = "0b01010101";
-        ram[30] = "0b11100110";
-        ram[31] = "0b01010100";
+        ram[1] = "0b01011001";
+        ram[2] = "0b00111111";
+        ram[3] = "0b10010110";
+        ram[4] = "0b01101110";
+        ram[5] = "0b11111100";
+        ram[6] = "0b01001101";
+        ram[7] = "0b10011101";
+        ram[8] = "0b10010111";
+        ram[9] = "0b00101010";
+        ram[10] = "0b00000110";
+        ram[11] = "0b11010101";
+        ram[12] = "0b10100110";
+        ram[13] = "0b00000011";
+        ram[14] = "0b11011001";
+        ram[15] = "0b11100110";
 
 
 SC_METHOD(prc_write_0);
@@ -113,8 +97,8 @@ SC_MODULE(KeyExpansion_sbox_5) {
 
 
 static const unsigned DataWidth = 8;
-static const unsigned AddressRange = 32;
-static const unsigned AddressWidth = 5;
+static const unsigned AddressRange = 16;
+static const unsigned AddressWidth = 4;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

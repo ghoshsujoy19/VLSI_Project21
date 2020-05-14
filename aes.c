@@ -154,13 +154,13 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 	uint8_t a,b,c,d,e; // Used for the column/row operations
 	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2;
 
-	#pragma HLS allocation instances=add limit=12 operation
+//	#pragma HLS allocation instances=add limit=12 operation
 //	#pragma HLS allocation instances=xor limit=5 operation
 
-	#pragma HLS ARRAY_PARTITION variable=sbox     cyclic factor=8 dim=1
-	#pragma HLS ARRAY_PARTITION variable=rsbox    cyclic factor=8 dim=1
-	#pragma HLS ARRAY_PARTITION variable=Key      cyclic factor=8 dim=1
-	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=8 dim=1
+	#pragma HLS ARRAY_PARTITION variable=sbox     cyclic factor=16 dim=1
+	#pragma HLS ARRAY_PARTITION variable=rsbox    cyclic factor=16 dim=1
+	#pragma HLS ARRAY_PARTITION variable=Key      cyclic factor=16 dim=1
+	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
 
 	for (j=0;j<16;j++){
 		#pragma HLS unroll
@@ -255,7 +255,7 @@ static void SubBytes(state_t* state)
 		SubBytes_label34:for (j = 0; j < 4; ++j)
 		{
 			#pragma HLS unroll
-			(*state)[j][i] = getSBoxValue((*state)[j][i]);
+			(*state)[i][j] = getSBoxValue((*state)[i][j]);
 		}
 	}
 }
@@ -291,10 +291,10 @@ static void ShiftRows(state_t* state)
 	(*state)[2][3] = (*state)[1][3];
 	(*state)[1][3] = temp;
 }
-
+const uint8_t tme = 0x1b;
 static uint8_t xtime(uint8_t x)
 {
-	return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
+	return ((x<<1) ^ ((x>>7) * tme));
 }
 
 // MixColumns function mixes the columns of the state matrix
@@ -303,7 +303,7 @@ static void MixColumns(state_t* state)
 //	#pragma HLS allocation instances=XOR limit=4 operation
 	uint8_t i;
 	uint8_t Tmp[4], Tm[4][4], t;
-//	#pragma HLS INLINE
+	#pragma HLS INLINE
 	#pragma HLS ARRAY_PARTITION variable=Tm  complete dim=0
 	#pragma HLS ARRAY_PARTITION variable=Tmp complete dim=1
 
@@ -425,7 +425,7 @@ static void InvShiftRows(state_t* state)
 void Cipher(state_t* state, uint8_t RoundKey[240])
 {
 	uint8_t round = 0;
-
+	#pragma HLS allocation instances=xor limit=80 operation
 	// Add the First round key to the state before starting the rounds.
 	AddRoundKey(0, state, RoundKey);
 	// There will be Nr rounds.

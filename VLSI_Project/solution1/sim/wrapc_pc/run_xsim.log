@@ -27,83 +27,190 @@ f5d3d58503b9699de785895a96fdbaaf
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "/tools/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_KeyExpansion_top glbl -prj KeyExpansion.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /tools/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s KeyExpansion 
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_AES_top glbl -prj AES.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /tools/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s AES 
 Multi-threading is on. Using 2 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
     LIBRARY_PATH
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_9_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_9
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_2_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_KeyExpansion_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_9
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_12.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_12
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_1_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_7.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_7
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_9_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_9
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sboxbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxbkb_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_11_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_11
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_14.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_14
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_6.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_6_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_13.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_13_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_13
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_5
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_3.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_3_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_5.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_5
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AES.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_7.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_7_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_0_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_13.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_13
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AES.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_AES_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sboxcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxcud_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sboxg8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxg8j_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxg8j
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_5_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_4
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_1_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sboxeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxeOg_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxeOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_15.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_15_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_15
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_10_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_2_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_14.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_14_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_14
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_7_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_7
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sboxdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxdEe_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_3_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_0_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_11
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sboxfYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxfYi_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sboxfYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_6_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_12.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_12_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_12
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_4.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_4_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_4
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_4
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_5.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_Key_5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_RoundKey_7.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_RoundKey_7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_5_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_8_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_8_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_ctx_RoundKey_15.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_RoundKey_15
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/Cipher_sbox_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_4_rom
+INFO: [VRFC 10-311] analyzing module Cipher_sbox_4
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.KeyExpansion_sbox_7_rom
-Compiling module xil_defaultlib.KeyExpansion_sbox_7(DataWidth=8,...
+Compiling module xil_defaultlib.Cipher_sbox_0_rom
+Compiling module xil_defaultlib.Cipher_sbox_0(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_1_rom
+Compiling module xil_defaultlib.Cipher_sbox_1(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_2_rom
+Compiling module xil_defaultlib.Cipher_sbox_2(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_3_rom
+Compiling module xil_defaultlib.Cipher_sbox_3(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_4_rom
+Compiling module xil_defaultlib.Cipher_sbox_4(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_5_rom
+Compiling module xil_defaultlib.Cipher_sbox_5(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_6_rom
+Compiling module xil_defaultlib.Cipher_sbox_6(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_7_rom
+Compiling module xil_defaultlib.Cipher_sbox_7(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_8_rom
+Compiling module xil_defaultlib.Cipher_sbox_8(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_9_rom
+Compiling module xil_defaultlib.Cipher_sbox_9(DataWidth=8,Addres...
+Compiling module xil_defaultlib.Cipher_sbox_10_rom
+Compiling module xil_defaultlib.Cipher_sbox_10(DataWidth=8,Addre...
+Compiling module xil_defaultlib.Cipher_sbox_11_rom
+Compiling module xil_defaultlib.Cipher_sbox_11(DataWidth=8,Addre...
+Compiling module xil_defaultlib.Cipher_sbox_12_rom
+Compiling module xil_defaultlib.Cipher_sbox_12(DataWidth=8,Addre...
+Compiling module xil_defaultlib.Cipher_sbox_13_rom
+Compiling module xil_defaultlib.Cipher_sbox_13(DataWidth=8,Addre...
+Compiling module xil_defaultlib.Cipher_sbox_14_rom
+Compiling module xil_defaultlib.Cipher_sbox_14(DataWidth=8,Addre...
+Compiling module xil_defaultlib.Cipher_sbox_15_rom
+Compiling module xil_defaultlib.Cipher_sbox_15(DataWidth=8,Addre...
+Compiling module xil_defaultlib.Cipher
 Compiling module xil_defaultlib.KeyExpansion_sbox_0_rom
 Compiling module xil_defaultlib.KeyExpansion_sbox_0(DataWidth=8,...
 Compiling module xil_defaultlib.KeyExpansion_sbox_1_rom
@@ -118,47 +225,68 @@ Compiling module xil_defaultlib.KeyExpansion_sbox_5_rom
 Compiling module xil_defaultlib.KeyExpansion_sbox_5(DataWidth=8,...
 Compiling module xil_defaultlib.KeyExpansion_sbox_6_rom
 Compiling module xil_defaultlib.KeyExpansion_sbox_6(DataWidth=8,...
+Compiling module xil_defaultlib.KeyExpansion_sbox_7_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox_7(DataWidth=8,...
+Compiling module xil_defaultlib.KeyExpansion_sbox_8_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox_8(DataWidth=8,...
+Compiling module xil_defaultlib.KeyExpansion_sbox_9_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox_9(DataWidth=8,...
+Compiling module xil_defaultlib.KeyExpansion_sboxbkb_rom
+Compiling module xil_defaultlib.KeyExpansion_sboxbkb(DataWidth=8...
+Compiling module xil_defaultlib.KeyExpansion_sboxcud_rom
+Compiling module xil_defaultlib.KeyExpansion_sboxcud(DataWidth=8...
+Compiling module xil_defaultlib.KeyExpansion_sboxdEe_rom
+Compiling module xil_defaultlib.KeyExpansion_sboxdEe(DataWidth=8...
+Compiling module xil_defaultlib.KeyExpansion_sboxeOg_rom
+Compiling module xil_defaultlib.KeyExpansion_sboxeOg(DataWidth=8...
+Compiling module xil_defaultlib.KeyExpansion_sboxfYi_rom
+Compiling module xil_defaultlib.KeyExpansion_sboxfYi(DataWidth=8...
+Compiling module xil_defaultlib.KeyExpansion_sboxg8j_rom
+Compiling module xil_defaultlib.KeyExpansion_sboxg8j(DataWidth=8...
 Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
 Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
 Compiling module xil_defaultlib.KeyExpansion
-Compiling module xil_defaultlib.AESL_automem_RoundKey_0
-Compiling module xil_defaultlib.AESL_automem_RoundKey_1
-Compiling module xil_defaultlib.AESL_automem_RoundKey_2
-Compiling module xil_defaultlib.AESL_automem_RoundKey_3
-Compiling module xil_defaultlib.AESL_automem_RoundKey_4
-Compiling module xil_defaultlib.AESL_automem_RoundKey_5
-Compiling module xil_defaultlib.AESL_automem_RoundKey_6
-Compiling module xil_defaultlib.AESL_automem_RoundKey_7
-Compiling module xil_defaultlib.AESL_automem_Key_0
-Compiling module xil_defaultlib.AESL_automem_Key_1
-Compiling module xil_defaultlib.AESL_automem_Key_2
-Compiling module xil_defaultlib.AESL_automem_Key_3
-Compiling module xil_defaultlib.AESL_automem_Key_4
-Compiling module xil_defaultlib.AESL_automem_Key_5
-Compiling module xil_defaultlib.AESL_automem_Key_6
-Compiling module xil_defaultlib.AESL_automem_Key_7
-Compiling module xil_defaultlib.apatb_KeyExpansion_top
+Compiling module xil_defaultlib.AES
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_0
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_1
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_2
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_3
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_4
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_5
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_6
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_7
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_8
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_9
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_10
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_11
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_12
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_13
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_14
+Compiling module xil_defaultlib.AESL_automem_ctx_RoundKey_15
+Compiling module xil_defaultlib.apatb_AES_top
 Compiling module work.glbl
-Built simulation snapshot KeyExpansion
+Built simulation snapshot AES
 
 ****** Webtalk v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/KeyExpansion/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri May 15 00:34:21 2020...
+source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/AES/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/AES/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri May 15 04:26:39 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 2044 ; free virtual = 15178
+INFO: [Common 17-206] Exiting Webtalk at Fri May 15 04:26:39 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source xsim.dir/KeyExpansion/xsim_script.tcl
-# xsim {KeyExpansion} -autoloadwcfg -tclbatch {KeyExpansion.tcl}
+source xsim.dir/AES/xsim_script.tcl
+# xsim {AES} -autoloadwcfg -tclbatch {AES.tcl}
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-source KeyExpansion.tcl
+source AES.tcl
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -166,18 +294,12 @@ source KeyExpansion.tcl
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 7 [0.00%] @ "125000"
-// RTL Simulation : 1 / 7 [100.00%] @ "475000"
-// RTL Simulation : 2 / 7 [100.00%] @ "815000"
-// RTL Simulation : 3 / 7 [100.00%] @ "1155000"
-// RTL Simulation : 4 / 7 [100.00%] @ "1495000"
-// RTL Simulation : 5 / 7 [100.00%] @ "1835000"
-// RTL Simulation : 6 / 7 [100.00%] @ "2175000"
-// RTL Simulation : 7 / 7 [100.00%] @ "2515000"
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "1145000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 2555 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 1194
+$finish called at time : 1185 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AES.autotb.v" Line 4053
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri May 15 00:34:44 2020...
+INFO: [Common 17-206] Exiting xsim at Fri May 15 04:26:58 2020...
 
 Testing AES128
 

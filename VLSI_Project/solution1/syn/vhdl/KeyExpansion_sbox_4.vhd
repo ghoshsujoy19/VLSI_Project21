@@ -9,8 +9,8 @@ use ieee.std_logic_unsigned.all;
 entity KeyExpansion_sbox_4_rom is 
     generic(
              DWIDTH     : integer := 8; 
-             AWIDTH     : integer := 5; 
-             MEM_SIZE    : integer := 32
+             AWIDTH     : integer := 4; 
+             MEM_SIZE    : integer := 16
     ); 
     port (
           addr0      : in std_logic_vector(AWIDTH-1 downto 0); 
@@ -30,14 +30,10 @@ signal addr0_tmp : std_logic_vector(AWIDTH-1 downto 0);
 signal addr1_tmp : std_logic_vector(AWIDTH-1 downto 0); 
 type mem_array is array (0 to MEM_SIZE-1) of std_logic_vector (DWIDTH-1 downto 0); 
 signal mem : mem_array := (
-    0 => "11110010", 1 => "11111110", 2 => "11111010", 3 => "10011100", 
-    4 => "00110110", 5 => "01110001", 6 => "00011000", 7 => "11101011", 
-    8 => "00011011", 9 => "00101001", 10 => "00100000", 11 => "01001010", 
-    12 => "01000011", 13 => "01010000", 14 => "10010010", 15 => "00010000", 
-    16 => "01011111", 17 => "01100100", 18 => "00100010", 19 => "11011110", 
-    20 => "01001001", 21 => "10010001", 22 => "10001101", 23 => "01100101", 
-    24 => "00011100", 25 => "01001011", 26 => "01001000", 27 => "10000110", 
-    28 => "01101001", 29 => "11001110", 30 => "10111111", 31 => "10110000" );
+    0 => "11110010", 1 => "11111010", 2 => "00110110", 3 => "00011000", 
+    4 => "00011011", 5 => "00100000", 6 => "01000011", 7 => "10010010", 
+    8 => "01011111", 9 => "00100010", 10 => "01001001", 11 => "10001101", 
+    12 => "00011100", 13 => "01001000", 14 => "01101001", 15 => "10111111" );
 
 attribute syn_rom_style : string;
 attribute syn_rom_style of mem : signal is "select_rom";
@@ -91,8 +87,8 @@ use IEEE.std_logic_1164.all;
 entity KeyExpansion_sbox_4 is
     generic (
         DataWidth : INTEGER := 8;
-        AddressRange : INTEGER := 32;
-        AddressWidth : INTEGER := 5);
+        AddressRange : INTEGER := 16;
+        AddressWidth : INTEGER := 4);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

@@ -1,5 +1,5 @@
 
-set TopModule "KeyExpansion"
+set TopModule "AES"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0

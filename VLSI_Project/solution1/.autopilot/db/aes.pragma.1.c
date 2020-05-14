@@ -712,13 +712,13 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  uint8_t a,b,c,d,e;
  unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2;
 
-_ssdm_op_SpecResourceLimit(12, "add", "", "", "");
 
 
-_ssdm_SpecArrayPartition( &sbox, 1, "CYCLIC", 8, "");
-_ssdm_SpecArrayPartition( &rsbox, 1, "CYCLIC", 8, "");
-_ssdm_SpecArrayPartition( Key, 1, "CYCLIC", 8, "");
-_ssdm_SpecArrayPartition( RoundKey, 1, "CYCLIC", 8, "");
+
+_ssdm_SpecArrayPartition( &sbox, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( &rsbox, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( Key, 1, "CYCLIC", 16, "");
+_ssdm_SpecArrayPartition( RoundKey, 1, "CYCLIC", 16, "");
 
  for (j=0;j<16;j++){
 _ssdm_Unroll(0,0,0, "");
@@ -803,7 +803,7 @@ _ssdm_Unroll(0,0,0, "");
  SubBytes_label34:for (j = 0; j < 4; ++j)
   {
 _ssdm_Unroll(0,0,0, "");
- (*state)[j][i] = (sbox[((*state)[j][i])]);
+ (*state)[i][j] = (sbox[((*state)[i][j])]);
   }
  }
 }
@@ -839,10 +839,10 @@ _ssdm_InlineSelf(0, "");
  (*state)[2][3] = (*state)[1][3];
  (*state)[1][3] = temp;
 }
-
+const uint8_t tme = 0x1b;
 static uint8_t xtime(uint8_t x)
 {
- return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
+ return ((x<<1) ^ ((x>>7) * tme));
 }
 
 
@@ -851,7 +851,7 @@ static void MixColumns(state_t* state)
 
  uint8_t i;
  uint8_t Tmp[4], Tm[4][4], t;
-
+_ssdm_InlineSelf(0, "");
 _ssdm_SpecArrayPartition( Tm, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( Tmp, 1, "COMPLETE", 0, "");
 
@@ -946,7 +946,7 @@ static void InvShiftRows(state_t* state)
 void Cipher(state_t* state, uint8_t RoundKey[240])
 {_ssdm_SpecArrayDimSize(RoundKey, 240);
  uint8_t round = 0;
-
+_ssdm_op_SpecResourceLimit(80, "xor", "", "", "");
 
  AddRoundKey(0, state, RoundKey);
 

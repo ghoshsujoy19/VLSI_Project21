@@ -586,13 +586,13 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  uint8_t a,b,c,d,e;
  unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2;
 
-#pragma HLS allocation instances=add limit=12 operation
 
 
-#pragma HLS ARRAY_PARTITION variable=sbox cyclic factor=8 dim=1
-#pragma HLS ARRAY_PARTITION variable=rsbox cyclic factor=8 dim=1
-#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=8 dim=1
-#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=8 dim=1
+
+#pragma HLS ARRAY_PARTITION variable=sbox cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=rsbox cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=16 dim=1
+#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
 
  for (j=0;j<16;j++){
 #pragma HLS unroll
@@ -627,48 +627,16 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  }
 }
 
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_KeyExpansion.h"
-#endif
-# 208 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_init_ctx(struct AES_ctx* ctx, const uint8_t* key)
 {
- 
-#ifndef HLS_FASTSIM
-#define KeyExpansion AESL_WRAP_KeyExpansion
-#endif
-# 210 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-KeyExpansion(ctx->RoundKey, key);
-#undef KeyExpansion
-# 210 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
+ KeyExpansion(ctx->RoundKey, key);
 }
-#endif
-# 211 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 
-
-#ifndef HLS_FASTSIM
-#ifndef HLS_FASTSIM
-#include "apatb_KeyExpansion.h"
-#endif
-# 213 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_init_ctx_iv(struct AES_ctx* ctx, const uint8_t* key, const uint8_t* iv)
 {
- 
-#ifndef HLS_FASTSIM
-#define KeyExpansion AESL_WRAP_KeyExpansion
-#endif
-# 215 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-KeyExpansion(ctx->RoundKey, key);
-#undef KeyExpansion
-# 215 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
+ KeyExpansion(ctx->RoundKey, key);
  memcpy (ctx->Iv, iv, 16);
 }
-#endif
-# 217 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-
 void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 {
  memcpy (ctx->Iv, iv, 16);
@@ -709,7 +677,7 @@ static void SubBytes(state_t* state)
  SubBytes_label34:for (j = 0; j < 4; ++j)
   {
 #pragma HLS unroll
- (*state)[j][i] = (sbox[((*state)[j][i])]);
+ (*state)[i][j] = (sbox[((*state)[i][j])]);
   }
  }
 }
@@ -745,10 +713,10 @@ static void ShiftRows(state_t* state)
  (*state)[2][3] = (*state)[1][3];
  (*state)[1][3] = temp;
 }
-
+const uint8_t tme = 0x1b;
 static uint8_t xtime(uint8_t x)
 {
- return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
+ return ((x<<1) ^ ((x>>7) * tme));
 }
 
 
@@ -757,7 +725,7 @@ static void MixColumns(state_t* state)
 
  uint8_t i;
  uint8_t Tmp[4], Tm[4][4], t;
-
+#pragma HLS INLINE
 #pragma HLS ARRAY_PARTITION variable=Tm complete dim=0
 #pragma HLS ARRAY_PARTITION variable=Tmp complete dim=1
 
@@ -852,7 +820,7 @@ static void InvShiftRows(state_t* state)
 void Cipher(state_t* state, uint8_t RoundKey[240])
 {
  uint8_t round = 0;
-
+#pragma HLS allocation instances=xor limit=80 operation
 
  AddRoundKey(0, state, RoundKey);
 
