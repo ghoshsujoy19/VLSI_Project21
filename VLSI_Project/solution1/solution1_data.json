@@ -51,7 +51,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "58",
+    "Latency": "33",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -70,11 +70,13 @@
     "CSource": ["..\/..\/aes.c"],
     "Vhdl": [
       "impl\/vhdl\/InvCipher_rsbox.vhd",
+      "impl\/vhdl\/xtime.vhd",
       "impl\/vhdl\/InvCipher.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/InvCipher_rsbox.v",
       "impl\/verilog\/InvCipher_rsbox_rom.dat",
+      "impl\/verilog\/xtime.v",
       "impl\/verilog\/InvCipher.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -1233,50 +1235,176 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "InvCipher"},
-    "Info": {"InvCipher": {
+    "Hierarchy": {
+      "ModuleName": "InvCipher",
+      "Instances": [
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1305"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1310"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1316"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1322"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1327"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1333"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1339"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1344"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1350"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1356"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1361"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1367"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1373"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1378"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1384"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1390"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1395"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1401"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1407"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1412"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1418"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1424"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1429"
+        },
+        {
+          "ModuleName": "xtime",
+          "InstanceName": "grp_xtime_fu_1435"
+        }
+      ]
+    },
+    "Info": {
+      "xtime": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "InvCipher": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
-      }},
-    "Metrics": {"InvCipher": {
+      }
+    },
+    "Metrics": {
+      "xtime": {
         "Latency": {
-          "LatencyBest": "58",
-          "LatencyAvg": "58",
-          "LatencyWorst": "58",
-          "PipelineII": "59",
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "1",
+          "PipelineDepth": "1",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "0.757"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "13",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "InvCipher": {
+        "Latency": {
+          "LatencyBest": "33",
+          "LatencyAvg": "33",
+          "LatencyWorst": "33",
+          "PipelineII": "34",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "5.811"
+          "Estimate": "8.340"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "9",
-            "Latency": "54",
-            "PipelineII": "",
-            "PipelineDepth": "6",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "2",
-                "Latency": "2",
-                "PipelineII": "",
-                "PipelineDepth": "1"
-              }]
+            "Latency": "28",
+            "PipelineII": "3",
+            "PipelineDepth": "5"
           }],
         "Area": {
           "BRAM_18K": "8",
-          "FF": "275",
-          "LUT": "2179",
+          "FF": "340",
+          "LUT": "2869",
           "DSP48E": "0",
           "URAM": "0"
         }
-      }}
+      }
+    }
   },
   "Sdx": {
     "Target": "none",
@@ -1288,7 +1416,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-15 05:03:02 IST",
+    "Time": "2020-05-15 05:06:18 IST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

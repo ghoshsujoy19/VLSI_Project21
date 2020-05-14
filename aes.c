@@ -474,7 +474,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
 		// These Nr-1 rounds are executed in the loop below.
 	for (round = (Nr - 1); round > 0; --round)
 	{
-//#pragma HLS pipeline
+		#pragma HLS pipeline
 		AddRoundKey(round, state, RoundKey);
 		InvMixColumns(state);
 		InvShiftRows(state);

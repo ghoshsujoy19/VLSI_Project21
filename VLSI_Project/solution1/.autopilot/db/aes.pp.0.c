@@ -981,8 +981,8 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
 
  for (round = (10 - 1); round > 0; --round)
  {
-
-  AddRoundKey(round, state, RoundKey);
+#pragma HLS pipeline
+ AddRoundKey(round, state, RoundKey);
   InvMixColumns(state);
   InvShiftRows(state);
   InvSubBytes(state);

@@ -1,7 +1,7 @@
-Running: xsim.dir/InvCipher/xsimk -simmode gui -wdb InvCipher.wdb -simrunnum 0 -socket 39603
+Running: xsim.dir/InvCipher/xsimk -simmode gui -wdb InvCipher.wdb -simrunnum 0 -socket 41299
 Design successfully loaded
-Design Loading Memory Usage: 38448 KB (Peak: 38456 KB)
-Design Loading CPU Usage: 10 ms
+Design Loading Memory Usage: 38540 KB (Peak: 38548 KB)
+Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 120636 KB (Peak: 177716 KB)
-Simulation CPU Usage: 60 ms
+Simulation Memory Usage: 120728 KB (Peak: 177808 KB)
+Simulation CPU Usage: 50 ms

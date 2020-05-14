@@ -22406,3 +22406,102 @@ INFO: [VHDL 208-304]============================================================
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2159 ; free virtual = 15310
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2159 ; free virtual = 15310
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:483).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:478).
+INFO: [XFORM 203-603] Inlining function 'AddRoundKey' into 'InvCipher' (aes.c:469).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:481).
+INFO: [XFORM 203-603] Inlining function 'InvSubBytes' into 'InvCipher' (aes.c:471).
+INFO: [XFORM 203-603] Inlining function 'InvMixColumns' into 'InvCipher' (aes.c:479).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2154 ; free virtual = 15309
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2164 ; free virtual = 15309
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3' (aes.c:475) in function 'InvCipher' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-3.2' (aes.c:359) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label38' (aes.c:235) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'AddRoundKey_label37' (aes.c:238) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.2' (aes.c:359) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3' (aes.c:382) in function 'InvCipher' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.3.1' (aes.c:385) in function 'InvCipher' completely with a factor of 4.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RoundKey' (aes.c:449) in dimension 1 with a cyclic factor 16.
+INFO: [XFORM 203-101] Partitioning array 'state' (aes.c:449) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'InvShiftRows' into 'InvCipher' (aes.c:470) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'InvCipher' (aes.c:449)...152 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2160 ; free virtual = 15290
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 965.719 ; gain = 526.004 ; free physical = 2139 ; free virtual = 15289
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'InvCipher' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xtime'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.22 seconds; current allocated memory: 118.294 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 118.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'InvCipher' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('rsbox_load_27', aes.c:388->aes.c:481) on array 'rsbox' and 'load' operation ('rsbox_load_29', aes.c:388->aes.c:481) on array 'rsbox'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('rsbox_load_20', aes.c:388->aes.c:481) on array 'rsbox' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'rsbox'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 119.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 121.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xtime' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xtime'.
+INFO: [HLS 200-111]  Elapsed time: 0.87 seconds; current allocated memory: 122.092 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'InvCipher' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_0_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_1_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_2_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/state_3_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'InvCipher/RoundKey_0' to 'ap_memory'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
