@@ -2,8 +2,8 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu May 14 23:09:28 2020
-# Process ID: 18390
+# Start of session at: Thu May 14 23:22:38 2020
+# Process ID: 19331
 # Current directory: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/KeyExpansion/xsim_script.tcl}
 # Log file: /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.log
@@ -22,14 +22,14 @@ source KeyExpansion.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 7 [0.00%] @ "125000"
-// RTL Simulation : 1 / 7 [100.00%] @ "775000"
-// RTL Simulation : 2 / 7 [100.00%] @ "1415000"
-// RTL Simulation : 3 / 7 [100.00%] @ "2055000"
-// RTL Simulation : 4 / 7 [100.00%] @ "2695000"
-// RTL Simulation : 5 / 7 [100.00%] @ "3335000"
-// RTL Simulation : 6 / 7 [100.00%] @ "3975000"
-// RTL Simulation : 7 / 7 [100.00%] @ "4615000"
+// RTL Simulation : 1 / 7 [100.00%] @ "1175000"
+// RTL Simulation : 2 / 7 [100.00%] @ "2215000"
+// RTL Simulation : 3 / 7 [100.00%] @ "3255000"
+// RTL Simulation : 4 / 7 [100.00%] @ "4295000"
+// RTL Simulation : 5 / 7 [100.00%] @ "5335000"
+// RTL Simulation : 6 / 7 [100.00%] @ "6375000"
+// RTL Simulation : 7 / 7 [100.00%] @ "7415000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 4655 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 1176
+$finish called at time : 7455 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 1176
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu May 14 23:09:48 2020...
+INFO: [Common 17-206] Exiting xsim at Thu May 14 23:22:58 2020...

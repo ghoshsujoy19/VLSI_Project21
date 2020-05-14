@@ -712,7 +712,8 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
  uint8_t a,b,c,d,e;
  unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2;
 
-#pragma HLS allocation instances=icmp limit=22 operation
+
+#pragma HLS allocation instances=select limit=10 operation
 #pragma HLS ARRAY_PARTITION variable=&sbox cyclic factor=8 dim=1
 #pragma HLS ARRAY_PARTITION variable=&rsbox cyclic factor=8 dim=1
 #pragma HLS ARRAY_PARTITION variable=&Key cyclic factor=8 dim=1
@@ -747,7 +748,7 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
    c = (sbox[(d)]);
    d = (sbox[(e)]);
   }
-# 203 "aes.c"
+# 204 "aes.c"
   a = RoundKey[s] = RoundKey[s-16] ^ a;
   b = RoundKey[s+1] = RoundKey[s-15] ^ b;
   c = RoundKey[s+2] = RoundKey[s-14] ^ c;
@@ -872,7 +873,7 @@ static void MixColumns(state_t* state)
   (*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
  }
 }
-# 355 "aes.c"
+# 356 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -995,7 +996,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 485 "aes.c"
+# 486 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1067,7 +1068,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 564 "aes.c"
+# 565 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

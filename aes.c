@@ -154,7 +154,8 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 	uint8_t a,b,c,d,e; // Used for the column/row operations
 	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2;
 
-	#pragma HLS allocation instances=icmp limit=22 operation
+//	#pragma HLS allocation instances=icmp limit=22 operation
+	#pragma HLS allocation instances=select limit=10 operation
 	#pragma HLS ARRAY_PARTITION variable=sbox     cyclic factor=8 dim=1
 	#pragma HLS ARRAY_PARTITION variable=rsbox    cyclic factor=8 dim=1
 	#pragma HLS ARRAY_PARTITION variable=Key      cyclic factor=8 dim=1
