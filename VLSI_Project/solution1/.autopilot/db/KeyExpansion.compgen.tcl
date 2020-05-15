@@ -5,7 +5,7 @@ set ID 1
 set hasByteEnable 0
 set MemName KeyExpansion_sbox
 set CoreName ap_simcore_mem
-set PortList { 1 1 }
+set PortList { 1 1 1 1 }
 set DataWd 32
 set AddrRange 64
 set AddrWd 6
@@ -31,7 +31,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 2 \
+    port_num 4 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -66,7 +66,90 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 2 \
+    port_num 4 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+  } else {
+    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_ROM, check your platform lib"
+  }
+}
+
+
+# Memory (RAM/ROM)  definition:
+set ID 2
+set hasByteEnable 0
+set MemName KeyExpansion_Rcon
+set CoreName ap_simcore_mem
+set PortList { 1 }
+set DataWd 8
+set AddrRange 11
+set AddrWd 4
+set TrueReset 0
+set IsROM 1
+set ROMData { "10001101" "00000001" "00000010" "00000100" "00001000" "00010000" "00100000" "01000000" "10000000" "00011011" "00110110" }
+set HasInitializer 1
+set Initializer $ROMData
+set NumOfStage 2
+set MaxLatency -1
+set DelayBudget 2.664
+set ClkPeriod 10
+set RegisteredInput 0
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
+    eval "ap_gen_simcore_mem { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    registered_input ${RegisteredInput} \
+    port_num 1 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+} else {
+    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+  ::AP::rtl_comp_handler $MemName
+}
+
+
+set CoreName ROM_nP
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_ROM"} {
+    eval "::AESL_LIB_VIRTEX::xil_gen_ROM { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    registered_input ${RegisteredInput} \
+    port_num 1 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -95,14 +178,14 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 2 \
+    id 3 \
     name RoundKey_0 \
     reset_level 1 \
     sync_rst true \
-    dir O \
+    dir IO \
     corename RoundKey_0 \
     op interface \
-    ports { RoundKey_0_address0 { O 6 vector } RoundKey_0_ce0 { O 1 bit } RoundKey_0_we0 { O 1 bit } RoundKey_0_d0 { O 8 vector } RoundKey_0_address1 { O 6 vector } RoundKey_0_ce1 { O 1 bit } RoundKey_0_we1 { O 1 bit } RoundKey_0_d1 { O 8 vector } } \
+    ports { RoundKey_0_address0 { O 6 vector } RoundKey_0_ce0 { O 1 bit } RoundKey_0_we0 { O 1 bit } RoundKey_0_d0 { O 8 vector } RoundKey_0_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_0'"
@@ -114,14 +197,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 3 \
+    id 4 \
     name RoundKey_1 \
     reset_level 1 \
     sync_rst true \
-    dir O \
+    dir IO \
     corename RoundKey_1 \
     op interface \
-    ports { RoundKey_1_address0 { O 6 vector } RoundKey_1_ce0 { O 1 bit } RoundKey_1_we0 { O 1 bit } RoundKey_1_d0 { O 8 vector } RoundKey_1_address1 { O 6 vector } RoundKey_1_ce1 { O 1 bit } RoundKey_1_we1 { O 1 bit } RoundKey_1_d1 { O 8 vector } } \
+    ports { RoundKey_1_address0 { O 6 vector } RoundKey_1_ce0 { O 1 bit } RoundKey_1_we0 { O 1 bit } RoundKey_1_d0 { O 8 vector } RoundKey_1_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_1'"
@@ -133,14 +216,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 4 \
+    id 5 \
     name RoundKey_2 \
     reset_level 1 \
     sync_rst true \
-    dir O \
+    dir IO \
     corename RoundKey_2 \
     op interface \
-    ports { RoundKey_2_address0 { O 6 vector } RoundKey_2_ce0 { O 1 bit } RoundKey_2_we0 { O 1 bit } RoundKey_2_d0 { O 8 vector } RoundKey_2_address1 { O 6 vector } RoundKey_2_ce1 { O 1 bit } RoundKey_2_we1 { O 1 bit } RoundKey_2_d1 { O 8 vector } } \
+    ports { RoundKey_2_address0 { O 6 vector } RoundKey_2_ce0 { O 1 bit } RoundKey_2_we0 { O 1 bit } RoundKey_2_d0 { O 8 vector } RoundKey_2_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_2'"
@@ -152,14 +235,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 5 \
+    id 6 \
     name RoundKey_3 \
     reset_level 1 \
     sync_rst true \
-    dir O \
+    dir IO \
     corename RoundKey_3 \
     op interface \
-    ports { RoundKey_3_address0 { O 6 vector } RoundKey_3_ce0 { O 1 bit } RoundKey_3_we0 { O 1 bit } RoundKey_3_d0 { O 8 vector } RoundKey_3_address1 { O 6 vector } RoundKey_3_ce1 { O 1 bit } RoundKey_3_we1 { O 1 bit } RoundKey_3_d1 { O 8 vector } } \
+    ports { RoundKey_3_address0 { O 6 vector } RoundKey_3_ce0 { O 1 bit } RoundKey_3_we0 { O 1 bit } RoundKey_3_d0 { O 8 vector } RoundKey_3_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'RoundKey_3'"
@@ -171,14 +254,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6 \
+    id 7 \
     name Key_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename Key_0 \
     op interface \
-    ports { Key_0_address0 { O 2 vector } Key_0_ce0 { O 1 bit } Key_0_q0 { I 8 vector } Key_0_address1 { O 2 vector } Key_0_ce1 { O 1 bit } Key_0_q1 { I 8 vector } } \
+    ports { Key_0_address0 { O 2 vector } Key_0_ce0 { O 1 bit } Key_0_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'Key_0'"
@@ -190,14 +273,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 7 \
+    id 8 \
     name Key_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename Key_1 \
     op interface \
-    ports { Key_1_address0 { O 2 vector } Key_1_ce0 { O 1 bit } Key_1_q0 { I 8 vector } Key_1_address1 { O 2 vector } Key_1_ce1 { O 1 bit } Key_1_q1 { I 8 vector } } \
+    ports { Key_1_address0 { O 2 vector } Key_1_ce0 { O 1 bit } Key_1_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'Key_1'"
@@ -209,14 +292,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 8 \
+    id 9 \
     name Key_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename Key_2 \
     op interface \
-    ports { Key_2_address0 { O 2 vector } Key_2_ce0 { O 1 bit } Key_2_q0 { I 8 vector } Key_2_address1 { O 2 vector } Key_2_ce1 { O 1 bit } Key_2_q1 { I 8 vector } } \
+    ports { Key_2_address0 { O 2 vector } Key_2_ce0 { O 1 bit } Key_2_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'Key_2'"
@@ -228,14 +311,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 9 \
+    id 10 \
     name Key_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename Key_3 \
     op interface \
-    ports { Key_3_address0 { O 2 vector } Key_3_ce0 { O 1 bit } Key_3_q0 { I 8 vector } Key_3_address1 { O 2 vector } Key_3_ce1 { O 1 bit } Key_3_q1 { I 8 vector } } \
+    ports { Key_3_address0 { O 2 vector } Key_3_ce0 { O 1 bit } Key_3_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'Key_3'"

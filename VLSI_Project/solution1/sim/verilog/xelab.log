@@ -25,6 +25,9 @@ INFO: [VRFC 10-311] analyzing module KeyExpansion
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_Key_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_3.v" into library xil_defaultlib
@@ -37,6 +40,8 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.KeyExpansion_sbox_rom
 Compiling module xil_defaultlib.KeyExpansion_sbox(DataWidth=32,A...
+Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
+Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
 Compiling module xil_defaultlib.KeyExpansion
 Compiling module xil_defaultlib.AESL_automem_RoundKey_0
 Compiling module xil_defaultlib.AESL_automem_RoundKey_1

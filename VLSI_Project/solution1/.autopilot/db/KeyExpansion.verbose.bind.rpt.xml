@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'KeyExpansion'" level="0">
-<item name = "Date">Fri May 15 12:11:27 2020
+<item name = "Date">Fri May 15 12:15:30 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">VLSI_Project</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.239 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.344 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">23, 23, 0.230 us, 0.230 us, 22, 22, function</column>
+<column name="">130, 130, 1.300 us, 1.300 us, 130, 130, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 2">120, 120, 3, -, -, 40, no</column>
 </table>
 </item>
 </section>

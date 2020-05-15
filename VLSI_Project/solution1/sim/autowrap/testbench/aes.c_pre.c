@@ -579,7 +579,7 @@ static const uint8_t Rcon[11] = {
 # 152 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 {
- unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2 ;
+ unsigned i, j, k;
  uint8_t tempa[4];
 
 #pragma HLS ARRAY_RESHAPE variable=sbox cyclic factor=4 dim=1
@@ -587,39 +587,44 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 #pragma HLS ARRAY_PARTITION variable=Key cyclic factor=4 dim=1
 #pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=4 dim=1
 #pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
-#pragma HLS pipeline
 
- for (j = 0; j < cnt; j += 4)
+
+ for (i = 0; i < 4; ++i)
  {
-  RoundKey[j] = Key[j];
-  RoundKey[j + 1] = Key[j + 1];
-  RoundKey[j + 2] = Key[j + 2];
-  RoundKey[j + 3] = Key[j + 3];
+  j = i*4;
+  RoundKey[(i * 4) + 0] = Key[(i * 4) + 0];
+  RoundKey[(i * 4) + 1] = Key[(i * 4) + 1];
+  RoundKey[(i * 4) + 2] = Key[(i * 4) + 2];
+  RoundKey[(i * 4) + 3] = Key[(i * 4) + 3];
+
+
+
  }
 
 
- for (s = cnt; s < cnt2; s+=4)
+ for (i = 4; i < 4 * (10 + 1); ++i)
  {
   {
-   k = s-4;
-   tempa[0] = RoundKey[k + 0];
-   tempa[1] = RoundKey[k + 1];
-   tempa[2] = RoundKey[k + 2];
-   tempa[3] = RoundKey[k + 3];
+   k = (i - 1) * 4;
+   tempa[0]=RoundKey[k + 0];
+   tempa[1]=RoundKey[k + 1];
+   tempa[2]=RoundKey[k + 2];
+   tempa[3]=RoundKey[k + 3];
+
   }
 
-  if (s % cnt == 0)
+  if (i % 4 == 0)
   {
 
 
 
 
    {
-    const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
-    tempa[0] = u8tmp1;
-    tempa[1] = u8tmp2;
-    tempa[2] = u8tmp3;
-    tempa[3] = u8tmp0;
+    const uint8_t u8tmp = tempa[0];
+    tempa[0] = tempa[1];
+    tempa[1] = tempa[2];
+    tempa[2] = tempa[3];
+    tempa[3] = u8tmp;
    }
 
 
@@ -632,16 +637,17 @@ void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
     tempa[2] = (sbox[(tempa[2])]);
     tempa[3] = (sbox[(tempa[3])]);
    }
-   tempa[0] = tempa[0] ^ Rcon[s / cnt];
+   tempa[0] = tempa[0] ^ Rcon[i/4];
   }
-# 221 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
-  j = s;
-  k = s - cnt;
-  uint8_t tmp0 = RoundKey[k], tmp1 = RoundKey[k+1], tmp2 = RoundKey[k+2], tmp3 = RoundKey[k+3];
-  RoundKey[j] = tmp0 ^ tempa[0];
-  RoundKey[j + 1] = tmp1 ^ tempa[1];
-  RoundKey[j + 2] = tmp2 ^ tempa[2];
-  RoundKey[j + 3] = tmp3 ^ tempa[3];
+# 226 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+  j = i * 4; k=(i - 4) * 4;
+  RoundKey[j + 0] = RoundKey[k + 0] ^ tempa[0];
+  RoundKey[j + 1] = RoundKey[k + 1] ^ tempa[1];
+  RoundKey[j + 2] = RoundKey[k + 2] ^ tempa[2];
+  RoundKey[j + 3] = RoundKey[k + 3] ^ tempa[3];
+
+
+
  }
 }
 
@@ -740,7 +746,7 @@ MixColumns_label36:for (i = 0; i < 4; ++i)
       Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
      }
 }
-# 354 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 360 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
@@ -854,7 +860,7 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
  InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
 }
-# 475 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 481 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -926,7 +932,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 554 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
+# 560 "/home/sujoy/Documents/VLSI_project/project21/aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

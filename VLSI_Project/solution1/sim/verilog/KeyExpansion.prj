@@ -8,6 +8,7 @@ sv xil_defaultlib "AESL_automem_RoundKey_3.v"
 sv xil_defaultlib "AESL_automem_Key_2.v"
 sv xil_defaultlib "KeyExpansion.v"
 sv xil_defaultlib "KeyExpansion_sbox.v"
+sv xil_defaultlib "KeyExpansion_Rcon.v"
 sv xil_defaultlib "AESL_automem_Key_0.v"
 sv xil_defaultlib "AESL_automem_Key_3.v"
 

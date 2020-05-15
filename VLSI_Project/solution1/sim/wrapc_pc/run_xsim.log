@@ -24,32 +24,6 @@ f5d3d58503b9699de785895a96fdbaaf
 43b1cd7f598ece23881b00e3ed030688
 7b0c785e27e8ad3f8223207104725dd4
 
-
-Testing AES128
-
-CBC encrypt: SUCCESS!
-CBC decrypt: SUCCESS!
-CTR encrypt: SUCCESS!
-CTR decrypt: SUCCESS!
-ECB decrypt: SUCCESS!
-ECB encrypt: SUCCESS!
-ECB encrypt verbose:
-
-plain text:
-6bc1bee22e409f96e93d7e117393172a
-ae2d8a571e03ac9c9eb76fac45af8e51
-30c81c46a35ce411e5fbc1191a0a52ef
-f69f2445df4f9b17ad2b417be66c3710
-
-key:
-2b7e151628aed2a6abf7158809cf4f3c
-
-ciphertext:
-3ad77bb40d7a3660a89ecaf32466ef97
-f5d3d58503b9699de785895a96fdbaaf
-43b1cd7f598ece23881b00e3ed030688
-7b0c785e27e8ad3f8223207104725dd4
-
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "/tools/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
@@ -78,6 +52,9 @@ INFO: [VRFC 10-311] analyzing module KeyExpansion
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_sbox.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_rom
 INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_Key_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/AESL_automem_Key_3.v" into library xil_defaultlib
@@ -90,6 +67,8 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.KeyExpansion_sbox_rom
 Compiling module xil_defaultlib.KeyExpansion_sbox(DataWidth=32,A...
+Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
+Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
 Compiling module xil_defaultlib.KeyExpansion
 Compiling module xil_defaultlib.AESL_automem_RoundKey_0
 Compiling module xil_defaultlib.AESL_automem_RoundKey_1
@@ -109,8 +88,8 @@ Built simulation snapshot KeyExpansion
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/xsim.dir/KeyExpansion/webtalk/xsim_webtalk.tcl -notrace
-webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 5096 ; free virtual = 17360
-INFO: [Common 17-206] Exiting Webtalk at Fri May 15 12:12:44 2020...
+webtalk_transmit: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 402.609 ; gain = 0.000 ; free physical = 5094 ; free virtual = 17358
+INFO: [Common 17-206] Exiting Webtalk at Fri May 15 12:16:32 2020...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -130,17 +109,17 @@ source KeyExpansion.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 7 [0.00%] @ "125000"
-// RTL Simulation : 1 / 7 [4.35%] @ "375000"
-// RTL Simulation : 2 / 7 [4.35%] @ "595000"
-// RTL Simulation : 3 / 7 [4.35%] @ "815000"
-// RTL Simulation : 4 / 7 [4.35%] @ "1035000"
-// RTL Simulation : 5 / 7 [4.35%] @ "1255000"
-// RTL Simulation : 6 / 7 [4.35%] @ "1475000"
-// RTL Simulation : 7 / 7 [100.00%] @ "1695000"
+// RTL Simulation : 1 / 7 [100.00%] @ "1445000"
+// RTL Simulation : 2 / 7 [100.00%] @ "2755000"
+// RTL Simulation : 3 / 7 [100.00%] @ "4065000"
+// RTL Simulation : 4 / 7 [100.00%] @ "5375000"
+// RTL Simulation : 5 / 7 [100.00%] @ "6685000"
+// RTL Simulation : 6 / 7 [100.00%] @ "7995000"
+// RTL Simulation : 7 / 7 [100.00%] @ "9305000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 1735 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 656
+$finish called at time : 9345 ns : File "/home/sujoy/Documents/VLSI_project/project21/VLSI_Project/solution1/sim/verilog/KeyExpansion.autotb.v" Line 592
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri May 15 12:13:04 2020...
+INFO: [Common 17-206] Exiting xsim at Fri May 15 12:16:56 2020...
 
 Testing AES128
 
