@@ -30,17 +30,17 @@ using namespace sc_dt;
 
 
 // wrapc file define: "RoundKey_0"
-#define AUTOTB_TVIN_RoundKey_0  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_0.dat"
 #define AUTOTB_TVOUT_RoundKey_0  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_0.dat"
+#define AUTOTB_TVIN_RoundKey_0  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_0.dat"
 // wrapc file define: "RoundKey_1"
-#define AUTOTB_TVIN_RoundKey_1  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_1.dat"
 #define AUTOTB_TVOUT_RoundKey_1  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_1.dat"
+#define AUTOTB_TVIN_RoundKey_1  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_1.dat"
 // wrapc file define: "RoundKey_2"
-#define AUTOTB_TVIN_RoundKey_2  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_2.dat"
 #define AUTOTB_TVOUT_RoundKey_2  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_2.dat"
+#define AUTOTB_TVIN_RoundKey_2  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_2.dat"
 // wrapc file define: "RoundKey_3"
-#define AUTOTB_TVIN_RoundKey_3  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_3.dat"
 #define AUTOTB_TVOUT_RoundKey_3  "../tv/cdatafile/c.KeyExpansion.autotvout_RoundKey_3.dat"
+#define AUTOTB_TVIN_RoundKey_3  "../tv/cdatafile/c.KeyExpansion.autotvin_RoundKey_3.dat"
 // wrapc file define: "Key_0"
 #define AUTOTB_TVIN_Key_0  "../tv/cdatafile/c.KeyExpansion.autotvin_Key_0.dat"
 // wrapc file define: "Key_1"
@@ -1321,17 +1321,17 @@ char Key[16])
 
 		CodeState = DELETE_CHAR_BUFFERS;
 		// release memory allocation: "RoundKey_0"
-		delete [] tvin_RoundKey_0;
 		delete [] tvout_RoundKey_0;
+		delete [] tvin_RoundKey_0;
 		// release memory allocation: "RoundKey_1"
-		delete [] tvin_RoundKey_1;
 		delete [] tvout_RoundKey_1;
+		delete [] tvin_RoundKey_1;
 		// release memory allocation: "RoundKey_2"
-		delete [] tvin_RoundKey_2;
 		delete [] tvout_RoundKey_2;
+		delete [] tvin_RoundKey_2;
 		// release memory allocation: "RoundKey_3"
-		delete [] tvin_RoundKey_3;
 		delete [] tvout_RoundKey_3;
+		delete [] tvin_RoundKey_3;
 		// release memory allocation: "Key_0"
 		delete [] tvin_Key_0;
 		// release memory allocation: "Key_1"

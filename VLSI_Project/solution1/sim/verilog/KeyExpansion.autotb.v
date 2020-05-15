@@ -58,7 +58,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 7;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 130;
+parameter LATENCY_ESTIMATION = 23;
 parameter LENGTH_RoundKey_0 = 60;
 parameter LENGTH_RoundKey_1 = 60;
 parameter LENGTH_RoundKey_2 = 60;
@@ -104,34 +104,58 @@ wire [5 : 0] RoundKey_0_address0;
 wire  RoundKey_0_ce0;
 wire  RoundKey_0_we0;
 wire [7 : 0] RoundKey_0_d0;
-wire [7 : 0] RoundKey_0_q0;
+wire [5 : 0] RoundKey_0_address1;
+wire  RoundKey_0_ce1;
+wire  RoundKey_0_we1;
+wire [7 : 0] RoundKey_0_d1;
 wire [5 : 0] RoundKey_1_address0;
 wire  RoundKey_1_ce0;
 wire  RoundKey_1_we0;
 wire [7 : 0] RoundKey_1_d0;
-wire [7 : 0] RoundKey_1_q0;
+wire [5 : 0] RoundKey_1_address1;
+wire  RoundKey_1_ce1;
+wire  RoundKey_1_we1;
+wire [7 : 0] RoundKey_1_d1;
 wire [5 : 0] RoundKey_2_address0;
 wire  RoundKey_2_ce0;
 wire  RoundKey_2_we0;
 wire [7 : 0] RoundKey_2_d0;
-wire [7 : 0] RoundKey_2_q0;
+wire [5 : 0] RoundKey_2_address1;
+wire  RoundKey_2_ce1;
+wire  RoundKey_2_we1;
+wire [7 : 0] RoundKey_2_d1;
 wire [5 : 0] RoundKey_3_address0;
 wire  RoundKey_3_ce0;
 wire  RoundKey_3_we0;
 wire [7 : 0] RoundKey_3_d0;
-wire [7 : 0] RoundKey_3_q0;
+wire [5 : 0] RoundKey_3_address1;
+wire  RoundKey_3_ce1;
+wire  RoundKey_3_we1;
+wire [7 : 0] RoundKey_3_d1;
 wire [1 : 0] Key_0_address0;
 wire  Key_0_ce0;
 wire [7 : 0] Key_0_q0;
+wire [1 : 0] Key_0_address1;
+wire  Key_0_ce1;
+wire [7 : 0] Key_0_q1;
 wire [1 : 0] Key_1_address0;
 wire  Key_1_ce0;
 wire [7 : 0] Key_1_q0;
+wire [1 : 0] Key_1_address1;
+wire  Key_1_ce1;
+wire [7 : 0] Key_1_q1;
 wire [1 : 0] Key_2_address0;
 wire  Key_2_ce0;
 wire [7 : 0] Key_2_q0;
+wire [1 : 0] Key_2_address1;
+wire  Key_2_ce1;
+wire [7 : 0] Key_2_q1;
 wire [1 : 0] Key_3_address0;
 wire  Key_3_ce0;
 wire [7 : 0] Key_3_q0;
+wire [1 : 0] Key_3_address1;
+wire  Key_3_ce1;
+wire [7 : 0] Key_3_q1;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -157,34 +181,58 @@ wire ap_rst_n;
     .RoundKey_0_ce0(RoundKey_0_ce0),
     .RoundKey_0_we0(RoundKey_0_we0),
     .RoundKey_0_d0(RoundKey_0_d0),
-    .RoundKey_0_q0(RoundKey_0_q0),
+    .RoundKey_0_address1(RoundKey_0_address1),
+    .RoundKey_0_ce1(RoundKey_0_ce1),
+    .RoundKey_0_we1(RoundKey_0_we1),
+    .RoundKey_0_d1(RoundKey_0_d1),
     .RoundKey_1_address0(RoundKey_1_address0),
     .RoundKey_1_ce0(RoundKey_1_ce0),
     .RoundKey_1_we0(RoundKey_1_we0),
     .RoundKey_1_d0(RoundKey_1_d0),
-    .RoundKey_1_q0(RoundKey_1_q0),
+    .RoundKey_1_address1(RoundKey_1_address1),
+    .RoundKey_1_ce1(RoundKey_1_ce1),
+    .RoundKey_1_we1(RoundKey_1_we1),
+    .RoundKey_1_d1(RoundKey_1_d1),
     .RoundKey_2_address0(RoundKey_2_address0),
     .RoundKey_2_ce0(RoundKey_2_ce0),
     .RoundKey_2_we0(RoundKey_2_we0),
     .RoundKey_2_d0(RoundKey_2_d0),
-    .RoundKey_2_q0(RoundKey_2_q0),
+    .RoundKey_2_address1(RoundKey_2_address1),
+    .RoundKey_2_ce1(RoundKey_2_ce1),
+    .RoundKey_2_we1(RoundKey_2_we1),
+    .RoundKey_2_d1(RoundKey_2_d1),
     .RoundKey_3_address0(RoundKey_3_address0),
     .RoundKey_3_ce0(RoundKey_3_ce0),
     .RoundKey_3_we0(RoundKey_3_we0),
     .RoundKey_3_d0(RoundKey_3_d0),
-    .RoundKey_3_q0(RoundKey_3_q0),
+    .RoundKey_3_address1(RoundKey_3_address1),
+    .RoundKey_3_ce1(RoundKey_3_ce1),
+    .RoundKey_3_we1(RoundKey_3_we1),
+    .RoundKey_3_d1(RoundKey_3_d1),
     .Key_0_address0(Key_0_address0),
     .Key_0_ce0(Key_0_ce0),
     .Key_0_q0(Key_0_q0),
+    .Key_0_address1(Key_0_address1),
+    .Key_0_ce1(Key_0_ce1),
+    .Key_0_q1(Key_0_q1),
     .Key_1_address0(Key_1_address0),
     .Key_1_ce0(Key_1_ce0),
     .Key_1_q0(Key_1_q0),
+    .Key_1_address1(Key_1_address1),
+    .Key_1_ce1(Key_1_ce1),
+    .Key_1_q1(Key_1_q1),
     .Key_2_address0(Key_2_address0),
     .Key_2_ce0(Key_2_ce0),
     .Key_2_q0(Key_2_q0),
+    .Key_2_address1(Key_2_address1),
+    .Key_2_ce1(Key_2_ce1),
+    .Key_2_q1(Key_2_q1),
     .Key_3_address0(Key_3_address0),
     .Key_3_ce0(Key_3_ce0),
-    .Key_3_q0(Key_3_q0));
+    .Key_3_q0(Key_3_q0),
+    .Key_3_address1(Key_3_address1),
+    .Key_3_ce1(Key_3_ce1),
+    .Key_3_q1(Key_3_q1));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -247,13 +295,14 @@ wire    arrayRoundKey_0_done;
 // Assignment between dut and arrayRoundKey_0
 assign arrayRoundKey_0_address0 = RoundKey_0_address0;
 assign arrayRoundKey_0_ce0 = RoundKey_0_ce0;
-assign RoundKey_0_q0 = arrayRoundKey_0_dout0;
 assign arrayRoundKey_0_we0 = RoundKey_0_we0;
 assign arrayRoundKey_0_din0 = RoundKey_0_d0;
-assign arrayRoundKey_0_we1 = 0;
-assign arrayRoundKey_0_din1 = 0;
-assign arrayRoundKey_0_ready= ready;
-assign arrayRoundKey_0_done = interface_done;
+assign arrayRoundKey_0_address1 = RoundKey_0_address1;
+assign arrayRoundKey_0_ce1 = RoundKey_0_ce1;
+assign arrayRoundKey_0_we1 = RoundKey_0_we1;
+assign arrayRoundKey_0_din1 = RoundKey_0_d1;
+assign arrayRoundKey_0_ready= ready_initial | arrayRoundKey_0_done;
+assign arrayRoundKey_0_done =    AESL_done_delay;
 
 
 //------------------------arrayRoundKey_1 Instantiation--------------
@@ -287,13 +336,14 @@ wire    arrayRoundKey_1_done;
 // Assignment between dut and arrayRoundKey_1
 assign arrayRoundKey_1_address0 = RoundKey_1_address0;
 assign arrayRoundKey_1_ce0 = RoundKey_1_ce0;
-assign RoundKey_1_q0 = arrayRoundKey_1_dout0;
 assign arrayRoundKey_1_we0 = RoundKey_1_we0;
 assign arrayRoundKey_1_din0 = RoundKey_1_d0;
-assign arrayRoundKey_1_we1 = 0;
-assign arrayRoundKey_1_din1 = 0;
-assign arrayRoundKey_1_ready= ready;
-assign arrayRoundKey_1_done = interface_done;
+assign arrayRoundKey_1_address1 = RoundKey_1_address1;
+assign arrayRoundKey_1_ce1 = RoundKey_1_ce1;
+assign arrayRoundKey_1_we1 = RoundKey_1_we1;
+assign arrayRoundKey_1_din1 = RoundKey_1_d1;
+assign arrayRoundKey_1_ready= ready_initial | arrayRoundKey_1_done;
+assign arrayRoundKey_1_done =    AESL_done_delay;
 
 
 //------------------------arrayRoundKey_2 Instantiation--------------
@@ -327,13 +377,14 @@ wire    arrayRoundKey_2_done;
 // Assignment between dut and arrayRoundKey_2
 assign arrayRoundKey_2_address0 = RoundKey_2_address0;
 assign arrayRoundKey_2_ce0 = RoundKey_2_ce0;
-assign RoundKey_2_q0 = arrayRoundKey_2_dout0;
 assign arrayRoundKey_2_we0 = RoundKey_2_we0;
 assign arrayRoundKey_2_din0 = RoundKey_2_d0;
-assign arrayRoundKey_2_we1 = 0;
-assign arrayRoundKey_2_din1 = 0;
-assign arrayRoundKey_2_ready= ready;
-assign arrayRoundKey_2_done = interface_done;
+assign arrayRoundKey_2_address1 = RoundKey_2_address1;
+assign arrayRoundKey_2_ce1 = RoundKey_2_ce1;
+assign arrayRoundKey_2_we1 = RoundKey_2_we1;
+assign arrayRoundKey_2_din1 = RoundKey_2_d1;
+assign arrayRoundKey_2_ready= ready_initial | arrayRoundKey_2_done;
+assign arrayRoundKey_2_done =    AESL_done_delay;
 
 
 //------------------------arrayRoundKey_3 Instantiation--------------
@@ -367,13 +418,14 @@ wire    arrayRoundKey_3_done;
 // Assignment between dut and arrayRoundKey_3
 assign arrayRoundKey_3_address0 = RoundKey_3_address0;
 assign arrayRoundKey_3_ce0 = RoundKey_3_ce0;
-assign RoundKey_3_q0 = arrayRoundKey_3_dout0;
 assign arrayRoundKey_3_we0 = RoundKey_3_we0;
 assign arrayRoundKey_3_din0 = RoundKey_3_d0;
-assign arrayRoundKey_3_we1 = 0;
-assign arrayRoundKey_3_din1 = 0;
-assign arrayRoundKey_3_ready= ready;
-assign arrayRoundKey_3_done = interface_done;
+assign arrayRoundKey_3_address1 = RoundKey_3_address1;
+assign arrayRoundKey_3_ce1 = RoundKey_3_ce1;
+assign arrayRoundKey_3_we1 = RoundKey_3_we1;
+assign arrayRoundKey_3_din1 = RoundKey_3_d1;
+assign arrayRoundKey_3_ready= ready_initial | arrayRoundKey_3_done;
+assign arrayRoundKey_3_done =    AESL_done_delay;
 
 
 //------------------------arrayKey_0 Instantiation--------------
@@ -410,6 +462,9 @@ assign arrayKey_0_ce0 = Key_0_ce0;
 assign Key_0_q0 = arrayKey_0_dout0;
 assign arrayKey_0_we0 = 0;
 assign arrayKey_0_din0 = 0;
+assign arrayKey_0_address1 = Key_0_address1;
+assign arrayKey_0_ce1 = Key_0_ce1;
+assign Key_0_q1 = arrayKey_0_dout1;
 assign arrayKey_0_we1 = 0;
 assign arrayKey_0_din1 = 0;
 assign arrayKey_0_ready=    ready;
@@ -450,6 +505,9 @@ assign arrayKey_1_ce0 = Key_1_ce0;
 assign Key_1_q0 = arrayKey_1_dout0;
 assign arrayKey_1_we0 = 0;
 assign arrayKey_1_din0 = 0;
+assign arrayKey_1_address1 = Key_1_address1;
+assign arrayKey_1_ce1 = Key_1_ce1;
+assign Key_1_q1 = arrayKey_1_dout1;
 assign arrayKey_1_we1 = 0;
 assign arrayKey_1_din1 = 0;
 assign arrayKey_1_ready=    ready;
@@ -490,6 +548,9 @@ assign arrayKey_2_ce0 = Key_2_ce0;
 assign Key_2_q0 = arrayKey_2_dout0;
 assign arrayKey_2_we0 = 0;
 assign arrayKey_2_din0 = 0;
+assign arrayKey_2_address1 = Key_2_address1;
+assign arrayKey_2_ce1 = Key_2_ce1;
+assign Key_2_q1 = arrayKey_2_dout1;
 assign arrayKey_2_we1 = 0;
 assign arrayKey_2_din1 = 0;
 assign arrayKey_2_ready=    ready;
@@ -530,6 +591,9 @@ assign arrayKey_3_ce0 = Key_3_ce0;
 assign Key_3_q0 = arrayKey_3_dout0;
 assign arrayKey_3_we0 = 0;
 assign arrayKey_3_din0 = 0;
+assign arrayKey_3_address1 = Key_3_address1;
+assign arrayKey_3_ce1 = Key_3_ce1;
+assign Key_3_q1 = arrayKey_3_dout1;
 assign arrayKey_3_we1 = 0;
 assign arrayKey_3_din1 = 0;
 assign arrayKey_3_ready=    ready;
@@ -936,6 +1000,13 @@ initial begin : simulation_progress
                 end
             end
         end
+        // non-dataflow design && latency is predictable && no AXI master/slave interface
+        get_intra_progress(intra_progress);
+        if (intra_progress > 1000) begin
+            $display("// RTL Simulation : transaction %0d run-time latency is greater than %0f time(s) of the prediction @ \"%0t\"", start_cnt, intra_progress, $time);
+            $display("////////////////////////////////////////////////////////////////////////////////////");
+            $finish;
+        end
     end
     print_progress();
     $display("////////////////////////////////////////////////////////////////////////////////////");
@@ -1001,7 +1072,7 @@ task calculate_performance();
                 interval_min = 0;
                 interval_total = 0;
             end else if (i < AUTOTB_TRANSACTION_NUM - 1) begin
-                interval[i] = finish_timestamp[i] - start_timestamp[i]+1;
+                interval[i] = start_timestamp[i + 1] - start_timestamp[i];
                 if (interval[i] > interval_max) interval_max = interval[i];
                 if (interval[i] < interval_min) interval_min = interval[i];
                 interval_total = interval_total + interval[i];

@@ -717,7 +717,7 @@ _ssdm_SpecArrayReshape( &rsbox, 1,  "CYCLIC",  4, "");
 _ssdm_SpecArrayPartition( Key, 1, "CYCLIC", 4, "");
 _ssdm_SpecArrayPartition( RoundKey, 1, "CYCLIC", 4, "");
 _ssdm_SpecArrayPartition( tempa, 1, "COMPLETE", 0, "");
-
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
  for (i = 0; i < 4; ++i)
  {

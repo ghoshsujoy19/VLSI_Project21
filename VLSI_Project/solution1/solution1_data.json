@@ -51,8 +51,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
-    "II": "x",
-    "Latency": "130",
+    "II": "22",
+    "Latency": "23",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -70,13 +70,10 @@
   "Files": {
     "CSource": ["..\/..\/aes.c"],
     "Vhdl": [
-      "impl\/vhdl\/KeyExpansion_Rcon.vhd",
       "impl\/vhdl\/KeyExpansion_sbox.vhd",
       "impl\/vhdl\/KeyExpansion.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/KeyExpansion_Rcon.v",
-      "impl\/verilog\/KeyExpansion_Rcon_rom.dat",
       "impl\/verilog\/KeyExpansion_sbox.v",
       "impl\/verilog\/KeyExpansion_sbox_rom.dat",
       "impl\/verilog\/KeyExpansion.v"
@@ -132,6 +129,17 @@
       "bundle_name": "Key_0",
       "bundle_role": "address0"
     },
+    "Key_0_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "2",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "2"
+        }},
+      "bundle_name": "Key_0",
+      "bundle_role": "address1"
+    },
     "Key_0_q0": {
       "type": "data",
       "dir": "in",
@@ -142,6 +150,17 @@
         }},
       "bundle_name": "Key_0",
       "bundle_role": "q0"
+    },
+    "Key_0_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "Key_0",
+      "bundle_role": "q1"
     },
     "Key_1_address0": {
       "type": "data",
@@ -154,6 +173,17 @@
       "bundle_name": "Key_1",
       "bundle_role": "address0"
     },
+    "Key_1_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "2",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "2"
+        }},
+      "bundle_name": "Key_1",
+      "bundle_role": "address1"
+    },
     "Key_1_q0": {
       "type": "data",
       "dir": "in",
@@ -164,6 +194,17 @@
         }},
       "bundle_name": "Key_1",
       "bundle_role": "q0"
+    },
+    "Key_1_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "Key_1",
+      "bundle_role": "q1"
     },
     "Key_2_address0": {
       "type": "data",
@@ -176,6 +217,17 @@
       "bundle_name": "Key_2",
       "bundle_role": "address0"
     },
+    "Key_2_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "2",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "2"
+        }},
+      "bundle_name": "Key_2",
+      "bundle_role": "address1"
+    },
     "Key_2_q0": {
       "type": "data",
       "dir": "in",
@@ -186,6 +238,17 @@
         }},
       "bundle_name": "Key_2",
       "bundle_role": "q0"
+    },
+    "Key_2_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "Key_2",
+      "bundle_role": "q1"
     },
     "Key_3_address0": {
       "type": "data",
@@ -198,6 +261,17 @@
       "bundle_name": "Key_3",
       "bundle_role": "address0"
     },
+    "Key_3_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "2",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "2"
+        }},
+      "bundle_name": "Key_3",
+      "bundle_role": "address1"
+    },
     "Key_3_q0": {
       "type": "data",
       "dir": "in",
@@ -208,6 +282,17 @@
         }},
       "bundle_name": "Key_3",
       "bundle_role": "q0"
+    },
+    "Key_3_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "Key_3",
+      "bundle_role": "q1"
     },
     "RoundKey_0_address0": {
       "type": "data",
@@ -220,6 +305,17 @@
       "bundle_name": "RoundKey_0",
       "bundle_role": "address0"
     },
+    "RoundKey_0_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "6",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "6"
+        }},
+      "bundle_name": "RoundKey_0",
+      "bundle_role": "address1"
+    },
     "RoundKey_0_d0": {
       "type": "data",
       "dir": "out",
@@ -231,16 +327,16 @@
       "bundle_name": "RoundKey_0",
       "bundle_role": "d0"
     },
-    "RoundKey_0_q0": {
+    "RoundKey_0_d1": {
       "type": "data",
-      "dir": "in",
+      "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "RoundKey_0",
-      "bundle_role": "q0"
+      "bundle_role": "d1"
     },
     "RoundKey_1_address0": {
       "type": "data",
@@ -253,6 +349,17 @@
       "bundle_name": "RoundKey_1",
       "bundle_role": "address0"
     },
+    "RoundKey_1_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "6",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "6"
+        }},
+      "bundle_name": "RoundKey_1",
+      "bundle_role": "address1"
+    },
     "RoundKey_1_d0": {
       "type": "data",
       "dir": "out",
@@ -264,16 +371,16 @@
       "bundle_name": "RoundKey_1",
       "bundle_role": "d0"
     },
-    "RoundKey_1_q0": {
+    "RoundKey_1_d1": {
       "type": "data",
-      "dir": "in",
+      "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "RoundKey_1",
-      "bundle_role": "q0"
+      "bundle_role": "d1"
     },
     "RoundKey_2_address0": {
       "type": "data",
@@ -286,6 +393,17 @@
       "bundle_name": "RoundKey_2",
       "bundle_role": "address0"
     },
+    "RoundKey_2_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "6",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "6"
+        }},
+      "bundle_name": "RoundKey_2",
+      "bundle_role": "address1"
+    },
     "RoundKey_2_d0": {
       "type": "data",
       "dir": "out",
@@ -297,16 +415,16 @@
       "bundle_name": "RoundKey_2",
       "bundle_role": "d0"
     },
-    "RoundKey_2_q0": {
+    "RoundKey_2_d1": {
       "type": "data",
-      "dir": "in",
+      "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "RoundKey_2",
-      "bundle_role": "q0"
+      "bundle_role": "d1"
     },
     "RoundKey_3_address0": {
       "type": "data",
@@ -319,6 +437,17 @@
       "bundle_name": "RoundKey_3",
       "bundle_role": "address0"
     },
+    "RoundKey_3_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "6",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "6"
+        }},
+      "bundle_name": "RoundKey_3",
+      "bundle_role": "address1"
+    },
     "RoundKey_3_d0": {
       "type": "data",
       "dir": "out",
@@ -330,16 +459,16 @@
       "bundle_name": "RoundKey_3",
       "bundle_role": "d0"
     },
-    "RoundKey_3_q0": {
+    "RoundKey_3_d1": {
       "type": "data",
-      "dir": "in",
+      "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
           "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "RoundKey_3",
-      "bundle_role": "q0"
+      "bundle_role": "d1"
     }
   },
   "RtlPorts": {
@@ -383,8 +512,20 @@
       "dir": "out",
       "width": "8"
     },
-    "RoundKey_0_q0": {
-      "dir": "in",
+    "RoundKey_0_address1": {
+      "dir": "out",
+      "width": "6"
+    },
+    "RoundKey_0_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_0_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_0_d1": {
+      "dir": "out",
       "width": "8"
     },
     "RoundKey_1_address0": {
@@ -403,8 +544,20 @@
       "dir": "out",
       "width": "8"
     },
-    "RoundKey_1_q0": {
-      "dir": "in",
+    "RoundKey_1_address1": {
+      "dir": "out",
+      "width": "6"
+    },
+    "RoundKey_1_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_1_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_1_d1": {
+      "dir": "out",
       "width": "8"
     },
     "RoundKey_2_address0": {
@@ -423,8 +576,20 @@
       "dir": "out",
       "width": "8"
     },
-    "RoundKey_2_q0": {
-      "dir": "in",
+    "RoundKey_2_address1": {
+      "dir": "out",
+      "width": "6"
+    },
+    "RoundKey_2_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_2_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_2_d1": {
+      "dir": "out",
       "width": "8"
     },
     "RoundKey_3_address0": {
@@ -443,8 +608,20 @@
       "dir": "out",
       "width": "8"
     },
-    "RoundKey_3_q0": {
-      "dir": "in",
+    "RoundKey_3_address1": {
+      "dir": "out",
+      "width": "6"
+    },
+    "RoundKey_3_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_3_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "RoundKey_3_d1": {
+      "dir": "out",
       "width": "8"
     },
     "Key_0_address0": {
@@ -456,6 +633,18 @@
       "width": "1"
     },
     "Key_0_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "Key_0_address1": {
+      "dir": "out",
+      "width": "2"
+    },
+    "Key_0_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Key_0_q1": {
       "dir": "in",
       "width": "8"
     },
@@ -471,6 +660,18 @@
       "dir": "in",
       "width": "8"
     },
+    "Key_1_address1": {
+      "dir": "out",
+      "width": "2"
+    },
+    "Key_1_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Key_1_q1": {
+      "dir": "in",
+      "width": "8"
+    },
     "Key_2_address0": {
       "dir": "out",
       "width": "2"
@@ -480,6 +681,18 @@
       "width": "1"
     },
     "Key_2_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "Key_2_address1": {
+      "dir": "out",
+      "width": "2"
+    },
+    "Key_2_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Key_2_q1": {
       "dir": "in",
       "width": "8"
     },
@@ -494,6 +707,18 @@
     "Key_3_q0": {
       "dir": "in",
       "width": "8"
+    },
+    "Key_3_address1": {
+      "dir": "out",
+      "width": "2"
+    },
+    "Key_3_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Key_3_q1": {
+      "dir": "in",
+      "width": "8"
     }
   },
   "ModuleInfo": {
@@ -501,44 +726,28 @@
     "Info": {"KeyExpansion": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
-        "isPipelined": "0",
+        "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       }},
     "Metrics": {"KeyExpansion": {
         "Latency": {
-          "LatencyBest": "130",
-          "LatencyAvg": "130",
-          "LatencyWorst": "130",
-          "PipelineII": "131",
-          "PipelineDepth": "",
-          "PipelineType": "none"
+          "LatencyBest": "23",
+          "LatencyAvg": "23",
+          "LatencyWorst": "23",
+          "PipelineII": "22",
+          "PipelineDepth": "24",
+          "PipelineType": "function"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.344"
+          "Estimate": "8.239"
         },
-        "Loops": [
-          {
-            "Name": "Loop 1",
-            "TripCount": "4",
-            "Latency": "8",
-            "PipelineII": "",
-            "PipelineDepth": "2"
-          },
-          {
-            "Name": "Loop 2",
-            "TripCount": "40",
-            "Latency": "120",
-            "PipelineII": "",
-            "PipelineDepth": "3"
-          }
-        ],
         "Area": {
-          "BRAM_18K": "4",
-          "FF": "75",
-          "LUT": "1635",
+          "BRAM_18K": "1",
+          "FF": "1366",
+          "LUT": "16291",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -554,7 +763,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-05-15 12:15:32 IST",
+    "Time": "2020-05-15 12:18:35 IST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }
