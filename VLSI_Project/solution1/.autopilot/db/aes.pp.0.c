@@ -709,47 +709,69 @@ static const uint8_t Rcon[11] = {
 # 152 "aes.c"
 void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 {_ssdm_SpecArrayDimSize(RoundKey, 240);_ssdm_SpecArrayDimSize(Key, 16);
- uint8_t a,b,c,d,e;
- unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2;
+ unsigned i, s, j, k, cnt = 4<<2, cnt2 = (4*10 + 4)<<2 ;
+ uint8_t tempa[4];
 
+#pragma HLS ARRAY_RESHAPE variable=&sbox cyclic factor=4 dim=1
+#pragma HLS ARRAY_RESHAPE variable=&rsbox cyclic factor=4 dim=1
+#pragma HLS ARRAY_PARTITION variable=&Key cyclic factor=4 dim=1
+#pragma HLS ARRAY_PARTITION variable=&RoundKey cyclic factor=4 dim=1
+#pragma HLS ARRAY_PARTITION variable=&tempa complete dim=1
+#pragma HLS pipeline
 
-
-
-#pragma HLS ARRAY_PARTITION variable=&sbox cyclic factor=16 dim=1
-#pragma HLS ARRAY_PARTITION variable=&rsbox cyclic factor=16 dim=1
-#pragma HLS ARRAY_PARTITION variable=&Key cyclic factor=16 dim=1
-#pragma HLS ARRAY_PARTITION variable=&RoundKey cyclic factor=16 dim=1
-
- for (j=0;j<16;j++){
-#pragma HLS unroll
- RoundKey[j] = Key[j];
+ for (j = 0; j < cnt; j += 4)
+ {
+  RoundKey[j] = Key[j];
+  RoundKey[j + 1] = Key[j + 1];
+  RoundKey[j + 2] = Key[j + 2];
+  RoundKey[j + 3] = Key[j + 3];
  }
 
- a = RoundKey[12];
- b = RoundKey[13];
- c = RoundKey[14];
- d = RoundKey[15];
 
  for (s = cnt; s < cnt2; s+=4)
  {
-#pragma HLS pipeline
-#pragma HLS unroll factor=4 skip_exit_check
+  {
+   k = s-4;
+   tempa[0] = RoundKey[k + 0];
+   tempa[1] = RoundKey[k + 1];
+   tempa[2] = RoundKey[k + 2];
+   tempa[3] = RoundKey[k + 3];
+  }
 
- if (s % cnt == 0)
+  if (s % cnt == 0)
   {
 
 
-   e = a;
-   a = (sbox[(b)]) ^ Rcon[s / cnt];
-   b = (sbox[(c)]);
-   c = (sbox[(d)]);
-   d = (sbox[(e)]);
+
+
+   {
+    const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
+    tempa[0] = u8tmp1;
+    tempa[1] = u8tmp2;
+    tempa[2] = u8tmp3;
+    tempa[3] = u8tmp0;
+   }
+
+
+
+
+
+   {
+    tempa[0] = (sbox[(tempa[0])]);
+    tempa[1] = (sbox[(tempa[1])]);
+    tempa[2] = (sbox[(tempa[2])]);
+    tempa[3] = (sbox[(tempa[3])]);
+   }
+   tempa[0] = tempa[0] ^ Rcon[s / cnt];
   }
-# 201 "aes.c"
-  a = RoundKey[s] = RoundKey[s-16] ^ a;
-  b = RoundKey[s+1] = RoundKey[s-15] ^ b;
-  c = RoundKey[s+2] = RoundKey[s-14] ^ c;
-  d = RoundKey[s+3] = RoundKey[s-13] ^ d;
+# 221 "aes.c"
+  j = s;
+  k = s - cnt;
+  uint8_t tmp0 = RoundKey[k], tmp1 = RoundKey[k+1], tmp2 = RoundKey[k+2], tmp3 = RoundKey[k+3];
+  RoundKey[j] = tmp0 ^ tempa[0];
+  RoundKey[j + 1] = tmp1 ^ tempa[1];
+  RoundKey[j + 2] = tmp2 ^ tempa[2];
+  RoundKey[j + 3] = tmp3 ^ tempa[3];
  }
 }
 
@@ -773,39 +795,28 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
-#pragma HLS INLINE
-#pragma HLS ARRAY_PARTITION variable=&state complete dim=0
-#pragma HLS ARRAY_PARTITION variable=&RoundKey cyclic factor=16 dim=1
  uint8_t i,j;
- const uint8_t c = 4*4*round;
-
- AddRoundKey_label38:for (i = 0; i < 4; ++i)
- {
-#pragma HLS unroll
- AddRoundKey_label37:for (j = 0; j < 4; ++j)
-  {
-#pragma HLS unroll
- (*state)[i][j] ^= RoundKey[c + (i * 4) + j];
-  }
- }
+AddRoundKey_label38:for (i = 0; i < 4; ++i)
+      {
+AddRoundKey_label37:for (j = 0; j < 4; ++j)
+      {
+       (*state)[i][j] ^= RoundKey[(round * 4 * 4) + (i * 4) + j];
+      }
+      }
 }
 
 
 
 static void SubBytes(state_t* state)
 {
-#pragma HLS INLINE
-#pragma HLS ARRAY_PARTITION variable=&state complete dim=0
  uint8_t i, j;
- SubBytes_label35:for (i = 0; i < 4; ++i)
- {
-#pragma HLS unroll
- SubBytes_label34:for (j = 0; j < 4; ++j)
-  {
-#pragma HLS unroll
- (*state)[i][j] = (sbox[((*state)[i][j])]);
-  }
- }
+SubBytes_label35:for (i = 0; i < 4; ++i)
+   {
+SubBytes_label34:for (j = 0; j < 4; ++j)
+   {
+    (*state)[j][i] = (sbox[((*state)[j][i])]);
+   }
+   }
 }
 
 
@@ -813,7 +824,6 @@ static void SubBytes(state_t* state)
 
 static void ShiftRows(state_t* state)
 {
-#pragma HLS INLINE
  uint8_t temp;
 
 
@@ -839,59 +849,43 @@ static void ShiftRows(state_t* state)
  (*state)[2][3] = (*state)[1][3];
  (*state)[1][3] = temp;
 }
-const uint8_t tme = 0x1b;
+
 static uint8_t xtime(uint8_t x)
 {
- return ((x<<1) ^ ((x>>7) * tme));
+ return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
 }
 
 
 static void MixColumns(state_t* state)
 {
-
  uint8_t i;
- uint8_t Tmp[4], Tm[4][4], t;
-#pragma HLS INLINE
-#pragma HLS ARRAY_PARTITION variable=&Tm complete dim=0
-#pragma HLS ARRAY_PARTITION variable=&Tmp complete dim=1
-
- MixColumns_label36:for (i = 0; i < 4; ++i)
- {
-#pragma HLS unroll
- Tm[i][0] = ((*state)[i][0] ^ (*state)[i][1]);
-  Tm[i][1] = ((*state)[i][1] ^ (*state)[i][2]);
-  Tm[i][2] = ((*state)[i][2] ^ (*state)[i][3]);
-  Tm[i][3] = ((*state)[i][3] ^ (*state)[i][0]);
-  Tmp[i] = Tm[i][0] ^ Tm[i][2];
-
-  (*state)[i][0] ^= xtime(Tm[i][0]) ^ Tmp[i];
-  (*state)[i][1] ^= xtime(Tm[i][1]) ^ Tmp[i];
-  (*state)[i][2] ^= xtime(Tm[i][2]) ^ Tmp[i];
-  (*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
- }
+ uint8_t Tmp, Tm, t;
+MixColumns_label36:for (i = 0; i < 4; ++i)
+     {
+      t = (*state)[i][0];
+      Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3] ;
+      Tm = (*state)[i][0] ^ (*state)[i][1] ; Tm = xtime(Tm); (*state)[i][0] ^= Tm ^ Tmp ;
+      Tm = (*state)[i][1] ^ (*state)[i][2] ; Tm = xtime(Tm); (*state)[i][1] ^= Tm ^ Tmp ;
+      Tm = (*state)[i][2] ^ (*state)[i][3] ; Tm = xtime(Tm); (*state)[i][2] ^= Tm ^ Tmp ;
+      Tm = (*state)[i][3] ^ t ; Tm = xtime(Tm); (*state)[i][3] ^= Tm ^ Tmp ;
+     }
 }
-# 351 "aes.c"
+# 354 "aes.c"
 static void InvMixColumns(state_t* state)
 {
  int i;
-#pragma HLS INLINE
-#pragma HLS ARRAY_PARTITION variable=&state complete dim=0
-
  uint8_t a, b, c, d;
-
  for (i = 0; i < 4; ++i)
  {
-#pragma HLS unroll factor=2
-
- a = (*state)[i][0];
+  a = (*state)[i][0];
   b = (*state)[i][1];
   c = (*state)[i][2];
   d = (*state)[i][3];
 
-  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
-  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
-  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
-  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ (xtime(xtime(xtime(a))))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ (xtime(xtime(xtime(b))))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ (xtime(xtime(xtime(c))))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ (xtime(xtime(xtime(d)))));
+  (*state)[i][0] = ( ((0x0e & 1) * a) ^ ((0x0e>>1 & 1) * xtime(a)) ^ ((0x0e>>2 & 1) * xtime(xtime(a))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x0b & 1) * b) ^ ((0x0b>>1 & 1) * xtime(b)) ^ ((0x0b>>2 & 1) * xtime(xtime(b))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x0d & 1) * c) ^ ((0x0d>>1 & 1) * xtime(c)) ^ ((0x0d>>2 & 1) * xtime(xtime(c))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x09 & 1) * d) ^ ((0x09>>1 & 1) * xtime(d)) ^ ((0x09>>2 & 1) * xtime(xtime(d))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
+  (*state)[i][1] = ( ((0x09 & 1) * a) ^ ((0x09>>1 & 1) * xtime(a)) ^ ((0x09>>2 & 1) * xtime(xtime(a))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x0e & 1) * b) ^ ((0x0e>>1 & 1) * xtime(b)) ^ ((0x0e>>2 & 1) * xtime(xtime(b))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x0b & 1) * c) ^ ((0x0b>>1 & 1) * xtime(c)) ^ ((0x0b>>2 & 1) * xtime(xtime(c))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x0d & 1) * d) ^ ((0x0d>>1 & 1) * xtime(d)) ^ ((0x0d>>2 & 1) * xtime(xtime(d))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
+  (*state)[i][2] = ( ((0x0d & 1) * a) ^ ((0x0d>>1 & 1) * xtime(a)) ^ ((0x0d>>2 & 1) * xtime(xtime(a))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x09 & 1) * b) ^ ((0x09>>1 & 1) * xtime(b)) ^ ((0x09>>2 & 1) * xtime(xtime(b))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x0e & 1) * c) ^ ((0x0e>>1 & 1) * xtime(c)) ^ ((0x0e>>2 & 1) * xtime(xtime(c))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x0b & 1) * d) ^ ((0x0b>>1 & 1) * xtime(d)) ^ ((0x0b>>2 & 1) * xtime(xtime(d))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
+  (*state)[i][3] = ( ((0x0b & 1) * a) ^ ((0x0b>>1 & 1) * xtime(a)) ^ ((0x0b>>2 & 1) * xtime(xtime(a))) ^ ((0x0b>>3 & 1) * xtime(xtime(xtime(a)))) ^ ((0x0b>>4 & 1) * xtime(xtime(xtime(xtime(a)))))) ^ ( ((0x0d & 1) * b) ^ ((0x0d>>1 & 1) * xtime(b)) ^ ((0x0d>>2 & 1) * xtime(xtime(b))) ^ ((0x0d>>3 & 1) * xtime(xtime(xtime(b)))) ^ ((0x0d>>4 & 1) * xtime(xtime(xtime(xtime(b)))))) ^ ( ((0x09 & 1) * c) ^ ((0x09>>1 & 1) * xtime(c)) ^ ((0x09>>2 & 1) * xtime(xtime(c))) ^ ((0x09>>3 & 1) * xtime(xtime(xtime(c)))) ^ ((0x09>>4 & 1) * xtime(xtime(xtime(xtime(c)))))) ^ ( ((0x0e & 1) * d) ^ ((0x0e>>1 & 1) * xtime(d)) ^ ((0x0e>>2 & 1) * xtime(xtime(d))) ^ ((0x0e>>3 & 1) * xtime(xtime(xtime(d)))) ^ ((0x0e>>4 & 1) * xtime(xtime(xtime(xtime(d))))));
  }
 }
 
@@ -900,15 +894,12 @@ static void InvMixColumns(state_t* state)
 
 static void InvSubBytes(state_t* state)
 {
-#pragma HLS INLINE
  uint8_t i, j;
  for (i = 0; i < 4; ++i)
  {
-#pragma HLS unroll
- for (j = 0; j < 4; ++j)
+  for (j = 0; j < 4; ++j)
   {
-#pragma HLS unroll
- (*state)[i][j] = (rsbox[((*state)[i][j])]);
+   (*state)[j][i] = (rsbox[((*state)[j][i])]);
   }
  }
 }
@@ -946,54 +937,54 @@ static void InvShiftRows(state_t* state)
 void Cipher(state_t* state, uint8_t RoundKey[240])
 {_ssdm_SpecArrayDimSize(RoundKey, 240);
  uint8_t round = 0;
-#pragma HLS allocation instances=xor limit=80 operation
+
 
  AddRoundKey(0, state, RoundKey);
 
 
 
- Cipher_label33:for (round = 1; round < 10; ++round)
- {
-#pragma HLS pipeline
- SubBytes(state);
-  ShiftRows(state);
-  MixColumns(state);
-  AddRoundKey(round, state, RoundKey);
- }
+
+Cipher_label33:for (round = 1; round < 10; ++round)
+        {
+         SubBytes(state);
+         ShiftRows(state);
+         MixColumns(state);
+         AddRoundKey(round, state, RoundKey);
+        }
 
 
 
- SubBytes(state);
- ShiftRows(state);
- AddRoundKey(10, state, RoundKey);
+        SubBytes(state);
+        ShiftRows(state);
+        AddRoundKey(10, state, RoundKey);
 }
 
 
 void InvCipher(state_t* state,uint8_t RoundKey[240])
 {_ssdm_SpecArrayDimSize(RoundKey, 240);
  uint8_t round = 0;
-# 469 "aes.c"
+
+
  AddRoundKey(10, state, RoundKey);
- InvShiftRows(state);
- InvSubBytes(state);
+
 
 
 
  for (round = (10 - 1); round > 0; --round)
  {
-#pragma HLS pipeline
- AddRoundKey(round, state, RoundKey);
-  InvMixColumns(state);
   InvShiftRows(state);
   InvSubBytes(state);
+  AddRoundKey(round, state, RoundKey);
+  InvMixColumns(state);
  }
+
+
+
+ InvShiftRows(state);
+ InvSubBytes(state);
  AddRoundKey(0, state, RoundKey);
-
-
-
-
 }
-# 497 "aes.c"
+# 475 "aes.c"
 void AES_ECB_encrypt(struct AES_ctx *ctx, uint8_t* buf)
 {
 
@@ -1065,7 +1056,7 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
  }
 
 }
-# 576 "aes.c"
+# 554 "aes.c"
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 {
  uint8_t buffer[16];

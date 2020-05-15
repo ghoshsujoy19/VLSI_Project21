@@ -23,12 +23,12 @@ module AESL_automem_RoundKey_0 (
 
 //------------------------Parameter----------------------
 localparam
-    TV_IN  = "c.InvCipher.autotvin_RoundKey_0.dat", 
-    TV_OUT = "impl_rtl.InvCipher.autotvout_RoundKey_0.dat"; 
+    TV_IN  = "c.KeyExpansion.autotvin_RoundKey_0.dat", 
+    TV_OUT = "impl_rtl.KeyExpansion.autotvout_RoundKey_0.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 8;
-parameter ADDR_WIDTH = 32'd 4;
-parameter DEPTH = 32'd 15;
+parameter ADDR_WIDTH = 32'd 6;
+parameter DEPTH = 32'd 60;
 parameter DLY = 0.1;
 
 // Input and Output
@@ -124,26 +124,26 @@ end
 // Read data from array to RTL
 always @ (posedge clk or rst) begin
     if(rst === 1) begin
-        dout0 <= 0;
+        dout0 = 0;
     end
     else begin
-	  if((we0 == 0) && (ce0 == 1) && (ce1 == 1) && (we1 == 1) && (address0 == address1))
-	      dout0 <= #DLY din1;
-	  else if(ce0 == 1)
-	      dout0 <= #DLY mem[address0];
+        if((we0 == 0) && (ce0 == 1) && (ce1 == 1) && (we1 == 1) && (address0 == address1))
+            dout0 = #DLY din1;
+        else if(ce0 == 1)
+            dout0 = #DLY mem[address0];
         else ;
     end
 end
 
 always @ (posedge clk or rst) begin
     if(rst === 1) begin
-        dout1 <= 0;
+        dout1 = 0;
     end
     else begin
-	  if((we0 == 1) && (ce0 == 1) && (ce1 == 1) && (we1 == 0) && (address0 == address1))
-            dout1 <= #DLY din0;
-	  else if(ce1 == 1)
-            dout1 <= #DLY mem[address1];
+        if((we0 == 1) && (ce0 == 1) && (ce1 == 1) && (we1 == 0) && (address0 == address1))
+            dout1 = #DLY din0;
+        else if(ce1 == 1)
+            dout1 = #DLY mem[address1];
         else ;
     end
 end

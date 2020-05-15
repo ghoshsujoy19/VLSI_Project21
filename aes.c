@@ -133,12 +133,12 @@ static const uint8_t Rcon[11] = {
 /*****************************************************************************/
 /* Private functions:                                                        */
 /*****************************************************************************/
-
-//static uint8_t getSBoxValue(uint8_t num)
-//{
-//    return sbox[num];
-//}
-
+/*
+   static uint8_t getSBoxValue(uint8_t num)
+   {
+   return sbox[num];
+   }
+   */
 #define getSBoxValue(num) (sbox[(num)])
 /*
    static uint8_t getSBoxInvert(uint8_t num)
@@ -151,57 +151,80 @@ static const uint8_t Rcon[11] = {
 // This function produces Nb(Nr+1) round keys. The round keys are used in each round to decrypt the states. 
 void KeyExpansion(uint8_t RoundKey[240], const uint8_t Key[16])
 {
-	uint8_t a,b,c,d,e; // Used for the column/row operations
-	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2;
+	unsigned i, s, j, k, cnt = Nk<<2, cnt2 = (Nb*Nr + Nb)<<2 ;
+	uint8_t tempa[4]; // Used for the column/row operations
 
-//	#pragma HLS allocation instances=add limit=12 operation
-//	#pragma HLS allocation instances=xor limit=5 operation
-
-	#pragma HLS ARRAY_PARTITION variable=sbox     cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=rsbox    cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=Key      cyclic factor=16 dim=1
-	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
-
-	for (j=0;j<16;j++){
-		#pragma HLS unroll
+	#pragma HLS ARRAY_RESHAPE variable=sbox  cyclic factor=4 dim=1
+	#pragma HLS ARRAY_RESHAPE variable=rsbox cyclic factor=4 dim=1
+	#pragma HLS ARRAY_PARTITION variable=Key cyclic factor=4 dim=1
+	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=4 dim=1
+	#pragma HLS ARRAY_PARTITION variable=tempa complete dim=1
+	#pragma HLS pipeline
+	// The first round key is the key itself.
+	for (j = 0; j < cnt; j += 4)
+	{
 		RoundKey[j] = Key[j];
+		RoundKey[j + 1] = Key[j + 1];
+		RoundKey[j + 2] = Key[j + 2];
+		RoundKey[j + 3] = Key[j + 3];
 	}
 
-	a = RoundKey[12];
-	b = RoundKey[13];
-	c = RoundKey[14];
-	d = RoundKey[15];
 	// All other round keys are found from the previous round keys.
 	for (s = cnt; s < cnt2; s+=4)
 	{
-		#pragma HLS pipeline
-		#pragma HLS unroll factor=4 skip_exit_check
+		{
+			k = s-4;
+			tempa[0] = RoundKey[k + 0];
+			tempa[1] = RoundKey[k + 1];
+			tempa[2] = RoundKey[k + 2];
+			tempa[3] = RoundKey[k + 3];
+		}
 
 		if (s % cnt == 0)
 		{
 			// This function shifts the 4 bytes in a word to the left once.
 			// [a0,a1,a2,a3] becomes [a1,a2,a3,a0]
-			e = a;
-			a = getSBoxValue(b) ^ Rcon[s / cnt];
-			b = getSBoxValue(c);
-			c = getSBoxValue(d);
-			d = getSBoxValue(e);
+
+			// Function RotWord()
+			{
+				const uint8_t u8tmp0 = tempa[0], u8tmp1 = tempa[1], u8tmp2 = tempa[2], u8tmp3 = tempa[3];
+				tempa[0] = u8tmp1;
+				tempa[1] = u8tmp2;
+				tempa[2] = u8tmp3;
+				tempa[3] = u8tmp0;
+			}
+
+			// SubWord() is a function that takes a four-byte input word and
+			// applies the S-box to each of the four bytes to produce an output word.
+
+			// Function Subword()
+			{
+				tempa[0] = getSBoxValue(tempa[0]);
+				tempa[1] = getSBoxValue(tempa[1]);
+				tempa[2] = getSBoxValue(tempa[2]);
+				tempa[3] = getSBoxValue(tempa[3]);
+			}
+			tempa[0] = tempa[0] ^ Rcon[s / cnt];
 		}
 #if defined(AES256) && (AES256 == 1)
 		if (s % cnt == 4)
 		{
 			// Function Subword()
-			a = getSBoxValue(a);
-			b = getSBoxValue(b);
-			c = getSBoxValue(c);
-			d = getSBoxValue(d);
+			{
+				tempa[0] = getSBoxValue(tempa[0]);
+				tempa[1] = getSBoxValue(tempa[1]);
+				tempa[2] = getSBoxValue(tempa[2]);
+				tempa[3] = getSBoxValue(tempa[3]);
+			}
 		}
 #endif
-
-		a = RoundKey[s]   = RoundKey[s-16] ^ a;
-		b = RoundKey[s+1] = RoundKey[s-15] ^ b;
-		c = RoundKey[s+2] = RoundKey[s-14] ^ c;
-		d = RoundKey[s+3] = RoundKey[s-13] ^ d;
+		j = s;
+		k = s - cnt;
+		uint8_t tmp0 = RoundKey[k], tmp1 = RoundKey[k+1], tmp2 = RoundKey[k+2], tmp3 = RoundKey[k+3];
+		RoundKey[j] = tmp0 ^ tempa[0];
+		RoundKey[j + 1] = tmp1 ^ tempa[1];
+		RoundKey[j + 2] = tmp2 ^ tempa[2];
+		RoundKey[j + 3] = tmp3 ^ tempa[3];
 	}
 }
 
@@ -225,39 +248,28 @@ void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)
 // The round key is added to the state by an XOR function.
 static void AddRoundKey(uint8_t round,state_t* state,uint8_t* RoundKey)
 {
-	#pragma HLS INLINE
-	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=RoundKey cyclic factor=16 dim=1
 	uint8_t i,j;
-	const uint8_t c = 4*Nb*round;
-
-	AddRoundKey_label38:for (i = 0; i < 4; ++i)
-	{
-		#pragma HLS unroll
-		AddRoundKey_label37:for (j = 0; j < 4; ++j)
-		{
-			#pragma HLS unroll
-			(*state)[i][j] ^= RoundKey[c + (i * Nb) + j];
-		}
-	}
+AddRoundKey_label38:for (i = 0; i < 4; ++i)
+		    {
+AddRoundKey_label37:for (j = 0; j < 4; ++j)
+		    {
+			    (*state)[i][j] ^= RoundKey[(round * Nb * 4) + (i * Nb) + j];
+		    }
+		    }
 }
 
 // The SubBytes Function Substitutes the values in the
 // state matrix with values in an S-box.
 static void SubBytes(state_t* state)
 {
-	#pragma HLS INLINE
-	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
 	uint8_t i, j;
-	SubBytes_label35:for (i = 0; i < 4; ++i)
-	{
-		#pragma HLS unroll
-		SubBytes_label34:for (j = 0; j < 4; ++j)
-		{
-			#pragma HLS unroll
-			(*state)[i][j] = getSBoxValue((*state)[i][j]);
-		}
-	}
+SubBytes_label35:for (i = 0; i < 4; ++i)
+		 {
+SubBytes_label34:for (j = 0; j < 4; ++j)
+		 {
+			 (*state)[j][i] = getSBoxValue((*state)[j][i]);
+		 }
+		 }
 }
 
 // The ShiftRows() function shifts the rows in the state to the left.
@@ -265,7 +277,6 @@ static void SubBytes(state_t* state)
 // Offset = Row number. So the first row is not shifted.
 static void ShiftRows(state_t* state)
 {
-	#pragma HLS INLINE
 	uint8_t temp;
 
 	// Rotate first row 1 columns to left  
@@ -291,36 +302,26 @@ static void ShiftRows(state_t* state)
 	(*state)[2][3] = (*state)[1][3];
 	(*state)[1][3] = temp;
 }
-const uint8_t tme = 0x1b;
+
 static uint8_t xtime(uint8_t x)
 {
-	return ((x<<1) ^ ((x>>7) * tme));
+	return ((x<<1) ^ (((x>>7) & 1) * 0x1b));
 }
 
 // MixColumns function mixes the columns of the state matrix
 static void MixColumns(state_t* state)
 {
-//	#pragma HLS allocation instances=XOR limit=4 operation
 	uint8_t i;
-	uint8_t Tmp[4], Tm[4][4], t;
-	#pragma HLS INLINE
-	#pragma HLS ARRAY_PARTITION variable=Tm  complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=Tmp complete dim=1
-
-	MixColumns_label36:for (i = 0; i < 4; ++i)
-	{
-		#pragma HLS unroll
-		Tm[i][0] = ((*state)[i][0] ^ (*state)[i][1]);
-		Tm[i][1] = ((*state)[i][1] ^ (*state)[i][2]);
-		Tm[i][2] = ((*state)[i][2] ^ (*state)[i][3]);
-		Tm[i][3] = ((*state)[i][3] ^ (*state)[i][0]);
-		Tmp[i] = Tm[i][0] ^ Tm[i][2];
-
-		(*state)[i][0] ^= xtime(Tm[i][0]) ^ Tmp[i];
-		(*state)[i][1] ^= xtime(Tm[i][1]) ^ Tmp[i];
-		(*state)[i][2] ^= xtime(Tm[i][2]) ^ Tmp[i];
-		(*state)[i][3] ^= xtime(Tm[i][3]) ^ Tmp[i];
-	}
+	uint8_t Tmp, Tm, t;
+MixColumns_label36:for (i = 0; i < 4; ++i)
+		   {
+			   t   = (*state)[i][0];
+			   Tmp = (*state)[i][0] ^ (*state)[i][1] ^ (*state)[i][2] ^ (*state)[i][3] ;
+			   Tm  = (*state)[i][0] ^ (*state)[i][1] ; Tm = xtime(Tm);  (*state)[i][0] ^= Tm ^ Tmp ;
+			   Tm  = (*state)[i][1] ^ (*state)[i][2] ; Tm = xtime(Tm);  (*state)[i][1] ^= Tm ^ Tmp ;
+			   Tm  = (*state)[i][2] ^ (*state)[i][3] ; Tm = xtime(Tm);  (*state)[i][2] ^= Tm ^ Tmp ;
+			   Tm  = (*state)[i][3] ^ t ;              Tm = xtime(Tm);  (*state)[i][3] ^= Tm ^ Tmp ;
+		   }
 }
 
 // Multiply is used to multiply numbers in the field GF(2^8)
@@ -333,14 +334,16 @@ static uint8_t Multiply(uint8_t x, uint8_t y)
 	return (((y & 1) * x) ^
 			((y>>1 & 1) * xtime(x)) ^
 			((y>>2 & 1) * xtime(xtime(x))) ^
-			(xtime(xtime(xtime(x))))); /* this last call to xtime() can be omitted */
+			((y>>3 & 1) * xtime(xtime(xtime(x)))) ^
+			((y>>4 & 1) * xtime(xtime(xtime(xtime(x)))))); /* this last call to xtime() can be omitted */
 }
 #else
 #define Multiply(x, y)                                \
 	(  ((y & 1) * x) ^                              \
 	   ((y>>1 & 1) * xtime(x)) ^                       \
 	   ((y>>2 & 1) * xtime(xtime(x))) ^                \
-	   (xtime(xtime(xtime(x)))))
+	   ((y>>3 & 1) * xtime(xtime(xtime(x)))) ^         \
+	   ((y>>4 & 1) * xtime(xtime(xtime(xtime(x))))))   \
 
 #endif
 
@@ -351,15 +354,9 @@ static uint8_t Multiply(uint8_t x, uint8_t y)
 static void InvMixColumns(state_t* state)
 {
 	int i;
-	#pragma HLS INLINE
-	#pragma HLS ARRAY_PARTITION variable=state complete dim=0
-//	#pragma HLS allocation instances=xor limit=60 operation
 	uint8_t a, b, c, d;
-
 	for (i = 0; i < 4; ++i)
 	{ 
-		#pragma HLS unroll factor=2
-//		#pragma HLS pipeline
 		a = (*state)[i][0];
 		b = (*state)[i][1];
 		c = (*state)[i][2];
@@ -377,15 +374,12 @@ static void InvMixColumns(state_t* state)
 // state matrix with values in an S-box.
 static void InvSubBytes(state_t* state)
 {
-	#pragma HLS INLINE
 	uint8_t i, j;
 	for (i = 0; i < 4; ++i)
 	{
-		#pragma HLS unroll
 		for (j = 0; j < 4; ++j)
 		{
-			#pragma HLS unroll
-			(*state)[i][j] = getSBoxInvert((*state)[i][j]);
+			(*state)[j][i] = getSBoxInvert((*state)[j][i]);
 		}
 	}
 }
@@ -423,26 +417,26 @@ static void InvShiftRows(state_t* state)
 void Cipher(state_t* state, uint8_t RoundKey[240])
 {
 	uint8_t round = 0;
-	#pragma HLS allocation instances=xor limit=80 operation
+
 	// Add the First round key to the state before starting the rounds.
 	AddRoundKey(0, state, RoundKey);
+
 	// There will be Nr rounds.
 	// The first Nr-1 rounds are identical.
 	// These Nr-1 rounds are executed in the loop below.
-	Cipher_label33:for (round = 1; round < Nr; ++round)
-	{
-		#pragma HLS pipeline
-		SubBytes(state);
-		ShiftRows(state);
-		MixColumns(state);
-		AddRoundKey(round, state, RoundKey);
-	}
+Cipher_label33:for (round = 1; round < Nr; ++round)
+	       {
+		       SubBytes(state);
+		       ShiftRows(state);
+		       MixColumns(state);
+		       AddRoundKey(round, state, RoundKey);
+	       }
 
-	// The last round is given below.
-	// The MixColumns function is not here in the last round.
-	SubBytes(state);
-	ShiftRows(state);
-	AddRoundKey(Nr, state, RoundKey);
+	       // The last round is given below.
+	       // The MixColumns function is not here in the last round.
+	       SubBytes(state);
+	       ShiftRows(state);
+	       AddRoundKey(Nr, state, RoundKey);
 }
 
 #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
@@ -451,40 +445,24 @@ void InvCipher(state_t* state,uint8_t RoundKey[240])
 	uint8_t round = 0;
 
 	// Add the First round key to the state before starting the rounds.
-//	AddRoundKey(Nr, state, RoundKey);
-//
-//	// There will be Nr rounds.
-//	// The first Nr-1 rounds are identical.
-//	// These Nr-1 rounds are executed in the loop below.
-//	for (round = (Nr - 1); round > 0; --round)
-//	{
-//#pragma HLS pipeline
-//		InvShiftRows(state);
-//		InvSubBytes(state);
-//		AddRoundKey(round, state, RoundKey);
-//		InvMixColumns(state);
-//	}
-
-
 	AddRoundKey(Nr, state, RoundKey);
-	InvShiftRows(state);
-	InvSubBytes(state);
-		// There will be Nr rounds.
-		// The first Nr-1 rounds are identical.
-		// These Nr-1 rounds are executed in the loop below.
+
+	// There will be Nr rounds.
+	// The first Nr-1 rounds are identical.
+	// These Nr-1 rounds are executed in the loop below.
 	for (round = (Nr - 1); round > 0; --round)
 	{
-		#pragma HLS pipeline
-		AddRoundKey(round, state, RoundKey);
-		InvMixColumns(state);
 		InvShiftRows(state);
 		InvSubBytes(state);
+		AddRoundKey(round, state, RoundKey);
+		InvMixColumns(state);
 	}
-	AddRoundKey(0, state, RoundKey);
 
 	// The last round is given below.
 	// The MixColumns function is not here in the last round.
-
+	InvShiftRows(state);
+	InvSubBytes(state);
+	AddRoundKey(0, state, RoundKey);
 }
 #endif // #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)
 
